@@ -1,2 +1,3 @@
-# COVID19-Dyn
-COVID-19 epidemic dynamics
+# COVID19-RJ
+
+COVID-19 Rio de Janeiro
