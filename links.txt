@@ -1,0 +1,15 @@
+Relevant links: 
+
+Johns Hopnikis - https://coronavirus.jhu.edu/map.html
+
+Covid Trends - https://aatishb.com/covidtrends/
+
+Download de dados de COVID-19 no Brasil - https://liibre.github.io/coronabr/
+
+Observatório COVID-19 BR - https://covid19br.github.io/
+
+Why is it difficult to accurately predict the COVID-19 epidemic? - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7104073/
+
+AWS makes COVID-19 datasets freely available - https://www.infoworld.com/article/3537593/aws-makes-covid-19-datasets-freely-available.html
+
+Mathematics of COVID-19 - http://www.iciam.org/mathematics-covid-19 
