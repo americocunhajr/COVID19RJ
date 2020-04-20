@@ -33,11 +33,11 @@ https://www.nytimes.com/2020/03/17/opinion/coronavirus-social-distancing-effect.
 
 U.S. National Institutes of Health (NIH) - https://www.fic.nih.gov/ResearchTopics/Pages/infectiousdiseases-coronavirus-cov.aspx
 
-%---------------------------------------
-
 Why is it difficult to accurately predict the COVID-19 epidemic? - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7104073/
 
 AWS makes COVID-19 datasets freely available - https://www.infoworld.com/article/3537593/aws-makes-covid-19-datasets-freely-available.html
+
+How does the coronavirus work? - https://www.technologyreview.com/2020/04/15/999476/explainer-how-does-the-coronavirus-work/?utm_medium=tr_social&utm_campaign=site_visitor.unpaid.engagement&utm_source=Facebook#Echobox=1587155881
 
 ### Modeling Tools and Data Trackers
 
@@ -60,8 +60,6 @@ Data-driven prediction of infection by the SIR model (Work in progress!) - https
 Epidemic Calculator - https://gabgoh.github.io/COVID/index.html
 
 COVID-19 Scenarios - https://covid19-scenarios.org/
-
-*-----------------------------------------------------------------
 
 GitHub project - https://github.com/CSSEGISandData 
 
@@ -104,7 +102,5 @@ GitHub project - https://github.com/midas-network/COVID-19
 Research!America - https://www.researchamerica.org/covid19
 
 SIAM Epidemiology Collection - https://epubs.siam.org/page/EpidemiologyCollection
-
-%--------------------------------------------
 
 ICIAM - http://www.iciam.org/mathematics-covid-19
