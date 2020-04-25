@@ -1,6 +1,6 @@
 # COVID19-RJ
 
-COVID-19 Rio de Janeiro
+Esse repositório reune informações e dados relativos à epidemia de COVID-19 no Estado do Rio de Janeiro
 
 ## Relevant links: 
 
@@ -14,7 +14,7 @@ European Centre for Disease Prevention and Control - https://www.ecdc.europa.eu/
 
 U.S. National Institutes of Health (NIH) - https://www.fic.nih.gov/ResearchTopics/Pages/infectiousdiseases-coronavirus-cov.aspx
 
-Brazil Health Ministry - https://saude.gov.br/
+Brazilian Health Ministry - https://saude.gov.br/
 
 ### Articles on Coronaviruses and Epidemiology
 
