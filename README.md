@@ -2,8 +2,6 @@
 
 COVID-19 Rio de Janeiro
 
-This work is an initiative of NUMERICO (Nucleus of Modeling and Experimentation with Computers), of Rio de Janeiro State University (UERJ), coordinated by professor Americo Cunha Jr.
-
 ## Relevant links: 
 
 ### Government Agencies and Non-governmental Organizations
