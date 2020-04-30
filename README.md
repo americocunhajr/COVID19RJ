@@ -1,5 +1,5 @@
 
-# COVID19-RJ
+# COVID-19 RJ
 
 <img src="Imagem/logo.png" width="50%">
 
