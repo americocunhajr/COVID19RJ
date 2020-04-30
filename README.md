@@ -7,7 +7,7 @@ Esse repositório reune informações e dados relativos à epidemia de COVID-19 
 
 | *Orgãos governamentais e ONGs* |
 | :----- |
-|[Ministério da Saúde do Brasil](https://saude.gov.br/)|
+|[Ministério da Saúde do Brasil](https://saude.gov.br/){:target="_blank"}|
 |[World Health Organization (WHO)](https://www.who.int/emergencies/diseases/novel-coronavirus-2019) |
 |[U.S. Centers for Disease Control and Prevention](https://www.cdc.gov/coronavirus/2019-ncov/index.html) | 
 |[U.S. National Institutes of Health (NIH)](https://www.fic.nih.gov/ResearchTopics/Pages/infectiousdiseases-coronavirus-cov.aspx)| 
