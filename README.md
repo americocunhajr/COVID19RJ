@@ -4,6 +4,7 @@
 Esse repositório reune informações e dados relativos à epidemia de COVID-19 no Estado do Rio de Janeiro
 
 ## Links Relevantes:
+##### '*'OBS
 
 | **Orgãos governamentais e ONGs** |
 | :----- |
