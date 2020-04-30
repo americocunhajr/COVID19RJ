@@ -5,9 +5,11 @@ Esse repositório reune informações e dados relativos à epidemia de COVID-19 
 
 ## Links Relevantes:
 
+<a href="http://stackoverflow.com" target="_blank">Go</a>
+
 | *Orgãos governamentais e ONGs* |
 | :----- |
-| [go](http://stackoverflow.com){:target="_blank"}|
+| [go](http://stackoverflow.com)|
 |[Ministério da Saúde do Brasil](https://saude.gov.br/) |
 |[World Health Organization (WHO)](https://www.who.int/emergencies/diseases/novel-coronavirus-2019) |
 |[U.S. Centers for Disease Control and Prevention](https://www.cdc.gov/coronavirus/2019-ncov/index.html) | 
