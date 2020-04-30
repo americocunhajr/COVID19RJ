@@ -6,13 +6,18 @@ Esse repositório reune informações e dados relativos à epidemia de COVID-19 
 ## Links Relevantes:
 ###### * OBS: Para abrir um link em uma nova aba, simplesmente clique enquanto pressiona a tecla “Ctrl” no teclado.
 
-| **Orgãos governamentais e ONGs** |
+| *Orgãos governamentais e ONGs* |
 | :----- |
-|[Ministério da Saúde do Brasil](https://saude.gov.br/) |
-|[World Health Organization (WHO)](https://www.who.int/emergencies/diseases/novel-coronavirus-2019) |
-|[U.S. Centers for Disease Control and Prevention](https://www.cdc.gov/coronavirus/2019-ncov/index.html) | 
+|[Ministério da Saúde do Brasil](https://saude.gov.br/)|
+|[World Health Organization (WHO)](https://www.who.int/emergencies/diseases/novel-coronavirus-2019)|
+|[U.S. Centers for Disease Control and Prevention](https://www.cdc.gov/coronavirus/2019-ncov/index.html)| 
 |[U.S. National Institutes of Health (NIH)](https://www.fic.nih.gov/ResearchTopics/Pages/infectiousdiseases-coronavirus-cov.aspx)| 
-|[European Centre for Disease Prevention and Control]( https://www.ecdc.europa.eu/en/covid-19-pandemic) |
+|[European Centre for Disease Prevention and Control]( https://www.ecdc.europa.eu/en/covid-19-pandemic)|
+
+| *Dados e Ferramenta de Modelagens* |
+| :----- |
+|[Dashboard by the CSSE at Johns Hopkins University(JHU)](https://coronavirus.jhu.edu/map.html)|
+|[Interactive dashboard to track COVID-19 (Johns Hopkins University)](https://systems.jhu.edu/research/public-health/ncov/)|
 
 ### Artigos sobre Coronavírus e Epidemiologia
 
@@ -43,73 +48,7 @@ COVID-19 pandemics modeling with SEIR(+CAQH), social distancing, and age stratif
 
 Short-Term Covid-19 Forecast for Latecomers - https://www.dropbox.com/s/z3nqral0u26b50u/Short_term_COVID19_forecast%20V1.pdf?dl=0
 
-### Ferramentas de modelagem e Dados
 
-COVID-19 Dashboard by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University (JHU) - https://coronavirus.jhu.edu/map.html
-
-Interactive dashboard to track COVID-19 (Johns Hopkins University) - https://systems.jhu.edu/research/public-health/ncov/
-
-Data download COVID-19 in Brazil - https://liibre.github.io/coronabr/
-
-Mathematical of COVID-19 (Brazil) - http://covid19.mat.br/
-
-COVID-19 BR Obsevatory - https://covid19br.github.io/
-
-Brazil per state - https://ciis.fmrp.usp.br/covid19/estado-br/
-
-CCMID Repository - https://cmmid.github.io/topics/covid19/
-
-Data-driven prediction of infection by the SIR model (Work in progress!) - https://cse-lab.ethz.ch/coronavirus/
-
-Epidemic Calculator - https://gabgoh.github.io/COVID/index.html
-
-COVID-19 Scenarios - https://covid19-scenarios.org/
-
-GitHub project - https://github.com/CSSEGISandData 
-
-Interactive charts the new confirmed cases of COVID-19 - https://aatishb.com/covidtrends/
-
-WHO Situation Dashboard - https://experience.arcgis.com/experience/685d0ace521648f8a5beeeee1b9125cd
-
-Institute for Health Metrics and Evaluation (University of Washington) - http://www.healthdata.org/covid 
-
-GitHub project - https://github.com/ihmeuw-msca/CurveFit  
-
-Our World in Data (developed by Global Change Data Lab, a UK-based charity) - https://ourworldindata.org/coronavirus 
-
-Worldometer (published by Dadax, a U.S.-based independent media company) - https://www.worldometers.info/coronavirus/ 
-
-U.S. Health Weather Map issued by Kinsa Insights and based on data from smart thermometers -  https://healthweather.us/
-
-Databrew's COVID-19 epidemic curve explorer - https://datacat.cc/covid/
-
-Data-Driven Estimation of End Dates - https://ddi.sutd.edu.sg/
-
-Modelagem matemática do COVID-19 em Brasil - https://cic.unb.br/~lucero/covid_pt.html
-
-Portal da transparência COVID-19 - https://transparencia.registrocivil.org.br/especial-covid
-
-Número de casos confirmados de COVID-19 no Brasil - https://github.com/wcota/covid19br
-
-Coronavirus Source Data (CSV or XLSX) - https://ourworldindata.org/coronavirus-source-data
-
-Modelo de Dispersão do Coronavírus - https://simulacovid.github.io/covid19/index.html
-
-COVID-19 Analytics PUC-Rio - https://covid19analytics.com.br/
-
-### Solicitações de financimento COVID-19
-
-Elrha - https://www.elrha.org/funding-opportunity/research-to-support-covid-19-response-in-humanitarian-settings/ 
-
-NIH - https://grants.nih.gov/grants/natural_disasters/corona-virus.htm
-
-National Institute of Allergy and Infectious Diseases (NIAID) - https://www.niaid.nih.gov/grants-contracts/response-covid-2019-outbreak 
-
-National Science Foundation (NSF) - https://www.nsf.gov/news/special_reports/coronavirus/
-
-Wellcome Trust - https://wellcome.ac.uk/grant-funding/schemes/epidemic-preparedness-covid-19
-
-Mortes por coronavírus no Brasil - https://especiais.g1.globo.com/bemestar/coronavirus/mapa-coronavirus/#/
 
 ### Páginas de informações fornecidas por outras organizações e sociedades
 
