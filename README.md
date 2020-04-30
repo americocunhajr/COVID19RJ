@@ -15,6 +15,14 @@ Esse repositório reune informações e dados relativos à epidemia de COVID-19 
 |European Centre for Disease Prevention and Control | https://www.ecdc.europa.eu/en/covid-19-pandemic |
 
 
+|  |  |
+| :----- | :----- |
+|[Ministério da Saúde do Brasil](https://saude.gov.br/)|
+|World Health Organization (WHO) |  |
+|U.S. Centers for Disease Control and Prevention | https://www.cdc.gov/coronavirus/2019-ncov/index.html |
+|U.S. National Institutes of Health (NIH)| https://www.fic.nih.gov/ResearchTopics/Pages/infectiousdiseases-coronavirus-cov.aspx |
+|European Centre for Disease Prevention and Control | https://www.ecdc.europa.eu/en/covid-19-pandemic |
+
 ### Artigos sobre Coronavírus e Epidemiologia
 
 A collection of epidemiology articles in SIAM journals, made free as a public service - https://epubs.siam.org/page/EpidemiologyCollection 
