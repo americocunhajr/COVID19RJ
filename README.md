@@ -1,3 +1,5 @@
+require 'octokit'
+
 # COVID19-RJ
 
 Esse repositório reune informações e dados relativos à epidemia de COVID-19 no Estado do Rio de Janeiro
