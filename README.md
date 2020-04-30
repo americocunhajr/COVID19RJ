@@ -41,8 +41,15 @@ Esse repositório reune informações e dados relativos à epidemia de COVID-19 
 |[Número de casos confirmados de COVID-19 no Brasil](https://github.com/wcota/covid19br)|
 |[Modelo de Dispersão do Coronavírus](https://simulacovid.github.io/covid19/index.html)|
 |[COVID-19 Analytics PUC-Rio](https://covid19analytics.com.br/)|
+|[Mortes por coronavírus no Brasil](https://especiais.g1.globo.com/bemestar/coronavirus/mapa-coronavirus/#/)|
 
-
+| *Solicitações de financimento COVID-19* |
+| :----- |
+|[Elrha](https://www.elrha.org/funding-opportunity/research-to-support-covid-19-response-in-humanitarian-settings/)|
+|[NIH](https://grants.nih.gov/grants/natural_disasters/corona-virus.htm)|
+|[National Institute of Allergy and Infectious Diseases (NIAID)](https://www.niaid.nih.gov/grants-contracts/response-covid-2019-outbreak)| 
+|[National Science Foundation (NSF)](https://www.nsf.gov/news/special_reports/coronavirus/)|
+|[Wellcome Trust](https://wellcome.ac.uk/grant-funding/schemes/epidemic-preparedness-covid-19)|
 
 ### Artigos sobre Coronavírus e Epidemiologia
 
@@ -74,8 +81,6 @@ Coronavírus: Por que o isolamento por idade não funciona - https://medium.com/
 COVID-19 pandemics modeling with SEIR(+CAQH), social distancing, and age stratification. The effect of vertical confinement and release in Brazil. - https://www.medrxiv.org/content/10.1101/2020.04.09.20060053v3
 
 Short-Term Covid-19 Forecast for Latecomers - https://www.dropbox.com/s/z3nqral0u26b50u/Short_term_COVID19_forecast%20V1.pdf?dl=0
-
-
 
 ### Páginas de informações fornecidas por outras organizações e sociedades
 
