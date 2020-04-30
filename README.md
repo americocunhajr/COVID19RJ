@@ -58,8 +58,7 @@ Esse repositório reune informações e dados relativos à epidemia de COVID-19 
 |[Articles and updates published by Imperial College COVID-19 Response Team](https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/covid-19-information/)|
 |[Article using simulations to demonstrate “flattening the curve” (Harry Stevens, Washington Post)]( https://www.washingtonpost.com/graphics/2020/world/corona-simulator/)|
 |[The effect of summer on SARS-CoV-2 (Marc Lipsitch, Harvard School of Public Health)](https://ccdd.hsph.harvard.edu/will-covid-19-go-away-on-its-own-in-warmer-weather/)|
-|[The dynamics of COVID-19 under social distancing (Ezekiel Emanuel et al., University of Pennsylvania in New York Times op-ed)]
-(https://www.nytimes.com/2020/03/17/opinion/coronavirus-social-distancing-effect.html)|
+|[The dynamics of COVID-19 under social distancing (Ezekiel Emanuel et al., University of Pennsylvania in New York Times op-ed)](https://www.nytimes.com/2020/03/17/opinion/coronavirus-social-distancing-effect.html)|
 |[U.S. National Institutes of Health (NIH)](https://www.fic.nih.gov/ResearchTopics/Pages/infectiousdiseases-coronavirus-cov.aspx)|
 |[Why is it difficult to accurately predict the COVID-19 epidemic?](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7104073/)|
 |[AWS makes COVID-19 datasets freely available](https://www.infoworld.com/article/3537593/aws-makes-covid-19-datasets-freely-available.html)|
