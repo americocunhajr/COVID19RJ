@@ -14,6 +14,17 @@ Esse repositório reune informações e dados relativos à epidemia de COVID-19 
 |[U.S. National Institutes of Health (NIH)](https://www.fic.nih.gov/ResearchTopics/Pages/infectiousdiseases-coronavirus-cov.aspx)| 
 |[European Centre for Disease Prevention and Control]( https://www.ecdc.europa.eu/en/covid-19-pandemic)|
 
+| *Páginas de informações fornecidas por outras organizações e sociedades* |
+| :----- |
+|[American Society for Microbiology](https://asm.org/Press-Releases/2020/COVID-19-Resources)|
+|[Federation of American Scientists](https://fas.org/ncov/)|
+|[MIDAS Network](https://midasnetwork.us/covid-19/)|
+|[MIDAS GitHub](https://github.com/midas-network/COVID-19)| 
+|[Research!America](https://www.researchamerica.org/covid19)|
+|[SIAM Epidemiology Collection](https://epubs.siam.org/page/EpidemiologyCollection)
+|[ICIAM](http://www.iciam.org/mathematics-covid-19)|
+|[Fighting COVID-19 By Bringing Together Researchers Across Disciplines](https://covid19.researcher.life/)|
+
 | *Dados e Ferramenta de Modelagens* |
 | :----- |
 |[Dashboard by the CSSE at Johns Hopkins University (JHU)](https://coronavirus.jhu.edu/map.html)|
@@ -67,21 +78,4 @@ Esse repositório reune informações e dados relativos à epidemia de COVID-19 
 |[Coronavírus: Por que o isolamento por idade não funciona](https://medium.com/@wlyra/coronav%C3%ADrus-porque-o-isolamento-por-idade-n%C3%A3o-funciona-898d0a4a0d5b)|
 |[COVID-19 pandemics modeling with SEIR(+CAQH), social distancing, and age stratification. The effect of vertical confinement and release in Brazil.](https://www.medrxiv.org/content/10.1101/2020.04.09.20060053v3)|
 |[Short-Term Covid-19 Forecast for Latecomers](https://www.dropbox.com/s/z3nqral0u26b50u/Short_term_COVID19_forecast%20V1.pdf?dl=0)|
-
-### Páginas de informações fornecidas por outras organizações e sociedades
-
-American Society for Microbiology - https://asm.org/Press-Releases/2020/COVID-19-Resources
-
-Federation of American Scientists - https://fas.org/ncov/
-
-MIDAS Network - https://midasnetwork.us/covid-19/
-
-GitHub project - https://github.com/midas-network/COVID-19 
-
-Research!America - https://www.researchamerica.org/covid19
-
-SIAM Epidemiology Collection - https://epubs.siam.org/page/EpidemiologyCollection
-
-ICIAM - http://www.iciam.org/mathematics-covid-19
-
-Fighting COVID-19 By Bringing Together Researchers Across Disciplines - https://covid19.researcher.life/
+|[Your Sacrifices are Saving Lives](https://medium.com/@inders/your-sacrifices-are-saving-lives-3c80d88cea39)]
