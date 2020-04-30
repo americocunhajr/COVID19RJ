@@ -1,6 +1,6 @@
 
 # COVID19-RJ
-![logo](Imagem/logo.png?raw=true "Optional Title" scale=0.5)
+![](Imagem/logo.png =250x250)
 
 Esse repositório reune informações e dados relativos à epidemia de COVID-19 no Estado do Rio de Janeiro
 
