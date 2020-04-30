@@ -16,7 +16,7 @@ Esse repositório reune informações e dados relativos à epidemia de COVID-19 
 
 ### Artigos sobre Coronavírus e Epidemiologia
 
-A collection of epidemiology articles in SIAM journals, made free as a public service - https://epubs.siam.org/page/EpidemiologyCollection 
+A collection of epidemiology articles in SIAM journals, made free as a public service - https://epubs.siam.org/page/EpidemiologyCollection{:target="_blank"} 
 
 Articles and updates published by Imperial College COVID-19 Response Team - https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/covid-19-information/
 
