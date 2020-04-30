@@ -1,7 +1,7 @@
 
 # COVID-19 RJ
 
-Esse repositório reune informações e dados relativos à epidemia de COVID-19 no Estado do Rio de Janeiro
+Esse repositório reune informações e dados da epidemia de COVID-19, com particular interesse em catalogar informações relativas ao progresso dessa doença no Estado do Rio de Janeiro.
 
 <img src="Imagem/logo.png" width="50%">
 
