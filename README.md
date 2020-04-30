@@ -4,7 +4,7 @@
 Esse repositório reune informações e dados relativos à epidemia de COVID-19 no Estado do Rio de Janeiro
 
 ## Links Relevantes:
- * OBS: Para abrir um link em uma nova aba, simplesmente clique enquanto pressiona a tecla “Ctrl” no teclado.
+##### * OBS: Para abrir um link em uma nova aba, simplesmente clique enquanto pressiona a tecla “Ctrl” no teclado.
 
 | **Orgãos governamentais e ONGs** |
 | :----- |
