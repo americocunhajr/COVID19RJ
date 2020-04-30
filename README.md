@@ -18,12 +18,37 @@ Esse repositório reune informações e dados relativos à epidemia de COVID-19 
 | :----- |
 |[Dashboard by the CSSE at Johns Hopkins University (JHU)](https://coronavirus.jhu.edu/map.html)|
 |[Interactive dashboard to track COVID-19 (Johns Hopkins University)](https://systems.jhu.edu/research/public-health/ncov/)|
+|[Novel Coronavirus (COVID-19) Cases, provided by JHU CSSE](https://github.com/CSSEGISandData)|
+|[COVID-19 WHO](https://covid19.who.int/)|
 |[Download de dados de COVID-19 no Brasil](https://liibre.github.io/coronabr/)|
 |[A Matemática da Covid-19](http://covid19.mat.br/)|
+|[Observatório COVID-19](https://covid19br.github.io/)|
+|[Brasil por Estado USP](https://ciis.fmrp.usp.br/covid19/estado-br/)|
+|[Data-driven prediction of infection by the SIR model (Work in progress!)](https://cse-lab.ethz.ch/coronavirus/)|
+|[Epidemic Calculator](https://gabgoh.github.io/COVID/index.html)|
+|[COVID-19 Scenarios](https://covid19-scenarios.org/)|
+|[Interactive charts the new confirmed cases of COVID-19](https://aatishb.com/covidtrends/)|
+|[IHME (University of Washington)](http://www.healthdata.org/covid)|
+|[IHME COVID-19 GitHub](https://github.com/ihmeuw-msca/CurveFit)|
+|[Our World in Data](https://ourworldindata.org/coronavirus)|
+|[Coronavirus Source Data (CSV or XLSX)](https://ourworldindata.org/coronavirus-source-data)|
+|[Worldometer](https://www.worldometers.info/coronavirus/)| 
+|[U.S. Health Weather Map](https://healthweather.us/)|
+|[Databrew's COVID-19 epidemic curve explorer](https://datacat.cc/covid/)|
+|[Data-Driven Estimation of End Dates](https://ddi.sutd.edu.sg/)|
+|[Modelagem matemática do COVID-19 em Brasil](https://cic.unb.br/~lucero/covid_pt.html)|
+|[Portal da transparência COVID-19](https://transparencia.registrocivil.org.br/especial-covid)|
+|[Número de casos confirmados de COVID-19 no Brasil](https://github.com/wcota/covid19br)|
+|[Modelo de Dispersão do Coronavírus](https://simulacovid.github.io/covid19/index.html)|
+|[COVID-19 Analytics PUC-Rio](https://covid19analytics.com.br/)|
+
+
 
 ### Artigos sobre Coronavírus e Epidemiologia
 
 A collection of epidemiology articles in SIAM journals, made free as a public service - https://epubs.siam.org/page/EpidemiologyCollection
+
+CCMID Repository - https://cmmid.github.io/topics/covid19/
 
 Articles and updates published by Imperial College COVID-19 Response Team - https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/covid-19-information/
 
