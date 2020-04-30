@@ -5,7 +5,7 @@ Esse repositório reune informações e dados relativos à epidemia de COVID-19 
 
 ## Links Relevantes:
 
-<a class="user-generated" href="malicious.html" target="_blank" rel="noopener"><b>Click me!!1 (now with <code>rel=noopener</code>)</b></a>
+<a href="https://www.google.com" target="_blank">Txt</a>
 
 | *Orgãos governamentais e ONGs* |
 | :----- |
