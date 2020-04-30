@@ -5,8 +5,7 @@ Esse repositório reune informações e dados relativos à epidemia de COVID-19 
 
 ## Links Relevantes:
 
-<a class="user-generated" href="malicious.html" target="_blank" rel="noreferrer"><b>Click me!!1 (now with <code>rel=noreferrer</code>-based workaround)</b></a>
-<a class="user-generated" href="malicious.html" target="_blank" onclick="var otherWindow = window.open(); otherWindow.opener = null; otherWindow.location = href; return false;"><b>Click me!!1 (now with <code>window.open()</code>-based workaround)</b></a>
+<a class="user-generated" href="malicious.html" target="_blank" rel="noopener"><b>Click me!!1 (now with <code>rel=noopener</code>)</b></a>
 
 | *Orgãos governamentais e ONGs* |
 | :----- |
