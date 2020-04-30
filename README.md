@@ -55,6 +55,7 @@ Esse repositório reune informações e dados relativos à epidemia de COVID-19 
 |[Modelo de Dispersão do Coronavírus](https://simulacovid.github.io/covid19/index.html)|
 |[COVID-19 Analytics PUC-Rio](https://covid19analytics.com.br/)|
 |[Mortes por coronavírus no Brasil](https://especiais.g1.globo.com/bemestar/coronavirus/mapa-coronavirus/#/)|
+|[SIR code in python to model the spread of COVID-19](https://github.com/wlyra/covid19)|
 
 | *Solicitações de financimento COVID-19* |
 | :----- |
