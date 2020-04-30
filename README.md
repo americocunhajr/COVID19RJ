@@ -5,8 +5,6 @@ Esse repositório reune informações e dados relativos à epidemia de COVID-19 
 
 ## Links Relevantes:
 
-<a href="https://www.google.com" target="_blank">Txt</a>
-
 | *Orgãos governamentais e ONGs* |
 | :----- |
 | [go](http://stackoverflow.com)|
