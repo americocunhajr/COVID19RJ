@@ -37,6 +37,14 @@ AWS makes COVID-19 datasets freely available - https://www.infoworld.com/article
 
 How does the coronavirus work? - https://www.technologyreview.com/2020/04/15/999476/explainer-how-does-the-coronavirus-work/?utm_medium=tr_social&utm_campaign=site_visitor.unpaid.engagement&utm_source=Facebook#Echobox=1587155881
 
+COVID-19 and hospitalizations for SARI in Brazil: a comparison up to the 12th epidemiological week of 2020 - https://www.scielosp.org/article/csp/2020.v36n4/e00070120/en/
+
+Coronavírus: Por que o isolamento por idade não funciona - https://medium.com/@wlyra/coronav%C3%ADrus-porque-o-isolamento-por-idade-n%C3%A3o-funciona-898d0a4a0d5b
+
+COVID-19 pandemics modeling with SEIR(+CAQH), social distancing, and age stratification. The effect of vertical confinement and release in Brazil. - https://www.medrxiv.org/content/10.1101/2020.04.09.20060053v3
+
+Short-Term Covid-19 Forecast for Latecomers - https://www.dropbox.com/s/z3nqral0u26b50u/Short_term_COVID19_forecast%20V1.pdf?dl=0
+
 ### Modeling Tools and Data Trackers
 
 COVID-19 Dashboard by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University (JHU) - https://coronavirus.jhu.edu/map.html
@@ -73,7 +81,23 @@ Our World in Data (developed by Global Change Data Lab, a UK-based charity) - ht
 
 Worldometer (published by Dadax, a U.S.-based independent media company) - https://www.worldometers.info/coronavirus/ 
 
-U.S. Health Weather Map issued by Kinsa Insights and based on data from smart thermometers -  https://healthweather.us/ 
+U.S. Health Weather Map issued by Kinsa Insights and based on data from smart thermometers -  https://healthweather.us/
+
+Databrew's COVID-19 epidemic curve explorer - https://datacat.cc/covid/
+
+Data-Driven Estimation of End Dates - https://ddi.sutd.edu.sg/
+
+Modelagem matemática do COVID-19 em Brasil - https://cic.unb.br/~lucero/covid_pt.html
+
+Portal da transparência COVID-19 - https://transparencia.registrocivil.org.br/especial-covid
+
+Número de casos confirmados de COVID-19 no Brasil - https://github.com/wcota/covid19br
+
+Coronavirus Source Data (CSV or XLSX) - https://ourworldindata.org/coronavirus-source-data
+
+Modelo de Dispersão do Coronavírus - https://simulacovid.github.io/covid19/index.html
+
+COVID-19 Analytics PUC-Rio - https://covid19analytics.com.br/
 
 ### COVID-19 Funding Solicitations
 
@@ -86,6 +110,8 @@ National Institute of Allergy and Infectious Diseases (NIAID) - https://www.niai
 National Science Foundation (NSF) - https://www.nsf.gov/news/special_reports/coronavirus/
 
 Wellcome Trust - https://wellcome.ac.uk/grant-funding/schemes/epidemic-preparedness-covid-19
+
+Mortes por coronavírus no Brasil - https://especiais.g1.globo.com/bemestar/coronavirus/mapa-coronavirus/#/
 
 ### Resource Pages Provided by Other Organizations and Societies
 
@@ -102,3 +128,5 @@ Research!America - https://www.researchamerica.org/covid19
 SIAM Epidemiology Collection - https://epubs.siam.org/page/EpidemiologyCollection
 
 ICIAM - http://www.iciam.org/mathematics-covid-19
+
+Fighting COVID-19 By Bringing Together Researchers Across Disciplines - https://covid19.researcher.life/
