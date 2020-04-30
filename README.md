@@ -1,9 +1,9 @@
 
 # COVID-19 RJ
 
-<img src="Imagem/logo.png" width="50%">
-
 Esse repositório reune informações e dados relativos à epidemia de COVID-19 no Estado do Rio de Janeiro
+
+<img src="Imagem/logo.png" width="50%">
 
 ## Links Relevantes:
 ###### * OBS: Para abrir um link em uma nova aba, simplesmente clique enquanto pressiona a tecla “Ctrl” no teclado.
