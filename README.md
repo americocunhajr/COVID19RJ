@@ -2,21 +2,17 @@
 
 Esse repositório reune informações e dados relativos à epidemia de COVID-19 no Estado do Rio de Janeiro
 
-## Relevant links: 
+## Links Relevantes: 
 
-### Government Agencies and Non-governmental Organizations
+### Orgãos governamentais e ONGs
 
-U.S. Centers for Disease Control and Prevention - https://www.cdc.gov/coronavirus/2019-ncov/index.html
+|Ministério da Saúde do Brasil | https://saude.gov.br/|
+|U.S. Centers for Disease Control and Prevention | https://www.cdc.gov/coronavirus/2019-ncov/index.html |
+|World Health Organization (WHO) | https://www.who.int/emergencies/diseases/novel-coronavirus-2019 |
+|European Centre for Disease Prevention and Control | https://www.ecdc.europa.eu/en/covid-19-pandemic |
+|U.S. National Institutes of Health (NIH)| https://www.fic.nih.gov/ResearchTopics/Pages/infectiousdiseases-coronavirus-cov.aspx|
 
-World Health Organization (WHO) - https://www.who.int/emergencies/diseases/novel-coronavirus-2019
-
-European Centre for Disease Prevention and Control - https://www.ecdc.europa.eu/en/covid-19-pandemic
-
-U.S. National Institutes of Health (NIH) - https://www.fic.nih.gov/ResearchTopics/Pages/infectiousdiseases-coronavirus-cov.aspx
-
-Brazilian Health Ministry - https://saude.gov.br/
-
-### Articles on Coronaviruses and Epidemiology
+### Artigos sobre Coronavírus e Epidemiologia
 
 A collection of epidemiology articles in SIAM journals, made free as a public service - https://epubs.siam.org/page/EpidemiologyCollection 
 
@@ -45,7 +41,7 @@ COVID-19 pandemics modeling with SEIR(+CAQH), social distancing, and age stratif
 
 Short-Term Covid-19 Forecast for Latecomers - https://www.dropbox.com/s/z3nqral0u26b50u/Short_term_COVID19_forecast%20V1.pdf?dl=0
 
-### Modeling Tools and Data Trackers
+### Ferramentas de modelagem e Dados
 
 COVID-19 Dashboard by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University (JHU) - https://coronavirus.jhu.edu/map.html
 
@@ -99,7 +95,7 @@ Modelo de Dispersão do Coronavírus - https://simulacovid.github.io/covid19/ind
 
 COVID-19 Analytics PUC-Rio - https://covid19analytics.com.br/
 
-### COVID-19 Funding Solicitations
+### Solicitações de financimento COVID-19
 
 Elrha - https://www.elrha.org/funding-opportunity/research-to-support-covid-19-response-in-humanitarian-settings/ 
 
@@ -113,7 +109,7 @@ Wellcome Trust - https://wellcome.ac.uk/grant-funding/schemes/epidemic-preparedn
 
 Mortes por coronavírus no Brasil - https://especiais.g1.globo.com/bemestar/coronavirus/mapa-coronavirus/#/
 
-### Resource Pages Provided by Other Organizations and Societies
+### Páginas de informações fornecidas por outras organizações e sociedades
 
 American Society for Microbiology - https://asm.org/Press-Releases/2020/COVID-19-Resources
 
