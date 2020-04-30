@@ -82,3 +82,5 @@ Esse repositório reune informações e dados relativos à epidemia de COVID-19 
 |[COVID-19 pandemics modeling with SEIR(+CAQH), social distancing, and age stratification. The effect of vertical confinement and release in Brazil.](https://www.medrxiv.org/content/10.1101/2020.04.09.20060053v3)|
 |[Short-Term Covid-19 Forecast for Latecomers](https://www.dropbox.com/s/z3nqral0u26b50u/Short_term_COVID19_forecast%20V1.pdf?dl=0)|
 |[Your Sacrifices are Saving Lives](https://medium.com/@inders/your-sacrifices-are-saving-lives-3c80d88cea39)|
+|[Expected impact of COVID-19 outbreak in a major metropolitan area in Brazil](https://www.medrxiv.org/content/10.1101/2020.03.14.20035873v1)|
+|[A contribution to the mathematical theory of epidemics](https://royalsocietypublishing.org/doi/10.1098/rspa.1927.0118)|
