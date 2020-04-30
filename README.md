@@ -16,8 +16,10 @@ Esse repositório reune informações e dados relativos à epidemia de COVID-19 
 
 | *Dados e Ferramenta de Modelagens* |
 | :----- |
-|[Dashboard by the CSSE at Johns Hopkins University(JHU)](https://coronavirus.jhu.edu/map.html)|
+|[Dashboard by the CSSE at Johns Hopkins University (JHU)](https://coronavirus.jhu.edu/map.html)|
 |[Interactive dashboard to track COVID-19 (Johns Hopkins University)](https://systems.jhu.edu/research/public-health/ncov/)|
+|[Download de dados de COVID-19 no Brasil](https://liibre.github.io/coronabr/)]
+|[A Matemática da Covid-19](http://covid19.mat.br/)|
 
 ### Artigos sobre Coronavírus e Epidemiologia
 
