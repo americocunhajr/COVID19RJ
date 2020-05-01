@@ -20,55 +20,61 @@ Esse repositório reune informações e dados da epidemia de COVID-19, com parti
 | :----- |
 |[American Society for Microbiology](https://asm.org/Press-Releases/2020/COVID-19-Resources)|
 |[Federation of American Scientists](https://fas.org/ncov/)|
-|[MIDAS Network](https://midasnetwork.us/covid-19/)|
-|[MIDAS GitHub](https://github.com/midas-network/COVID-19)| 
+|[Models of Infectious Disease Agent Study (MIDAS) Network](https://midasnetwork.us/covid-19/)|
+|[Models of Infectious Disease Agent Study (MIDAS) GitHub](https://github.com/midas-network/COVID-19)| 
 |[Research!America](https://www.researchamerica.org/covid19)|
-|[SIAM Epidemiology Collection](https://epubs.siam.org/page/EpidemiologyCollection)
-|[ICIAM](http://www.iciam.org/mathematics-covid-19)|
+|[Society for Industrial and Applied Mathematics (SIAM) Epidemiology Collection](https://epubs.siam.org/page/EpidemiologyCollection)
+|[International Council for Industrial and Applied Mathematics (ICIAM)](http://www.iciam.org/mathematics-covid-19)|
 |[Fighting COVID-19 By Bringing Together Researchers Across Disciplines](https://covid19.researcher.life/)|
 
-| *Dados e Ferramenta de Modelagens* |
+|*Monitoramento*|
 | :----- |
 |[Dashboard by the CSSE at Johns Hopkins University (JHU)](https://coronavirus.jhu.edu/map.html)|
+[COVID-19 WHO](https://covid19.who.int/)|
+|[Brasil por Estado USP](https://ciis.fmrp.usp.br/covid19/estado-br/)|
+|[Worldometer](https://www.worldometers.info/coronavirus/)|
+|[U.S. Health Weather Map](https://healthweather.us/)|
+|[Databrew's COVID-19 epidemic curve explorer](https://datacat.cc/covid/)|
+|[Mortes por coronavírus no Brasil](https://especiais.g1.globo.com/bemestar/coronavirus/mapa-coronavirus/#/)|
+
+| *Dados* |
+| :----- |
 |[Interactive dashboard to track COVID-19 (Johns Hopkins University)](https://systems.jhu.edu/research/public-health/ncov/)|
 |[Novel Coronavirus (COVID-19) Cases, provided by JHU CSSE](https://github.com/CSSEGISandData)|
-|[COVID-19 WHO](https://covid19.who.int/)|
 |[Download de dados de COVID-19 no Brasil](https://liibre.github.io/coronabr/)|
-|[A Matemática da Covid-19](http://covid19.mat.br/)|
 |[Observatório COVID-19](https://covid19br.github.io/)|
-|[Brasil por Estado USP](https://ciis.fmrp.usp.br/covid19/estado-br/)|
+|[Institute for Health Metrics and Evaluation (IHME) COVID-19 GitHub](https://github.com/ihmeuw-msca/CurveFit)|
+|[Our World in Data](https://ourworldindata.org/coronavirus)|
+|[Coronavirus Source Data (CSV or XLSX)](https://ourworldindata.org/coronavirus-source-data)|
+|[Data-Driven Estimation of End Dates](https://ddi.sutd.edu.sg/)|
+|[Portal da transparência COVID-19](https://transparencia.registrocivil.org.br/especial-covid)|
+|[Número de casos confirmados de COVID-19 no Brasil](https://github.com/wcota/covid19br)|
+|[COVID-19 Analytics PUC-Rio](https://covid19analytics.com.br/)|
+
+|*Modelagens*|
+| :----- |
+|[A Matemática da Covid-19](http://covid19.mat.br/)|
 |[Data-driven prediction of infection by the SIR model (Work in progress!)](https://cse-lab.ethz.ch/coronavirus/)|
 |[Epidemic Calculator](https://gabgoh.github.io/COVID/index.html)|
 |[COVID-19 Scenarios](https://covid19-scenarios.org/)|
 |[Interactive charts the new confirmed cases of COVID-19](https://aatishb.com/covidtrends/)|
-|[IHME (University of Washington)](http://www.healthdata.org/covid)|
-|[IHME COVID-19 GitHub](https://github.com/ihmeuw-msca/CurveFit)|
-|[Our World in Data](https://ourworldindata.org/coronavirus)|
-|[Coronavirus Source Data (CSV or XLSX)](https://ourworldindata.org/coronavirus-source-data)|
-|[Worldometer](https://www.worldometers.info/coronavirus/)| 
-|[U.S. Health Weather Map](https://healthweather.us/)|
-|[Databrew's COVID-19 epidemic curve explorer](https://datacat.cc/covid/)|
-|[Data-Driven Estimation of End Dates](https://ddi.sutd.edu.sg/)|
+|[Institute for Health Metrics and Evaluation (IHME) (University of Washington)](http://www.healthdata.org/covid)|
 |[Modelagem matemática do COVID-19 em Brasil](https://cic.unb.br/~lucero/covid_pt.html)|
-|[Portal da transparência COVID-19](https://transparencia.registrocivil.org.br/especial-covid)|
-|[Número de casos confirmados de COVID-19 no Brasil](https://github.com/wcota/covid19br)|
 |[Modelo de Dispersão do Coronavírus](https://simulacovid.github.io/covid19/index.html)|
-|[COVID-19 Analytics PUC-Rio](https://covid19analytics.com.br/)|
-|[Mortes por coronavírus no Brasil](https://especiais.g1.globo.com/bemestar/coronavirus/mapa-coronavirus/#/)|
-|[SIR code in python to model the spread of COVID-19](https://github.com/wlyra/covid19)|
+|[SIR (Susceptible, Infected and Recovered) code in python to model the spread of COVID-19](https://github.com/wlyra/covid19)|
 
 | *Solicitações de financimento COVID-19* |
 | :----- |
 |[Elrha](https://www.elrha.org/funding-opportunity/research-to-support-covid-19-response-in-humanitarian-settings/)|
-|[NIH](https://grants.nih.gov/grants/natural_disasters/corona-virus.htm)|
-|[National Institute of Allergy and Infectious Diseases (NIAID)](https://www.niaid.nih.gov/grants-contracts/response-covid-2019-outbreak)| 
-|[National Science Foundation (NSF)](https://www.nsf.gov/news/special_reports/coronavirus/)|
-|[Wellcome Trust](https://wellcome.ac.uk/grant-funding/schemes/epidemic-preparedness-covid-19)|
+|[U.S. National Institutes of Health (NIH)](https://grants.nih.gov/grants/natural_disasters/corona-virus.htm)|
+|[U.S. National Institute of Allergy and Infectious Diseases (NIAID)](https://www.niaid.nih.gov/grants-contracts/response-covid-2019-outbreak)| 
+|[U.S National Science Foundation (NSF)](https://www.nsf.gov/news/special_reports/coronavirus/)|
+|[U.K Wellcome Trust](https://wellcome.ac.uk/grant-funding/schemes/epidemic-preparedness-covid-19)|
 
 | *Artigos sobre Coronavírus e Epidemiologia* |
 | :----- |
 |[A collection of epidemiology articles in SIAM journals, made free as a public service](https://epubs.siam.org/page/EpidemiologyCollection)|
-|[CCMID Repository](https://cmmid.github.io/topics/covid19/)|
+|[Centre for Mathematical of Modelling of Infectious Diseases (CCMID) Repository](https://cmmid.github.io/topics/covid19/)|
 |[Articles and updates published by Imperial College COVID-19 Response Team](https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/covid-19-information/)|
 |[Article using simulations to demonstrate “flattening the curve” (Harry Stevens, Washington Post)]( https://www.washingtonpost.com/graphics/2020/world/corona-simulator/)|
 |[The effect of summer on SARS-CoV-2 (Marc Lipsitch, Harvard School of Public Health)](https://ccdd.hsph.harvard.edu/will-covid-19-go-away-on-its-own-in-warmer-weather/)|
