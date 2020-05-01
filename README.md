@@ -8,7 +8,7 @@ Esse repositório reune informações e dados da epidemia de COVID-19, com parti
 ## Links Relevantes:
 ###### * OBS: Para abrir um link em uma nova aba, simplesmente clique enquanto pressiona a tecla “Ctrl” no teclado.
 
-| *Orgãos governamentais e ONGs* |
+| Orgãos governamentais e ONGs |
 | :----- |
 |[Ministério da Saúde do Brasil](https://saude.gov.br/)|
 |[World Health Organization (WHO)](https://www.who.int/emergencies/diseases/novel-coronavirus-2019)|
@@ -16,7 +16,7 @@ Esse repositório reune informações e dados da epidemia de COVID-19, com parti
 |[U.S. National Institutes of Health (NIH)](https://www.fic.nih.gov/ResearchTopics/Pages/infectiousdiseases-coronavirus-cov.aspx)| 
 |[European Centre for Disease Prevention and Control (ECDC)]( https://www.ecdc.europa.eu/en/covid-19-pandemic)|
 
-| *Páginas de informações fornecidas por outras organizações e sociedades* |
+| Páginas de informações fornecidas por outras organizações e sociedades |
 | :----- |
 |[American Society for Microbiology](https://asm.org/Press-Releases/2020/COVID-19-Resources)|
 |[Federation of American Scientists (FAS)](https://fas.org/ncov/)|
@@ -27,7 +27,7 @@ Esse repositório reune informações e dados da epidemia de COVID-19, com parti
 |[International Council for Industrial and Applied Mathematics (ICIAM)](http://www.iciam.org/mathematics-covid-19)|
 |[Fighting COVID-19 By Bringing Together Researchers Across Disciplines](https://covid19.researcher.life/)|
 
-|*Monitoramento*|
+| Monitoramento |
 | :----- |
 |[COVID-19 Dashboard by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University (JHU)](https://coronavirus.jhu.edu/map.html)|
 |[COVID-19 World Health Organization (WHO)](https://covid19.who.int/)|
@@ -37,7 +37,7 @@ Esse repositório reune informações e dados da epidemia de COVID-19, com parti
 |[Databrew's COVID-19 epidemic curve explorer](https://datacat.cc/covid/)|
 |[Mortes por coronavírus no Brasil](https://especiais.g1.globo.com/bemestar/coronavirus/mapa-coronavirus/#/)|
 
-| *Dados* |
+| Dados |
 | :----- |
 |[Interactive dashboard to track COVID-19 (Johns Hopkins University)](https://systems.jhu.edu/research/public-health/ncov/)|
 |[Novel Coronavirus (COVID-19) Cases, provided by JHU CSSE](https://github.com/CSSEGISandData)|
@@ -51,7 +51,7 @@ Esse repositório reune informações e dados da epidemia de COVID-19, com parti
 |[Número de casos confirmados de COVID-19 no Brasil](https://github.com/wcota/covid19br)|
 |[COVID-19 Analytics PUC-Rio](https://covid19analytics.com.br/)|
 
-|*Modelagens*|
+| Modelagens |
 | :----- |
 |[A Matemática da Covid-19](http://covid19.mat.br/)|
 |[Data-driven prediction of infection by the SIR model (Work in progress!)](https://cse-lab.ethz.ch/coronavirus/)|
@@ -63,7 +63,7 @@ Esse repositório reune informações e dados da epidemia de COVID-19, com parti
 |[Modelo de Dispersão do Coronavírus](https://simulacovid.github.io/covid19/index.html)|
 |[SIR (Susceptible, Infected and Recovered) code in python to model the spread of COVID-19](https://github.com/wlyra/covid19)|
 
-| *Artigos sobre Coronavírus e Epidemiologia* |
+| Artigos sobre Coronavírus e Epidemiologia |
 | :----- |
 |[A collection of epidemiology articles in SIAM journals, made free as a public service](https://epubs.siam.org/page/EpidemiologyCollection)|
 |[Centre for Mathematical of Modelling of Infectious Diseases (CCMID) Repository](https://cmmid.github.io/topics/covid19/)|
@@ -88,7 +88,7 @@ Esse repositório reune informações e dados da epidemia de COVID-19, com parti
 |[The Forensics of Emerging Diseases](https://sinews.siam.org/Details-Page/the-forensics-of-emerging-diseases)|
 |[Modeling the Spread of COVID-19](https://sinews.siam.org/Details-Page/modeling-the-spread-of-covid-19)|
 
-| *Solicitações de financimento COVID-19* |
+| Solicitações de financimento COVID-19 |
 | :----- |
 |[Elrha](https://www.elrha.org/funding-opportunity/research-to-support-covid-19-response-in-humanitarian-settings/)|
 |[U.S. National Institutes of Health (NIH)](https://grants.nih.gov/grants/natural_disasters/corona-virus.htm)|
@@ -98,11 +98,11 @@ Esse repositório reune informações e dados da epidemia de COVID-19, com parti
 
 ## Vídeos educativos:
 
-Americo Cunha Jr
+### Americo Cunha Jr
   - [Xadrez, Feijão e COVID-19: Um Perigo Exponencial](https://www.youtube.com/watch?v=2-7WrBDdp30)
   - [O que simulações computacionais podem (ou não) dizer sobre a pandemia?](https://www.youtube.com/watch?v=ZjfpZSQF_vM&t=156s)
  
- Flávio Codeço Coelho
+ ### Flávio Codeço Coelho
   - [Ferramentas para pensar a Pandemia: o Nosso dashboard](https://www.youtube.com/watch?v=C5K5YVaWmNo&feature=youtu.be)
 
 
