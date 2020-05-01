@@ -107,3 +107,7 @@ Esse repositório reune informações e dados da epidemia de COVID-19, com parti
 
 
 ## Equipe:
+
+## Instituições Participantes:
+
+<img src="Imagem/uerj_logo_cor.png" width="50%"> <img src="Imagem/ufrj_logo_cor.png" width="50%">
