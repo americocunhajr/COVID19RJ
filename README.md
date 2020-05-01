@@ -12,9 +12,9 @@ Esse repositório reune informações e dados da epidemia de COVID-19, com parti
 | :----- |
 |[Ministério da Saúde do Brasil](https://saude.gov.br/)|
 |[World Health Organization (WHO)](https://www.who.int/emergencies/diseases/novel-coronavirus-2019)|
-|[U.S. Centers for Disease Control and Prevention](https://www.cdc.gov/coronavirus/2019-ncov/index.html)| 
+|[U.S. Centers for Disease Control and Prevention (CDC)](https://www.cdc.gov/coronavirus/2019-ncov/index.html)| 
 |[U.S. National Institutes of Health (NIH)](https://www.fic.nih.gov/ResearchTopics/Pages/infectiousdiseases-coronavirus-cov.aspx)| 
-|[European Centre for Disease Prevention and Control]( https://www.ecdc.europa.eu/en/covid-19-pandemic)|
+|[European Centre for Disease Prevention and Control (ECDC)]( https://www.ecdc.europa.eu/en/covid-19-pandemic)|
 
 | *Páginas de informações fornecidas por outras organizações e sociedades* |
 | :----- |
