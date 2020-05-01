@@ -101,6 +101,9 @@ Esse repositório reune informações e dados da epidemia de COVID-19, com parti
 ### Americo Cunha Jr
   - [Xadrez, Feijão e COVID-19: Um Perigo Exponencial](https://www.youtube.com/watch?v=2-7WrBDdp30)
   - [O que simulações computacionais podem (ou não) dizer sobre a pandemia?](https://www.youtube.com/watch?v=ZjfpZSQF_vM&t=156s)
+
+### 3Blue1Brown
+  - [Simulando uma epidemia](https://m.youtube.com/watch?v=gxAaO2rsdIs)
  
  ### Flávio Codeço Coelho
   - [Ferramentas para pensar a Pandemia: o Nosso dashboard](https://www.youtube.com/watch?v=C5K5YVaWmNo&feature=youtu.be)
