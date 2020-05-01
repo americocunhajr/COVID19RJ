@@ -29,8 +29,8 @@ Esse repositório reune informações e dados da epidemia de COVID-19, com parti
 
 |*Monitoramento*|
 | :----- |
-|[Dashboard by the CSSE at Johns Hopkins University (JHU)](https://coronavirus.jhu.edu/map.html)|
-[COVID-19 WHO](https://covid19.who.int/)|
+|[COVID-19 Dashboard by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University (JHU)](https://coronavirus.jhu.edu/map.html)|
+|[COVID-19 World Health Organization (WHO)](https://covid19.who.int/)|
 |[Brasil por Estado USP](https://ciis.fmrp.usp.br/covid19/estado-br/)|
 |[Worldometer](https://www.worldometers.info/coronavirus/)|
 |[U.S. Health Weather Map](https://healthweather.us/)|
