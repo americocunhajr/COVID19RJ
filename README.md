@@ -63,14 +63,6 @@ Esse repositório reune informações e dados da epidemia de COVID-19, com parti
 |[Modelo de Dispersão do Coronavírus](https://simulacovid.github.io/covid19/index.html)|
 |[SIR (Susceptible, Infected and Recovered) code in python to model the spread of COVID-19](https://github.com/wlyra/covid19)|
 
-| *Solicitações de financimento COVID-19* |
-| :----- |
-|[Elrha](https://www.elrha.org/funding-opportunity/research-to-support-covid-19-response-in-humanitarian-settings/)|
-|[U.S. National Institutes of Health (NIH)](https://grants.nih.gov/grants/natural_disasters/corona-virus.htm)|
-|[U.S. National Institute of Allergy and Infectious Diseases (NIAID)](https://www.niaid.nih.gov/grants-contracts/response-covid-2019-outbreak)| 
-|[U.S National Science Foundation (NSF)](https://www.nsf.gov/news/special_reports/coronavirus/)|
-|[U.K Wellcome Trust](https://wellcome.ac.uk/grant-funding/schemes/epidemic-preparedness-covid-19)|
-
 | *Artigos sobre Coronavírus e Epidemiologia* |
 | :----- |
 |[A collection of epidemiology articles in SIAM journals, made free as a public service](https://epubs.siam.org/page/EpidemiologyCollection)|
@@ -90,3 +82,11 @@ Esse repositório reune informações e dados da epidemia de COVID-19, com parti
 |[Your Sacrifices are Saving Lives](https://medium.com/@inders/your-sacrifices-are-saving-lives-3c80d88cea39)|
 |[Expected impact of COVID-19 outbreak in a major metropolitan area in Brazil](https://www.medrxiv.org/content/10.1101/2020.03.14.20035873v1)|
 |[A contribution to the mathematical theory of epidemics](https://royalsocietypublishing.org/doi/10.1098/rspa.1927.0118)|
+
+| *Solicitações de financimento COVID-19* |
+| :----- |
+|[Elrha](https://www.elrha.org/funding-opportunity/research-to-support-covid-19-response-in-humanitarian-settings/)|
+|[U.S. National Institutes of Health (NIH)](https://grants.nih.gov/grants/natural_disasters/corona-virus.htm)|
+|[U.S. National Institute of Allergy and Infectious Diseases (NIAID)](https://www.niaid.nih.gov/grants-contracts/response-covid-2019-outbreak)| 
+|[U.S National Science Foundation (NSF)](https://www.nsf.gov/news/special_reports/coronavirus/)|
+|[U.K Wellcome Trust](https://wellcome.ac.uk/grant-funding/schemes/epidemic-preparedness-covid-19)|
