@@ -96,4 +96,8 @@ Esse repositório reune informações e dados da epidemia de COVID-19, com parti
 |[U.S National Science Foundation (NSF)](https://www.nsf.gov/news/special_reports/coronavirus/)|
 |[U.K Wellcome Trust](https://wellcome.ac.uk/grant-funding/schemes/epidemic-preparedness-covid-19)|
 
+## Vídeos educativos:
+
+
+
 ## Equipe:
