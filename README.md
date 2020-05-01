@@ -19,10 +19,10 @@ Esse repositório reune informações e dados da epidemia de COVID-19, com parti
 | *Páginas de informações fornecidas por outras organizações e sociedades* |
 | :----- |
 |[American Society for Microbiology](https://asm.org/Press-Releases/2020/COVID-19-Resources)|
-|[Federation of American Scientists](https://fas.org/ncov/)|
+|[Federation of American Scientists (FAS)](https://fas.org/ncov/)|
 |[Models of Infectious Disease Agent Study (MIDAS) Network](https://midasnetwork.us/covid-19/)|
 |[Models of Infectious Disease Agent Study (MIDAS) GitHub](https://github.com/midas-network/COVID-19)| 
-|[Research!America](https://www.researchamerica.org/covid19)|
+|[Research Amer!ca](https://www.researchamerica.org/covid19)|
 |[Society for Industrial and Applied Mathematics (SIAM) Epidemiology Collection](https://epubs.siam.org/page/EpidemiologyCollection)
 |[International Council for Industrial and Applied Mathematics (ICIAM)](http://www.iciam.org/mathematics-covid-19)|
 |[Fighting COVID-19 By Bringing Together Researchers Across Disciplines](https://covid19.researcher.life/)|
