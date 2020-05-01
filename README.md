@@ -82,6 +82,11 @@ Esse repositório reune informações e dados da epidemia de COVID-19, com parti
 |[Your Sacrifices are Saving Lives](https://medium.com/@inders/your-sacrifices-are-saving-lives-3c80d88cea39)|
 |[Expected impact of COVID-19 outbreak in a major metropolitan area in Brazil](https://www.medrxiv.org/content/10.1101/2020.03.14.20035873v1)|
 |[A contribution to the mathematical theory of epidemics](https://royalsocietypublishing.org/doi/10.1098/rspa.1927.0118)|
+|[Modelling Global Outbreaks and Proliferation of COVID-19](https://sinews.siam.org/Details-Page/modelling-global-outbreaks-and-proliferation-of-covid-19)|
+|[A Model to Predict COVID-19 Epidemics with Applications to South Korea, Italy, and Spain](https://sinews.siam.org/Details-Page/a-model-to-predict-covid-19-epidemics-with-applications-to-south-korea-italy-and-spain)|
+|[Choosing Intervention Strategies During an Emerging Epidemic](https://sinews.siam.org/Details-Page/choosing-intervention-strategies-during-an-emerging-epidemic)|
+|[The Forensics of Emerging Diseases](https://sinews.siam.org/Details-Page/the-forensics-of-emerging-diseases)|
+|[Modeling the Spread of COVID-19](https://sinews.siam.org/Details-Page/modeling-the-spread-of-covid-19)|
 
 | *Solicitações de financimento COVID-19* |
 | :----- |
@@ -90,3 +95,5 @@ Esse repositório reune informações e dados da epidemia de COVID-19, com parti
 |[U.S. National Institute of Allergy and Infectious Diseases (NIAID)](https://www.niaid.nih.gov/grants-contracts/response-covid-2019-outbreak)| 
 |[U.S National Science Foundation (NSF)](https://www.nsf.gov/news/special_reports/coronavirus/)|
 |[U.K Wellcome Trust](https://wellcome.ac.uk/grant-funding/schemes/epidemic-preparedness-covid-19)|
+
+## Equipe:
