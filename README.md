@@ -3,7 +3,7 @@
 
 Esse repositório reune informações e dados da epidemia de COVID-19, com particular interesse em catalogar informações relativas ao progresso dessa doença no Estado do Rio de Janeiro.
 
-<img src="Imagem/logo.png" width="50%">
+<img src="Imagem/covid19-rj.png" width="50%">
 
 ## Links Relevantes:
 ###### * OBS: Para abrir um link em uma nova aba, simplesmente clique enquanto pressiona a tecla “Ctrl” no teclado.
