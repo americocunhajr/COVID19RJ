@@ -109,23 +109,25 @@ Esse repositório reune informações e dados da epidemia de COVID-19, com parti
 ## Equipe:
 
 Professores:
-- Adriano Cortês (UFRJ)
-- Americo Cunha (UERJ) - www.americocunha.org
-- Karla Figueiredo (UERJ)
-- Lisandro Lovisolo (UERJ)
-- Rodrigo Burgos (UERJ)
+- Adriano Cortês
+- Americo Cunha
+- Karla Figueiredo
+- Lisandro Lovisolo
+- Rodrigo Burgos
 
 Estudantes:
-- Bruna Pavlack (UNESP)
-- Diego Matos (UERJ)
-- Eber Dantas (UFRJ)
-- Julio Basilio (UERJ)
-- Leonardo de la Roca (UERJ)
-- Lucas Chaves (UFU)
-- Marcos Vinicius Issa (UERJ)
-- Michel Tosin (UERJ)
-- Roberto Luo (UERJ)
+- Bruna Pavlack
+- Diego Matos
+- Eber Dantas
+- Julio Basilio
+- Leonardo de la Roca
+- Lucas Chaves
+- Marcos Vinicius Issa
+- Michel Tosin
+- Roberto Luo
 
+Design Gráfico:
+Amanda Cunha
 
 ## Instituições Participantes:
 
