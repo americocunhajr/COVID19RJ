@@ -127,7 +127,7 @@ Estudantes:
 - Roberto Luo
 
 Design Gráfico:
-Amanda Cunha
+- Amanda Cunha Guyt
 
 ## Instituições Participantes:
 
