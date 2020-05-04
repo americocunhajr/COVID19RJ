@@ -73,7 +73,7 @@ Esse repositório reune informações e dados da epidemia de COVID-19, com parti
 |[A contribution to the mathematical theory of epidemics](https://royalsocietypublishing.org/doi/10.1098/rspa.1927.0118)|
 |[The Forensics of Emerging Diseases](https://sinews.siam.org/Details-Page/the-forensics-of-emerging-diseases)|
 |[Modeling the Spread of COVID-19](https://sinews.siam.org/Details-Page/modeling-the-spread-of-covid-19)|
-|[How Control Theory Can Help Us Control COVID-19](https://spectrum.ieee.org/biomedical/diagnostics/how-control-theory-can-help-control-covid19)|
+
 
 | Artigos Webjornais |
 | :----- |
@@ -87,6 +87,7 @@ Esse repositório reune informações e dados da epidemia de COVID-19, com parti
 |[Modelling Global Outbreaks and Proliferation of COVID-19](https://sinews.siam.org/Details-Page/modelling-global-outbreaks-and-proliferation-of-covid-19)|
 |[A Model to Predict COVID-19 Epidemics with Applications to South Korea, Italy, and Spain](https://sinews.siam.org/Details-Page/a-model-to-predict-covid-19-epidemics-with-applications-to-south-korea-italy-and-spain)|
 |[Choosing Intervention Strategies During an Emerging Epidemic](https://sinews.siam.org/Details-Page/choosing-intervention-strategies-during-an-emerging-epidemic)|
+|[How Control Theory Can Help Us Control COVID-19](https://spectrum.ieee.org/biomedical/diagnostics/how-control-theory-can-help-control-covid19)|
 
 | Solicitações de financimento COVID-19 |
 | :----- |
