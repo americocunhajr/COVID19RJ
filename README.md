@@ -5,6 +5,16 @@ Esse repositório reune informações e dados da epidemia de COVID-19, com parti
 ## Links Relevantes:
 ###### * OBS: Para abrir um link em uma nova aba, simplesmente clique enquanto pressiona a tecla “Ctrl” no teclado.
 
+| Monitoramento |
+| :----- |
+|[COVID-19 Dashboard by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University (JHU)](https://coronavirus.jhu.edu/map.html)|
+|[COVID-19 World Health Organization (WHO)](https://covid19.who.int/)|
+|[Brasil por Estado USP](https://ciis.fmrp.usp.br/covid19/estado-br/)|
+|[Worldometer](https://www.worldometers.info/coronavirus/)|
+|[U.S. Health Weather Map](https://healthweather.us/)|
+|[Databrew's COVID-19 epidemic curve explorer](https://datacat.cc/covid/)|
+|[Mortes por coronavírus no Brasil](https://especiais.g1.globo.com/bemestar/coronavirus/mapa-coronavirus/#/)|
+
 | Orgãos governamentais e ONGs |
 | :----- |
 |[Ministério da Saúde do Brasil](https://saude.gov.br/)|
@@ -24,19 +34,9 @@ Esse repositório reune informações e dados da epidemia de COVID-19, com parti
 |[International Council for Industrial and Applied Mathematics (ICIAM)](http://www.iciam.org/mathematics-covid-19)|
 |[Fighting COVID-19 By Bringing Together Researchers Across Disciplines](https://covid19.researcher.life/)|
 
-| Monitoramento |
-| :----- |
-|[COVID-19 Dashboard by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University (JHU)](https://coronavirus.jhu.edu/map.html)|
-|[COVID-19 World Health Organization (WHO)](https://covid19.who.int/)|
-|[Brasil por Estado USP](https://ciis.fmrp.usp.br/covid19/estado-br/)|
-|[Worldometer](https://www.worldometers.info/coronavirus/)|
-|[U.S. Health Weather Map](https://healthweather.us/)|
-|[Databrew's COVID-19 epidemic curve explorer](https://datacat.cc/covid/)|
-|[Mortes por coronavírus no Brasil](https://especiais.g1.globo.com/bemestar/coronavirus/mapa-coronavirus/#/)|
-
 | Dados |
 | :----- |
-|[Interactive dashboard to track COVID-19 (Johns Hopkins University)](https://systems.jhu.edu/research/public-health/ncov/)|
+|[Interactive dashboard to track COVID-19 (Johns Hopkins University](https://systems.jhu.edu/research/public-health/ncov/)|
 |[Novel Coronavirus (COVID-19) Cases, provided by JHU CSSE](https://github.com/CSSEGISandData)|
 |[Download de dados de COVID-19 no Brasil](https://liibre.github.io/coronabr/)|
 |[Observatório COVID-19](https://covid19br.github.io/)|
@@ -62,6 +62,7 @@ Esse repositório reune informações e dados da epidemia de COVID-19, com parti
 
 | Artigos sobre Coronavírus e Epidemiologia |
 | :----- |
+|[Why outbreaks like coronavirus spread exponentially, and how to “flatten the curve”](https://www.washingtonpost.com/graphics/2020/world/corona-simulator/)|
 |[A collection of epidemiology articles in SIAM journals, made free as a public service](https://epubs.siam.org/page/EpidemiologyCollection)|
 |[Centre for Mathematical of Modelling of Infectious Diseases (CCMID) Repository](https://cmmid.github.io/topics/covid19/)|
 |[Articles and updates published by Imperial College COVID-19 Response Team](https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/covid-19-information/)|
@@ -84,6 +85,7 @@ Esse repositório reune informações e dados da epidemia de COVID-19, com parti
 |[Choosing Intervention Strategies During an Emerging Epidemic](https://sinews.siam.org/Details-Page/choosing-intervention-strategies-during-an-emerging-epidemic)|
 |[The Forensics of Emerging Diseases](https://sinews.siam.org/Details-Page/the-forensics-of-emerging-diseases)|
 |[Modeling the Spread of COVID-19](https://sinews.siam.org/Details-Page/modeling-the-spread-of-covid-19)|
+|[How Control Theory Can Help Us Control COVID-19](https://spectrum.ieee.org/biomedical/diagnostics/how-control-theory-can-help-control-covid19)|
 
 | Solicitações de financimento COVID-19 |
 | :----- |
@@ -105,6 +107,12 @@ Esse repositório reune informações e dados da epidemia de COVID-19, com parti
  ### Flávio Codeço Coelho
   - [Ferramentas para pensar a Pandemia: o Nosso dashboard](https://www.youtube.com/watch?v=C5K5YVaWmNo&feature=youtu.be)
 
+### Steve Brunton
+  - [Control Theory and COVID-19](https://youtu.be/BTLZu-1IMcE)
+
+### Marcelo Feo
+  - [Coronavirus e Vitórias-Régias: Entendendo a Curva Exponencial do Coronavirus](https://youtu.be/s-lgS-4Xqy0)
+  - [A quarentena pode estar salvando o Brasil. Entenda o porquê](https://youtu.be/cyEGb1Osu0k)
 
 ## Equipe:
 
