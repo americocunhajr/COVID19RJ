@@ -69,7 +69,7 @@ Esse repositório reune informações e dados da epidemia de COVID-19, com parti
 |[COVID-19 and hospitalizations for SARI in Brazil: a comparison up to the 12th epidemiological week of 2020](https://www.scielosp.org/article/csp/2020.v36n4/e00070120/en/)
 |[COVID-19 pandemics modeling with SEIR(+CAQH), social distancing, and age stratification. The effect of vertical confinement and release in Brazil.](https://www.medrxiv.org/content/10.1101/2020.04.09.20060053v3)|
 |[Short-Term Covid-19 Forecast for Latecomers](https://www.dropbox.com/s/z3nqral0u26b50u/Short_term_COVID19_forecast%20V1.pdf?dl=0)|
-|[Expected impact of COVID-19 outbreak in a major metropolitan area in Brazil (https://www.medrxiv.org/content/10.1101/2020.03.14.20035873v1)|
+|[Expected impact of COVID-19 outbreak in a major metropolitan area in Brazil] (https://www.medrxiv.org/content/10.1101/2020.03.14.20035873v1)|
 |[A contribution to the mathematical theory of epidemics](https://royalsocietypublishing.org/doi/10.1098/rspa.1927.0118)|
 |[The Forensics of Emerging Diseases](https://sinews.siam.org/Details-Page/the-forensics-of-emerging-diseases)|
 |[Modeling the Spread of COVID-19](https://sinews.siam.org/Details-Page/modeling-the-spread-of-covid-19)|
