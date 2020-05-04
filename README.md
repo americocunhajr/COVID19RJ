@@ -62,30 +62,31 @@ Esse repositório reune informações e dados da epidemia de COVID-19, com parti
 
 | Artigos sobre Coronavírus e Epidemiologia |
 | :----- |
-|[Why outbreaks like coronavirus spread exponentially, and how to “flatten the curve”](https://www.washingtonpost.com/graphics/2020/world/corona-simulator/)|
 |[A collection of epidemiology articles in SIAM journals, made free as a public service](https://epubs.siam.org/page/EpidemiologyCollection)|
 |[Centre for Mathematical of Modelling of Infectious Diseases (CCMID) Repository](https://cmmid.github.io/topics/covid19/)|
 |[Articles and updates published by Imperial College COVID-19 Response Team](https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/covid-19-information/)|
-|[Article using simulations to demonstrate “flattening the curve” (Harry Stevens, Washington Post)]( https://www.washingtonpost.com/graphics/2020/world/corona-simulator/)|
-|[The effect of summer on SARS-CoV-2 (Marc Lipsitch, Harvard School of Public Health)](https://ccdd.hsph.harvard.edu/will-covid-19-go-away-on-its-own-in-warmer-weather/)|
-|[The dynamics of COVID-19 under social distancing (Ezekiel Emanuel et al., University of Pennsylvania in New York Times op-ed)](https://www.nytimes.com/2020/03/17/opinion/coronavirus-social-distancing-effect.html)|
-|[U.S. National Institutes of Health (NIH)](https://www.fic.nih.gov/ResearchTopics/Pages/infectiousdiseases-coronavirus-cov.aspx)|
 |[Why is it difficult to accurately predict the COVID-19 epidemic?](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7104073/)|
-|[AWS makes COVID-19 datasets freely available](https://www.infoworld.com/article/3537593/aws-makes-covid-19-datasets-freely-available.html)|
-|[How does the coronavirus work?](https://www.technologyreview.com/2020/04/15/999476/explainer-how-does-the-coronavirus-work/?utm_medium=tr_social&utm_campaign=site_visitor.unpaid.engagement&utm_source=Facebook#Echobox=1587155881)|
 |[COVID-19 and hospitalizations for SARI in Brazil: a comparison up to the 12th epidemiological week of 2020](https://www.scielosp.org/article/csp/2020.v36n4/e00070120/en/)
-|[Coronavírus: Por que o isolamento por idade não funciona](https://medium.com/@wlyra/coronav%C3%ADrus-porque-o-isolamento-por-idade-n%C3%A3o-funciona-898d0a4a0d5b)|
 |[COVID-19 pandemics modeling with SEIR(+CAQH), social distancing, and age stratification. The effect of vertical confinement and release in Brazil.](https://www.medrxiv.org/content/10.1101/2020.04.09.20060053v3)|
 |[Short-Term Covid-19 Forecast for Latecomers](https://www.dropbox.com/s/z3nqral0u26b50u/Short_term_COVID19_forecast%20V1.pdf?dl=0)|
-|[Your Sacrifices are Saving Lives](https://medium.com/@inders/your-sacrifices-are-saving-lives-3c80d88cea39)|
-|[Expected impact of COVID-19 outbreak in a major metropolitan area in Brazil](https://www.medrxiv.org/content/10.1101/2020.03.14.20035873v1)|
+|[Expected impact of COVID-19 outbreak in a major metropolitan area in Brazil (https://www.medrxiv.org/content/10.1101/2020.03.14.20035873v1)|
 |[A contribution to the mathematical theory of epidemics](https://royalsocietypublishing.org/doi/10.1098/rspa.1927.0118)|
-|[Modelling Global Outbreaks and Proliferation of COVID-19](https://sinews.siam.org/Details-Page/modelling-global-outbreaks-and-proliferation-of-covid-19)|
-|[A Model to Predict COVID-19 Epidemics with Applications to South Korea, Italy, and Spain](https://sinews.siam.org/Details-Page/a-model-to-predict-covid-19-epidemics-with-applications-to-south-korea-italy-and-spain)|
-|[Choosing Intervention Strategies During an Emerging Epidemic](https://sinews.siam.org/Details-Page/choosing-intervention-strategies-during-an-emerging-epidemic)|
 |[The Forensics of Emerging Diseases](https://sinews.siam.org/Details-Page/the-forensics-of-emerging-diseases)|
 |[Modeling the Spread of COVID-19](https://sinews.siam.org/Details-Page/modeling-the-spread-of-covid-19)|
 |[How Control Theory Can Help Us Control COVID-19](https://spectrum.ieee.org/biomedical/diagnostics/how-control-theory-can-help-control-covid19)|
+
+| Artigos Webjornais |
+| :----- |
+|[Why outbreaks like coronavirus spread exponentially, and how to “flatten the curve”](https://www.washingtonpost.com/graphics/2020/world/corona-simulator/)|
+|[The effect of summer on SARS-CoV-2 (Marc Lipsitch, Harvard School of Public Health)](https://ccdd.hsph.harvard.edu/will-covid-19-go-away-on-its-own-in-warmer-weather/)|
+|[The dynamics of COVID-19 under social distancing (Ezekiel Emanuel et al., University of Pennsylvania in New York Times op-ed)](https://www.nytimes.com/2020/03/17/opinion/coronavirus-social-distancing-effect.html)|
+|[AWS makes COVID-19 datasets freely available](https://www.infoworld.com/article/3537593/aws-makes-covid-19-datasets-freely-available.html)|
+|[How does the coronavirus work?](https://www.technologyreview.com/2020/04/15/999476/explainer-how-does-the-coronavirus-work/?utm_medium=tr_social&utm_campaign=site_visitor.unpaid.engagement&utm_source=Facebook#Echobox=1587155881)|
+|[Coronavírus: Por que o isolamento por idade não funciona](https://medium.com/@wlyra/coronav%C3%ADrus-porque-o-isolamento-por-idade-n%C3%A3o-funciona-898d0a4a0d5b)|
+|[Your Sacrifices are Saving Lives](https://medium.com/@inders/your-sacrifices-are-saving-lives-3c80d88cea39)|
+|[Modelling Global Outbreaks and Proliferation of COVID-19](https://sinews.siam.org/Details-Page/modelling-global-outbreaks-and-proliferation-of-covid-19)|
+|[A Model to Predict COVID-19 Epidemics with Applications to South Korea, Italy, and Spain](https://sinews.siam.org/Details-Page/a-model-to-predict-covid-19-epidemics-with-applications-to-south-korea-italy-and-spain)|
+|[Choosing Intervention Strategies During an Emerging Epidemic](https://sinews.siam.org/Details-Page/choosing-intervention-strategies-during-an-emerging-epidemic)|
 
 | Solicitações de financimento COVID-19 |
 | :----- |
@@ -94,6 +95,7 @@ Esse repositório reune informações e dados da epidemia de COVID-19, com parti
 |[U.S. National Institute of Allergy and Infectious Diseases (NIAID)](https://www.niaid.nih.gov/grants-contracts/response-covid-2019-outbreak)| 
 |[U.S National Science Foundation (NSF)](https://www.nsf.gov/news/special_reports/coronavirus/)|
 |[U.K Wellcome Trust](https://wellcome.ac.uk/grant-funding/schemes/epidemic-preparedness-covid-19)|
+|[U.S. National Institutes of Health (NIH)](https://www.fic.nih.gov/ResearchTopics/Pages/infectiousdiseases-coronavirus-cov.aspx)|
 
 ## Vídeos educativos:
 
