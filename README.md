@@ -120,12 +120,12 @@ Esse repositório reune informações e dados da epidemia de COVID-19, com parti
 ## Equipe:
 
 Pesquisadores:
-- Adriano Cortês
-- Americo Cunha
-- Karla Figueiredo
-- Lisandro Lovisolo
-- Malú Grave
-- Rodrigo Burgos
+- Prof. Adriano Cortês
+- Prof. Americo Cunha
+- Profa. Karla Figueiredo
+- Prof. Lisandro Lovisolo
+- Dra. Malú Grave
+- Prof. Rodrigo Burgos
 
 Estudantes:
 - Bruna Pavlack
