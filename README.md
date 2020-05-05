@@ -1,4 +1,4 @@
-<img src="Imagem/COVID19_CapaSite_R00.png " width="50%">
+<img src="logos/COVID19_CapaSite_R00.png " width="50%">
 
 Esse repositório reune informações e dados da epidemia de COVID-19, com particular interesse em catalogar informações relativas ao progresso dessa doença no Estado do Rio de Janeiro.
 
@@ -142,4 +142,4 @@ Design Gráfico:
 
 ## Instituições Participantes:
 
-<img src="Imagem/uerj_logo_cor.png" width="13%">     <img src="Imagem/ufrj_logo_cor.png" width="10%">
+<img src="logos/uerj_logo_cor.png" width="13%">     <img src="logos/ufrj_logo_cor.png" width="10%">
