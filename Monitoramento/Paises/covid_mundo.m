@@ -340,10 +340,10 @@ figure (1);
 [n1,n2] = size(BR_deaths);
 n=n1;
 days_state = 0:1:n-1;
-figBR=semilogy(days_state,BR_deaths(:,4),'DisplayName','Brasil')
+figBR=semilogy(days_state,BR_deaths(:,4),'DisplayName','Brazil')
 hold on;
 set(figBR,'LineWidth', 1,"color",colorBR,'Linestyle',lineBR);
-text (n-1, BR_deaths(n,4), [' Brasil'],'FontSize',fonte_estados,"color",colorBR)
+text (n-1, BR_deaths(n,4), [' Brazil'],'FontSize',fonte_estados,"color",colorBR)
 
 [n1,n2] = size(US_deaths);
 n=n1;
@@ -427,10 +427,10 @@ figure (2);
 [n1,n2] = size(BR_cases);
 n=n1;
 days_state = 0:1:n-1;
-figBR=semilogy(days_state,BR_cases(:,2),'DisplayName','Brasil')
+figBR=semilogy(days_state,BR_cases(:,2),'DisplayName','Brazil')
 hold on;
 set(figBR,'LineWidth', 1,"color",colorBR,'Linestyle',lineBR)
-text (n-1, BR_cases(n,2), [' Brasil'],'FontSize',fonte_estados,"color",colorBR);
+text (n-1, BR_cases(n,2), [' Brazil'],'FontSize',fonte_estados,"color",colorBR);
 
 [n1,n2] = size(US_cases);
 n=n1;
@@ -511,10 +511,10 @@ close(figure(2));
 %Plotar novas mortes X total de mortes (por milhao de hab.)
 figure (3);
 
-figBR=loglog(BR_per_million_week(:,4),BR_per_million_week(:,3),'DisplayName','Brasil')
+figBR=loglog(BR_per_million_week(:,4),BR_per_million_week(:,3),'DisplayName','Brazil')
 hold on;
 set(figBR,'LineWidth', 1,"color",colorBR,'Linestyle',lineBR)
-text (BR_per_million_week(D,4), BR_per_million_week(D,3), [' BR'],'FontSize',fonte_estados,"color",colorBR);
+text (BR_per_million_week(D,4), BR_per_million_week(D,3), [' Brazil'],'FontSize',fonte_estados,"color",colorBR);
 
 figUS=loglog(US_per_million_week(:,4),US_per_million_week(:,3),'DisplayName','US')
 hold on;
@@ -582,10 +582,10 @@ close(figure(3));
 figure (4);
 
 
-figBR=loglog(BR_per_million_week(:,2),BR_per_million_week(:,1),'DisplayName','Brasil')
+figBR=loglog(BR_per_million_week(:,2),BR_per_million_week(:,1),'DisplayName','Brazil')
 hold on;
 set(figBR,'LineWidth', 1,"color",colorBR,'Linestyle',lineBR)
-text (BR_per_million_week(D,2), BR_per_million_week(D,1), [' Brasil'],'FontSize',fonte_estados,"color",colorBR);
+text (BR_per_million_week(D,2), BR_per_million_week(D,1), [' Brazil'],'FontSize',fonte_estados,"color",colorBR);
 
 figUS=loglog(US_per_million_week(:,2),US_per_million_week(:,1),'DisplayName','US')
 hold on;
