@@ -2,6 +2,7 @@
 
 Esse repositório reune informações e dados da epidemia de COVID-19, com particular interesse em catalogar informações relativas ao progresso dessa doença no Estado do Rio de Janeiro.
 
+www.covid19rj.org
 
 
 ## Equipe:
