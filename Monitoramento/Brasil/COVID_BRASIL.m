@@ -1276,7 +1276,7 @@ uistack(ha,'bottom');
 % To create the logo at the bottom left corner of the plot use 
 % the next two lines
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[.1 -0.0], .22,.12,]);
+ha2=axes('position',[haPos([3 1])-[.12 -0.0], .24,.12,]);
 % To place the logo at the bottom left corner of the figure window
 % uncomment the line below and comment the above two lines
 %ha2=axes('position',[0, 0, .1,.04,]);
@@ -1290,7 +1290,7 @@ colormap (map)
 % into the axes again. Also, make the axes invisible
 set(ha2,'handlevisibility','off','visible','off')
 
-saveas(gcf,[name,'_letalidade_',datestr(dia(n1dia,n2dia),29),'.png']);
+print(gcf,[name,'_letalidade_',datestr(dia(n1dia,n2dia),29),'.png'],'-dpng','-r300');
 
 close(figure((region-1)*4 + 1));
 
@@ -1577,7 +1577,7 @@ uistack(ha,'bottom');
 % To create the logo at the bottom left corner of the plot use 
 % the next two lines
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[.1 -0.0], .22,.12,]);
+ha2=axes('position',[haPos([3 1])-[.12 -0.0], .24,.12,]);
 % To place the logo at the bottom left corner of the figure window
 % uncomment the line below and comment the above two lines
 %ha2=axes('position',[0, 0, .1,.04,]);
@@ -1591,7 +1591,8 @@ colormap (map)
 % into the axes again. Also, make the axes invisible
 set(ha2,'handlevisibility','off','visible','off')
 
-saveas(gcf,[name,'_contagio_',datestr(dia(n1dia,n2dia),29),'.png']);
+print(gcf,[name,'_contagio_',datestr(dia(n1dia,n2dia),29),'.png'],'-dpng','-r300');
+
 
 close(figure((region-1)*4 + 2));
 
@@ -1795,7 +1796,7 @@ uistack(ha,'bottom');
 % To create the logo at the bottom left corner of the plot use 
 % the next two lines
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[.1 -0.0], .22,.12,]);
+ha2=axes('position',[haPos([3 1])-[.12 -0.0], .24,.12,]);
 % To place the logo at the bottom left corner of the figure window
 % uncomment the line below and comment the above two lines
 %ha2=axes('position',[0, 0, .1,.04,]);
@@ -1809,7 +1810,7 @@ colormap (map)
 % into the axes again. Also, make the axes invisible
 set(ha2,'handlevisibility','off','visible','off')
 
-saveas(gcf,[name,'_informativo-mortes_',datestr(dia(n1dia,n2dia),29),'.png']);
+print(gcf,[name,'_informativo-mortes_',datestr(dia(n1dia,n2dia),29),'.png'],'-dpng','-r300');
 
 close(figure((region-1)*4 + 3));
 
@@ -2011,7 +2012,7 @@ uistack(ha,'bottom');
 % To create the logo at the bottom left corner of the plot use 
 % the next two lines
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[.1 -0.0], .22,.12,]);
+ha2=axes('position',[haPos([3 1])-[.12 -0.0], .24,.12,]);
 % To place the logo at the bottom left corner of the figure window
 % uncomment the line below and comment the above two lines
 %ha2=axes('position',[0, 0, .1,.04,]);
@@ -2025,7 +2026,7 @@ colormap (map)
 % into the axes again. Also, make the axes invisible
 set(ha2,'handlevisibility','off','visible','off')
 
-saveas(gcf,[name,'_informativo-casos_',datestr(dia(n1dia,n2dia),29),'.png']);
+print(gcf,[name,'_informativo-casos_',datestr(dia(n1dia,n2dia),29),'.png'],'-dpng','-r300');
 
 close(figure((region-1)*4 + 4));
 
