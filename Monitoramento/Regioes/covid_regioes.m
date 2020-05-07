@@ -333,6 +333,10 @@ axis_new_deaths = 10^(ceil(log10(max_aux)));
 max_aux = max([max(NORTE_per_million_week(:,1)) max(NORDESTE_per_million_week(:,1)) max(SUDESTE_per_million_week(:,1)) max(SUL_per_million_week(:,1)) max(CENTRO_per_million_week(:,1)) max(BR_per_million_week(:,1)) ]);
 axis_new_cases = 10^(ceil(log10(max_aux)));
 
+%Para deixar igual aos gráficos do Brasil (ajuste manual)
+axis_cases = 10000;
+axis_deaths = 1000;
+
 %Estilos e cores
 %Fontes, estilos e cores
 fonte_titulo = 9;
@@ -364,7 +368,7 @@ days_state = 0:1:n-1;
 figNORTE=semilogy(days_state,NORTE_deaths(:,4))
 hold on;
 set(figNORTE,'LineWidth', 1,"color",colorNORTE,'DisplayName','Norte','Linestyle',lineNORTE)
-text (n-1, NORTE_deaths(n1,4), [' Norte'],'FontSize',fonte_estados,"color",colorNORTE);
+text (n-1, NORTE_deaths(n,4), [' Norte'],'FontSize',fonte_estados,"color",colorNORTE);
 
 [n1,n2] = size(NORDESTE_deaths);
 n=n1;
@@ -372,7 +376,7 @@ days_state = 0:1:n-1;
 figNORDESTE=semilogy(days_state,NORDESTE_deaths(:,4))
 hold on;
 set(figNORDESTE,'LineWidth', 1,"color",colorNORDESTE,'DisplayName','Nordeste','Linestyle',lineNORDESTE)
-text (n-1, NORDESTE_deaths(n1,4), [' Nordeste'],'FontSize',fonte_estados,"color",colorNORDESTE);
+text (n-1, NORDESTE_deaths(n,4), [' Nordeste'],'FontSize',fonte_estados,"color",colorNORDESTE);
 
 [n1,n2] = size(SUDESTE_deaths);
 n=n1;
@@ -380,7 +384,7 @@ days_state = 0:1:n-1;
 figSUDESTE=semilogy(days_state,SUDESTE_deaths(:,4))
 hold on;
 set(figSUDESTE,'LineWidth', 1,"color",colorSUDESTE,'DisplayName','Sudeste','Linestyle',lineSUDESTE)
-text (n-1, SUDESTE_deaths(n1,4), [' Sudeste'],'FontSize',fonte_estados,"color",colorSUDESTE);
+text (n-1, SUDESTE_deaths(n,4), [' Sudeste'],'FontSize',fonte_estados,"color",colorSUDESTE);
 
 [n1,n2] = size(SUL_deaths);
 n=n1;
@@ -388,7 +392,7 @@ days_state = 0:1:n-1;
 figSUL=semilogy(days_state,SUL_deaths(:,4))
 hold on;
 set(figSUL,'LineWidth', 1,"color",colorSUL,'DisplayName','Sul','Linestyle',lineSUL)
-text (n-1, SUL_deaths(n1,4), [' Sul'],'FontSize',fonte_estados,"color",colorSUL);
+text (n-1, SUL_deaths(n,4), [' Sul'],'FontSize',fonte_estados,"color",colorSUL);
 
 [n1,n2] = size(CENTRO_deaths);
 n=n1;
@@ -396,7 +400,7 @@ days_state = 0:1:n-1;
 figCENTRO=semilogy(days_state,CENTRO_deaths(:,4))
 hold on;
 set(figCENTRO,'LineWidth', 1,"color",colorCENTRO,'DisplayName','Centro-Oeste','Linestyle',lineCENTRO)
-text (n-1, CENTRO_deaths(n1,4), [' Centro-Oeste'],'FontSize',fonte_estados,"color",colorCENTRO);
+text (n-1, CENTRO_deaths(n,4), [' Centro-Oeste'],'FontSize',fonte_estados,"color",colorCENTRO);
 
 
 if (plotBR == 1)
@@ -425,7 +429,7 @@ uistack(ha,'bottom');
 % To create the logo at the bottom left corner of the plot use 
 % the next two lines
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[.1 -0.0], .22,.12,]);
+ha2=axes('position',[haPos([3 1])-[.12 -0.0], .24,.12,]);
 % To place the logo at the bottom left corner of the figure window
 % uncomment the line below and comment the above two lines
 %ha2=axes('position',[0, 0, .1,.04,]);
@@ -439,7 +443,7 @@ colormap (map)
 % into the axes again. Also, make the axes invisible
 set(ha2,'handlevisibility','off','visible','off')
 
-saveas(gcf,[name,'_letalidade_',datestr(dia(n1dia,n2dia),29),'.png']);
+print(gcf,[name,'_letalidade_',datestr(dia(n1dia,n2dia),29),'.png'],'-dpng','-r300');
 
 close(figure(1));
 
@@ -514,7 +518,7 @@ uistack(ha,'bottom');
 % To create the logo at the bottom left corner of the plot use 
 % the next two lines
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[.1 -0.0], .22,.12,]);
+ha2=axes('position',[haPos([3 1])-[.12 -0.0], .24,.12,]);
 % To place the logo at the bottom left corner of the figure window
 % uncomment the line below and comment the above two lines
 %ha2=axes('position',[0, 0, .1,.04,]);
@@ -528,7 +532,7 @@ colormap (map)
 % into the axes again. Also, make the axes invisible
 set(ha2,'handlevisibility','off','visible','off')
 
-saveas(gcf,[name,'_contagio_',datestr(dia(n1dia,n2dia),29),'.png']);
+print(gcf,[name,'_contagio_',datestr(dia(n1dia,n2dia),29),'.png'],'-dpng','-r300');
 
 
 close(figure(2));
@@ -586,7 +590,7 @@ uistack(ha,'bottom');
 % To create the logo at the bottom left corner of the plot use 
 % the next two lines
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[.1 -0.0], .22,.12,]);
+ha2=axes('position',[haPos([3 1])-[.12 -0.0], .24,.12,]);
 % To place the logo at the bottom left corner of the figure window
 % uncomment the line below and comment the above two lines
 %ha2=axes('position',[0, 0, .1,.04,]);
@@ -600,8 +604,7 @@ colormap (map)
 % into the axes again. Also, make the axes invisible
 set(ha2,'handlevisibility','off','visible','off')
 
-saveas(gcf,[name,'_informativo-mortes_',datestr(dia(n1dia,n2dia),29),'.png']);
-
+print(gcf,[name,'_informativo-mortes_',datestr(dia(n1dia,n2dia),29),'.png'],'-dpng','-r300');
 
 close(figure(3));
 
@@ -647,7 +650,7 @@ title({'Informativo de progresso da epidemia (número de casos)',['Regiões do B
 ylabel(['Novos casos por semana (por milhão de habitantes)'],'FontSize',fonte_labels);
 xlabel ("Total de casos (por milhão de habitantes)",'FontSize',fonte_labels);
 legend ("location", "northwest");
-axis([1 axis_cases 1 axis_new_cases]);
+axis([10 axis_cases 10 axis_new_cases]);
 Pos = [250,250,600,450];
 set(0, 'DefaultFigurePosition', Pos);
 
@@ -658,7 +661,7 @@ uistack(ha,'bottom');
 % To create the logo at the bottom left corner of the plot use 
 % the next two lines
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[.1 -0.0], .22,.12,]);
+ha2=axes('position',[haPos([3 1])-[.12 -0.0], .24,.12,]);
 % To place the logo at the bottom left corner of the figure window
 % uncomment the line below and comment the above two lines
 %ha2=axes('position',[0, 0, .1,.04,]);
@@ -672,7 +675,7 @@ colormap (map)
 % into the axes again. Also, make the axes invisible
 set(ha2,'handlevisibility','off','visible','off')
 
-saveas(gcf,[name,'_informativo-casos_',datestr(dia(n1dia,n2dia),29),'.png']);
+print(gcf,[name,'_informativo-casos_',datestr(dia(n1dia,n2dia),29),'.png'],'-dpng','-r300');
 
 
 close(figure(4));
