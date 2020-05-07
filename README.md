@@ -28,6 +28,6 @@ Estudantes:
 Design Gráfico:
 - Amanda Cunha Guyt
 
-## Instituições Participantes:
+## Instituições dos participantes:
 
 <img src="logos/uerj_logo_cor.jpg" width="13%">     <img src="logos/ufrj_logo_cor.png" width="10%">
