@@ -87,7 +87,7 @@ end
 
 %Criando vetores desde dia zero a partir de X mortes/milhao ("_deaths") ou a partir de X casos/milhao ("_cases")
 %Usuário define dia zero para casos ou mortes
-X_deaths_pm = 1;
+X_deaths_pm = 10000000;
 X_cases_pm = 10;
 X_deaths = 100;
 X_cases = 1000;
@@ -98,6 +98,7 @@ if (tot_deaths(i,1) >= X_deaths)
 n=n+1;
 tot_deaths_X(n,1) = tot_deaths(i,1);
 new_deaths_X(n,1) = new_deaths(i,1);
+new_deaths7_X(n,1) = new_deaths7(i,1);
 end
 end
 n=0;
@@ -106,6 +107,7 @@ if (tot_cases(i,1) >= X_cases)
 n=n+1;
 tot_cases_X(n,1) = tot_cases(i,1);
 new_cases_X(n,1) = new_cases(i,1);
+new_cases7_X(n,1) = new_cases7(i,1);
 end
 end
 n=0;
@@ -114,6 +116,7 @@ if (tot_cases_pm(i,1) >= X_cases_pm)
 n=n+1;
 tot_cases_pmX(n,1) = tot_cases_pm(i,1);
 new_cases_pmX(n,1) = new_cases_pm(i,1);
+new_cases7_pmX(n,1) = new_cases7_pm(i,1);
 end
 end
 n=0;
@@ -122,6 +125,7 @@ if (tot_deaths_pm(i,1) >= X_deaths_pm)
 n=n+1;
 tot_deaths_pmX(n,1) = tot_deaths_pm(i,1);
 new_deaths_pm(n,1) = new_deaths_pm(i,1);
+new_deaths7_pm(n,1) = new_deaths7_pm(i,1);
 end
 end
 
@@ -169,7 +173,6 @@ figure (4);
  fig=loglog(tot_cases,new_cases7,'DisplayName',[country,' - ',num2str(max(tot_cases)),' casos'],"color",color);
  hold on;
  text (tot_cases(n,1), new_cases7(n,1), [' ',country],'FontSize',fonte_location,"color",color);
-
 
 end
 
@@ -312,4 +315,5 @@ colormap (map)
 set(ha2,'handlevisibility','off','visible','off')
 
 saveas(gcf,[name,'_informativo-casos-abs_',datestr(end_time,29),'.png']);
+
 

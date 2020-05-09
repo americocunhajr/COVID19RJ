@@ -102,6 +102,7 @@ if (tot_deaths(i,1) >= X_deaths)
 n=n+1;
 tot_deaths_X(n,1) = tot_deaths(i,1);
 new_deaths_X(n,1) = new_deaths(i,1);
+new_deaths7_X(n,1) = new_deaths7(i,1);
 end
 end
 n=0;
@@ -110,6 +111,7 @@ if (tot_cases(i,1) >= X_cases)
 n=n+1;
 tot_cases_X(n,1) = tot_cases(i,1);
 new_cases_X(n,1) = new_cases(i,1);
+new_cases7_X(n,1) = new_cases7(i,1);
 end
 end
 n=0;
@@ -118,6 +120,7 @@ if (tot_cases_pm(i,1) >= X_cases_pm)
 n=n+1;
 tot_cases_pmX(n,1) = tot_cases_pm(i,1);
 new_cases_pmX(n,1) = new_cases_pm(i,1);
+new_cases7_pmX(n,1) = new_cases7_pm(i,1);
 end
 end
 n=0;
@@ -125,7 +128,8 @@ for (i=1:1:max(max(size(dates))) )
 if (tot_deaths_pm(i,1) >= X_deaths_pm)
 n=n+1;
 tot_deaths_pmX(n,1) = tot_deaths_pm(i,1);
-new_deaths_pm(n,1) = new_deaths_pm(i,1);
+new_deaths_pmX(n,1) = new_deaths_pm(i,1);
+new_deaths7_pmX(n,1) = new_deaths7_pm(i,1);
 end
 end
 
@@ -174,7 +178,6 @@ figure (4);
  hold on;
  text (tot_cases_pm(n,1), new_cases7_pm(n,1), [' ',country],'FontSize',fonte_location,"color",color);
 
-
 end
 
 
@@ -184,7 +187,7 @@ figure(1)
 
 set(gca,'FontSize',fonte_padrao)
 title({'Letalidade da epidemia',['Comparação entre países em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
-xlabel(['Dias desde que se ultrapassou ',num2str(X_deaths),' mortes (por milhão de habitantes)'],'FontSize',fonte_labels);
+xlabel(['Dias desde que se ultrapassou ',num2str(X_deaths_pm),' morte (por milhão de habitantes)'],'FontSize',fonte_labels);
 ylabel ("Total de mortes (por milhão de habitantes)",'FontSize',fonte_labels);
 legend ("location", "northeastoutside");
 axis([0 100 1 1000]);
@@ -219,7 +222,7 @@ figure (2)
 
 set(gca,'FontSize',fonte_padrao)
 title({'Contágio da epidemia',['Comparação entre países em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
-xlabel(['Dias desde que se ultrapassou ',num2str(X_cases),' casos (por milhão de habitantes)'],'FontSize',fonte_labels);
+xlabel(['Dias desde que se ultrapassou ',num2str(X_cases_pm),' casos (por milhão de habitantes)'],'FontSize',fonte_labels);
 ylabel ("Total de casos (por milhão de habitantes)",'FontSize',fonte_labels);
 legend ("location", "northeastoutside");
 axis([0 110 10 10000]);
@@ -283,37 +286,5 @@ set(ha2,'handlevisibility','off','visible','off')
 
 saveas(gcf,[name,'_informativo-mortes-pm_',datestr(end_time,29),'.png']);
 
-figure (4)
 
-set(gca,'FontSize',fonte_padrao);
-title({'Informativo de progresso da epidemia (número de casos por milhão de habitantes)',['Comparação entre países em ',datestr(end_time,24)]},'FontSize',fonte_titulo)
-ylabel(['Novos casos por semana (por milhão de habitantes)'],'FontSize',fonte_labels);
-xlabel ("Total de casos (por milhão de habitantes)",'FontSize',fonte_labels);
-legend ("location", "northeastoutside");
-axis([10 100000 10 10000]);
-Pos = [0,250,900,450];
-set(0, 'DefaultFigurePosition', Pos);
-
-% pra botar o logo no inferior direito
-ha =gca;
-uistack(ha,'bottom');
-% Creating a new axes for the logo on the current axes
-% To create the logo at the bottom left corner of the plot use 
-% the next two lines
-haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[-0.15 -0.2], .2,.15,]);
-% To place the logo at the bottom left corner of the figure window
-% uncomment the line below and comment the above two lines
-%ha2=axes('position',[0, 0, .1,.04,]);
-% Adding a LOGO to the new axes
-% The logo file(jpeg, png, etc.) must be placed in the working path
-[x, map]=imread('logo.png');
-image(x)
-% Setting the colormap to the colormap of the imported logo image
-colormap (map)
-% Turn the handlevisibility off so that we don't inadvertently plot
-% into the axes again. Also, make the axes invisible
-set(ha2,'handlevisibility','off','visible','off')
-
-saveas(gcf,[name,'_informativo-casos-pm_',datestr(end_time,29),'.png']);
 
