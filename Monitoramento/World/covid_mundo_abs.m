@@ -40,7 +40,7 @@ name = 'paises';
 all_data = readtable('owid-covid-data.csv');
 data = table2array(all_data(:,4:end));
 
-for( init = 1:1:13)
+for( init = 13:-1:1)
 
 clearvars -except init all_data data name 
 
@@ -143,7 +143,7 @@ fonte_location = 8;
 figure (1);
  n = max(max(size(tot_deaths_X)));
  days = 0:1:n-1;
- fig=semilogy(days,tot_deaths_X,'DisplayName',[country,' - ',num2str(max(tot_deaths)),' mortes'],"color",color);
+ fig=semilogy(days,tot_deaths_X,'DisplayName',[country,' - ',num2str(max(tot_deaths)),' mortes'],"color",color,'LineWidth', 1.25);
  hold on;
  text (n-1, tot_deaths_X(n,1), [' ',country],'FontSize',fonte_location,"color",color);
 
@@ -154,7 +154,7 @@ figure (2);
 
  n = max(max(size(tot_cases_X)));
  days = 0:1:n-1;
- fig=semilogy(days,tot_cases_X,'DisplayName',[country,' - ',num2str(max(tot_cases)),' casos'],"color",color);
+ fig=semilogy(days,tot_cases_X,'DisplayName',[country,' - ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', 1.25);
  hold on;
  text (n-1, tot_cases_X(n,1), [' ',country],'FontSize',fonte_location,"color",color);
 
@@ -162,7 +162,7 @@ figure (2);
 %Plotar novas mortes X total de mortes (por milhao de hab.)
 figure (3);
  n = max(max(size(tot_deaths)));
- fig=loglog(tot_deaths,new_deaths7,'DisplayName',[country,' - ',num2str(max(tot_deaths)),' mortes'],"color",color);
+ fig=loglog(tot_deaths,new_deaths7,'DisplayName',[country,' - ',num2str(max(tot_deaths)),' mortes'],"color",color,'LineWidth', 1.25);
  hold on;
  text (tot_deaths(n,1), new_deaths7(n,1), [' ',country],'FontSize',fonte_location,"color",color);
 
@@ -170,7 +170,7 @@ figure (3);
 %Plotar novos casos X total de casos (por milhao de hab.)
 figure (4);
  n = max(max(size(tot_cases)));
- fig=loglog(tot_cases,new_cases7,'DisplayName',[country,' - ',num2str(max(tot_cases)),' casos'],"color",color);
+ fig=loglog(tot_cases,new_cases7,'DisplayName',[country,' - ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', 1.25);
  hold on;
  text (tot_cases(n,1), new_cases7(n,1), [' ',country],'FontSize',fonte_location,"color",color);
 
@@ -316,4 +316,5 @@ set(ha2,'handlevisibility','off','visible','off')
 
 saveas(gcf,[name,'_informativo-casos-abs_',datestr(end_time,29),'.png']);
 
+close all
 
