@@ -19,6 +19,7 @@ Estudantes:
 - Bruna Pavlack
 - Diego Matos
 - Eber Dantas
+- João Pedro Norenberg
 - Julio Basilio
 - Leonardo de la Roca
 - Lucas Chaves
