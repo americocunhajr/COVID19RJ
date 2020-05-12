@@ -54,7 +54,6 @@ end_time = datestr(dia(n1dia,n2dia),24);
 
 
 %Separando os dados em 27 sub-matrizes
-for j=1:D
 RO= BRASIL(find(strcmp([data.estado], 'RO')),:);
 AC= BRASIL(find(strcmp([data.estado], 'AC')),:);
 AM= BRASIL(find(strcmp([data.estado], 'AM')),:);
@@ -82,7 +81,6 @@ MS= BRASIL(find(strcmp([data.estado], 'MS')),:);
 MT= BRASIL(find(strcmp([data.estado], 'MT')),:);
 GO= BRASIL(find(strcmp([data.estado], 'GO')),:);
 DF= BRASIL(find(strcmp([data.estado], 'DF')),:);
-end
 
 BR=RO+AC+AM+RR+PA+AP+TO+MA+PI+CE+RN+PE+AL+SE+BA+MG+ES+RJ+SP+PR+SC+RS+MS+MT+DF+PB+GO;
 
@@ -124,32 +122,32 @@ end_time = max(datenum(dates));
 for (regions = 1:1:6)
 
 if (regions == 1 )
-begin_states = 1;
+begin_states = 0;
 end_states = 7;
 name = 'Norte'
 end
 if (regions == 2 )
-begin_states = 1;
+begin_states = 0;
 end_states = 9;
 name = 'Nordeste'
 end
 if (regions == 3 )
-begin_states = 1;
+begin_states = 0;
 end_states = 4;
 name = 'Centro-Oeste'
 end
 if (regions == 4 )
-begin_states = 1;
+begin_states = 0;
 end_states = 4;
 name = 'Sudeste'
 end
 if (regions == 5 )
-begin_states = 1;
+begin_states = 0;
 end_states = 3;
 name = 'Sul'
 end
 if (regions == 6 )
-begin_states = 1;
+begin_states = 0;
 end_states = 27;
 name = 'Brasil'
 end
@@ -259,11 +257,11 @@ end
 
 if (regions == 2)
 if (init == 0) country = 'BR'; color = [0,0,0]/255; pop = popBR; end
-if (init == 5) country = 'AL'; color = [96,209,224]/255; pop = 3337357; end
+if (init == 4) country = 'AL'; color = [96,209,224]/255; pop = 3337357; end
 if (init == 6) country = 'BA'; color = [0,170,196]/255; pop = 14873064; end
 if (init == 9) country = 'CE'; color = [0,116,136]/255; pop = 9132078; end
 if (init == 7) country = 'MA'; color = [0,74,84]/255; pop = 7075181; end
-if (init == 4) country = 'PB'; color = [27,78,142]/255; pop = 4018127; end
+if (init == 5) country = 'PB'; color = [27,78,142]/255; pop = 4018127; end
 if (init == 8) country = 'PE'; color = [0,99,181]/255; pop = 9557071; end
 if (init == 1) country = 'PI'; color = [0,45,135]/255; pop = 3273227; end
 if (init == 3) country = 'RN'; color = [0,34,80]/255; pop = 3506853; end
@@ -358,8 +356,8 @@ end
 %Usuário define dia zero para casos ou mortes
 X_deaths_pm = 1;
 X_cases_pm = 10;
-X_deaths = 1;
-X_cases = 10;
+X_deaths = 10;
+X_cases = 100;
 
 n=0;
 for (i=1:1:max(max(size(dates))) )
@@ -400,17 +398,48 @@ end
 
 
 %Fontes
-fonte_titulo = 10;
-fonte_labels = 9;
+fonte_titulo = 10.5;
+fonte_labels = 10;
 fonte_padrao = 9; %numeros dos eixos
 fonte_location = 8;
 
-day_axis = 70;
+day_axis = 80;
+
+Pos = [250,250,600,450];
+set(0, 'DefaultFigurePosition', Pos);
 
 if (plot_type == 1)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Plotar total de mortes/milhao por tempo (dia zero definido por mortes/milhao)
+%Plotar total de mortes por tempo (dia zero definido por mortes/milhao)
 figure (1);
+
+
+%Grid manual
+grid1=semilogy(0:1:(day_axis-1),100*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+grid2=semilogy(0:1:(day_axis-1),1000*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+grid3=semilogy(0:1:(day_axis-1),10000*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+
+%Linhas "dobram"
+y_init=10;
+for (i=0:1:day_axis-1)
+y(i+1) = y_init*2^i;
+x1(i+1) = 4*i;
+x2(i+1) = 5*i;
+x3(i+1) = 6*i;
+x4(i+1) = 7*i;
+end
+dobram1=semilogy(x1,y,'color',[0.4,0.4,0.4],'LineStyle','--','HandleVisibility','off');
+hold on;
+dobram2=semilogy(x2,y,'color',[0.4,0.4,0.4],'LineStyle','--','HandleVisibility','off');
+hold on;
+dobram3=semilogy(x3,y,'color',[0.4,0.4,0.4],'LineStyle','--','HandleVisibility','off');
+hold on;
+dobram4=semilogy(x4,y,'color',[0.4,0.4,0.4],'LineStyle','--','HandleVisibility','off');
+hold on;
+
  n = max(max(size(tot_deaths_X)));
  days = 0:1:n-1;
  fig=semilogy(days,tot_deaths_X,'DisplayName',[country,' - ',num2str(max(tot_deaths)),' mortes'],"color",color,'LineWidth', linew);
@@ -426,41 +455,126 @@ figure (3);
  text (tot_deaths(n,1), new_deaths7(n,1), [' ',country],'FontSize',fonte_location,"color",color);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Plotar novas de mortes/milhao por tempo (dia zero definido por mortes/milhao)
+%Plotar novas de mortes por tempo (dia zero definido por mortes/milhao)
 figure (5);
+
+%Grid manual
+grid1=semilogy(0:1:(day_axis-1),10*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+grid2=semilogy(0:1:(day_axis-1),100*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+grid3=semilogy(0:1:(day_axis-1),1000*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+grid4=semilogy(0:1:(day_axis-1),10000*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+
+%Linhas "dobram"
+y_init=10;
+for (i=0:1:day_axis-1)
+y(i+1) = y_init*2^i;
+x1(i+1) = 4*i;
+x2(i+1) = 5*i;
+x3(i+1) = 6*i;
+x4(i+1) = 7*i;
+end
+dobram1=semilogy(x1,y,'color',[0.4,0.4,0.4],'LineStyle','--','HandleVisibility','off');
+hold on;
+dobram2=semilogy(x2,y,'color',[0.4,0.4,0.4],'LineStyle','--','HandleVisibility','off');
+hold on;
+dobram3=semilogy(x3,y,'color',[0.4,0.4,0.4],'LineStyle','--','HandleVisibility','off');
+hold on;
+dobram4=semilogy(x4,y,'color',[0.4,0.4,0.4],'LineStyle','--','HandleVisibility','off');
+hold on;
+
  n = max(max(size(new_deaths_X)));
  days = 0:1:n-1;
- fig=plot(days,new_deaths7_X,'DisplayName',[country,' - ',num2str(max(tot_deaths)),' mortes'],"color",color,'LineWidth', linew);
+ fig=semilogy(days,new_deaths7_X,'DisplayName',[country,' - ',num2str(max(tot_deaths)),' mortes'],"color",color,'LineWidth', linew);
  hold on;
  text (n-1, new_deaths7_X(n,1), [' ',country],'FontSize',fonte_location,"color",color);
 end
 
 if (plot_type == 2)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Plotar total de casos/milhao por tempo (dia zero definido por casos/milhao)
+%Plotar total de casos por tempo (dia zero definido por casos/milhao)
 figure (2);
+
+%Grid manual
+grid1=semilogy(0:1:(day_axis-1),1000*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+grid2=semilogy(0:1:(day_axis-1),10000*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+grid3=semilogy(0:1:(day_axis-1),100000*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+
+%Linhas "dobram"
+y_init=100;
+for (i=0:1:day_axis-1)
+y(i+1) = y_init*2^i;
+x1(i+1) = 4*i;
+x2(i+1) = 5*i;
+x3(i+1) = 6*i;
+x4(i+1) = 7*i;
+end
+dobram1=semilogy(x1,y,'color',[0.4,0.4,0.4],'LineStyle','--','HandleVisibility','off');
+hold on;
+dobram2=semilogy(x2,y,'color',[0.4,0.4,0.4],'LineStyle','--','HandleVisibility','off');
+hold on;
+dobram3=semilogy(x3,y,'color',[0.4,0.4,0.4],'LineStyle','--','HandleVisibility','off');
+hold on;
+dobram4=semilogy(x4,y,'color',[0.4,0.4,0.4],'LineStyle','--','HandleVisibility','off');
+hold on;
 
  n = max(max(size(tot_cases_X)));
  days = 0:1:n-1;
  fig=semilogy(days,tot_cases_X,'DisplayName',[country,' - ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', linew);
  hold on;
- text (n-1, tot_cases_X(n,1), [' ',country],'FontSize',fonte_location,"color",color);
+ figtext=text (n-1, tot_cases_X(n,1), [' ',country],'FontSize',fonte_location,"color",color);
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Plotar novos casos X total de casos (por milhao de hab.)
 figure (4);
+
  n = max(max(size(tot_cases)));
  fig=loglog(tot_cases,new_cases7,'DisplayName',[country,' - ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', linew);
  hold on;
  text (tot_cases(n,1), new_cases7(n,1), [' ',country],'FontSize',fonte_location,"color",color);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Plotar novos casos/milhao por tempo (dia zero definido por casos/milhao)
+%Plotar novos casos por tempo (dia zero definido por casos/milhao)
 figure (6);
+
+%Grid manual
+grid1=semilogy(0:1:(day_axis-1),100*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+grid2=semilogy(0:1:(day_axis-1),1000*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+grid3=semilogy(0:1:(day_axis-1),10000*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+grid4=semilogy(0:1:(day_axis-1),100000*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+
+%Linhas "dobram"
+y_init=100;
+for (i=0:1:day_axis-1)
+y(i+1) = y_init*2^i;
+x1(i+1) = 4*i;
+x2(i+1) = 5*i;
+x3(i+1) = 6*i;
+x4(i+1) = 7*i;
+end
+dobram1=semilogy(x1,y,'color',[0.4,0.4,0.4],'LineStyle','--','HandleVisibility','off');
+hold on;
+dobram2=semilogy(x2,y,'color',[0.4,0.4,0.4],'LineStyle','--','HandleVisibility','off');
+hold on;
+dobram3=semilogy(x3,y,'color',[0.4,0.4,0.4],'LineStyle','--','HandleVisibility','off');
+hold on;
+dobram4=semilogy(x4,y,'color',[0.4,0.4,0.4],'LineStyle','--','HandleVisibility','off');
+hold on;
 
  n = max(max(size(new_cases_X)));
  days = 0:1:n-1;
- fig=plot(days,new_cases7_X,'DisplayName',[country,' - ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', linew);
+ fig=semilogy(days,new_cases7_X,'DisplayName',[country,' - ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', linew);
  hold on;
  text (n-1, new_cases7_X(n,1), [' ',country],'FontSize',fonte_location,"color",color);
 
@@ -484,21 +598,35 @@ figure(1)
 
 set(gca,'FontSize',fonte_padrao)
 if (regions < 6)
-title({'Letalidade da epidemia ',['Estados da região ',name,'  em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
+title({'Letalidade da epidemia ',['Estados da região ',name,' em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
 legend ("location", "northwest");
 end
 if (regions == 6)
 title({'Letalidade da epidemia ',['Todos os estados do Brasil em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
 legend = "off";
 end
-xlabel(['Dias desde que se ultrapassou ',num2str(X_deaths_pm),' morte '],'FontSize',fonte_labels);
+xlabel(['Dias desde que se ultrapassou ',num2str(X_deaths),' mortes'],'FontSize',fonte_labels);
 ylabel ("Total de mortes ",'FontSize',fonte_labels);
-axis([0 [day_axis-10] 1 10000]);
-Pos = [250,250,600,450];
-set(0, 'DefaultFigurePosition', Pos);
 
-curtick = get(gca, 'YTick');
-set(gca, 'YTickLabel', cellstr(num2str(curtick(:))));
+y_init=10;
+max_y=100000;
+ang = 49;
+h1=text(51,0.9*max_y,'números dobram a cada 4 dias');
+set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
+ang = 45;
+h2=text(64,0.9*max_y,'5 dias');
+set(h2,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
+ang = 40;
+h3=text(76.9,0.9*max_y,'6 dias');
+set(h3,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
+ang = 38;
+h4=text(79.1,0.32*max_y,'7 dias');
+set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
+
+set(gca,'YTickLabel',{'10','100','1k','10k','100k'})
+
+
+axis([0 day_axis y_init max_y]);
 
 
 
@@ -529,22 +657,35 @@ figure (2)
 
 set(gca,'FontSize',fonte_padrao)
 if (regions < 6)
-title({'Contágio da epidemia ',['Estados da região ',name,'  em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
+title({'Contágio da epidemia ',['Estados da região ',name,' em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
 legend ("location", "northwest");
 end
 if (regions == 6)
 title({'Contágio da epidemia ',['Todos os estados do Brasil em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
 legend = "off";
 end
-xlabel(['Dias desde que se ultrapassou ',num2str(X_cases_pm),' casos '],'FontSize',fonte_labels);
+xlabel(['Dias desde que se ultrapassou ',num2str(X_cases),' casos '],'FontSize',fonte_labels);
 ylabel ("Total de casos ",'FontSize',fonte_labels);
 
-axis([0 day_axis 10 1000000]);
-Pos = [250,250,600,450];
-set(0, 'DefaultFigurePosition', Pos);
+y_init=100;
+max_y=1000000;
+ang = 49;
+h1=text(51,0.9*max_y,'números dobram a cada 4 dias');
+set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
+ang = 45;
+h2=text(64,0.9*max_y,'5 dias');
+set(h2,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
+ang = 40;
+h3=text(76.9,0.9*max_y,'6 dias');
+set(h3,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
+ang = 38;
+h4=text(79.1,0.32*max_y,'7 dias');
+set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 
-curtick = get(gca, 'YTick');
-set(gca, 'YTickLabel', cellstr(num2str(curtick(:))));
+set(gca,'YTickLabel',{'100','1k','10k','100k','1M'})
+
+axis([0 day_axis y_init max_y]);
+
 
 
 % pra botar o logo no inferior direito
@@ -574,23 +715,21 @@ figure (3)
 
 set(gca,'FontSize',fonte_padrao);
 if (regions < 6)
-title({'Informativo de progresso da epidemia (mortes)',['Estados da região ',name,'  em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
+title({'Informativo de progresso da epidemia (número de mortes)',['Estados da região ',name,' em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
 legend ("location", "northwest");
 end
 if (regions == 6)
-title({'Informativo de progresso da epidemia (mortes)',['Todos os estados do Brasil em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
+title({'Informativo de progresso da epidemia (número de mortes)',['Todos os estados do Brasil em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
 legend = "off";
 end
 ylabel(['Novas mortes por semana '],'FontSize',fonte_labels);
 xlabel ("Total de mortes ",'FontSize',fonte_labels);
-axis([1 100000 1 10000]);
-Pos = [250,250,600,450];
+axis([10 100000 10 10000]);
+
 set(0, 'DefaultFigurePosition', Pos);
 
-curtick = get(gca, 'YTick');
-set(gca, 'YTickLabel', cellstr(num2str(curtick(:))));
-curtick = get(gca, 'XTick');
-set(gca, 'XTickLabel', cellstr(num2str(curtick(:))));
+set(gca,'YTickLabel',{'10','100','1k','10k'})
+set(gca,'XTickLabel',{'10','100','1k','10k','100k'})
 
 % pra botar o logo no inferior direito
 ha =gca;
@@ -617,27 +756,20 @@ figure(4)
 
 set(gca,'FontSize',fonte_padrao);
 if (regions < 6)
-title({'Informativo de progresso da epidemia (casos)',['Estados da região ',name,'  em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
+title({'Informativo de progresso da epidemia (número de casos)',['Estados da região ',name,' em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
 legend ("location", "northwest");
 end
 if (regions == 6)
-title({'Informativo de progresso da epidemia (casos)',['Todos os estados do Brasil em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
+title({'Informativo de progresso da epidemia (número de casos)',['Todos os estados do Brasil em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
 legend = "off";
 end
 ylabel(['Novos casos por semana '],'FontSize',fonte_labels);
 xlabel ("Total de casos ",'FontSize',fonte_labels);
-axis([10 1000000 10 100000]);
-Pos = [250,250,600,450];
-set(0, 'DefaultFigurePosition', Pos);
+axis([100 1000000 100 100000]);
 
 
-
-
-curtick = get(gca, 'YTick');
-set(gca, 'YTickLabel', cellstr(num2str(curtick(:))));
-curtick = get(gca, 'XTick');
-set(gca, 'XTickLabel', cellstr(num2str(curtick(:))));
-
+set(gca,'YTickLabel',{'100','1k','10k','100k'})
+set(gca,'XTickLabel',{'100','1k','10k','100k','1M'})
 
 % pra botar o logo no inferior direito
 ha =gca;
@@ -665,21 +797,34 @@ figure(5)
 
 set(gca,'FontSize',fonte_padrao)
 if (regions < 6)
-title({'Letalidade semanal da epidemia ',['Estados da região ',name,'  em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
+title({'Letalidade semanal da epidemia ',['Estados da região ',name,' em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
 legend ("location", "northwest");
 end
 if (regions == 6)
 title({'Letalidade semanal da epidemia ',['Todos os estados do Brasil em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
 legend = "off";
 end
-xlabel(['Dias desde que se ultrapassou ',num2str(X_deaths_pm),' morte'],'FontSize',fonte_labels);
+xlabel(['Dias desde que se ultrapassou ',num2str(X_deaths),' mortes'],'FontSize',fonte_labels);
 ylabel ("Novas mortes por semana ",'FontSize',fonte_labels);
-axis([0 [day_axis-10] 0 1200]);
-Pos = [250,250,600,450];
-set(0, 'DefaultFigurePosition', Pos);
 
-curtick = get(gca, 'YTick');
-set(gca, 'YTickLabel', cellstr(num2str(curtick(:))));
+y_init=1;
+max_y=100000;
+ang = 43;
+h1=text(51.2,0.9*max_y,'números dobram a cada 4 dias');
+set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
+ang = 39;
+h2=text(64,0.9*max_y,'5 dias');
+set(h2,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
+ang = 35;
+h3=text(76.9,0.9*max_y,'6 dias');
+set(h3,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
+ang = 33;
+h4=text(79.1,0.32*max_y,'7 dias');
+set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
+
+set(gca,'YTickLabel',{'1','10','100','1k','10k','100k'})
+
+axis([0 day_axis y_init max_y]);
 
 
 % pra botar o logo no inferior direito
@@ -689,12 +834,7 @@ uistack(ha,'bottom');
 % To create the logo at the bottom left corner of the plot use 
 % the next two lines
 haPos = get(ha,'position');
-if (regions == 1) ha2=axes('position',[haPos([3 1])-[.625 -0.4], .24,.12,]); end
-if (regions == 2) ha2=axes('position',[haPos([3 1])-[.625 -0.33], .24,.12,]); end
-if (regions == 3) ha2=axes('position',[haPos([3 1])-[.625 -0.5], .24,.12,]); end
-if (regions == 4) ha2=axes('position',[haPos([3 1])-[.625 -0.5], .24,.12,]); end
-if (regions == 5) ha2=axes('position',[haPos([3 1])-[.625 -0.53], .24,.12,]); end
-if (regions == 6) ha2=axes('position',[haPos([3 1])-[.625 -0.65], .24,.12,]); end
+ha2=axes('position',[haPos([3 1])-[.12 -0.0], .24,.12,]);
 % To place the logo at the bottom left corner of the figure window
 % uncomment the line below and comment the above two lines
 %ha2=axes('position',[0, 0, .1,.04,]);
@@ -712,21 +852,34 @@ figure (6)
 
 set(gca,'FontSize',fonte_padrao)
 if (regions < 6)
-title({'Contágio semanal da epidemia ',['Estados da região ',name,'  em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
+title({'Contágio semanal da epidemia ',['Estados da região ',name,' em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
 legend ("location", "northwest");
 end
 if (regions == 6)
 title({'Contágio semanal da epidemia ',['Todos os estados do Brasil em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
 legend = "off";
 end
-xlabel(['Dias desde que se ultrapassou ',num2str(X_cases_pm),' casos '],'FontSize',fonte_labels);
+xlabel(['Dias desde que se ultrapassou ',num2str(X_cases),' casos '],'FontSize',fonte_labels);
 ylabel ("Novos casos por semana ",'FontSize',fonte_labels);
-axis([0 day_axis 0 16000]);
-Pos = [250,250,600,450];
-set(0, 'DefaultFigurePosition', Pos);
 
-curtick = get(gca, 'YTick');
-set(gca, 'YTickLabel', cellstr(num2str(curtick(:))));
+y_init=10;
+max_y=1000000;
+ang = 43;
+h1=text(51.2,0.9*max_y,'números dobram a cada 4 dias');
+set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
+ang = 39;
+h2=text(64,0.9*max_y,'5 dias');
+set(h2,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
+ang = 35;
+h3=text(76.9,0.9*max_y,'6 dias');
+set(h3,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
+ang = 33;
+h4=text(79.1,0.32*max_y,'7 dias');
+set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
+set(gca,'YTickLabel',{'10','100','1k','10k','100k','1M'})
+
+axis([0 day_axis y_init max_y]);
+
 
 
 % pra botar o logo no inferior direito
@@ -736,14 +889,7 @@ uistack(ha,'bottom');
 % To create the logo at the bottom left corner of the plot use 
 % the next two lines
 haPos = get(ha,'position');
-if (regions == 1) ha2=axes('position',[haPos([3 1])-[.625 -0.4], .24,.12,]); end
-if (regions == 2) ha2=axes('position',[haPos([3 1])-[.625 -0.33], .24,.12,]); end
-if (regions == 3) ha2=axes('position',[haPos([3 1])-[.625 -0.5], .24,.12,]); end
-if (regions == 4) ha2=axes('position',[haPos([3 1])-[.625 -0.5], .24,.12,]); end
-if (regions == 5) ha2=axes('position',[haPos([3 1])-[.625 -0.53], .24,.12,]); end
-if (regions == 6) ha2=axes('position',[haPos([3 1])-[.625 -0.65], .24,.12,]); end
-% To place the logo at the bottom left corner of the figure window
-
+ha2=axes('position',[haPos([3 1])-[.12 -0.0], .24,.12,]);
 % To place the logo at the bottom left corner of the figure window
 % uncomment the line below and comment the above two lines
 %ha2=axes('position',[0, 0, .1,.04,]);
