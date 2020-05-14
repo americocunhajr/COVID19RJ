@@ -147,7 +147,7 @@ popCENTRO = popMS + popMT + popGO + popDF;
 if (plot_type == 1)
 %ordem por países que tem mais morte
 if (init == 3)
-country = 'Norte';
+country = 'Norte              ';
 color = [0,169,74]/255; 
 pop = popNORTE;
 tot_cases = NORTE(:,1);
@@ -156,7 +156,7 @@ tot_deaths = NORTE(:,3);
 new_deaths = NORTE(:,4);
 end
 if (init == 2)
-country = 'Nordeste';
+country = 'Nordeste         ';
 color = [0,99,181]/255;
 pop = popNORDESTE;
 tot_cases = NORDESTE(:,1);
@@ -165,7 +165,7 @@ tot_deaths = NORDESTE(:,3);
 new_deaths = NORDESTE(:,4);
 end
 if (init == 1)
-country = 'Sudeste';
+country = 'Sudeste          ';
 color = [254,88,52]/255;
 pop = popSUDESTE;
 tot_cases = SUDESTE(:,1);
@@ -174,7 +174,7 @@ tot_deaths = SUDESTE(:,3);
 new_deaths = SUDESTE(:,4);
 end
 if (init == 4)
-country = 'Sul';
+country = 'Sul                    ';
 color = [193,203,68]/255;
 pop = popSUL;
 tot_cases = SUL(:,1);
@@ -183,7 +183,7 @@ tot_deaths = SUL(:,3);
 new_deaths = SUL(:,4);
 end
 if (init == 5)
-country = 'Centro-Oeste';
+country = 'Centro-Oeste    ';
 color = [135,85,30]/255;
 pop = popCENTRO;
 tot_cases = CENTRO(:,1);
@@ -192,7 +192,7 @@ tot_deaths = CENTRO(:,3);
 new_deaths = CENTRO(:,4);
 end
 if (init == 6)
-country = 'Brasil';
+country = 'Brasil            ';
 color = [0,0,0]/255;
 pop = popBR;
 tot_cases = BR(:,1);
@@ -207,7 +207,7 @@ end
 if (plot_type == 2)
 %ordem por países que tem mais morte
 if (init == 3)
-country = 'Norte';
+country = 'Norte              ';
 color = [0,169,74]/255; 
 pop = popNORTE;
 tot_cases = NORTE(:,1);
@@ -216,7 +216,7 @@ tot_deaths = NORTE(:,3);
 new_deaths = NORTE(:,4);
 end
 if (init == 2)
-country = 'Nordeste';
+country = 'Nordeste        ';
 color = [0,99,181]/255;
 pop = popNORDESTE;
 tot_cases = NORDESTE(:,1);
@@ -225,7 +225,7 @@ tot_deaths = NORDESTE(:,3);
 new_deaths = NORDESTE(:,4);
 end
 if (init == 1)
-country = 'Sudeste';
+country = 'Sudeste          ';
 color = [254,88,52]/255;
 pop = popSUDESTE;
 tot_cases = SUDESTE(:,1);
@@ -234,7 +234,7 @@ tot_deaths = SUDESTE(:,3);
 new_deaths = SUDESTE(:,4);
 end
 if (init == 4)
-country = 'Sul';
+country = 'Sul                    ';
 color = [193,203,68]/255;
 pop = popSUL;
 tot_cases = SUL(:,1);
@@ -243,7 +243,7 @@ tot_deaths = SUL(:,3);
 new_deaths = SUL(:,4);
 end
 if (init == 5)
-country = 'Centro-Oeste';
+country = 'Centro-Oeste    ';
 color = [135,85,30]/255;
 pop = popCENTRO;
 tot_cases = CENTRO(:,1);
@@ -252,7 +252,7 @@ tot_deaths = CENTRO(:,3);
 new_deaths = CENTRO(:,4);
 end
 if (init == 6)
-country = 'Brasil';
+country = 'Brasil            ';
 color = [0,0,0]/255;
 pop = popBR;
 tot_cases = BR(:,1);
@@ -265,12 +265,6 @@ end
 
 if (init < 6)  linew = 1.2; end
 if (init == 6) linew = 1.75; end
-
-if strcmp(country, 'Norte') country = 'Norte            '; end 
-if strcmp(country, 'Nordeste') country = 'Nordeste       '; end 
-if strcmp(country, 'Sudeste') country = 'Sudeste        '; end 
-if strcmp(country, 'Sul') country = 'Sul                '; end 
-if strcmp(country, 'Brasil') country = 'Brasil            '; end 
 
 tot_cases_pm = tot_cases/ (pop / 1000000);
 new_cases_pm = new_cases/ (pop / 1000000);
@@ -384,6 +378,22 @@ hold on;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Plotar novas mortes X total de mortes (por milhao de hab.)
 figure (3);
+
+%Grid manual
+grid1=loglog([1,10000],10*(ones(2, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+grid2=loglog([1,10000],100*(ones(2, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+
+grid3=loglog(10*(ones(2, 1)),[1,1000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+grid4=loglog(100*(ones(2, 1)),[1,1000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+grid5=loglog(1000*(ones(2, 1)),[1,1000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+
+
+
  n = max(max(size(tot_deaths_pm)));
  fig=loglog(tot_deaths_pm,new_deaths7_pm,'DisplayName',[country,' ',num2str(max(tot_deaths)),' mortes'],"color",color,'LineWidth', linew);
  hold on;
@@ -468,6 +478,19 @@ hold on;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Plotar novos casos X total de casos (por milhao de hab.)
 figure (4);
+
+grid1=loglog([1,100000],100*(ones(2, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+grid2=loglog([1,100000],1000*(ones(2, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+
+grid3=loglog(100*(ones(2, 1)),[1,10000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+grid4=loglog(1000*(ones(2, 1)),[1,10000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+grid5=loglog(10000*(ones(2, 1)),[1,10000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+
  n = max(max(size(tot_cases_pm)));
  fig=loglog(tot_cases_pm,new_cases7_pm,'DisplayName',[country,' ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', linew);
  hold on;
@@ -669,8 +692,8 @@ figure(4)
 set(gca,'FontSize',fonte_padrao);
 title({'Informativo de progresso da epidemia (número de casos)',['Regiões do Brasil em ',datestr(end_time,24)]},'FontSize',fonte_titulo)
 
-ylabel(['Novos casos por semana (por milhão de habitantes)'],'FontSize',fonte_labels);
-xlabel ("Total de casos (por milhão de habitantes)",'FontSize',fonte_labels);
+ylabel({'Novos casos por semana','(por milhão de habitantes)'},'FontSize',fonte_labels);
+xlabel ({'Total de casos','(por milhão de habitantes)'},'FontSize',fonte_labels);
 legend ("location", "northwest");
 legend ("location", "northwest");
 

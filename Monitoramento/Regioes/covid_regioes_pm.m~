@@ -37,6 +37,7 @@
 %=======================================================================%
 clc;
 clear all;
+close all;
 
 % IMPORTANTE
 % Esse código só funciona se o Ministério da Saúde manter o padrão de formatação dos arquivos.
@@ -53,9 +54,8 @@ BRASIL = [data.casosAcumulados, data.casosNovos, data.obitosAcumulados, data.obi
 %Definindo o número de dias com informações do COVID-19, que representa o tamanho das matrizes dos estados
 [n1,n2] = size(BRASIL);
 D = n1/27;
-dia = data.data;
-[n1dia,n2dia] = size(dia);
-end_time = datestr(dia(n1dia,n2dia),24);
+dates = data.data(find(strcmp([data.estado],'RO')),:);
+end_time = max(datenum(dates));
 
 
 %plot_type é pra diferenciar mortes e casos pra organizarmos a ordem da legenda de acordo com o número de mortes ou de casos
@@ -96,7 +96,7 @@ GO= BRASIL(find(strcmp([data.estado], 'GO')),:);
 DF= BRASIL(find(strcmp([data.estado], 'DF')),:);
 end
 
-BR=RO+AC+AM+RR+PA+AP+TO+MA+PI+CE+RN+PB+PE+AL+SE+BA+MG+ES+RJ+SP+PR+SC+RS+MS+MT+MG+DF;
+BR=RO+AC+AM+RR+PA+AP+TO+MA+PI+CE+RN+PE+AL+SE+BA+MG+ES+RJ+SP+PR+SC+RS+MS+MT+DF+PB+GO;
 
 %Juntando os estados em regiões
 NORTE = RO + AC+ AM + RR + PA;
@@ -133,7 +133,8 @@ popMS=2778986;
 popMT=3484466;
 popGO=7018354;
 popDF=3015268;
-popBR=popRO+popAC+popAM+popRR+popPA+popAP+popTO+popMA+popPI+popCE+popRN+popPB+popPE+popAL+popSE+popBA+popMG+popES+popRJ+popSP+popPR+popSC+popRS+popMS+popMT+popMG+popDF;
+
+popBR=popRO+popAC+popAM+popRR+popPA+popAP+popTO+popMA+popPI+popCE+popRN+popPE+popAL+popSE+popBA+popMG+popES+popRJ+popSP+popPR+popSC+popRS+popMS+popMT+popDF+popPB+popGO;
 
 %População de cada região
 popNORTE = popRO + popAC+ popAM + popRR + popPA;
@@ -145,7 +146,7 @@ popCENTRO = popMS + popMT + popGO + popDF;
 
 if (plot_type == 1)
 %ordem por países que tem mais morte
-if (init == 4)
+if (init == 3)
 country = 'Norte';
 color = [0,169,74]/255; 
 pop = popNORTE;
@@ -154,7 +155,7 @@ new_cases = NORTE(:,2);
 tot_deaths = NORTE(:,3);
 new_deaths = NORTE(:,4);
 end
-if (init == 3)
+if (init == 2)
 country = 'Nordeste';
 color = [0,99,181]/255;
 pop = popNORDESTE;
@@ -163,7 +164,7 @@ new_cases = NORDESTE(:,2);
 tot_deaths = NORDESTE(:,3);
 new_deaths = NORDESTE(:,4);
 end
-if (init == 2)
+if (init == 1)
 country = 'Sudeste';
 color = [254,88,52]/255;
 pop = popSUDESTE;
@@ -172,7 +173,7 @@ new_cases = SUDESTE(:,2);
 tot_deaths = SUDESTE(:,3);
 new_deaths = SUDESTE(:,4);
 end
-if (init == 5)
+if (init == 4)
 country = 'Sul';
 color = [193,203,68]/255;
 pop = popSUL;
@@ -181,7 +182,7 @@ new_cases = SUL(:,2);
 tot_deaths = SUL(:,3);
 new_deaths = SUL(:,4);
 end
-if (init == 6)
+if (init == 5)
 country = 'Centro-Oeste';
 color = [135,85,30]/255;
 pop = popCENTRO;
@@ -190,7 +191,7 @@ new_cases = CENTRO(:,2);
 tot_deaths = CENTRO(:,3);
 new_deaths = CENTRO(:,4);
 end
-if (init == 1)
+if (init == 6)
 country = 'Brasil';
 color = [0,0,0]/255;
 pop = popBR;
@@ -205,7 +206,7 @@ end
 
 if (plot_type == 2)
 %ordem por países que tem mais morte
-if (init == 4)
+if (init == 3)
 country = 'Norte';
 color = [0,169,74]/255; 
 pop = popNORTE;
@@ -214,7 +215,7 @@ new_cases = NORTE(:,2);
 tot_deaths = NORTE(:,3);
 new_deaths = NORTE(:,4);
 end
-if (init == 3)
+if (init == 2)
 country = 'Nordeste';
 color = [0,99,181]/255;
 pop = popNORDESTE;
@@ -223,7 +224,7 @@ new_cases = NORDESTE(:,2);
 tot_deaths = NORDESTE(:,3);
 new_deaths = NORDESTE(:,4);
 end
-if (init == 2)
+if (init == 1)
 country = 'Sudeste';
 color = [254,88,52]/255;
 pop = popSUDESTE;
@@ -263,10 +264,10 @@ end
 end
 
 
-tot_cases_pm = tot_cases/ (pop;
-new_cases_pm = new_cases/pop;
-tot_deaths_pm = tot_deaths/pop;
-new_deaths_pm = new_deaths/pop;
+tot_cases_pm = tot_cases/ (pop / 1000000);
+new_cases_pm = new_cases/ (pop / 1000000);
+tot_deaths_pm = tot_deaths/ (pop / 1000000);
+new_deaths_pm = new_deaths/ (pop / 1000000);
 
 
 %consolidando os novos casos e mortes por semana
@@ -280,8 +281,8 @@ end
 
 %Criando vetores desde dia zero a partir de X mortes ("_deaths") ou a partir de X casos ("_cases")
 %Usuário define dia zero para casos ou mortes
-X_deaths_pm = 0;
-X_cases_pm = 0;
+X_deaths_pm = 1;
+X_cases_pm = 10;
 X_deaths = 100;
 X_cases = 1000;
 
@@ -330,6 +331,8 @@ fonte_labels = 9;
 fonte_padrao = 9; %numeros dos eixos
 fonte_location = 8;
 
+day_axis = 70;
+
 if (plot_type == 1)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Plotar total de mortes/milhao por tempo (dia zero definido por mortes/milhao)
@@ -339,8 +342,6 @@ figure (1);
  fig=semilogy(days,tot_deaths_pmX,'DisplayName',[country,' - ',num2str(max(tot_deaths)),' mortes'],"color",color,'LineWidth', 1.25);
  hold on;
  text (n-1, tot_deaths_pmX(n,1), [' ',country],'FontSize',fonte_location,"color",color);
-
-tot_mortes(init,1) = max(tot_deaths);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Plotar novas mortes X total de mortes (por milhao de hab.)
@@ -358,7 +359,6 @@ figure (5);
  fig=plot(days,new_deaths7_pmX,'DisplayName',[country,' - ',num2str(max(tot_deaths)),' mortes'],"color",color,'LineWidth', 1.25);
  hold on;
  text (n-1, new_deaths7_pmX(n,1), [' ',country],'FontSize',fonte_location,"color",color);
-
 end
 
 if (plot_type == 2)
@@ -409,12 +409,12 @@ end
 figure(1)
 
 set(gca,'FontSize',fonte_padrao)
-title({'Letalidade da epidemia',['Comparação entre países em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
+title({'Letalidade da epidemia (por milhão de habitantes)',['Regiões do Brasil em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
 xlabel(['Dias desde que se ultrapassou ',num2str(X_deaths_pm),' morte (por milhão de habitantes)'],'FontSize',fonte_labels);
 ylabel ("Total de mortes (por milhão de habitantes)",'FontSize',fonte_labels);
-legend ("location", "northeastoutside");
-%axis([0 100 1 100]);
-Pos = [0,250,900,450];
+legend ("location", "northwest");;
+axis([0 [day_axis-1] 1 1000]);
+Pos = [250,250,600,450];
 set(0, 'DefaultFigurePosition', Pos);
 
 curtick = get(gca, 'YTick');
@@ -430,7 +430,7 @@ uistack(ha,'bottom');
 % To create the logo at the bottom left corner of the plot use 
 % the next two lines
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[-0.15 -0.2], .2,.15,]);
+ha2=axes('position',[haPos([3 1])-[.12 -0.0], .24,.12,]);
 % To place the logo at the bottom left corner of the figure window
 % uncomment the line below and comment the above two lines
 %ha2=axes('position',[0, 0, .1,.04,]);
@@ -448,12 +448,12 @@ set(ha2,'handlevisibility','off','visible','off')
 figure (2)
 
 set(gca,'FontSize',fonte_padrao)
-title({'Contágio da epidemia',['Comparação entre países em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
+title({'Contágio da epidemia (por milhão de habitantes)',['Regiões do Brasil em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
 xlabel(['Dias desde que se ultrapassou ',num2str(X_cases_pm),' casos (por milhão de habitantes)'],'FontSize',fonte_labels);
 ylabel ("Total de casos (por milhão de habitantes)",'FontSize',fonte_labels);
-legend ("location", "northeastoutside");
-%axis([0 110 10 1000]);
-Pos = [0,250,900,450];
+legend ("location", "northwest");;
+axis([0 day_axis 10 10000]);
+Pos = [250,250,600,450];
 set(0, 'DefaultFigurePosition', Pos);
 
 curtick = get(gca, 'YTick');
@@ -467,7 +467,7 @@ uistack(ha,'bottom');
 % To create the logo at the bottom left corner of the plot use 
 % the next two lines
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[-0.15 -0.2], .2,.15,]);
+ha2=axes('position',[haPos([3 1])-[.12 -0.0], .24,.12,]);
 % To place the logo at the bottom left corner of the figure window
 % uncomment the line below and comment the above two lines
 %ha2=axes('position',[0, 0, .1,.04,]);
@@ -486,12 +486,12 @@ set(ha2,'handlevisibility','off','visible','off')
 figure (3)
 
 set(gca,'FontSize',fonte_padrao);
-title({'Informativo de progresso da epidemia (número de mortes por milhão de habitantes)',['Comparação entre países em ',datestr(end_time,24)]},'FontSize',fonte_titulo)
+title({'Informativo de progresso da epidemia (mortes por milhão de habitantes)',['Regiões do Brasil em ',datestr(end_time,24)]},'FontSize',fonte_titulo)
 ylabel(['Novas mortes por semana (por milhão de habitantes)'],'FontSize',fonte_labels);
 xlabel ("Total de mortes (por milhão de habitantes)",'FontSize',fonte_labels);
-legend ("location", "northeastoutside");
-%axis([1 100 1 10]);
-Pos = [0,250,900,450];
+legend ("location", "northwest");;
+axis([1 1000 1 100]);
+Pos = [250,250,600,450];
 set(0, 'DefaultFigurePosition', Pos);
 
 curtick = get(gca, 'YTick');
@@ -506,7 +506,7 @@ uistack(ha,'bottom');
 % To create the logo at the bottom left corner of the plot use 
 % the next two lines
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[-0.15 -0.2], .2,.15,]);
+ha2=axes('position',[haPos([3 1])-[.12 -0.0], .24,.12,]);
 % To place the logo at the bottom left corner of the figure window
 % uncomment the line below and comment the above two lines
 %ha2=axes('position',[0, 0, .1,.04,]);
@@ -523,18 +523,19 @@ set(ha2,'handlevisibility','off','visible','off')
 figure(4)
 
 set(gca,'FontSize',fonte_padrao);
-title({'Informativo de progresso da epidemia (número de mortes por milhão de habitantes)',['Comparação entre países em ',datestr(end_time,24)]},'FontSize',fonte_titulo)
+title({'Informativo de progresso da epidemia (casos por milhão de habitantes)',['Regiões do Brasil em ',datestr(end_time,24)]},'FontSize',fonte_titulo)
 ylabel(['Novos casos por semana (por milhão de habitantes)'],'FontSize',fonte_labels);
 xlabel ("Total de casos (por milhão de habitantes)",'FontSize',fonte_labels);
-legend ("location", "northeastoutside");
-%axis([1 1000 1 100]);
-Pos = [0,250,900,450];
+legend ("location", "northwest");;
+axis([1 10000 1 1000]);
+Pos = [250,250,600,450];
 set(0, 'DefaultFigurePosition', Pos);
 
 curtick = get(gca, 'YTick');
 set(gca, 'YTickLabel', cellstr(num2str(curtick(:))));
 curtick = get(gca, 'XTick');
 set(gca, 'XTickLabel', cellstr(num2str(curtick(:))));
+
 
 % pra botar o logo no inferior direito
 ha =gca;
@@ -543,7 +544,7 @@ uistack(ha,'bottom');
 % To create the logo at the bottom left corner of the plot use 
 % the next two lines
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[-0.15 -0.2], .2,.15,]);
+ha2=axes('position',[haPos([3 1])-[.12 -0.0], .24,.12,]);
 % To place the logo at the bottom left corner of the figure window
 % uncomment the line below and comment the above two lines
 %ha2=axes('position',[0, 0, .1,.04,]);
@@ -561,12 +562,12 @@ set(ha2,'handlevisibility','off','visible','off')
 figure(5)
 
 set(gca,'FontSize',fonte_padrao)
-title({'Letalidade semanal da epidemia',['Comparação entre países em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
+title({'Letalidade semanal da epidemia (por milhão de habitantes)',['Regiões do Brasil em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
 xlabel(['Dias desde que se ultrapassou ',num2str(X_deaths_pm),' mortes (por milhão de habitantes)'],'FontSize',fonte_labels);
 ylabel ("Novas mortes por semana (por milhão de habitantes)",'FontSize',fonte_labels);
-legend ("location", "northeastoutside");
-%axis([0 80 1 22]);
-Pos = [0,250,900,450];
+legend ("location", "northwest");;
+axis([0 [day_axis-1] 0 80]);
+Pos = [250,250,600,450];
 set(0, 'DefaultFigurePosition', Pos);
 
 curtick = get(gca, 'YTick');
@@ -580,7 +581,7 @@ uistack(ha,'bottom');
 % To create the logo at the bottom left corner of the plot use 
 % the next two lines
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[-0.15 -0.2], .2,.15,]);
+ha2=axes('position',[haPos([3 1])-[.58 -0.42], .24,.12,]);
 % To place the logo at the bottom left corner of the figure window
 % uncomment the line below and comment the above two lines
 %ha2=axes('position',[0, 0, .1,.04,]);
@@ -597,12 +598,12 @@ set(ha2,'handlevisibility','off','visible','off')
 figure (6)
 
 set(gca,'FontSize',fonte_padrao)
-title({'Contágio semanal da epidemia',['Comparação entre países em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
+title({'Contágio semanal da epidemia (por milhão de habitantes)',['Regiões do Brasil em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
 xlabel(['Dias desde que se ultrapassou ',num2str(X_cases_pm),' casos (por milhão de habitantes)'],'FontSize',fonte_labels);
 ylabel ("Novos casos por semana (por milhão de habitantes)",'FontSize',fonte_labels);
-legend ("location", "northeastoutside");
-%axis([0 80 10 140]);
-Pos = [0,250,900,450];
+legend ("location", "northwest");;
+axis([0 [day_axis-1] 0 1000]);
+Pos = [250,250,600,450];
 set(0, 'DefaultFigurePosition', Pos);
 
 curtick = get(gca, 'YTick');
@@ -616,7 +617,7 @@ uistack(ha,'bottom');
 % To create the logo at the bottom left corner of the plot use 
 % the next two lines
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[-0.15 -0.2], .2,.15,]);
+ha2=axes('position',[haPos([3 1])-[.58 -0.42], .24,.12,]);
 % To place the logo at the bottom left corner of the figure window
 % uncomment the line below and comment the above two lines
 %ha2=axes('position',[0, 0, .1,.04,]);
@@ -638,4 +639,6 @@ saveas(figure(3),[pwd '/',outputdir,'/',name,'_informativo-mortes-pm_',datestr(e
 saveas(figure(4),[pwd '/',outputdir,'/',name,'_informativo-casos-pm_',datestr(end_time,29),'.png']);
 saveas(figure(5),[pwd '/',outputdir,'/',name,'_letalidade-semanal-pm_',datestr(end_time,29),'.png']);
 saveas(figure(6),[pwd '/',outputdir,'/',name,'_contagio_semanal-pm_',datestr(end_time,29),'.png']);
+
+close all
 

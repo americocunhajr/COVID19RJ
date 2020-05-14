@@ -143,7 +143,7 @@ popCENTRO = popMS + popMT + popGO + popDF;
 if (plot_type == 1)
 %ordem por países que tem mais morte
 if (init == 3)
-country = 'Norte';
+country = 'Norte              ';
 color = [0,169,74]/255; 
 pop = popNORTE;
 tot_cases = NORTE(:,1);
@@ -152,7 +152,7 @@ tot_deaths = NORTE(:,3);
 new_deaths = NORTE(:,4);
 end
 if (init == 2)
-country = 'Nordeste';
+country = 'Nordeste         ';
 color = [0,99,181]/255;
 pop = popNORDESTE;
 tot_cases = NORDESTE(:,1);
@@ -161,7 +161,7 @@ tot_deaths = NORDESTE(:,3);
 new_deaths = NORDESTE(:,4);
 end
 if (init == 1)
-country = 'Sudeste';
+country = 'Sudeste          ';
 color = [254,88,52]/255;
 pop = popSUDESTE;
 tot_cases = SUDESTE(:,1);
@@ -170,7 +170,7 @@ tot_deaths = SUDESTE(:,3);
 new_deaths = SUDESTE(:,4);
 end
 if (init == 4)
-country = 'Sul';
+country = 'Sul                    ';
 color = [193,203,68]/255;
 pop = popSUL;
 tot_cases = SUL(:,1);
@@ -179,7 +179,7 @@ tot_deaths = SUL(:,3);
 new_deaths = SUL(:,4);
 end
 if (init == 5)
-country = 'Centro-Oeste';
+country = 'Centro-Oeste    ';
 color = [135,85,30]/255;
 pop = popCENTRO;
 tot_cases = CENTRO(:,1);
@@ -188,7 +188,7 @@ tot_deaths = CENTRO(:,3);
 new_deaths = CENTRO(:,4);
 end
 if (init == 6)
-country = 'Brasil';
+country = 'Brasil            ';
 color = [0,0,0]/255;
 pop = popBR;
 tot_cases = BR(:,1);
@@ -203,7 +203,7 @@ end
 if (plot_type == 2)
 %ordem por países que tem mais morte
 if (init == 3)
-country = 'Norte';
+country = 'Norte              ';
 color = [0,169,74]/255; 
 pop = popNORTE;
 tot_cases = NORTE(:,1);
@@ -212,7 +212,7 @@ tot_deaths = NORTE(:,3);
 new_deaths = NORTE(:,4);
 end
 if (init == 2)
-country = 'Nordeste';
+country = 'Nordeste        ';
 color = [0,99,181]/255;
 pop = popNORDESTE;
 tot_cases = NORDESTE(:,1);
@@ -221,7 +221,7 @@ tot_deaths = NORDESTE(:,3);
 new_deaths = NORDESTE(:,4);
 end
 if (init == 1)
-country = 'Sudeste';
+country = 'Sudeste          ';
 color = [254,88,52]/255;
 pop = popSUDESTE;
 tot_cases = SUDESTE(:,1);
@@ -230,7 +230,7 @@ tot_deaths = SUDESTE(:,3);
 new_deaths = SUDESTE(:,4);
 end
 if (init == 4)
-country = 'Sul';
+country = 'Sul                    ';
 color = [193,203,68]/255;
 pop = popSUL;
 tot_cases = SUL(:,1);
@@ -239,7 +239,7 @@ tot_deaths = SUL(:,3);
 new_deaths = SUL(:,4);
 end
 if (init == 5)
-country = 'Centro-Oeste';
+country = 'Centro-Oeste    ';
 color = [135,85,30]/255;
 pop = popCENTRO;
 tot_cases = CENTRO(:,1);
@@ -248,7 +248,7 @@ tot_deaths = CENTRO(:,3);
 new_deaths = CENTRO(:,4);
 end
 if (init == 6)
-country = 'Brasil';
+country = 'Brasil            ';
 color = [0,0,0]/255;
 pop = popBR;
 tot_cases = BR(:,1);
@@ -261,12 +261,6 @@ end
 
 if (init < 6)  linew = 1.2; end
 if (init == 6) linew = 1.75; end
-
-if strcmp(country, 'Norte') country = 'Norte            '; end 
-if strcmp(country, 'Nordeste') country = 'Nordeste       '; end 
-if strcmp(country, 'Sudeste') country = 'Sudeste        '; end 
-if strcmp(country, 'Sul') country = 'Sul                '; end 
-if strcmp(country, 'Brasil') country = 'Brasil            '; end 
 
 tot_cases_pm = tot_cases/ (pop / 1000000);
 new_cases_pm = new_cases/ (pop / 1000000);
@@ -346,11 +340,11 @@ if (plot_type == 1)
 figure (1);
 
 %Grid manual
-grid1=semilogy(0:1:(day_axis-1),10*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+grid1=semilogy(0:1:(day_axis-1),100*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
 hold on;
-grid2=semilogy(0:1:(day_axis-1),100*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+grid2=semilogy(0:1:(day_axis-1),1000*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
 hold on;
-grid3=semilogy(0:1:(day_axis-1),1000*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+grid3=semilogy(0:1:(day_axis-1),10000*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
 hold on;
 
 %Linhas "dobram"
@@ -380,6 +374,21 @@ hold on;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Plotar novas mortes X total de mortes (por milhao de hab.)
 figure (3);
+
+%Grid manual
+grid1=loglog([1,100000],100*(ones(2, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+grid2=loglog([1,100000],1000*(ones(2, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+
+grid3=loglog(100*(ones(2, 1)),[1,10000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+grid4=loglog(1000*(ones(2, 1)),[1,10000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+grid5=loglog(10000*(ones(2, 1)),[1,10000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+
+
  n = max(max(size(tot_deaths)));
  fig=loglog(tot_deaths,new_deaths7,'DisplayName',[country,' ',num2str(max(tot_deaths)),' mortes'],"color",color,'LineWidth', 1.25);
  hold on;
@@ -390,13 +399,13 @@ figure (3);
 figure (5);
 
 %Grid manual
-grid1=semilogy(0:1:(day_axis-1),1*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+grid1=semilogy(0:1:(day_axis-1),10*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
 hold on;
-grid2=semilogy(0:1:(day_axis-1),10*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+grid2=semilogy(0:1:(day_axis-1),100*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
 hold on;
-grid3=semilogy(0:1:(day_axis-1),100*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+grid3=semilogy(0:1:(day_axis-1),1000*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
 hold on;
-grid4=semilogy(0:1:(day_axis-1),1000*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+grid4=semilogy(0:1:(day_axis-1),10000*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
 hold on;
 
 %Linhas "dobram"
@@ -430,11 +439,11 @@ if (plot_type == 2)
 figure (2);
 
 %Grid manual
-grid1=semilogy(0:1:(day_axis-1),100*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+grid1=semilogy(0:1:(day_axis-1),1000*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
 hold on;
-grid2=semilogy(0:1:(day_axis-1),1000*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+grid2=semilogy(0:1:(day_axis-1),10000*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
 hold on;
-grid3=semilogy(0:1:(day_axis-1),10000*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+grid3=semilogy(0:1:(day_axis-1),100000*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
 hold on;
 
 %Linhas "dobram"
@@ -464,6 +473,19 @@ hold on;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Plotar novos casos X total de casos (por milhao de hab.)
 figure (4);
+
+grid1=loglog([1,1000000],1000*(ones(2, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+grid2=loglog([1,1000000],10000*(ones(2, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+
+grid1=loglog(1000*(ones(2, 1)),[1,100000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+grid3=loglog(10000*(ones(2, 1)),[1,100000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+grid4=loglog(100000*(ones(2, 1)),[1,100000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+
  n = max(max(size(tot_cases)));
  fig=loglog(tot_cases,new_cases7,'DisplayName',[country,' ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', 1.25);
  hold on;
@@ -474,13 +496,13 @@ figure (4);
 figure (6);
 
 %Grid manual
-grid1=semilogy(0:1:(day_axis-1),10*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+grid1=semilogy(0:1:(day_axis-1),100*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
 hold on;
-grid2=semilogy(0:1:(day_axis-1),100*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+grid2=semilogy(0:1:(day_axis-1),1000*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
 hold on;
-grid3=semilogy(0:1:(day_axis-1),1000*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+grid3=semilogy(0:1:(day_axis-1),10000*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
 hold on;
-grid4=semilogy(0:1:(day_axis-1),10000*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+grid4=semilogy(0:1:(day_axis-1),100000*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
 hold on;
 
 %Linhas "dobram"
