@@ -163,12 +163,12 @@ if (plot_type == 1)
 
 if (regions == 1)
 if (init == 0) country = 'BR'; color = [0,0,0]/255; pop = popBR; end
-if (init == 3) country = 'AC'; color = [69,169,0]/255; pop = 881935; end
+if (init == 4) country = 'AC'; color = [69,169,0]/255; pop = 881935; end
 if (init == 5) country = 'AP'; color = [5,163,29]/255; pop = 845731; end
 if (init == 7) country = 'AM'; color = [53,143,31]/255; pop = 4144597; end  
 if (init == 6) country = 'PA'; color = [0,169,74]/255; pop = 8602865; end
 if (init == 1) country = 'TO'; color = [0,109,22]/255; pop = 1572866; end
-if (init == 4) country = 'RO'; color = [0,104,44]/255; pop = 1777225; end
+if (init == 3) country = 'RO'; color = [0,104,44]/255; pop = 1777225; end
 if (init == 2) country = 'RR'; color = [0,67,21]/255; pop = 605761; end
 end
 
@@ -239,7 +239,37 @@ if (init == 26) country = 'RS'; color = [193,203,68]/255; pop = 11377239; end
 if (init == 27) country = 'SC'; color = [191,171,72]/255; pop = 7164788; end
 end
 
+if (init > 0) location = BRASIL(find(strcmp([data.estado], country)),:); linew = 1.2; end
+if (init == 0) location = BR; linew = 1.75; end
 
+if strcmp(country, 'BR') country = 'BR'; end 
+if strcmp(country, 'AM') country = 'AM  '; end 
+if strcmp(country, 'PA') country = 'PA     '; end 
+if strcmp(country, 'AP') country = 'AP       '; end 
+if strcmp(country, 'AC') country = 'AC      '; end 
+if strcmp(country, 'RO') country = 'RO      '; end 
+if strcmp(country, 'RR') country = 'RR      '; end 
+if strcmp(country, 'TO') country = 'TO      '; end 
+if strcmp(country, 'CE') country = 'CE    '; end 
+if strcmp(country, 'PE') country = 'PE    '; end 
+if strcmp(country, 'MA') country = 'MA     '; end 
+if strcmp(country, 'BA') country = 'BA      '; end 
+if strcmp(country, 'PB') country = 'PB      '; end 
+if strcmp(country, 'AL') country = 'AL      '; end 
+if strcmp(country, 'RN') country = 'RN     '; end 
+if strcmp(country, 'PI') country = 'PI        '; end 
+if strcmp(country, 'SE') country = 'SE       '; end 
+if strcmp(country, 'SP') country = 'SP  '; end 
+if strcmp(country, 'RJ') country = 'RJ   '; end 
+if strcmp(country, 'ES') country = 'ES    '; end 
+if strcmp(country, 'MG') country = 'MG   '; end 
+if strcmp(country, 'GO') country = 'GO      '; end 
+if strcmp(country, 'DF') country = 'DF       '; end 
+if strcmp(country, 'MT') country = 'MT      '; end 
+if strcmp(country, 'MS') country = 'MS      '; end 
+if strcmp(country, 'PR') country = 'PR    '; end 
+if strcmp(country, 'RS') country = 'RS    '; end 
+if strcmp(country, 'SC') country = 'SC      '; end 
 end
 
 if (plot_type == 2)
@@ -323,13 +353,38 @@ if (init == 26) country = 'RS'; color = [193,203,68]/255; pop = 11377239; end
 if (init == 27) country = 'SC'; color = [191,171,72]/255; pop = 7164788; end
 end
 
-
-end
-
-
 if (init > 0) location = BRASIL(find(strcmp([data.estado], country)),:); linew = 1.2; end
 if (init == 0) location = BR; linew = 1.75; end
 
+if strcmp(country, 'BR') country = 'BR'; end 
+if strcmp(country, 'AM') country = 'AM  '; end 
+if strcmp(country, 'PA') country = 'PA    '; end 
+if strcmp(country, 'AP') country = 'AP    '; end 
+if strcmp(country, 'AC') country = 'AC    '; end 
+if strcmp(country, 'RO') country = 'RO    '; end 
+if strcmp(country, 'RR') country = 'RR    '; end 
+if strcmp(country, 'TO') country = 'TO      '; end 
+if strcmp(country, 'CE') country = 'CE   '; end 
+if strcmp(country, 'PE') country = 'PE   '; end 
+if strcmp(country, 'MA') country = 'MA    '; end 
+if strcmp(country, 'BA') country = 'BA     '; end 
+if strcmp(country, 'PB') country = 'PB     '; end 
+if strcmp(country, 'AL') country = 'AL     '; end 
+if strcmp(country, 'RN') country = 'RN    '; end 
+if strcmp(country, 'PI') country = 'PI      '; end 
+if strcmp(country, 'SE') country = 'SE     '; end 
+if strcmp(country, 'SP') country = 'SP  '; end 
+if strcmp(country, 'RJ') country = 'RJ   '; end 
+if strcmp(country, 'ES') country = 'ES    '; end 
+if strcmp(country, 'MG') country = 'MG   '; end 
+if strcmp(country, 'GO') country = 'GO    '; end 
+if strcmp(country, 'DF') country = 'DF     '; end 
+if strcmp(country, 'MT') country = 'MT      '; end 
+if strcmp(country, 'MS') country = 'MS      '; end 
+if strcmp(country, 'PR') country = 'PR    '; end 
+if strcmp(country, 'RS') country = 'RS    '; end 
+if strcmp(country, 'SC') country = 'SC    '; end 
+end
 
 
 
@@ -442,15 +497,28 @@ hold on;
 
  n = max(max(size(tot_deaths_X)));
  days = 0:1:n-1;
- fig=semilogy(days,tot_deaths_X,'DisplayName',[country,' - ',num2str(max(tot_deaths)),' mortes'],"color",color,'LineWidth', linew);
+ fig=semilogy(days,tot_deaths_X,'DisplayName',[country,'  ',num2str(max(tot_deaths)),' mortes'],"color",color,'LineWidth', linew);
  hold on;
  text (n-1, tot_deaths_X(n,1), [' ',country],'FontSize',fonte_location,"color",color);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Plotar novas mortes X total de mortes (por milhao de hab.)
 figure (3);
+
+grid1=loglog([1,100000],100*(ones(2, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+grid2=loglog([1,100000],1000*(ones(2, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+
+grid3=loglog(100*(ones(2, 1)),[1,10000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+grid4=loglog(1000*(ones(2, 1)),[1,10000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+grid5=loglog(10000*(ones(2, 1)),[1,10000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+
  n = max(max(size(tot_deaths)));
- fig=loglog(tot_deaths,new_deaths7,'DisplayName',[country,' - ',num2str(max(tot_deaths)),' mortes'],"color",color,'LineWidth', linew);
+ fig=loglog(tot_deaths,new_deaths7,'DisplayName',[country,'  ',num2str(max(tot_deaths)),' mortes'],"color",color,'LineWidth', linew);
  hold on;
  text (tot_deaths(n,1), new_deaths7(n,1), [' ',country],'FontSize',fonte_location,"color",color);
 
@@ -488,7 +556,7 @@ hold on;
 
  n = max(max(size(new_deaths_X)));
  days = 0:1:n-1;
- fig=semilogy(days,new_deaths7_X,'DisplayName',[country,' - ',num2str(max(tot_deaths)),' mortes'],"color",color,'LineWidth', linew);
+ fig=semilogy(days,new_deaths7_X,'DisplayName',[country,'  ',num2str(max(tot_deaths)),' mortes'],"color",color,'LineWidth', linew);
  hold on;
  text (n-1, new_deaths7_X(n,1), [' ',country],'FontSize',fonte_location,"color",color);
 end
@@ -526,7 +594,7 @@ hold on;
 
  n = max(max(size(tot_cases_X)));
  days = 0:1:n-1;
- fig=semilogy(days,tot_cases_X,'DisplayName',[country,' - ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', linew);
+ fig=semilogy(days,tot_cases_X,'DisplayName',[country,'  ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', linew);
  hold on;
  figtext=text (n-1, tot_cases_X(n,1), [' ',country],'FontSize',fonte_location,"color",color);
 
@@ -535,8 +603,20 @@ hold on;
 %Plotar novos casos X total de casos (por milhao de hab.)
 figure (4);
 
+grid1=loglog([1,1000000],1000*(ones(2, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+grid2=loglog([1,1000000],10000*(ones(2, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+
+grid3=loglog(1000*(ones(2, 1)),[1,100000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+grid4=loglog(10000*(ones(2, 1)),[1,100000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+grid5=loglog(100000*(ones(2, 1)),[1,100000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+
  n = max(max(size(tot_cases)));
- fig=loglog(tot_cases,new_cases7,'DisplayName',[country,' - ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', linew);
+ fig=loglog(tot_cases,new_cases7,'DisplayName',[country,'  ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', linew);
  hold on;
  text (tot_cases(n,1), new_cases7(n,1), [' ',country],'FontSize',fonte_location,"color",color);
 
@@ -574,7 +654,7 @@ hold on;
 
  n = max(max(size(new_cases_X)));
  days = 0:1:n-1;
- fig=semilogy(days,new_cases7_X,'DisplayName',[country,' - ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', linew);
+ fig=semilogy(days,new_cases7_X,'DisplayName',[country,'  ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', linew);
  hold on;
  text (n-1, new_cases7_X(n,1), [' ',country],'FontSize',fonte_location,"color",color);
 
