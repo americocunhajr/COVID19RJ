@@ -95,8 +95,8 @@ end
 BR=RO+AC+AM+RR+PA+AP+TO+MA+PI+CE+RN+PE+AL+SE+BA+MG+ES+RJ+SP+PR+SC+RS+MS+MT+DF+PB+GO;
 
 %Juntando os estados em regiões
-NORTE = RO + AC+ AM + RR + PA;
-NORDESTE = MA + PI + CE + RN + PB + PE + AL + SE; 
+NORTE = RO + AC + AM + RR + PA + AP + TO;
+NORDESTE = MA + PI + CE + RN + PB + PE + AL + SE + BA; 
 SUDESTE = MG + ES + RJ + SP;
 SUL = PR + SC + RS;
 CENTRO = MS + MT + GO + DF;
@@ -221,7 +221,7 @@ tot_deaths = NORDESTE(:,3);
 new_deaths = NORDESTE(:,4);
 end
 if (init == 1)
-country = 'Sudeste          ';
+country = 'Sudeste         ';
 color = [254,88,52]/255;
 pop = popSUDESTE;
 tot_cases = SUDESTE(:,1);
