@@ -58,39 +58,16 @@ if (plot_type == 1)
 if (init == 6) country = 'Brazil'; color = [0,0,0]/255; end
 if (init == 13) country = 'South Korea'; color = [69,169,0]/255; end
 if (init == 10) country = 'Turkey'; color = [96,209,224]/255; end  
-if (init == 11) country = 'Peru'; color = [181,147,87]/255; end
+if (init == 12) country = 'Peru'; color = [181,147,87]/255; end
 if (init == 9) country = 'Iran'; color = [255,130,113]/255; end
 if (init == 8) country = 'Germany'; color = [209,227,105]/255; end
-if (init == 12) country = 'Ecuador'; color = [248,187,208]/255; end
+if (init == 11) country = 'Ecuador'; color = [248,187,208]/255; end
 if (init == 1) country = 'United States'; color = [0,104,44]/255; end
 if (init == 5) country = 'France'; color = [0,45,135]/255; end
 if (init == 2) country = 'United Kingdom'; color = [135,85,30]/255; end
 if (init == 3) country = 'Italy'; color = [203,63,23]/255; end
 if (init == 4) country = 'Spain'; color = [191,171,72]/255; end
 if (init == 7) country = 'Belgium'; color = [236,64,122]/255; end
-
-paises{init} =  country;
-
-end
-
-if (plot_type == 2)
-%ordem por países que tem mais caso
-if (init == 6) country = 'Brazil'; color = [0,0,0]/255; end
-if (init == 13) country = 'South Korea'; color = [69,169,0]/255; end
-if (init == 8) country = 'Turkey'; color = [96,209,224]/255; end  
-if (init == 10) country = 'Peru'; color = [181,147,87]/255; end
-if (init == 9) country = 'Iran'; color = [255,130,113]/255; end
-if (init == 5) country = 'Germany'; color = [209,227,105]/255; end
-if (init == 12) country = 'Ecuador'; color = [248,187,208]/255; end
-if (init == 1) country = 'United States'; color = [0,104,44]/255; end
-if (init == 7) country = 'France'; color = [0,45,135]/255; end
-if (init == 4) country = 'United Kingdom'; color = [135,85,30]/255; end
-if (init == 3) country = 'Italy'; color = [203,63,23]/255; end
-if (init == 2) country = 'Spain'; color = [191,171,72]/255; end
-if (init == 11) country = 'Belgium'; color = [236,64,122]/255; end
-
-end
-
 
 location = data(find(strcmp([all_data.location], country)),1:8);
 
@@ -99,17 +76,60 @@ end_time = max(datenum(dates))-1;
 
 if strcmp(country, 'United States') country = 'USA            '; end 
 if strcmp(country, 'United Kingdom') country = 'UK              '; end
-if strcmp(country, 'Belgium') country = 'Belgium      '; end 
+if strcmp(country, 'Belgium') country = 'Belgium        '; end 
+if strcmp(country, 'Brazil') country = 'Brazil          '; end 
+if strcmp(country, 'Iran') country = 'Iran               '; end 
+if strcmp(country, 'South Korea') country = 'South Korea   '; end 
+if strcmp(country, 'Turkey') country = 'Turkey          '; end 
+if strcmp(country, 'Peru') country = 'Peru              '; end 
+if strcmp(country, 'Ecuador') country = 'Ecuador        '; end 
+if strcmp(country, 'France') country = 'France        '; end 
+if strcmp(country, 'Spain') country = 'Spain          '; end 
+if strcmp(country, 'Italy') country = 'Italy            '; end 
+if strcmp(country, 'Germany') country = 'Germany      '; end 
+
+end
+
+if (plot_type == 2)
+%ordem por países que tem mais caso
+if (init == 5) country = 'Brazil'; color = [0,0,0]/255; end
+if (init == 13) country = 'South Korea'; color = [69,169,0]/255; end
+if (init == 7) country = 'Turkey'; color = [96,209,224]/255; end  
+if (init == 10) country = 'Peru'; color = [181,147,87]/255; end
+if (init == 9) country = 'Iran'; color = [255,130,113]/255; end
+if (init == 6) country = 'Germany'; color = [209,227,105]/255; end
+if (init == 12) country = 'Ecuador'; color = [248,187,208]/255; end
+if (init == 1) country = 'United States'; color = [0,104,44]/255; end
+if (init == 8) country = 'France'; color = [0,45,135]/255; end
+if (init == 2) country = 'United Kingdom'; color = [135,85,30]/255; end
+if (init == 4) country = 'Italy'; color = [203,63,23]/255; end
+if (init == 3) country = 'Spain'; color = [191,171,72]/255; end
+if (init == 11) country = 'Belgium'; color = [236,64,122]/255; end
+
+
+location = data(find(strcmp([all_data.location], country)),1:8);
+
+dates = all_data.date(find(strcmp([all_data.location],country)),:);
+end_time = max(datenum(dates))-1;
+
+if strcmp(country, 'United States') country = 'USA          '; end 
+if strcmp(country, 'United Kingdom') country = 'UK              '; end
+if strcmp(country, 'Belgium') country = 'Belgium        '; end 
 if strcmp(country, 'Brazil') country = 'Brazil          '; end 
 if strcmp(country, 'Iran') country = 'Iran             '; end 
-if strcmp(country, 'South Korea') country = 'South Korea'; end 
+if strcmp(country, 'South Korea') country = 'South Korea  '; end 
 if strcmp(country, 'Turkey') country = 'Turkey        '; end 
-if strcmp(country, 'Peru') country = 'Peru            '; end 
-if strcmp(country, 'Ecuador') country = 'Ecuador      '; end 
+if strcmp(country, 'Peru') country = 'Peru              '; end 
+if strcmp(country, 'Ecuador') country = 'Ecuador        '; end 
 if strcmp(country, 'France') country = 'France        '; end 
 if strcmp(country, 'Spain') country = 'Spain          '; end 
 if strcmp(country, 'Italy') country = 'Italy            '; end 
 if strcmp(country, 'Germany') country = 'Germany    '; end 
+
+end
+
+
+
 
 tot_cases = location(:,1);
 new_cases = location(:,2);
@@ -229,6 +249,19 @@ tot_mortes(init,1) = max(tot_deaths);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Plotar novas mortes X total de mortes (por milhao de hab.)
 figure (3);
+
+grid1=loglog([1,10000],10*(ones(2, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+grid2=loglog([1,10000],100*(ones(2, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+
+grid3=loglog(10*(ones(2, 1)),[1,1000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+grid4=loglog(100*(ones(2, 1)),[1,1000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+grid5=loglog(1000*(ones(2, 1)),[1,1000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+
  n = max(max(size(tot_deaths_pm)));
  fig=loglog(tot_deaths_pm,new_deaths7_pm,'DisplayName',[country,'  ',num2str(max(tot_deaths)),' mortes'],"color",color,'LineWidth', 1.25);
  hold on;
@@ -314,6 +347,19 @@ hold on;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Plotar novos casos X total de casos (por milhao de hab.)
 figure (4);
+
+grid1=loglog([1,100000],100*(ones(2, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+grid2=loglog([1,100000],1000*(ones(2, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+
+grid3=loglog(100*(ones(2, 1)),[1,10000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+grid4=loglog(1000*(ones(2, 1)),[1,10000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+grid5=loglog(10000*(ones(2, 1)),[1,10000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+
  n = max(max(size(tot_cases_pm)));
  fig=loglog(tot_cases_pm,new_cases7_pm,'DisplayName',[country,'  ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', 1.25);
  hold on;
@@ -378,7 +424,7 @@ end
 figure(1)
 
 set(gca,'FontSize',fonte_padrao)
-title({'Letalidade da epidemia',['Comparação entre países em ',name,' em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
+title({'Letalidade da epidemia',['Comparação entre países em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
 xlabel({['Dias desde que se ultrapassou ',num2str(X_deaths_pm),' morte'],['(por milhão de habitantes)']},'FontSize',fonte_labels);
 ylabel ({'Total de mortes', '(por milhão de habitantes)'},'FontSize',fonte_labels);
 legend ("location", "northeastoutside");
@@ -484,8 +530,8 @@ figure (3)
 
 set(gca,'FontSize',fonte_padrao);
 title({'Informativo de progresso da epidemia (número de mortes)',['Comparação entre países em ',datestr(end_time,24)]},'FontSize',fonte_titulo)
-ylabel(['Novas mortes por semana (por milhão de habitantes)'],'FontSize',fonte_labels);
-xlabel ("Total de mortes (por milhão de habitantes)",'FontSize',fonte_labels);
+ylabel({'Novas mortes por semana','(por milhão de habitantes)'},'FontSize',fonte_labels);
+xlabel ({'Total de mortes','(por milhão de habitantes)'},'FontSize',fonte_labels);
 legend ("location", "northeastoutside");
 axis([1 10000 1 1000]);
 
@@ -517,8 +563,8 @@ figure(4)
 
 set(gca,'FontSize',fonte_padrao);
 title({'Informativo de progresso da epidemia (número de casos)',['Comparação entre países em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
-ylabel(['Novos casos por semana (por milhão de habitantes)'],'FontSize',fonte_labels);
-xlabel ("Total de casos (por milhão de habitantes)",'FontSize',fonte_labels);
+ylabel({'Novos casos por semana','(por milhão de habitantes)'},'FontSize',fonte_labels);
+xlabel ({'Total de casos','(por milhão de habitantes)'},'FontSize',fonte_labels);
 legend ("location", "northeastoutside");
 axis([10 100000 10 10000]);
 Pos = [250,250,600,450];
