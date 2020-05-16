@@ -5,13 +5,16 @@ close all;
 table = readtable('cases-brazil-cities-time.txt');
 data = table2cell(table);
 
+%nome dos arquivos que serão salvos
 name = 'cidades-RJ';
 
+%Separei em dois tipos de plot pra organizar em ordem de mais mortes (tipo 1) e mais casos (tipo 2)
 for( plot_type = 1:1:2)
 
 for( init = 1:1:12)
 
 clearvars -except plot_type init table data name
+
 
 if (plot_type == 1)
 
@@ -83,6 +86,8 @@ if strcmp(city, 'Macaé/RJ') city = 'Macaé                             '; end
 
 end
 
+
+%Definindo os números de casos e mortes
 tot_cases = cell2mat(location(:,9));
 new_cases = cell2mat(location(:,8));
 tot_deaths = cell2mat(location(:,7));
@@ -193,7 +198,7 @@ hold on;
  days = 0:1:n-1;
  fig=semilogy(days,tot_deaths_X,'DisplayName',[city,'  ',num2str(max(tot_deaths)),' mortes'],"color",color,'LineWidth', 1.25);
  hold on;
- text (n-1, tot_deaths_X(n,1), [' ',city],'FontSize',fonte_location,"color",color);
+ text (n-1, tot_deaths_X(n,1), [' ',city],'FontSize',fonte_location,"color",color,"Clipping",'on');
 
 tot_mortes(init,1) = max(tot_deaths);
 
@@ -220,7 +225,7 @@ hold on;
  n = max(max(size(tot_deaths)));
  fig=loglog(tot_deaths,new_deaths7,'DisplayName',[city,'  ',num2str(max(tot_deaths)),' mortes'],"color",color,'LineWidth', 1.25);
  hold on;
- text (tot_deaths(n,1), new_deaths7(n,1), [' ',city],'FontSize',fonte_location,"color",color);
+ text (tot_deaths(n,1), new_deaths7(n,1), [' ',city],'FontSize',fonte_location,"color",color,"Clipping",'on');
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Plotar novas de mortes por tempo (dia zero definido por mortes/milhao)
@@ -258,7 +263,7 @@ hold on;
  days = 0:1:n-1;
  fig=plot(days,new_deaths7_X,'DisplayName',[city,'  ',num2str(max(tot_deaths)),' mortes'],"color",color,'LineWidth', 1.25);
  hold on;
- text (n-1, new_deaths7_X(n,1), [' ',city],'FontSize',fonte_location,"color",color);
+ text (n-1, new_deaths7_X(n,1), [' ',city],'FontSize',fonte_location,"color",color,"Clipping",'on');
 
 end
 
@@ -297,7 +302,7 @@ hold on;
  days = 0:1:n-1;
  fig=semilogy(days,tot_cases_X,'DisplayName',[city,'  ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', 1.25);
  hold on;
- text (n-1, tot_cases_X(n,1), [' ',city],'FontSize',fonte_location,"color",color);
+ text (n-1, tot_cases_X(n,1), [' ',city],'FontSize',fonte_location,"color",color,"Clipping",'on');
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Plotar novos casos X total de casos 
@@ -323,7 +328,7 @@ hold on;
  n = max(max(size(tot_cases)));
  fig=loglog(tot_cases,new_cases7,'DisplayName',[city,'  ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', 1.25);
  hold on;
- text (tot_cases(n,1), new_cases7(n,1), [' ',city],'FontSize',fonte_location,"color",color);
+ text (tot_cases(n,1), new_cases7(n,1), [' ',city],'FontSize',fonte_location,"color",color,"Clipping",'on');
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Plotar novos casos por tempo (dia zero definido por casos/milhao)
@@ -361,7 +366,7 @@ hold on;
  days = 0:1:n-1;
  fig=plot(days,new_cases7_X,'DisplayName',[city,'  ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', 1.25);
  hold on;
- text (n-1, new_cases7_X(n,1), [' ',city],'FontSize',fonte_location,"color",color);
+ text (n-1, new_cases7_X(n,1), [' ',city],'FontSize',fonte_location,"color",color,"Clipping",'on');
 
 
 end
@@ -655,12 +660,12 @@ set(ha2,'handlevisibility','off','visible','off')
 
 
 
-saveas(figure(1),[pwd '/',outputdir,'/',name,'_letalidade-abs_',datestr(end_time,29),'.png']);
-saveas(figure(2),[pwd '/',outputdir,'/',name,'_contagio-abs_',datestr(end_time,29),'.png']);
-saveas(figure(3),[pwd '/',outputdir,'/',name,'_informativo-mortes-abs_',datestr(end_time,29),'.png']);
-saveas(figure(4),[pwd '/',outputdir,'/',name,'_informativo-casos-abs_',datestr(end_time,29),'.png']);
-saveas(figure(5),[pwd '/',outputdir,'/',name,'_letalidade-semanal-abs_',datestr(end_time,29),'.png']);
-saveas(figure(6),[pwd '/',outputdir,'/',name,'_contagio_semanal-abs_',datestr(end_time,29),'.png']);
+print(figure(1),[pwd '/',outputdir,'/',name,'_letalidade-abs_',datestr(end_time,29),'.png',],'-dpng','-r300');
+print(figure(2),[pwd '/',outputdir,'/',name,'_contagio-abs_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
+print(figure(3),[pwd '/',outputdir,'/',name,'_informativo-mortes-abs_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
+print(figure(4),[pwd '/',outputdir,'/',name,'_informativo-casos-abs_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
+print(figure(5),[pwd '/',outputdir,'/',name,'_letalidade-semanal-abs_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
+print(figure(6),[pwd '/',outputdir,'/',name,'_contagio_semanal-abs_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
 
 
 close all

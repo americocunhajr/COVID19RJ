@@ -193,8 +193,9 @@ hold on;
  days = 0:1:n-1;
  fig=semilogy(days,tot_deaths_pmX,'DisplayName',[city,'  ',num2str(max(tot_deaths)),' mortes'],"color",color,'LineWidth', 1.25);
  hold on;
- text (n-1, tot_deaths_pmX(n,1), [' ',city],'FontSize',fonte_location,"color",color);
 
+
+ text (n-1, tot_deaths_pmX(n,1), [' ',city],'FontSize',fonte_location,"color",color,"Clipping",'on');
 
 
 tot_mortes(init,1) = max(tot_deaths);
@@ -222,7 +223,7 @@ hold on;
  n = max(max(size(tot_deaths_pm)));
  fig=loglog(tot_deaths_pm,new_deaths7_pm,'DisplayName',[city,'  ',num2str(max(tot_deaths)),' mortes'],"color",color,'LineWidth', 1.25);
  hold on;
- text (tot_deaths_pm(n,1), new_deaths7_pm(n,1), [' ',city],'FontSize',fonte_location,"color",color);
+ text (tot_deaths_pm(n,1), new_deaths7_pm(n,1), [' ',city],'FontSize',fonte_location,"color",color,"Clipping",'on');
 
 tot_deaths_pm(n,1)
 new_deaths7_pm(n,1)
@@ -263,7 +264,7 @@ hold on;
  days = 0:1:n-1;
  fig=semilogy(days,new_deaths7_pmX,'DisplayName',[city,'  ',num2str(max(tot_deaths)),' mortes'],"color",color,'LineWidth', 1.25);
  hold on;
- text (n-1, new_deaths7_pmX(n,1), [' ',city],'FontSize',fonte_location,"color",color);
+ text (n-1, new_deaths7_pmX(n,1), [' ',city],'FontSize',fonte_location,"color",color,"Clipping",'on');
 
 end
 
@@ -302,7 +303,7 @@ hold on;
  days = 0:1:n-1;
  fig=semilogy(days,tot_cases_pmX,'DisplayName',[city,'  ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', 1.25);
  hold on;
- text (n-1, tot_cases_pmX(n,1), [' ',city],'FontSize',fonte_location,"color",color);
+ text (n-1, tot_cases_pmX(n,1), [' ',city],'FontSize',fonte_location,"color",color,"Clipping",'on');
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Plotar novos casos X total de casos 
@@ -328,7 +329,7 @@ hold on;
  n = max(max(size(tot_cases_pm)));
  fig=loglog(tot_cases_pm,new_cases7_pm,'DisplayName',[city,'  ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', 1.25);
  hold on;
- text (tot_cases_pm(n,1), new_cases7_pm(n,1), [' ',city],'FontSize',fonte_location,"color",color);
+ text (tot_cases_pm(n,1), new_cases7_pm(n,1), [' ',city],'FontSize',fonte_location,"color",color,"Clipping",'on');
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -367,7 +368,7 @@ hold on;
  days = 0:1:n-1;
  fig=semilogy(days,new_cases7_pmX,'DisplayName',[city,'  ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', 1.25);
  hold on;
- text (n-1, new_cases7_pmX(n,1), [' ',city],'FontSize',fonte_location,"color",color);
+ text (n-1, new_cases7_pmX(n,1), [' ',city],'FontSize',fonte_location,"color",color,"Clipping",'on');
 
 
 end
@@ -389,8 +390,8 @@ figure(1)
 
 set(gca,'FontSize',fonte_padrao)
 title({'Letalidade da epidemia',['Municípios do RJ em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
-xlabel({['Dias desde que se ultrapassou ',num2str(X_deaths_pm),' morte'],['(por 100 mil de habitantes)']},'FontSize',fonte_labels);
-ylabel ({'Total de mortes', '(por 100 mil de habitantes)'},'FontSize',fonte_labels);
+xlabel({['Dias desde que se ultrapassou ',num2str(X_deaths_pm),' morte'],['(por 100 mil habitantes)']},'FontSize',fonte_labels);
+ylabel ({'Total de mortes', '(por 100 mil habitantes)'},'FontSize',fonte_labels);
 legend ("location", "northeastoutside");
 
 y_init=1;
@@ -444,8 +445,8 @@ figure (2)
 
 set(gca,'FontSize',fonte_padrao)
 title({'Contágio da epidemia',['Municípios do RJ em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
-xlabel({['Dias desde que se ultrapassou ',num2str(X_cases_pm),' casos'], '(por 100 mil de habitantes)'},'FontSize',fonte_labels);
-ylabel ({'Total de casos','(por 100 mil de habitantes)'},'FontSize',fonte_labels);
+xlabel({['Dias desde que se ultrapassou ',num2str(X_cases_pm),' casos'], '(por 100 mil habitantes)'},'FontSize',fonte_labels);
+ylabel ({'Total de casos','(por 100 mil habitantes)'},'FontSize',fonte_labels);
 legend ("location", "northeastoutside");
 
 y_init=10;
@@ -495,10 +496,10 @@ figure (3)
 
 set(gca,'FontSize',fonte_padrao);
 title({'Informativo de progresso da epidemia (número de mortes)',['Municípios do RJ em ',datestr(end_time,24)]},'FontSize',fonte_titulo)
-ylabel({'Novas mortes por semana','(por 100 mil de habitantes)'},'FontSize',fonte_labels);
-xlabel ({'Total de mortes','(por 100 mil de habitantes)'},'FontSize',fonte_labels);
+ylabel({'Novas mortes por semana','(por 100 mil habitantes)'},'FontSize',fonte_labels);
+xlabel ({'Total de mortes','(por 100 mil habitantes)'},'FontSize',fonte_labels);
 legend ("location", "northeastoutside");
-axis([1 100 1 10]);
+axis([1 200 1 20]);
 
 
 set(gca,'YTickLabel',{'1','10','100'})
@@ -530,8 +531,8 @@ figure (4)
 
 set(gca,'FontSize',fonte_padrao);
 title({'Informativo de progresso da epidemia (número de casos)',['Municípios do RJ em ',datestr(end_time,24)]},'FontSize',fonte_titulo)
-ylabel({'Novos casos por semana','(por 100 mil de habitantes)'},'FontSize',fonte_labels);
-xlabel ({'Total de casos','(por 100 mil de habitantes)'},'FontSize',fonte_labels);
+ylabel({'Novos casos por semana','(por 100 mil habitantes)'},'FontSize',fonte_labels);
+xlabel ({'Total de casos','(por 100 mil habitantes)'},'FontSize',fonte_labels);
 legend ("location", "northeastoutside");
 axis([10 1000 10 100]);
 
@@ -565,8 +566,8 @@ figure(5)
 
 set(gca,'FontSize',fonte_padrao)
 title({'Letalidade semanal da epidemia',['Municípios do RJ em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
-xlabel({['Dias desde que se ultrapassou ',num2str(X_deaths_pm),' morte'],'(por 100 mil de habitantes)'},'FontSize',fonte_labels);
-ylabel ({'Novas mortes por semana','(por 100 mil de habitantes)'},'FontSize',fonte_labels);
+xlabel({['Dias desde que se ultrapassou ',num2str(X_deaths_pm),' morte'],'(por 100 mil habitantes)'},'FontSize',fonte_labels);
+ylabel ({'Novas mortes por semana','(por 100 mil habitantes)'},'FontSize',fonte_labels);
 legend ("location", "northeastoutside");
 
 y_init=0.1;
@@ -586,6 +587,8 @@ h4=text(44,0.9*max_y,'7 dias');
 set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 
 set(gca,'YTickLabel',{'0.1','1','10','100'})
+
+
 
 axis([0 day_axis y_init max_y]);
 Pos = [250,250,600,450];
@@ -616,8 +619,8 @@ figure (6)
 
 set(gca,'FontSize',fonte_padrao)
 title({'Contágio semanal da epidemia',['Municípios do RJ em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
-xlabel({['Dias desde que se ultrapassou ',num2str(X_cases_pm),' casos'],'(por 100 mil de habitantes)'},'FontSize',fonte_labels);
-ylabel ({'Novos casos por semana','(por 100 mil de habitantes)'},'FontSize',fonte_labels);
+xlabel({['Dias desde que se ultrapassou ',num2str(X_cases_pm),' casos'],'(por 100 mil habitantes)'},'FontSize',fonte_labels);
+ylabel ({'Novos casos por semana','(por 100 mil habitantes)'},'FontSize',fonte_labels);
 legend ("location", "northeastoutside");
 y_init=1;
 max_y=1000;
@@ -664,12 +667,12 @@ set(ha2,'handlevisibility','off','visible','off')
 
 
 
-saveas(figure(1),[pwd '/',outputdir,'/',name,'_letalidade-pm_',datestr(end_time,29),'.png']);
-saveas(figure(2),[pwd '/',outputdir,'/',name,'_contagio-pm_',datestr(end_time,29),'.png']);
-saveas(figure(3),[pwd '/',outputdir,'/',name,'_informativo-mortes-pm_',datestr(end_time,29),'.png']);
-saveas(figure(4),[pwd '/',outputdir,'/',name,'_informativo-casos-pm_',datestr(end_time,29),'.png']);
-saveas(figure(5),[pwd '/',outputdir,'/',name,'_letalidade-semanal-pm_',datestr(end_time,29),'.png']);
-saveas(figure(6),[pwd '/',outputdir,'/',name,'_contagio_semanal-pm_',datestr(end_time,29),'.png']);
+print(figure(1),[pwd '/',outputdir,'/',name,'_letalidade-pm_',datestr(end_time,29),'.png',],'-dpng','-r300');
+print(figure(2),[pwd '/',outputdir,'/',name,'_contagio-pm_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
+print(figure(3),[pwd '/',outputdir,'/',name,'_informativo-mortes-pm_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
+print(figure(4),[pwd '/',outputdir,'/',name,'_informativo-casos-pm_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
+print(figure(5),[pwd '/',outputdir,'/',name,'_letalidade-semanal-pm_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
+print(figure(6),[pwd '/',outputdir,'/',name,'_contagio_semanal-pm_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
 
 
 close all
