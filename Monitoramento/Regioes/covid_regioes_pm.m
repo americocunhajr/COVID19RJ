@@ -234,7 +234,7 @@ tot_deaths = SUDESTE(:,3);
 new_deaths = SUDESTE(:,4);
 end
 if (init == 4)
-country = 'Sul                    ';
+country = 'Sul                  ';
 color = [193,203,68]/255;
 pop = popSUL;
 tot_cases = SUL(:,1);
@@ -823,13 +823,12 @@ colormap (map)
 set(ha2,'handlevisibility','off','visible','off')
 
 
-
-saveas(figure(1),[pwd '/',outputdir,'/',name,'_letalidade-pm_',datestr(end_time,29),'.png']);
-saveas(figure(2),[pwd '/',outputdir,'/',name,'_contagio-pm_',datestr(end_time,29),'.png']);
-saveas(figure(3),[pwd '/',outputdir,'/',name,'_informativo-mortes-pm_',datestr(end_time,29),'.png']);
-saveas(figure(4),[pwd '/',outputdir,'/',name,'_informativo-casos-pm_',datestr(end_time,29),'.png']);
-saveas(figure(5),[pwd '/',outputdir,'/',name,'_letalidade-semanal-pm_',datestr(end_time,29),'.png']);
-saveas(figure(6),[pwd '/',outputdir,'/',name,'_contagio_semanal-pm_',datestr(end_time,29),'.png']);
+print(figure(1),[pwd '/',outputdir,'/',name,'_letalidade-pm_',datestr(end_time,29),'.png',],'-dpng','-r300');
+print(figure(2),[pwd '/',outputdir,'/',name,'_contagio-pm_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
+print(figure(3),[pwd '/',outputdir,'/',name,'_informativo-mortes-pm_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
+print(figure(4),[pwd '/',outputdir,'/',name,'_informativo-casos-pm_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
+print(figure(5),[pwd '/',outputdir,'/',name,'_letalidade-semanal-pm_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
+print(figure(6),[pwd '/',outputdir,'/',name,'_contagio_semanal-pm_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
 
 close all
 
