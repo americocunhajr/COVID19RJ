@@ -75,20 +75,20 @@ location = data(find(strcmp([all_data.location], country)),1:8);
 dates = all_data.date(find(strcmp([all_data.location],country)),:);
 end_time = max(datenum(dates))-1;
 
-if strcmp(country, 'United States') country = 'USA            '; end 
-if strcmp(country, 'United Kingdom') country = 'UK              '; end
-if strcmp(country, 'Belgium') country = 'Belgium        '; end 
-if strcmp(country, 'Brazil') country = 'Brazil          '; end 
-if strcmp(country, 'Iran') country = 'Iran               '; end 
-if strcmp(country, 'South Korea') country = 'South Korea    '; end 
-if strcmp(country, 'Turkey') country = 'Turkey          '; end 
-if strcmp(country, 'Peru') country = 'Peru              '; end 
-if strcmp(country, 'Chile') country = 'Chile               '; end 
-if strcmp(country, 'France') country = 'France        '; end 
-if strcmp(country, 'Spain') country = 'Spain          '; end 
-if strcmp(country, 'Italy') country = 'Italy            '; end 
-if strcmp(country, 'Germany') country = 'Germany      '; end 
-if strcmp(country, 'Russia') country = 'Russia           '; end 
+if strcmp(country, 'United States') country = 'USA           '; end 
+if strcmp(country, 'United Kingdom') country = 'UK             '; end
+if strcmp(country, 'Belgium') country = 'Belgium       '; end 
+if strcmp(country, 'Brazil') country = 'Brazil         '; end 
+if strcmp(country, 'Iran') country = 'Iran              '; end 
+if strcmp(country, 'South Korea') country = 'South Korea   '; end 
+if strcmp(country, 'Turkey') country = 'Turkey         '; end 
+if strcmp(country, 'Peru') country = 'Peru             '; end 
+if strcmp(country, 'Chile') country = 'Chile              '; end 
+if strcmp(country, 'France') country = 'France       '; end 
+if strcmp(country, 'Spain') country = 'Spain         '; end 
+if strcmp(country, 'Italy') country = 'Italy           '; end 
+if strcmp(country, 'Germany') country = 'Germany     '; end 
+if strcmp(country, 'Russia') country = 'Russia          '; end 
 
 
 end
@@ -104,11 +104,12 @@ if (init == 7) country = 'Germany'; color = [209,227,105]/255; end
 if (init == 13) country = 'Chile'; color = [248,187,208]/255; end
 if (init == 1) country = 'United States'; color = [0,104,44]/255; end
 if (init == 9) country = 'France'; color = [0,45,135]/255; end
-if (init == 4) country = 'United Kingdom'; color = [135,85,30]/255; end
+if (init == 3) country = 'United Kingdom'; color = [135,85,30]/255; end
 if (init == 5) country = 'Italy'; color = [203,63,23]/255; end
-if (init == 3) country = 'Spain'; color = [191,171,72]/255; end
+if (init == 4) country = 'Spain'; color = [191,171,72]/255; end
 if (init == 12) country = 'Belgium'; color = [236,64,122]/255; end
 if (init == 2) country = 'Russia'; color = [0.4,0.4,0.4]; end
+
 
 
 location = data(find(strcmp([all_data.location], country)),1:8);
@@ -117,18 +118,18 @@ dates = all_data.date(find(strcmp([all_data.location],country)),:);
 end_time = max(datenum(dates))-1;
 
 if strcmp(country, 'United States') country = 'USA        '; end 
-if strcmp(country, 'United Kingdom') country = 'UK             '; end
-if strcmp(country, 'Belgium') country = 'Belgium        '; end 
-if strcmp(country, 'Brazil') country = 'Brazil         '; end 
-if strcmp(country, 'Iran') country = 'Iran            '; end 
-if strcmp(country, 'South Korea') country = 'South Korea  '; end 
-if strcmp(country, 'Turkey') country = 'Turkey       '; end 
-if strcmp(country, 'Peru') country = 'Peru             '; end 
-if strcmp(country, 'Chile') country = 'Chile             '; end 
-if strcmp(country, 'France') country = 'France       '; end 
+if strcmp(country, 'United Kingdom') country = 'UK            '; end
+if strcmp(country, 'Belgium') country = 'Belgium       '; end 
+if strcmp(country, 'Brazil') country = 'Brazil        '; end 
+if strcmp(country, 'Iran') country = 'Iran           '; end 
+if strcmp(country, 'South Korea') country = 'South Korea '; end 
+if strcmp(country, 'Turkey') country = 'Turkey      '; end 
+if strcmp(country, 'Peru') country = 'Peru            '; end 
+if strcmp(country, 'Chile') country = 'Chile            '; end 
+if strcmp(country, 'France') country = 'France      '; end 
 if strcmp(country, 'Spain') country = 'Spain        '; end 
-if strcmp(country, 'Italy') country = 'Italy           '; end 
-if strcmp(country, 'Germany') country = 'Germany   '; end 
+if strcmp(country, 'Italy') country = 'Italy          '; end 
+if strcmp(country, 'Germany') country = 'Germany  '; end 
 if strcmp(country, 'Russia') country = 'Russia      '; end 
 
 end
@@ -247,7 +248,7 @@ hold on;
  days = 0:1:n-1;
  fig=semilogy(days,tot_deaths_pmX,'DisplayName',[country,'  ',num2str(max(tot_deaths)),' mortes'],"color",color,'LineWidth', 1.25);
  hold on;
- text (n-1, tot_deaths_pmX(n,1), [' ',country],'FontSize',fonte_location,"color",color);
+ text (n-1, tot_deaths_pmX(n,1), [' ',country],'FontSize',fonte_location,"color",color,"Clipping",'on');
 
 tot_mortes(init,1) = max(tot_deaths);
 
@@ -270,7 +271,7 @@ hold on;
  n = max(max(size(tot_deaths_pm)));
  fig=loglog(tot_deaths_pm,new_deaths7_pm,'DisplayName',[country,'  ',num2str(max(tot_deaths)),' mortes'],"color",color,'LineWidth', 1.25);
  hold on;
- text (tot_deaths_pm(n,1), new_deaths7_pm(n,1), [' ',country],'FontSize',fonte_location,"color",color);
+ text (tot_deaths_pm(n,1), new_deaths7_pm(n,1), [' ',country],'FontSize',fonte_location,"color",color,"Clipping",'on');
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Plotar novas de mortes/milhao por tempo (dia zero definido por mortes/milhao)
@@ -308,7 +309,7 @@ hold on;
  days = 0:1:n-1;
  fig=semilogy(days,new_deaths7_pmX,'DisplayName',[country,'  ',num2str(max(tot_deaths)),' mortes'],"color",color,'LineWidth', 1.25);
  hold on;
- text (n-1, new_deaths7_pmX(n,1), [' ',country],'FontSize',fonte_location,"color",color);
+ text (n-1, new_deaths7_pmX(n,1), [' ',country],'FontSize',fonte_location,"color",color,"Clipping",'on');
 
 end
 
@@ -347,7 +348,7 @@ hold on;
  days = 0:1:n-1;
  fig=semilogy(days,tot_cases_pmX,'DisplayName',[country,'  ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', 1.25);
  hold on;
- text (n-1, tot_cases_pmX(n,1), [' ',country],'FontSize',fonte_location,"color",color);
+ text (n-1, tot_cases_pmX(n,1), [' ',country],'FontSize',fonte_location,"color",color,"Clipping",'on');
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Plotar novos casos X total de casos (por milhao de hab.)
@@ -368,7 +369,7 @@ hold on;
  n = max(max(size(tot_cases_pm)));
  fig=loglog(tot_cases_pm,new_cases7_pm,'DisplayName',[country,'  ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', 1.25);
  hold on;
- text (tot_cases_pm(n,1), new_cases7_pm(n,1), [' ',country],'FontSize',fonte_location,"color",color);
+ text (tot_cases_pm(n,1), new_cases7_pm(n,1), [' ',country],'FontSize',fonte_location,"color",color,"Clipping",'on');
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Plotar novos casos/milhao por tempo (dia zero definido por casos/milhao)
@@ -406,7 +407,7 @@ hold on;
  days = 0:1:n-1;
  fig=semilogy(days,new_cases7_pmX,'DisplayName',[country,'  ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', 1.25);
  hold on;
- text (n-1, new_cases7_pmX(n,1), [' ',country],'FontSize',fonte_location,"color",color);
+ text (n-1, new_cases7_pmX(n,1), [' ',country],'FontSize',fonte_location,"color",color,"Clipping",'on');
 
 
 end
@@ -700,12 +701,12 @@ set(ha2,'handlevisibility','off','visible','off')
 
 
 
-saveas(figure(1),[pwd '/',outputdir,'/',name,'_letalidade-pm_',datestr(end_time,29),'.png']);
-saveas(figure(2),[pwd '/',outputdir,'/',name,'_contagio-pm_',datestr(end_time,29),'.png']);
-saveas(figure(3),[pwd '/',outputdir,'/',name,'_informativo-mortes-pm_',datestr(end_time,29),'.png']);
-saveas(figure(4),[pwd '/',outputdir,'/',name,'_informativo-casos-pm_',datestr(end_time,29),'.png']);
-saveas(figure(5),[pwd '/',outputdir,'/',name,'_letalidade-semanal-pm_',datestr(end_time,29),'.png']);
-saveas(figure(6),[pwd '/',outputdir,'/',name,'_contagio_semanal-pm_',datestr(end_time,29),'.png']);
+print(figure(1),[pwd '/',outputdir,'/',name,'_letalidade-pm_',datestr(end_time,29),'.png',],'-dpng','-r300');
+print(figure(2),[pwd '/',outputdir,'/',name,'_contagio-pm_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
+print(figure(3),[pwd '/',outputdir,'/',name,'_informativo-mortes-pm_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
+print(figure(4),[pwd '/',outputdir,'/',name,'_informativo-casos-pm_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
+print(figure(5),[pwd '/',outputdir,'/',name,'_letalidade-semanal-pm_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
+print(figure(6),[pwd '/',outputdir,'/',name,'_contagio_semanal-pm_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
 
 
 close all
