@@ -8,7 +8,7 @@ www.covid19rj.org
 
 Entenda o nome dos nossos arquivos: 
 
-*covid19rj_analise_tipo_informacao_escala_local_data*
+*covid19rj_analise_tipo_informacao_base_escala_local_data*
 
 Análise:
 - M - Monitoramento
@@ -25,8 +25,9 @@ Informação:
 - NM - número de mortes
 
 Base:
-- D - diária
-- S - semanal
+- VA - valor acumulado
+- PS - por semana
+- NA - não se aplica
 
 Escala:
 - VA - valores absolutos
@@ -48,7 +49,7 @@ Ano-Mês-Dia
 
 Exemplo: 
 
-*covid19rj_M_EF_NM_S_PM_BR_2020-04-17*
+covid19rj_M_EF_NM_PS_PM_BR_2020-04-17
 
 --> Monitoramento via Espaço de Fase do Número de Mortes por Semana por 1 milhão de habitantes no Brasil em 17/5/2020 <--
 
