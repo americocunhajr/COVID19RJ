@@ -4,6 +4,50 @@ Esse repositório reune informações e dados da epidemia de COVID-19, com parti
 
 www.covid19rj.org
 
+## Arquivos no repositório
+
+Entenda o nome dos nossos arquivos: 
+
+*covid19rj_analise_tipo_escala_local_data*
+
+Análise:
+- M - Monitoramento
+- P - Previsão
+
+Tipo:
+- LT - letalidade total
+- LS - letalidade semanal
+- IM - informativo-mortes
+- IC - informativo-casos
+- CT - contagio total
+- CS - contagio semanal
+- MC - mapa de cores
+- VP - variação percentual
+
+Escala:
+- VA - valores absolutos
+- PM - por 1 milhão de habitantes
+
+Local:
+- Rio - Município do RJ
+- RJ - Estado do RJ
+- NO - Região Norte
+- NE - Região Nordeste
+- CO - Região Centro-Oeste
+- SE - Região Sudeste
+- SU - Região Sul
+- BR - Brasil
+- WD - Mundo
+
+Data: 
+ano-mes-dia
+
+Exemplo: 
+
+*covid19rj_M_LT_PM_BR_2020-04-17*
+
+>> Monitoramento da Letalidade Total por 1 milhão de habitantes no Brasil em 17/5/2020
+
 
 ## Equipe:
 
