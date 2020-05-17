@@ -286,7 +286,7 @@ malu = [1	1	1
 arquivogeral = readtable('owid-covid-data.csv');
 
 % Definições para os graficos 
-Estados = {"Belgium"; "Brazil"; "Chile";"China"; "France"; "Germany"; "Iran";"Italy"; "Peru"; "Russia"; "South Korea"; "Turkey"; "United Kingdom"; "United States"};
+Estados = {"Germany"; "Belgium"; "Brazil"; "Chile";"China"; "South Korea"; "United States"; "France";  "Iran";"Italy"; "Peru"; "United Kingdom";"Russia"; "Turkey";  };
 
 titulos = {"Novos Casos";"Novos Óbitos";"Casos Acumulados";"Óbitos Acumulados"};
 name = 'mapa-cor-paises';
@@ -369,7 +369,7 @@ for t=1:4
     end
 
     % Juntando o mapa e a escala
-    space_imag = 800;
+    space_imag = 850;
     img_lins = 4140;
     img_cols = 14*img_lins/9;
     imagem = resizem(img,[img_lins,img_cols]);
@@ -388,7 +388,7 @@ for t=1:4
     ax1 = gca;
     ax1.FontSize = 10;
 
-Estados = {"Belgium"; "Brazil"; "Chile";"China"; "France"; "Germany"; "Iran";"Italy"; "Peru"; "Russia"; "South Korea"; "Turkey"; "UK"; "US"};
+Estados = {"Alemanha"; "Bélgica"; "Brasil"; "Chile";"China"; "Coréia do Sul"; "EUA";"França"; "Irã";"Itália"; "Peru"; "Reino Unido"; "Rússia"; "Turquia"};
 
 % Insercao de textos
 position = [round([0:size(imagem,1)/(size(img,1)):size(imagem,1)-(size(imagem,1)/(size(img,1)))] +(size(imagem,1)/(2*size(img,1))))];
@@ -398,6 +398,10 @@ position = [round([0:size(imagem,1)/(size(img,1)):size(imagem,1)-(size(imagem,1)
     end
 
 text((size(imagem,2) + space_imag),-55,'  Máx. valor');
+
+hfonte=text((size(imagem,2) + space_imag+size(img_lista,2)),0,'Fonte: https://ourworldindata.org/coronavirus-source-data');
+set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
+
 
     axis on;
     set(gca,'TickDir','in');

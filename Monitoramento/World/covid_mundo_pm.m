@@ -53,6 +53,9 @@ for( init = 1:1:14)
 
 clearvars -except plot_type init all_data data name paises tot_mortes tot_casos
 
+%espessura da linha no plot
+linew = 1.25;
+
 if (plot_type == 1)
 %ordem por países que tem mais morte
 if (init == 6) country = 'Brazil'; color = [0,0,0]/255; end
@@ -75,27 +78,27 @@ location = data(find(strcmp([all_data.location], country)),1:8);
 dates = all_data.date(find(strcmp([all_data.location],country)),:);
 end_time = max(datenum(dates))-1;
 
-if strcmp(country, 'United States') country = 'USA           '; end 
-if strcmp(country, 'United Kingdom') country = 'UK             '; end
-if strcmp(country, 'Belgium') country = 'Belgium       '; end 
-if strcmp(country, 'Brazil') country = 'Brazil         '; end 
-if strcmp(country, 'Iran') country = 'Iran              '; end 
-if strcmp(country, 'South Korea') country = 'South Korea   '; end 
-if strcmp(country, 'Turkey') country = 'Turkey         '; end 
-if strcmp(country, 'Peru') country = 'Peru             '; end 
-if strcmp(country, 'Chile') country = 'Chile              '; end 
-if strcmp(country, 'France') country = 'France       '; end 
-if strcmp(country, 'Spain') country = 'Spain         '; end 
-if strcmp(country, 'Italy') country = 'Italy           '; end 
-if strcmp(country, 'Germany') country = 'Germany     '; end 
-if strcmp(country, 'Russia') country = 'Russia          '; end 
+if strcmp(country, 'United States') country = 'EUA            '; end 
+if strcmp(country, 'United Kingdom') country = 'Reino Unido'; end
+if strcmp(country, 'Belgium') country = 'Bélgica          '; end 
+if strcmp(country, 'Brazil') country = 'Brasil          '; end 
+if strcmp(country, 'Iran') country = 'Irã                 '; end 
+if strcmp(country, 'South Korea') country = 'Coréia do Sul  '; end 
+if strcmp(country, 'Turkey') country = 'Turquia         '; end 
+if strcmp(country, 'Peru') country = 'Peru              '; end 
+if strcmp(country, 'Chile') country = 'Chile               '; end 
+if strcmp(country, 'France') country = 'França        '; end 
+if strcmp(country, 'Spain') country = 'Espanha     '; end 
+if strcmp(country, 'Italy') country = 'Itália           '; end 
+if strcmp(country, 'Germany') country = 'Alemanha     '; end 
+if strcmp(country, 'Russia') country = 'Rússia           '; end 
 
 
 end
 
 if (plot_type == 2)
 %ordem por países que tem mais caso
-if (init == 6) country = 'Brazil'; color = [0,0,0]/255; end
+if (init == 4) country = 'Brazil'; color = [0,0,0]/255; linew = 1.75; end
 if (init == 14) country = 'South Korea'; color = [69,169,0]/255; end
 if (init == 8) country = 'Turkey'; color = [96,209,224]/255; end  
 if (init == 11) country = 'Peru'; color = [181,147,87]/255; end
@@ -105,8 +108,8 @@ if (init == 13) country = 'Chile'; color = [248,187,208]/255; end
 if (init == 1) country = 'United States'; color = [0,104,44]/255; end
 if (init == 9) country = 'France'; color = [0,45,135]/255; end
 if (init == 3) country = 'United Kingdom'; color = [135,85,30]/255; end
-if (init == 5) country = 'Italy'; color = [203,63,23]/255; end
-if (init == 4) country = 'Spain'; color = [191,171,72]/255; end
+if (init == 6) country = 'Italy'; color = [203,63,23]/255; end
+if (init == 5) country = 'Spain'; color = [191,171,72]/255; end
 if (init == 12) country = 'Belgium'; color = [236,64,122]/255; end
 if (init == 2) country = 'Russia'; color = [0.4,0.4,0.4]; end
 
@@ -117,20 +120,20 @@ location = data(find(strcmp([all_data.location], country)),1:8);
 dates = all_data.date(find(strcmp([all_data.location],country)),:);
 end_time = max(datenum(dates))-1;
 
-if strcmp(country, 'United States') country = 'USA        '; end 
-if strcmp(country, 'United Kingdom') country = 'UK            '; end
-if strcmp(country, 'Belgium') country = 'Belgium       '; end 
-if strcmp(country, 'Brazil') country = 'Brazil        '; end 
-if strcmp(country, 'Iran') country = 'Iran           '; end 
-if strcmp(country, 'South Korea') country = 'South Korea '; end 
-if strcmp(country, 'Turkey') country = 'Turkey      '; end 
-if strcmp(country, 'Peru') country = 'Peru            '; end 
-if strcmp(country, 'Chile') country = 'Chile            '; end 
-if strcmp(country, 'France') country = 'France      '; end 
-if strcmp(country, 'Spain') country = 'Spain        '; end 
-if strcmp(country, 'Italy') country = 'Italy          '; end 
-if strcmp(country, 'Germany') country = 'Germany  '; end 
-if strcmp(country, 'Russia') country = 'Russia      '; end 
+if strcmp(country, 'United States') country = 'EUA             '; end 
+if strcmp(country, 'United Kingdom') country = 'Reino Unido  '; end
+if strcmp(country, 'Belgium') country = 'Bélgica            '; end 
+if strcmp(country, 'Brazil') country = 'Brasil            '; end 
+if strcmp(country, 'Iran') country = 'Irã                 '; end 
+if strcmp(country, 'South Korea') country = 'Coréia do Sul  '; end 
+if strcmp(country, 'Turkey') country = 'Turquia         '; end 
+if strcmp(country, 'Peru') country = 'Peru                '; end 
+if strcmp(country, 'Chile') country = 'Chile               '; end 
+if strcmp(country, 'France') country = 'França          '; end 
+if strcmp(country, 'Spain') country = 'Espanha       '; end 
+if strcmp(country, 'Italy') country = 'Itália             '; end 
+if strcmp(country, 'Germany') country = 'Alemanha     '; end 
+if strcmp(country, 'Russia') country = 'Rússia           '; end 
 
 end
 
@@ -160,8 +163,8 @@ end
 %Usuário define dia zero para casos ou mortes
 X_deaths_pm = 1;
 X_cases_pm = 10;
-X_deaths = 10;
-X_cases = 100;
+X_deaths = 100;
+X_cases = 1000;
 
 n=0;
 for (i=1:1:max(max(size(dates))) )
@@ -450,7 +453,10 @@ ang = 38;
 h4=text(90,0.9*max_y,'7 dias');
 set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 
-set(gca,'YTickLabel',{'1','10','100','1k','10k'})
+set(gca,'YTickLabel',{'100','1k','10k','100k','1M'})
+
+hfonte=text(day_axis,max_y,'Fonte: https://ourworldindata.org/coronavirus-source-data');
+set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
 
 
 axis([0 day_axis y_init max_y]);
@@ -504,7 +510,10 @@ ang = 38;
 h4=text(90,0.9*max_y,'7 dias');
 set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 
-set(gca,'YTickLabel',{'10','100','1k','10k','100k'})
+set(gca,'YTickLabel',{'1k','10k','100k','1M','10M'})
+
+hfonte=text(day_axis,max_y,'Fonte: https://ourworldindata.org/coronavirus-source-data');
+set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
 
 axis([0 day_axis y_init max_y]);
 Pos = [250,250,600,450];
@@ -539,10 +548,16 @@ title({'Informativo de progresso da epidemia (número de mortes)',['Comparação
 ylabel({'Novas mortes por semana','(por milhão de habitantes)'},'FontSize',fonte_labels);
 xlabel ({'Total de mortes','(por milhão de habitantes)'},'FontSize',fonte_labels);
 legend ("location", "northeastoutside");
-axis([1 10000 1 1000]);
+max_x = 10000;
+max_y = 1000;
+axis([1 max_x 1 max_y]);
 
 set(gca,'YTickLabel',{'1','10','100','1k'})
 set(gca,'XTickLabel',{'1','10','100','1k','10k'})
+
+hfonte=text(max_x,max_y,'Fonte: https://ourworldindata.org/coronavirus-source-data');
+set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
+
 
 % pra botar o logo no inferior direito
 ha =gca;
@@ -572,11 +587,17 @@ title({'Informativo de progresso da epidemia (número de casos)',['Comparação 
 ylabel({'Novos casos por semana','(por milhão de habitantes)'},'FontSize',fonte_labels);
 xlabel ({'Total de casos','(por milhão de habitantes)'},'FontSize',fonte_labels);
 legend ("location", "northeastoutside");
-axis([10 100000 10 10000]);
-Pos = [250,250,600,450];
+max_x = 100000;
+max_y = 10000;
+axis([10 max_x 10 max_y]);
+
+
 
 set(gca,'YTickLabel',{'10','100','1k','10k'})
 set(gca,'XTickLabel',{'10','100','1k','10k','100k'})
+
+hfonte=text(max_x,max_y,'Fonte: https://ourworldindata.org/coronavirus-source-data');
+set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
 
 % pra botar o logo no inferior direito
 ha =gca;
@@ -625,8 +646,10 @@ set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','Font
 
 set(gca,'YTickLabel',{'0.1','1','10','100','1k','10k'})
 
+hfonte=text(day_axis,max_y,'Fonte: https://ourworldindata.org/coronavirus-source-data');
+set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
+
 axis([0 day_axis y_init max_y]);
-Pos = [250,250,600,450];
 
 
 % pra botar o logo no inferior direito
@@ -674,8 +697,10 @@ set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','Font
 
 set(gca,'YTickLabel',{'1','10','100','1k','10k'})
 
+hfonte=text(day_axis,max_y,'Fonte: https://ourworldindata.org/coronavirus-source-data');
+set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
+
 axis([0 day_axis y_init max_y]);
-Pos = [250,250,600,450];
 
 
 % pra botar o logo no inferior direito
