@@ -25,7 +25,7 @@ Informação:
 - NM - número de mortes
 
 Base:
-- VA - valor acumulado
+- AC - acumulado
 - PS - por semana
 - NA - não se aplica
 
