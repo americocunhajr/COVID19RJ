@@ -49,9 +49,9 @@ Ano-Mês-Dia
 
 Exemplo: 
 
-covid19rj_M_EF_NM_PS_PM_BR_2020-04-17
 
---> Monitoramento via Espaço de Fase do Número de Mortes por Semana por 1 milhão de habitantes no Brasil em 17/5/2020 <--
+
+A leitura do arquivo *covid19rj_M_EF_NM_PS_PM_BR_2020-04-17* é a seguinte: "Monitoramento via espaço de fase do número de mortes por semana por 1 milhão de habitantes no Brasil em 17/5/2020".
 
 
 ## Equipe:
