@@ -21,12 +21,12 @@ Tipo:
 - VP - variação percentual
 
 Informação:
-- IC - informativo-casos
-- IM - informativo-mortes
-- CT - contagio
-- CS - contagio semanal
-- LT - letalidade
-- LS - letalidade semanal
+- NC - número de casos
+- NM - número de mortes
+
+Base:
+- D - diária
+- S - semanal
 
 Escala:
 - VA - valores absolutos
@@ -48,9 +48,9 @@ Ano-Mês-Dia
 
 Exemplo: 
 
-*covid19rj_M_EF_LT_PM_BR_2020-04-17*
+*covid19rj_M_EF_NM_S_PM_BR_2020-04-17*
 
---> Monitoramento via Espaço de Fase da Letalidade Total por 1 milhão de habitantes no Brasil em 17/5/2020 <--
+--> Monitoramento via Espaço de Fase do Número de Mortes por Semana por 1 milhão de habitantes no Brasil em 17/5/2020 <--
 
 
 ## Equipe:
