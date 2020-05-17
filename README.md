@@ -41,6 +41,7 @@ Local:
 - CO - Região Centro-Oeste
 - SE - Região Sudeste
 - SU - Região Sul
+- RB - Regiões do Brasil
 - BR - Brasil
 - WD - Mundo
 
