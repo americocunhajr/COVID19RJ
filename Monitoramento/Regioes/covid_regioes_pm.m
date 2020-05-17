@@ -560,6 +560,8 @@ legend ("location", "northwest");;
 
 y_init=1;
 max_y=10000;
+max_x=day_axis;
+
 ang = 49;
 h1=text(51,0.9*max_y,'números dobram a cada 4 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
@@ -575,8 +577,12 @@ set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','Font
 
 set(gca,'YTickLabel',{'1','10','100','1k','10k'})
 
+hfonte=text(max_x,max_y,'Fonte: https://covid.saude.gov.br/');
+set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
 
-axis([0 day_axis y_init max_y]);
+axis([0 max_x y_init max_y]);
+
+
 
 
 % pra botar o logo no inferior direito
@@ -611,6 +617,8 @@ legend ("location", "northwest");
 
 y_init=10;
 max_y=100000;
+max_x=day_axis;
+
 ang = 49;
 h1=text(51,0.9*max_y,'números dobram a cada 4 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
@@ -626,8 +634,10 @@ set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','Font
 
 set(gca,'YTickLabel',{'10','100','1k','10k','100k'})
 
-axis([0 day_axis y_init max_y]);
+hfonte=text(max_x,max_y,'Fonte: https://covid.saude.gov.br/');
+set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
 
+axis([0 max_x y_init max_y]);
 
 
 % pra botar o logo no inferior direito
@@ -659,12 +669,15 @@ set(gca,'FontSize',fonte_padrao);
 title({'Informativo de progresso da epidemia (número de mortes)',['Regiões do Brasil em ',datestr(end_time,24)]},'FontSize',fonte_titulo)
 ylabel({'Novas mortes por semana','(por milhão de habitantes)'},'FontSize',fonte_labels);
 xlabel ({'Total de mortes','(por milhão de habitantes)'},'FontSize',fonte_labels);
-legend ("location", "northwest");
-
-axis([1 10000 1 1000]);
+max_x = 10000;
+max_y = 1000;
+axis([1 max_x 1 max_y]);
 
 set(gca,'YTickLabel',{'1','10','100','1k'})
 set(gca,'XTickLabel',{'1','10','100','1k','10k'})
+
+hfonte=text(max_x,max_y,'Fonte: https://covid.saude.gov.br/');
+set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
 
 % pra botar o logo no inferior direito
 ha =gca;
@@ -694,13 +707,16 @@ title({'Informativo de progresso da epidemia (número de casos)',['Regiões do B
 
 ylabel({'Novos casos por semana','(por milhão de habitantes)'},'FontSize',fonte_labels);
 xlabel ({'Total de casos','(por milhão de habitantes)'},'FontSize',fonte_labels);
-legend ("location", "northwest");
-legend ("location", "northwest");
+max_x = 100000;
+max_y = 10000;
+axis([10 max_x 10 max_y]);
 
-axis([10 100000 10 10000]);
 
 set(gca,'YTickLabel',{'10','100','1k','10k'})
 set(gca,'XTickLabel',{'10','100','1k','10k','100k'})
+
+hfonte=text(max_x,max_y,'Fonte: https://covid.saude.gov.br/');
+set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
 
 % pra botar o logo no inferior direito
 ha =gca;
@@ -734,6 +750,8 @@ legend ("location", "northwest");
 
 y_init=0.1;
 max_y=10000;
+max_x=day_axis;
+
 ang = 43;
 h1=text(51.2,0.9*max_y,'números dobram a cada 4 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
@@ -749,7 +767,12 @@ set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','Font
 
 set(gca,'YTickLabel',{'0.1','1','10','100','1k','10k'})
 
-axis([0 day_axis y_init max_y]);
+hfonte=text(max_x,max_y,'Fonte: https://covid.saude.gov.br/');
+set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
+
+
+axis([0 max_x y_init max_y]);
+
 
 % pra botar o logo no inferior direito
 ha =gca;
@@ -783,6 +806,8 @@ legend ("location", "northwest");;
 
 y_init=1;
 max_y=100000;
+max_x=day_axis;
+
 ang = 43;
 h1=text(51.2,0.9*max_y,'números dobram a cada 4 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
@@ -798,7 +823,13 @@ set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','Font
 
 set(gca,'YTickLabel',{'1','10','100','1k','10k','100k'})
 
-axis([0 day_axis y_init max_y]);
+
+hfonte=text(max_x,max_y,'Fonte: https://covid.saude.gov.br/');
+set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
+
+
+axis([0 max_x y_init max_y]);
+
 
 
 % pra botar o logo no inferior direito

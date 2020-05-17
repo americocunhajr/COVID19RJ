@@ -691,6 +691,8 @@ ylabel ("Total de mortes ",'FontSize',fonte_labels);
 
 y_init=10;
 max_y=100000;
+max_x=day_axis;
+
 ang = 49;
 h1=text(51,0.9*max_y,'números dobram a cada 4 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
@@ -706,8 +708,10 @@ set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','Font
 
 set(gca,'YTickLabel',{'10','100','1k','10k','100k'})
 
+hfonte=text(max_x,max_y,'Fonte: https://covid.saude.gov.br/');
+set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
 
-axis([0 day_axis y_init max_y]);
+axis([0 max_x y_init max_y]);
 
 
 
@@ -750,6 +754,8 @@ ylabel ("Total de casos ",'FontSize',fonte_labels);
 
 y_init=100;
 max_y=1000000;
+max_x=day_axis;
+
 ang = 49;
 h1=text(51,0.9*max_y,'números dobram a cada 4 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
@@ -765,8 +771,10 @@ set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','Font
 
 set(gca,'YTickLabel',{'100','1k','10k','100k','1M'})
 
-axis([0 day_axis y_init max_y]);
+hfonte=text(max_x,max_y,'Fonte: https://covid.saude.gov.br/');
+set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
 
+axis([0 max_x y_init max_y]);
 
 
 % pra botar o logo no inferior direito
@@ -805,12 +813,15 @@ legend = "off";
 end
 ylabel(['Novas mortes por semana '],'FontSize',fonte_labels);
 xlabel ("Total de mortes ",'FontSize',fonte_labels);
-axis([10 100000 10 10000]);
-
-set(0, 'DefaultFigurePosition', Pos);
+max_x = 100000;
+max_y = 10000;
+axis([10 max_x 10 max_y]);
 
 set(gca,'YTickLabel',{'10','100','1k','10k'})
 set(gca,'XTickLabel',{'10','100','1k','10k','100k'})
+
+hfonte=text(max_x,max_y,'Fonte: https://covid.saude.gov.br/');
+set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
 
 % pra botar o logo no inferior direito
 ha =gca;
@@ -846,11 +857,16 @@ legend = "off";
 end
 ylabel(['Novos casos por semana '],'FontSize',fonte_labels);
 xlabel ("Total de casos ",'FontSize',fonte_labels);
-axis([100 1000000 100 100000]);
+max_x = 1000000;
+max_y = 100000;
+axis([100 max_x 100 max_y]);
 
 
 set(gca,'YTickLabel',{'100','1k','10k','100k'})
 set(gca,'XTickLabel',{'100','1k','10k','100k','1M'})
+
+hfonte=text(max_x,max_y,'Fonte: https://covid.saude.gov.br/');
+set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
 
 % pra botar o logo no inferior direito
 ha =gca;
@@ -890,6 +906,8 @@ ylabel ("Novas mortes por semana ",'FontSize',fonte_labels);
 
 y_init=1;
 max_y=100000;
+max_x=day_axis;
+
 ang = 43;
 h1=text(51.2,0.9*max_y,'números dobram a cada 4 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
@@ -905,7 +923,11 @@ set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','Font
 
 set(gca,'YTickLabel',{'1','10','100','1k','10k','100k'})
 
-axis([0 day_axis y_init max_y]);
+hfonte=text(max_x,max_y,'Fonte: https://covid.saude.gov.br/');
+set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
+
+
+axis([0 max_x y_init max_y]);
 
 
 % pra botar o logo no inferior direito
@@ -945,6 +967,8 @@ ylabel ("Novos casos por semana ",'FontSize',fonte_labels);
 
 y_init=10;
 max_y=1000000;
+max_x=day_axis;
+
 ang = 43;
 h1=text(51.2,0.9*max_y,'números dobram a cada 4 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
@@ -957,9 +981,15 @@ set(h3,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','Font
 ang = 33;
 h4=text(79.1,0.32*max_y,'7 dias');
 set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
+
 set(gca,'YTickLabel',{'10','100','1k','10k','100k','1M'})
 
-axis([0 day_axis y_init max_y]);
+
+hfonte=text(max_x,max_y,'Fonte: https://covid.saude.gov.br/');
+set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
+
+
+axis([0 max_x y_init max_y]);
 
 
 

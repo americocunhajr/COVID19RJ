@@ -392,8 +392,10 @@ xlabel(['Dias desde que se ultrapassou ',num2str(X_deaths),' mortes'],'FontSize'
 ylabel ("Total de mortes",'FontSize',fonte_labels);
 legend ("location", "northeastoutside");
 
-y_init=10;
-max_y=10000;
+y_init = 10;
+max_y = 10000;
+max_x = day_axis;
+
 ang = 54;
 h1=text(38,0.9*max_y,'números dobram a cada 4 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
@@ -409,8 +411,10 @@ set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','Font
 
 set(gca,'YTickLabel',{'10','100','1k','10k'})
 
+hfonte=text(max_x,max_y,'Fonte: http://painel.saude.rj.gov.br/monitoramento/covid19.html');
+set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
 
-axis([0 day_axis y_init max_y]);
+axis([0 max_x y_init max_y]);
 Pos = [250,250,600,450];
 
 
@@ -448,6 +452,8 @@ legend ("location", "northeastoutside");
 
 y_init=100;
 max_y=100000;
+max_x=day_axis;
+
 ang = 54;
 h1=text(38,0.9*max_y,'números dobram a cada 4 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
@@ -463,7 +469,10 @@ set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','Font
 
 set(gca,'YTickLabel',{'100','1k','10k','100k'})
 
-axis([0 day_axis y_init max_y]);
+hfonte=text(max_x,max_y,'Fonte: http://painel.saude.rj.gov.br/monitoramento/covid19.html');
+set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
+
+axis([0 max_x y_init max_y]);
 Pos = [250,250,600,450];
 
 % pra botar o logo no inferior direito
@@ -496,11 +505,17 @@ title({'Informativo de progresso da epidemia (número de mortes)',['Municípios 
 ylabel(['Novas mortes por semana'],'FontSize',fonte_labels);
 xlabel ("Total de mortes",'FontSize',fonte_labels);
 legend ("location", "northeastoutside");
-axis([1 50000 1 5000]);
+max_x = 50000;
+max_y = 5000;
+axis([1 max_x 1 max_y]);
 
 
 set(gca,'YTickLabel',{'1','10','100','1k'})
 set(gca,'XTickLabel',{'1','10','100','1k','10k'})
+
+hfonte=text(max_x,max_y,'Fonte: http://painel.saude.rj.gov.br/monitoramento/covid19.html');
+set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
+
 
 
 % pra botar o logo no inferior direito
@@ -531,11 +546,16 @@ title({'Informativo de progresso da epidemia (número de casos)',['Municípios d
 ylabel(['Novos casos por semana'],'FontSize',fonte_labels);
 xlabel ("Total de casos",'FontSize',fonte_labels);
 legend ("location", "northeastoutside");
+max_x = 500000;
+max_y = 50000;
 axis([10 500000 10 50000]);
-
 
 set(gca,'YTickLabel',{'10','100','1k','10k'})
 set(gca,'XTickLabel',{'10','100','1k','10k','100k'})
+
+hfonte=text(max_x,max_y,'Fonte: http://painel.saude.rj.gov.br/monitoramento/covid19.html');
+set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
+
 
 % pra botar o logo no inferior direito
 ha =gca;
@@ -569,6 +589,8 @@ legend ("location", "northeastoutside");
 
 y_init=1;
 max_y=10000;
+max_x=day_axis;
+
 ang = 47;
 h1=text(37.2,0.8*max_y,'números dobram a cada 4 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
@@ -584,7 +606,10 @@ set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','Font
 
 set(gca,'YTickLabel',{'1','10','100','1k','10k','100k'})
 
-axis([0 day_axis y_init max_y]);
+hfonte=text(max_x,max_y,'Fonte: http://painel.saude.rj.gov.br/monitoramento/covid19.html');
+set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
+
+axis([0 max_x y_init max_y]);
 Pos = [250,250,600,450];
 
 
@@ -618,6 +643,8 @@ ylabel ({'Novos casos por semana'},'FontSize',fonte_labels);
 legend ("location", "northeastoutside");
 y_init=10;
 max_y=100000;
+max_x=day_axis;
+
 ang = 47;
 h1=text(37.2,0.8*max_y,'números dobram a cada 4 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
@@ -633,7 +660,10 @@ set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','Font
 
 set(gca,'YTickLabel',{'10','100','1k','10k','100k'})
 
-axis([0 day_axis y_init max_y]);
+hfonte=text(max_x,max_y,'Fonte: http://painel.saude.rj.gov.br/monitoramento/covid19.html');
+set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
+
+axis([0 max_x y_init max_y]);
 Pos = [250,250,600,450];
 
 

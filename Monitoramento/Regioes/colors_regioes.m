@@ -418,6 +418,9 @@ position = [round([0:size(imagem,1)/(size(img,1)):size(imagem,1)-(size(imagem,1)
 
 text((size(imagem,2) + space_imag),-55,'  Máx. valor');
 
+hfonte=text((size(imagem,2) + space_imag+size(img_lista,2)),0,'Fonte: https://covid.saude.gov.br/');
+set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
+
     axis on;
     set(gca,'TickDir','in');
     set(gca,'ytick',[]);
