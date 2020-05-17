@@ -15,13 +15,13 @@ Análise:
 - P - Previsão
 
 Tipo:
-- LT - letalidade total
-- LS - letalidade semanal
-- IM - informativo-mortes
 - IC - informativo-casos
-- CT - contagio total
+- IM - informativo-mortes
+- CT - contagio
 - CS - contagio semanal
-- MC - mapa de cores
+- LT - letalidade
+- LS - letalidade semanal
+- MC - mapa de calor
 - VP - variação percentual
 
 Escala:
@@ -40,13 +40,13 @@ Local:
 - WD - Mundo
 
 Data: 
-ano-mes-dia
+Ano-Mês-Dia
 
 Exemplo: 
 
 *covid19rj_M_LT_PM_BR_2020-04-17*
 
->> Monitoramento da Letalidade Total por 1 milhão de habitantes no Brasil em 17/5/2020
+--> Monitoramento da Letalidade Total por 1 milhão de habitantes no Brasil em 17/5/2020 <--
 
 
 ## Equipe:
