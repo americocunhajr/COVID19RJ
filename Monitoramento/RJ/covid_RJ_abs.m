@@ -6,7 +6,7 @@ table = readtable('cases-brazil-cities-time.txt');
 data = table2cell(table);
 
 %nome dos arquivos que serão salvos
-name = 'cidades-RJ';
+name = 'RJ';
 
 %Separei em dois tipos de plot pra organizar em ordem de mais mortes (tipo 1) e mais casos (tipo 2)
 for( plot_type = 1:1:2)
@@ -690,12 +690,11 @@ set(ha2,'handlevisibility','off','visible','off')
 
 
 
-print(figure(1),[pwd '/',outputdir,'/',name,'_letalidade-abs_',datestr(end_time,29),'.png',],'-dpng','-r300');
-print(figure(2),[pwd '/',outputdir,'/',name,'_contagio-abs_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
-print(figure(3),[pwd '/',outputdir,'/',name,'_informativo-mortes-abs_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
-print(figure(4),[pwd '/',outputdir,'/',name,'_informativo-casos-abs_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
-print(figure(5),[pwd '/',outputdir,'/',name,'_letalidade-semanal-abs_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
-print(figure(6),[pwd '/',outputdir,'/',name,'_contagio_semanal-abs_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
-
+print(figure(1),[pwd '/',outputdir,'/covid19rj_M_ST_NM_AC_VA_',name,'_',datestr(end_time,29),'.png',],'-dpng','-r300');
+print(figure(2),[pwd '/',outputdir,'/covid19rj_M_ST_NC_AC_VA_',name,'_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
+print(figure(3),[pwd '/',outputdir,'/covid19rj_M_EF_NM_NA_VA_',name,'_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
+print(figure(4),[pwd '/',outputdir,'/covid19rj_M_EF_NC_NA_VA_',name,'_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
+print(figure(5),[pwd '/',outputdir,'/covid19rj_M_ST_NM_PS_VA_',name,'_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
+print(figure(6),[pwd '/',outputdir,'/covid19rj_M_ST_NC_PS_VA_',name,'_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
 
 close all

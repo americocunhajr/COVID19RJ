@@ -128,32 +128,32 @@ for (regions = 1:1:6)
 if (regions == 1 )
 begin_states = 0;
 end_states = 7;
-name = 'Norte'
+name = 'NO'
 end
 if (regions == 2 )
 begin_states = 0;
 end_states = 9;
-name = 'Nordeste'
+name = 'NE'
 end
 if (regions == 3 )
 begin_states = 0;
 end_states = 4;
-name = 'Centro-Oeste'
+name = 'CO'
 end
 if (regions == 4 )
 begin_states = 0;
 end_states = 4;
-name = 'Sudeste'
+name = 'SE'
 end
 if (regions == 5 )
 begin_states = 0;
 end_states = 3;
-name = 'Sul'
+name = 'SU'
 end
 if (regions == 6 )
 begin_states = 0;
 end_states = 27;
-name = 'Brasil'
+name = 'BR'
 end
 
 for( plot_type = 1:1:2)
@@ -254,10 +254,10 @@ if strcmp(country, 'AC') country = 'AC      '; end
 if strcmp(country, 'RO') country = 'RO      '; end 
 if strcmp(country, 'RR') country = 'RR      '; end 
 if strcmp(country, 'TO') country = 'TO      '; end 
-if strcmp(country, 'CE') country = 'CE  '; end 
+if strcmp(country, 'CE') country = 'CE   '; end 
 if strcmp(country, 'PE') country = 'PE   '; end 
 if strcmp(country, 'MA') country = 'MA    '; end 
-if strcmp(country, 'BA') country = 'BA    '; end 
+if strcmp(country, 'BA') country = 'BA     '; end 
 if strcmp(country, 'PB') country = 'PB     '; end 
 if strcmp(country, 'AL') country = 'AL     '; end 
 if strcmp(country, 'RN') country = 'RN     '; end 
@@ -280,12 +280,12 @@ if (plot_type == 2)
 
 if (regions == 1)
 if (init == 0) country = 'BR'; color = [0,0,0]/255; pop = popBR; end
-if (init == 3) country = 'AC'; color = [69,169,0]/255; pop = 881935; end
+if (init == 4) country = 'AC'; color = [69,169,0]/255; pop = 881935; end
 if (init == 5) country = 'AP'; color = [5,163,29]/255; pop = 845731; end
 if (init == 7) country = 'AM'; color = [53,143,31]/255; pop = 4144597; end  
 if (init == 6) country = 'PA'; color = [0,169,74]/255; pop = 8602865; end
 if (init == 1) country = 'TO'; color = [0,109,22]/255; pop = 1572866; end
-if (init == 4) country = 'RO'; color = [0,104,44]/255; pop = 1777225; end
+if (init == 3) country = 'RO'; color = [0,104,44]/255; pop = 1777225; end
 if (init == 2) country = 'RR'; color = [0,67,21]/255; pop = 605761; end
 end
 
@@ -1019,13 +1019,12 @@ colormap (map)
 set(ha2,'handlevisibility','off','visible','off')
 
 
-
-print(figure(1),[pwd '/',outputdir,'/',name,'_letalidade-pm_',datestr(end_time,29),'.png',],'-dpng','-r300');
-print(figure(2),[pwd '/',outputdir,'/',name,'_contagio-pm_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
-print(figure(3),[pwd '/',outputdir,'/',name,'_informativo-mortes-pm_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
-print(figure(4),[pwd '/',outputdir,'/',name,'_informativo-casos-pm_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
-print(figure(5),[pwd '/',outputdir,'/',name,'_letalidade-semanal-pm_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
-print(figure(6),[pwd '/',outputdir,'/',name,'_contagio_semanal-pm_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
+print(figure(1),[pwd '/',outputdir,'/covid19rj_M_ST_NM_AC_PM_',name,'_',datestr(end_time,29),'.png',],'-dpng','-r300');
+print(figure(2),[pwd '/',outputdir,'/covid19rj_M_ST_NC_AC_PM_',name,'_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
+print(figure(3),[pwd '/',outputdir,'/covid19rj_M_EF_NM_NA_PM_',name,'_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
+print(figure(4),[pwd '/',outputdir,'/covid19rj_M_EF_NC_NA_PM_',name,'_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
+print(figure(5),[pwd '/',outputdir,'/covid19rj_M_ST_NM_PS_PM_',name,'_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
+print(figure(6),[pwd '/',outputdir,'/covid19rj_M_ST_NC_PS_PM_',name,'_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
 
 close all
 

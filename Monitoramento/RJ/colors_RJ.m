@@ -320,7 +320,7 @@ Estados = {
 };
 
 titulos = {"Novos Casos";"Novos Óbitos";"Casos Acumulados";"Óbitos Acumulados"};
-name = 'mapa-cor-cidades-RJ';
+name = 'RJ';
 
 
 % Encontrando data inicial
@@ -518,10 +518,10 @@ set(ha2,'handlevisibility','off','visible','off')
   ax2.XTick = [];
   ax2.YTick = [];      
 
-if (t == 1) print(gcf,[pwd '/',outputdir,'/',name,'_contagio_semanal-abs_',datestr(tabela.date(length(tabela.date)),29),'.png'],'-dpng','-r300'); end
-if (t == 2) print(gcf,[pwd '/',outputdir,'/',name,'_letalidade_semanal-abs_',datestr(tabela.date(length(tabela.date)),29),'.png'],'-dpng','-r300'); end
-if (t == 3) print(gcf,[pwd '/',outputdir,'/',name,'_contagio-abs_',datestr(tabela.date(length(tabela.date)),29),'.png'],'-dpng','-r300'); end
-if (t == 4) print(gcf,[pwd '/',outputdir,'/',name,'_letalidade-abs_',datestr(tabela.date(length(tabela.date)),29),'.png',],'-dpng','-r300'); end
+if (t == 1) print(gcf,[pwd '/',outputdir,'/covid19rj_M_MC_NC_PS_VA_',name,'_',datestr(end_date,29),'.png'],'-dpng','-r300'); end
+if (t == 2) print(gcf,[pwd '/',outputdir,'/covid19rj_M_MC_NM_PS_VA_',name,'_',datestr(end_date,29),'.png'],'-dpng','-r300'); end
+if (t == 3) print(gcf,[pwd '/',outputdir,'/covid19rj_M_MC_NC_AC_VA_',name,'_',datestr(end_date,29),'.png'],'-dpng','-r300'); end
+if (t == 4) print(gcf,[pwd '/',outputdir,'/covid19rj_M_MC_NM_AC_VA_',name,'_',datestr(end_date,29),'.png'],'-dpng','-r300'); end
 
 end
 

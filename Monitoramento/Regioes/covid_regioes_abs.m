@@ -41,7 +41,7 @@ close all;
 % - Conter headers com os nomes: "estado","data","casosNovos","casosAcumulados", "obitosNovos", "obitosAcumulados".
 
 %nome que aparece nos arquivos
-name = 'regioes';
+name = 'RB';
 
 %Lendo o arquivo disponível no site 
 data = readtable('arquivo_geral.csv');
@@ -143,7 +143,7 @@ popCENTRO = popMS + popMT + popGO + popDF;
 if (plot_type == 1)
 %ordem por países que tem mais morte
 if (init == 3)
-country = 'Norte              ';
+country = 'Norte               ';
 color = [0,169,74]/255; 
 pop = popNORTE;
 tot_cases = NORTE(:,1);
@@ -853,12 +853,12 @@ set(ha2,'handlevisibility','off','visible','off')
 
 
 
-print(figure(1),[pwd '/',outputdir,'/',name,'_letalidade-abs_',datestr(end_time,29),'.png',],'-dpng','-r300');
-print(figure(2),[pwd '/',outputdir,'/',name,'_contagio-abs_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
-print(figure(3),[pwd '/',outputdir,'/',name,'_informativo-mortes-abs_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
-print(figure(4),[pwd '/',outputdir,'/',name,'_informativo-casos-abs_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
-print(figure(5),[pwd '/',outputdir,'/',name,'_letalidade-semanal-abs_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
-print(figure(6),[pwd '/',outputdir,'/',name,'_contagio_semanal-abs_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
+print(figure(1),[pwd '/',outputdir,'/covid19rj_M_ST_NM_AC_VA_',name,'_',datestr(end_time,29),'.png',],'-dpng','-r300');
+print(figure(2),[pwd '/',outputdir,'/covid19rj_M_ST_NC_AC_VA_',name,'_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
+print(figure(3),[pwd '/',outputdir,'/covid19rj_M_EF_NM_NA_VA_',name,'_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
+print(figure(4),[pwd '/',outputdir,'/covid19rj_M_EF_NC_NA_VA_',name,'_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
+print(figure(5),[pwd '/',outputdir,'/covid19rj_M_ST_NM_PS_VA_',name,'_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
+print(figure(6),[pwd '/',outputdir,'/covid19rj_M_ST_NC_PS_VA_',name,'_',datestr(end_time,29),'.png',],'-dpng','-r300'); 
 
 
 
