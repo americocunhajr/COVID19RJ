@@ -11,9 +11,6 @@ covid_RJ_abs;
 covid_brasil_pm;
 covid_regioes_pm;
 covid_RJ_pm;
-colors_world;
-covid_world_abs;
-covid_world_pm;
 
 
 
