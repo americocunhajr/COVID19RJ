@@ -288,7 +288,7 @@ arquivogeral = readtable('arquivo_geral.csv');
 % Definições para os graficos 
 Estados = {"AC"; "AM"; "AP"; "PA"; "RO"; "RR"; "TO"; "AL"; "BA"; "CE"; "MA"; "PB"; "PE"; "PI"; "RN"; "SE"; "ES"; "MG"; "RJ"; "SP"; "PR"; "RS"; "SC"; "DF"; "GO"; "MS"; "MT"};
 titulos = {"Novos Casos";"Novos Óbitos";"Casos Acumulados";"Óbitos Acumulados"};
-name = 'mapa-cor-regioes';
+name = 'RB';
 
 
 % Encontrando data inicial
@@ -342,6 +342,7 @@ for (j=init:1:final)
 end
 end
 
+end_date = tabela.data(length(tabela.data));
 
 outputdir = datestr(tabela.data(length(tabela.data)),29);
 if ~exist(outputdir, 'dir')
@@ -470,10 +471,11 @@ set(ha2,'handlevisibility','off','visible','off')
   ax2.XTick = [];
   ax2.YTick = [];      
 
-if (t == 1) print(gcf,[pwd '/',outputdir,'/',name,'_contagio_semanal-abs_',datestr(tabela.data(length(tabela.data)),29),'.png'],'-dpng','-r300'); end
-if (t == 2) print(gcf,[pwd '/',outputdir,'/',name,'_letalidade_semanal-abs_',datestr(tabela.data(length(tabela.data)),29),'.png'],'-dpng','-r300'); end
-if (t == 3) print(gcf,[pwd '/',outputdir,'/',name,'_contagio-abs_',datestr(tabela.data(length(tabela.data)),29),'.png'],'-dpng','-r300'); end
-if (t == 4) print(gcf,[pwd '/',outputdir,'/',name,'_letalidade-abs_',datestr(tabela.data(length(tabela.data)),29),'.png',],'-dpng','-r300'); end
+if (t == 1) print(gcf,[pwd '/',outputdir,'/covid19rj_M_MC_NC_PS_VA_',name,'_',datestr(end_date,29),'.png'],'-dpng','-r300'); end
+if (t == 2) print(gcf,[pwd '/',outputdir,'/covid19rj_M_MC_NM_PS_VA_',name,'_',datestr(end_date,29),'.png'],'-dpng','-r300'); end
+if (t == 3) print(gcf,[pwd '/',outputdir,'/covid19rj_M_MC_NC_AC_VA_',name,'_',datestr(end_date,29),'.png'],'-dpng','-r300'); end
+if (t == 4) print(gcf,[pwd '/',outputdir,'/covid19rj_M_MC_NM_AC_VA_',name,'_',datestr(end_date,29),'.png'],'-dpng','-r300'); end
+
 
 end
 
