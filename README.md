@@ -4,6 +4,53 @@ Esse repositório reune informações e dados da epidemia de COVID-19, com parti
 
 www.covid19rj.org
 
+## Arquivos no repositório
+
+Entenda o nome dos nossos arquivos: 
+
+*covid19rj_analise_tipo_informacao_base_escala_local_data*
+
+Análise:
+- M - Monitoramento
+- P - Previsão
+
+Tipo:
+- ST - série temporal
+- EF - espaço de fase
+- MC - mapa de calor
+- VP - variação percentual
+
+Informação:
+- NC - número de casos
+- NM - número de mortes
+
+Base:
+- AC - acumulado
+- PS - por semana
+- NA - não se aplica
+
+Escala:
+- VA - valores absolutos
+- PM - por 1 milhão de habitantes
+
+Local:
+- Rio - Município do RJ
+- RJ - Estado do RJ
+- NO - Região Norte
+- NE - Região Nordeste
+- CO - Região Centro-Oeste
+- SE - Região Sudeste
+- SU - Região Sul
+- RB - Regiões do Brasil
+- BR - Brasil
+- WD - Mundo
+
+Data: 
+Ano-Mês-Dia
+
+Exemplo: 
+
+A leitura do arquivo *covid19rj_M_EF_NM_PS_PM_BR_2020-05-17* é a seguinte: "Monitoramento via espaço de fase do número de mortes por semana por 1 milhão de habitantes no Brasil em 17/5/2020".
 
 ## Equipe:
 
