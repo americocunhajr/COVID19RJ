@@ -55,9 +55,9 @@ if (init == 3) city = 'Duque de Caxias/RJ'; pop = 919596; color = [96,209,224]/2
 if (init == 4) city = 'Nova Iguaçu/RJ'; pop = 821128; color = [181,147,87]/255; end
 if (init == 5) city = 'São Gonçalo/RJ'; pop = 1084839; color = [255,130,113]/255; end
 if (init == 2) city = 'Niterói/RJ'; pop = 524687; color = [209,227,105]/255; end
-if (init == 8) city = 'Belford Roxo/RJ'; pop = 508013; color = [248,187,208]/255; end
+if (init == 9) city = 'Belford Roxo/RJ'; pop = 508013; color = [248,187,208]/255; end
 if (init == 6) city = 'São João de Meriti/RJ'; pop = 472406; color = [0,104,44]/255; end
-if (init == 9) city = 'Itaboraí/RJ'; pop = 240592; color = [0,45,135]/255; end
+if (init == 8) city = 'Itaboraí/RJ'; pop = 240592; color = [0,45,135]/255; end
 if (init == 10) city = 'Mesquita/RJ'; pop = 176103; color = [135,85,30]/255; end
 if (init == 12) city = 'Petrópolis/RJ'; pop = 306191; color = [203,63,23]/255; end
 if (init == 7) city = 'Volta Redonda/RJ'; pop = 273012; color = [191,171,72]/255; end
@@ -69,8 +69,8 @@ dates = table.date(find(strcmp([table.city],city)),:);
 end_time = max(datenum(dates));
 
 if strcmp(city, 'Rio de Janeiro/RJ') city = 'Rio de Janeiro (capital)'; end 
-if strcmp(city, 'Duque de Caxias/RJ') city = 'Duque de Caxias             '; end 
-if strcmp(city, 'Nova Iguaçu/RJ') city = 'Nova Iguaçu                    '; end 
+if strcmp(city, 'Duque de Caxias/RJ') city = 'Duque de Caxias           '; end 
+if strcmp(city, 'Nova Iguaçu/RJ') city = 'Nova Iguaçu                  '; end 
 if strcmp(city, 'São Gonçalo/RJ') city = 'São Gonçalo                    '; end 
 if strcmp(city, 'Niterói/RJ') city = 'Niterói                           '; end 
 if strcmp(city, 'Belford Roxo/RJ') city = 'Belford Roxo                   '; end 
@@ -82,6 +82,7 @@ if strcmp(city, 'Volta Redonda/RJ') city = 'Volta Redonda                '; end
 if strcmp(city, 'Magé/RJ') city = 'Magé                               '; end 
 
 end
+
 
 tot_cases = cell2mat(location(:,9));
 new_cases = cell2mat(location(:,8));
