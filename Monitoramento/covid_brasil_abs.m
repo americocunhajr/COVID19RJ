@@ -119,7 +119,7 @@ dates = data.data(find(strcmp([data.estado],'RO')),:);
 end_time = max(datenum(dates));
 
 %inicio do loop de plot
-for (regions = 2:1:2)
+for (regions = 1:1:6)
 
 if (regions == 1 )
 begin_states = 0;
@@ -609,17 +609,22 @@ hold on;
 %Plotar novos casos X total de casos (por milhao de hab.)
 figure (4);
 
-grid1=loglog([1,1000000],1000*(ones(2, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+grid1=loglog([1,10000000],1000*(ones(2, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
 hold on;
-grid2=loglog([1,1000000],10000*(ones(2, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+grid2=loglog([1,10000000],10000*(ones(2, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+grid22=loglog([1,10000000],100000*(ones(2, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
 hold on;
 
-grid3=loglog(1000*(ones(2, 1)),[1,100000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
+grid3=loglog(1000*(ones(2, 1)),[1,1000000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
 hold on;
-grid4=loglog(10000*(ones(2, 1)),[1,100000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
+grid4=loglog(10000*(ones(2, 1)),[1,1000000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
 hold on;
-grid5=loglog(100000*(ones(2, 1)),[1,100000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
+grid5=loglog(100000*(ones(2, 1)),[1,1000000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
 hold on;
+grid55=loglog(1000000*(ones(2, 1)),[1,1000000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+
 
  n = max(max(size(tot_cases)));
  fig=loglog(tot_cases,new_cases7,'DisplayName',[country,'  ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', linew);
@@ -857,8 +862,8 @@ legend = "off";
 end
 ylabel(['Novos casos por semana '],'FontSize',fonte_labels);
 xlabel ("Total de casos ",'FontSize',fonte_labels);
-max_x = 1000000;
-max_y = 100000;
+max_x = 2000000;
+max_y = 200000;
 axis([100 max_x 100 max_y]);
 
 
