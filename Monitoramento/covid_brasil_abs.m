@@ -119,7 +119,7 @@ dates = data.data(find(strcmp([data.estado],'RO')),:);
 end_time = max(datenum(dates));
 
 %inicio do loop de plot
-for (regions = 1:1:6)
+for (regions = 2:1:2)
 
 if (regions == 1 )
 begin_states = 0;
@@ -372,7 +372,7 @@ if strcmp(country, 'TO') country = 'TO    '; end
 if strcmp(country, 'CE') country = 'CE   '; end 
 if strcmp(country, 'PE') country = 'PE   '; end 
 if strcmp(country, 'MA') country = 'MA  '; end 
-if strcmp(country, 'BA') country = 'BA     '; end 
+if strcmp(country, 'BA') country = 'BA   '; end 
 if strcmp(country, 'PB') country = 'PB     '; end 
 if strcmp(country, 'AL') country = 'AL     '; end 
 if strcmp(country, 'RN') country = 'RN    '; end 
