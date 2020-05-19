@@ -442,7 +442,7 @@ ang = 38;
 h4=text(90,0.9*max_y,'7 dias');
 set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 
-set(gca,'YTickLabel',{'100','1k','10k','100k','1M'})
+set(gca,'YTickLabel',{'1','100','1k','10k','100k'})
 
 hfonte=text(day_axis,max_y,'Fonte: https://ourworldindata.org/coronavirus-source-data');
 set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
