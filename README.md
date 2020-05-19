@@ -61,6 +61,7 @@ Professores:
 - Lisandro Lovisolo
 - Malú Grave
 - Rodrigo Burgos
+- Roberto Velho
 
 Estudantes:
 - Bruna Pavlack
