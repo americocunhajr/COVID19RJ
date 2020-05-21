@@ -3,8 +3,8 @@ clc;
 close all;
 
 %ATUALIZAR O NOME DO ARQUIVO NOVO E DATA
-all_data = readtable('HIST_PAINEL_COVIDBR_20mai2020.xlsx');
-date = '2020-05-20';
+all_data = readtable('HIST_PAINEL_COVIDBR_21mai2020.xlsx');
+date = '2020-05-21';
 
 data = table2array(all_data(:,11:12));
 BRASIL= str2double(data);

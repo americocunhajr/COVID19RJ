@@ -35,7 +35,7 @@ end_time = max(datenum(dates));
 
 if strcmp(city, 'Rio de Janeiro/RJ') city = 'Rio de Janeiro (capital)'; end 
 if strcmp(city, 'Duque de Caxias/RJ') city = 'Duque de Caxias           '; end 
-if strcmp(city, 'Nova Iguaçu/RJ') city = 'Nova Iguaçu                    '; end 
+if strcmp(city, 'Nova Iguaçu/RJ') city = 'Nova Iguaçu                  '; end 
 if strcmp(city, 'São Gonçalo/RJ') city = 'São Gonçalo                    '; end 
 if strcmp(city, 'Niterói/RJ') city = 'Niterói                             '; end 
 if strcmp(city, 'Belford Roxo/RJ') city = 'Belford Roxo                   '; end 
