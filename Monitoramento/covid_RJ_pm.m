@@ -18,8 +18,8 @@ if (plot_type == 1)
 if (init == 1) city = 'Rio de Janeiro/RJ'; pop = 6718903; color = [69,169,0]/255; end
 if (init == 2) city = 'Duque de Caxias/RJ'; pop = 919596; color = [96,209,224]/255; end
 if (init == 3) city = 'Nova Iguaçu/RJ'; pop = 821128; color = [181,147,87]/255; end
-if (init == 4) city = 'São Gonçalo/RJ'; pop = 1084839; color = [255,130,113]/255; end
-if (init == 5) city = 'Niterói/RJ'; pop = 524687; color = [209,227,105]/255; end
+if (init == 5) city = 'São Gonçalo/RJ'; pop = 1084839; color = [255,130,113]/255; end
+if (init == 4) city = 'Niterói/RJ'; pop = 524687; color = [209,227,105]/255; end
 if (init == 7) city = 'Belford Roxo/RJ'; pop = 508013; color = [248,187,208]/255; end
 if (init == 8) city = 'São João de Meriti/RJ'; pop = 472406; color = [0,104,44]/255; end
 if (init == 10) city = 'Itaboraí/RJ'; pop = 240592; color = [0,45,135]/255; end
