@@ -243,7 +243,7 @@ tot_deaths = SUL(:,3);
 new_deaths = SUL(:,4);
 end
 if (init == 5)
-country = 'Centro-Oeste    ';
+country = 'Centro-Oeste  ';
 color = [135,85,30]/255;
 pop = popCENTRO;
 tot_cases = CENTRO(:,1);
