@@ -213,7 +213,7 @@ fonte_labels = 10;
 fonte_padrao = 9; %numeros dos eixos
 fonte_location = 8;
 
-day_axis = 100;
+day_axis = 120;
 
 Pos = [0,250,900,450];
 set(0, 'DefaultFigurePosition', Pos);
@@ -432,16 +432,16 @@ legend ("location", "northeastoutside");
 
 y_init=1;
 max_y=10000;
-ang = 52;
+ang = 57;
 h1=text(51,0.9*max_y,'números dobram a cada 4 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 45;
+ang = 50;
 h2=text(64,0.9*max_y,'5 dias');
 set(h2,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 40;
+ang = 44;
 h3=text(76.9,0.9*max_y,'6 dias');
 set(h3,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 38;
+ang = 41;
 h4=text(90,0.9*max_y,'7 dias');
 set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 
@@ -489,16 +489,16 @@ legend ("location", "northeastoutside");
 
 y_init=10;
 max_y=100000;
-ang = 52;
+ang = 57;
 h1=text(51,0.9*max_y,'números dobram a cada 4 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 45;
+ang = 50;
 h2=text(64,0.9*max_y,'5 dias');
 set(h2,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 40;
+ang = 44;
 h3=text(76.9,0.9*max_y,'6 dias');
 set(h3,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 38;
+ang = 41;
 h4=text(90,0.9*max_y,'7 dias');
 set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 
@@ -622,18 +622,18 @@ ylabel ({'Novas mortes por semana','(por milhão de habitantes)'},'FontSize',fon
 legend ("location", "northeastoutside");
 
 y_init=0.1;
-max_y=10000;
-ang = 45;
-h1=text(50.5,0.8*max_y,'números dobram a cada 4 dias');
+max_y=1000;
+ang = 57;
+h1=text(37.2,0.8*max_y,'números dobram a cada 4 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 39;
-h2=text(63.2,0.8*max_y,'5 dias');
+ang = 52;
+h2=text(46.7,0.8*max_y,'5 dias');
 set(h2,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 34;
-h3=text(76,0.8*max_y,'6 dias');
+ang = 45;
+h3=text(56.1,0.8*max_y,'6 dias');
 set(h3,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 32;
-h4=text(89,0.8*max_y,'7 dias');
+ang = 39.5;
+h4=text(66,0.8*max_y,'7 dias');
 set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 
 set(gca,'YTickLabel',{'0.1','1','10','100','1k','10k'})
@@ -674,16 +674,16 @@ ylabel ({'Novos casos por semana','(por milhão de habitantes)'},'FontSize',font
 legend ("location", "northeastoutside");
 y_init=1;
 max_y=10000;
-ang = 52;
+ang = 57;
 h1=text(37.2,0.8*max_y,'números dobram a cada 4 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 47;
+ang = 52;
 h2=text(46.7,0.8*max_y,'5 dias');
 set(h2,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 42;
-h3=text(56,0.8*max_y,'6 dias');
+ang = 45;
+h3=text(56.1,0.8*max_y,'6 dias');
 set(h3,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 35;
+ang = 39.5;
 h4=text(66,0.8*max_y,'7 dias');
 set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 
@@ -727,19 +727,19 @@ if ~exist([pwd,'/',outputdir,'/',outputdir2], 'dir')
 end
 
 %Controle do site
-print(figure(1),[pwd '/upload/',name,'/covid19rj_M_ST_NM_AC_PM_',name,'.png'],'-dpng','-r300'); 
-print(figure(2),[pwd '/upload/',name,'/covid19rj_M_ST_NC_AC_PM_',name,'.png'],'-dpng','-r300'); 
-print(figure(3),[pwd '/upload/',name,'/covid19rj_M_EF_NM_NA_PM_',name,'.png'],'-dpng','-r300'); 
-print(figure(4),[pwd '/upload/',name,'/covid19rj_M_EF_NC_NA_PM_',name,'.png'],'-dpng','-r300'); 
-print(figure(5),[pwd '/upload/',name,'/covid19rj_M_ST_NM_PS_PM_',name,'.png'],'-dpng','-r300'); 
-print(figure(6),[pwd '/upload/',name,'/covid19rj_M_ST_NC_PS_PM_',name,'.png'],'-dpng','-r300'); 
+print(figure(1),[pwd '/upload/',name,'/covid19rj_M_ST_NM_AC_PM_',name,'.png'],'-dpng','-r500'); 
+print(figure(2),[pwd '/upload/',name,'/covid19rj_M_ST_NC_AC_PM_',name,'.png'],'-dpng','-r500'); 
+print(figure(3),[pwd '/upload/',name,'/covid19rj_M_EF_NM_NA_PM_',name,'.png'],'-dpng','-r500'); 
+print(figure(4),[pwd '/upload/',name,'/covid19rj_M_EF_NC_NA_PM_',name,'.png'],'-dpng','-r500'); 
+print(figure(5),[pwd '/upload/',name,'/covid19rj_M_ST_NM_PS_PM_',name,'.png'],'-dpng','-r500'); 
+print(figure(6),[pwd '/upload/',name,'/covid19rj_M_ST_NC_PS_PM_',name,'.png'],'-dpng','-r500'); 
 
 %Controle do github
-print(figure(1),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_ST_NM_AC_PM_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r300'); 
-print(figure(2),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_ST_NC_AC_PM_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r300'); 
-print(figure(3),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_EF_NM_NA_PM_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r300'); 
-print(figure(4),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_EF_NC_NA_PM_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r300'); 
-print(figure(5),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_ST_NM_PS_PM_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r300'); 
-print(figure(6),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_ST_NC_PS_PM_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r300'); 
+print(figure(1),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_ST_NM_AC_PM_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r500'); 
+print(figure(2),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_ST_NC_AC_PM_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r500'); 
+print(figure(3),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_EF_NM_NA_PM_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r500'); 
+print(figure(4),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_EF_NC_NA_PM_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r500'); 
+print(figure(5),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_ST_NM_PS_PM_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r500'); 
+print(figure(6),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_ST_NC_PS_PM_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r500'); 
 
 close all
