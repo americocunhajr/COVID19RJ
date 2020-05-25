@@ -48,8 +48,9 @@ tend = datetime(2020,5,31,0,0,0);
 xlim([tstart tend]);
 set(gca, 'XTick', linspace(tstart,tend,7))
 datetick('x',19,'keepticks')
-
-ylim([0 400000]);
+max_x=tend;
+max_y=400000;
+ylim([0 max_y]);
 set(gca,'YTickLabel',{'0','50k','100k','150k','200k','250k','300k','350k','400k'})
 
 
@@ -61,6 +62,9 @@ ax = gca;
 ax.FontSize = 8; 
 
 title({'Evolução dos casos de COVID-19 no Brasil',[datestr(end_time,24)]},'FontSize',10);
+
+hfonte=text(max_x,max_y,'Fonte: https://covid.saude.gov.br/');
+set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
 
 
 % pra botar o logo no inferior direito
@@ -94,9 +98,9 @@ if ~exist([pwd,'/',outputdir,'/',outputdir2], 'dir')
   mkdir([pwd,'/',outputdir,'/',outputdir2]);
 end
 
-if (t==1) print(figure(1),[pwd '/upload/',name,'/covid19rj_M_ST_RE_AC_VA_',name,'.png'],'-dpng','-r300'); end
+if (t==1) print(figure(1),[pwd '/upload/',name,'/covid19rj_M_ST_RE_AC_VA_',name,'.png'],'-dpng','-r500'); end
 
-if (t == 1) print(gcf,[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_ST_RE_AC_VA_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r300'); end
+if (t == 1) print(gcf,[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_ST_RE_AC_VA_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r500'); end
 
 %dates(end,:) = [];
 %BRASIL(end,:) = [];

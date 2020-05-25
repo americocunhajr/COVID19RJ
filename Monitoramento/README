@@ -13,6 +13,7 @@ Tipo:
 - EF - espaço de fase
 - MC - mapa de calor
 - VP - variação percentual
+- CP - comparação entre valores acumulados (gráfico de barras)
 
 Informação:
 - NC - número de casos
