@@ -3,10 +3,10 @@ clc;
 close all;
 
 %ATUALIZAR O NOME DO ARQUIVO NOVO E DATA
-all_data = readtable('HIST_PAINEL_COVIDBR_24mai2020.xlsx');
-date = '2020-05-24';
+all_data = readtable('HIST_PAINEL_COVIDBR_25mai2020.xlsx');
+date = '2020-05-25';
 
-data = table2array(all_data(:,11:12));
+data = table2array(all_data(:,11:14));
 BRASIL= str2double(data);
 
 table = readtable('arquivo_geral_old.csv');
@@ -52,7 +52,7 @@ if (i==27) estado = 'DF'; end
 aux = all_data(find(strcmp([all_data.estado], estado)),:);
 dados = max(BRASIL(find(strcmp([all_data.estado], estado)),:));
 casos = dados(:,1);
-mortes = dados(:,2);
+mortes = dados(:,3);
 regiao = table2array(aux(1,1));
 
 

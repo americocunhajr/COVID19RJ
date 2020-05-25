@@ -161,7 +161,7 @@ tot_deaths = NORDESTE(:,3);
 new_deaths = NORDESTE(:,4);
 end
 if (init == 1)
-country = 'Sudeste          ';
+country = 'Sudeste         ';
 color = [254,88,52]/255;
 pop = popSUDESTE;
 tot_cases = SUDESTE(:,1);
@@ -212,7 +212,7 @@ tot_deaths = NORTE(:,3);
 new_deaths = NORTE(:,4);
 end
 if (init == 2)
-country = 'Nordeste        ';
+country = 'Nordeste       ';
 color = [0,99,181]/255;
 pop = popNORDESTE;
 tot_cases = NORDESTE(:,1);
@@ -221,7 +221,7 @@ tot_deaths = NORDESTE(:,3);
 new_deaths = NORDESTE(:,4);
 end
 if (init == 1)
-country = 'Sudeste         ';
+country = 'Sudeste        ';
 color = [254,88,52]/255;
 pop = popSUDESTE;
 tot_cases = SUDESTE(:,1);

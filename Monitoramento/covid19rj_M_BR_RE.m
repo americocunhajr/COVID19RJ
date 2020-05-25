@@ -5,7 +5,7 @@ close all;
 
 name = 'BR';
 
-all_data = readtable([pwd,'/Dados/dados_br/HIST_PAINEL_COVIDBR_24mai2020.xlsx']);
+all_data = readtable([pwd,'/Dados/dados_br/HIST_PAINEL_COVIDBR_25mai2020.xlsx']);
 
 table = all_data(find(strcmp([all_data.coduf], '76')),:);
 
