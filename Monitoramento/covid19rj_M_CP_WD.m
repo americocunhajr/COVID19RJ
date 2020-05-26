@@ -53,7 +53,7 @@ for i=1:length(Estados)
 end
 
 %Legenda
-Estados_leg = {"Alemanha"; "Bélgica"; "Brasil"; "Chile";"China"; "Coréia do Sul";"Espanha"; "EUA";"França"; "Irã";"Itália"; "Peru"; "Reino Unido"; "Rússia"; "Suécia";"Turquia"};
+Estados_leg = {"Alemanha     "; "Bélgica     "; "Brasil     "; "Chile     ";"China     "; "Coréia do Sul     ";"Espanha     "; "EUA     ";"França     "; "Irã     ";"Itália     "; "Peru     "; "Reino Unido     "; "Rússia     "; "Suécia     ";"Turquia     "};
 
 
 
@@ -77,23 +77,9 @@ b.CData(3,:) = color_brasil;
 for(i=1:length(Estados))
 text (i, casos_acumulados_pm(i,max_size), mat2str(round(casos_acumulados_pm(i,max_size))),'HorizontalAlignment', 'center','VerticalAlignment', 'bottom','FontSize',8)
 end
-%b.CData(1,:) = [0 0.4470 0.7410];
-%b.CData(2,:) = [0.8500 0.3250 0.0980];
-%b.CData(3,:) = [0.9290 0.6940 0.1250];
-%b.CData(4,:) = [0.4940 0.1840 0.5560];
-%b.CData(5,:) = [0.4660 0.6740 0.1880];
-%b.CData(6,:) = [0.3010 0.7450 0.9330];
-%b.CData(7,:) = [0.6350 0.0780 0.1840];
-%b.CData(8,:) = [0 0.4470 0.7410];
-%b.CData(9,:) = [0.8500 0.3250 0.0980];
-%b.CData(10,:) = [0.9290 0.6940 0.1250];
-%b.CData(11,:) = [0.4940 0.1840 0.5560];
-%b.CData(12,:) = [0.4660 0.6740 0.1880];
-%b.CData(13,:) = [0.3010 0.7450 0.9330];
-%b.CData(length(Estados),:) = [0.6350 0.0780 0.1840];
 
 set(gca,'XTickLabel',Estados_leg, 'FontSize',9);
-set(gca, 'XTick', 1:1:length(Estados));
+set(gca, 'XTick', 1.4:1:length(Estados)+0.4);
 xtickangle(45);
 
 
@@ -119,6 +105,17 @@ ha2=axes('position',[haPos([3 1])-[.12 -0.65], .24,.12,]);
 image(x)
 colormap (map)
 set(ha2,'handlevisibility','off','visible','off')
+
+%Bandeiras
+ha =gca;
+uistack(ha,'bottom');
+haPos = get(ha,'position');
+ha2=axes('position',[haPos([3 1])-[0.6115 -0.015], 0.7075,.038,]);
+[x, map]=imread('bandeiras.png');
+image(x)
+colormap (map)
+set(ha2,'handlevisibility','off','visible','off')
+
 
 
 %Mortes por milhão
@@ -160,6 +157,15 @@ image(x)
 colormap (map)
 set(ha2,'handlevisibility','off','visible','off')
 
+%Bandeiras
+ha =gca;
+uistack(ha,'bottom');
+haPos = get(ha,'position');
+ha2=axes('position',[haPos([3 1])-[0.6115 -0.015], 0.7075,.038,]);
+[x, map]=imread('bandeiras.png');
+image(x)
+colormap (map)
+set(ha2,'handlevisibility','off','visible','off')
 
 %Letalidade em relação aos casos confirmados
 figure(3)
@@ -197,6 +203,16 @@ uistack(ha,'bottom');
 haPos = get(ha,'position');
 ha2=axes('position',[haPos([3 1])-[.12 -0.65], .24,.12,]);
 [x, map]=imread('logo.png');
+image(x)
+colormap (map)
+set(ha2,'handlevisibility','off','visible','off')
+
+%Bandeiras
+ha =gca;
+uistack(ha,'bottom');
+haPos = get(ha,'position');
+ha2=axes('position',[haPos([3 1])-[0.6115 -0.015], 0.7075,.038,]);
+[x, map]=imread('bandeiras.png');
 image(x)
 colormap (map)
 set(ha2,'handlevisibility','off','visible','off')
