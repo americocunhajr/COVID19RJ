@@ -6,6 +6,9 @@ clc
 name = 'WD';
 
 %Lendo o arquivo disponível no site 
+fullURL = ['https://covid.ourworldindata.org/data/owid-covid-data.csv'];
+filename = 'owid-covid-data.csv';
+urlwrite(fullURL,[pwd '/Dados/',filename]);
 arquivogeral = readtable([pwd '/Dados/owid-covid-data.csv']);
 
 Estados = {"Germany"; "Belgium"; "Brazil"; "Chile";"China"; "South Korea";"Spain"; "United States"; "France";"Iran";"Italy"; "Peru"; "United Kingdom";"Russia"; "Sweden"; "Turkey"};
