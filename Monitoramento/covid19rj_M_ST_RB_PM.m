@@ -394,7 +394,7 @@ fonte_labels = 10;
 fonte_padrao = 9; %numeros dos eixos
 fonte_location = 8;
 
-day_axis = 80;
+day_axis = 100;
 
 Pos = [250,250,600,450];
 set(0, 'DefaultFigurePosition', Pos);
@@ -417,10 +417,10 @@ hold on;
 y_init=1;
 for (i=0:1:day_axis-1)
 y(i+1) = y_init*2^i;
-x1(i+1) = 4*i;
-x2(i+1) = 5*i;
-x3(i+1) = 6*i;
-x4(i+1) = 7*i;
+x1(i+1) = 5*i;
+x2(i+1) = 6*i;
+x3(i+1) = 7*i;
+x4(i+1) = 8*i;
 end
 dobram1=semilogy(x1,y,'color',[0.4,0.4,0.4],'LineStyle','--','HandleVisibility','off');
 hold on;
@@ -479,10 +479,10 @@ hold on;
 y_init=1;
 for (i=0:1:day_axis-1)
 y(i+1) = y_init*2^i;
-x1(i+1) = 4*i;
-x2(i+1) = 5*i;
-x3(i+1) = 6*i;
-x4(i+1) = 7*i;
+x1(i+1) = 5*i;
+x2(i+1) = 6*i;
+x3(i+1) = 7*i;
+x4(i+1) = 8*i;
 end
 dobram1=semilogy(x1,y,'color',[0.4,0.4,0.4],'LineStyle','--','HandleVisibility','off');
 hold on;
@@ -517,10 +517,10 @@ hold on;
 y_init=10;
 for (i=0:1:day_axis-1)
 y(i+1) = y_init*2^i;
-x1(i+1) = 4*i;
-x2(i+1) = 5*i;
-x3(i+1) = 6*i;
-x4(i+1) = 7*i;
+x1(i+1) = 5*i;
+x2(i+1) = 6*i;
+x3(i+1) = 7*i;
+x4(i+1) = 8*i;
 end
 dobram1=semilogy(x1,y,'color',[0.4,0.4,0.4],'LineStyle','--','HandleVisibility','off');
 hold on;
@@ -576,10 +576,10 @@ hold on;
 y_init=10;
 for (i=0:1:day_axis-1)
 y(i+1) = y_init*2^i;
-x1(i+1) = 4*i;
-x2(i+1) = 5*i;
-x3(i+1) = 6*i;
-x4(i+1) = 7*i;
+x1(i+1) = 5*i;
+x2(i+1) = 6*i;
+x3(i+1) = 7*i;
+x4(i+1) = 8*i;
 end
 dobram1=semilogy(x1,y,'color',[0.4,0.4,0.4],'LineStyle','--','HandleVisibility','off');
 hold on;
@@ -619,16 +619,16 @@ max_y=10000;
 max_x=day_axis;
 
 ang = 49;
-h1=text(51,0.9*max_y,'números dobram a cada 4 dias');
+h1=text(64,0.9*max_y,'números dobram a cada 5 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 ang = 45;
-h2=text(64,0.9*max_y,'5 dias');
+h2=text(76.9,0.9*max_y,'6 dias');
 set(h2,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 ang = 40;
-h3=text(76.9,0.9*max_y,'6 dias');
+h3=text(90,0.9*max_y,'7 dias');
 set(h3,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 ang = 38;
-h4=text(79.1,0.32*max_y,'7 dias');
+h4=text(99,0.65*max_y,'8 dias');
 set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 
 set(gca,'YTickLabel',{'1','10','100','1k','10k'})
@@ -676,16 +676,16 @@ max_y=100000;
 max_x=day_axis;
 
 ang = 49;
-h1=text(51,0.9*max_y,'números dobram a cada 4 dias');
+h1=text(64,0.9*max_y,'números dobram a cada 5 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 ang = 45;
-h2=text(64,0.9*max_y,'5 dias');
+h2=text(76.9,0.9*max_y,'6 dias');
 set(h2,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 ang = 40;
-h3=text(76.9,0.9*max_y,'6 dias');
+h3=text(90,0.9*max_y,'7 dias');
 set(h3,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 ang = 38;
-h4=text(79.1,0.32*max_y,'7 dias');
+h4=text(99,0.65*max_y,'8 dias');
 set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 
 set(gca,'YTickLabel',{'10','100','1k','10k','100k'})
@@ -812,16 +812,16 @@ max_y=10000;
 max_x=day_axis;
 
 ang = 43;
-h1=text(51.2,0.9*max_y,'números dobram a cada 4 dias');
+h1=text(64,0.9*max_y,'números dobram a cada 5 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 ang = 39;
-h2=text(64,0.9*max_y,'5 dias');
+h2=text(76.9,0.9*max_y,'6 dias');
 set(h2,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 ang = 35;
-h3=text(76.9,0.9*max_y,'6 dias');
+h3=text(90,0.9*max_y,'7 dias');
 set(h3,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 ang = 33;
-h4=text(79.1,0.32*max_y,'7 dias');
+h4=text(99,0.65*max_y,'8 dias');
 set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 
 set(gca,'YTickLabel',{'0.1','1','10','100','1k','10k'})
@@ -868,16 +868,16 @@ max_y=100000;
 max_x=day_axis;
 
 ang = 43;
-h1=text(51.2,0.9*max_y,'números dobram a cada 4 dias');
+h1=text(64,0.9*max_y,'números dobram a cada 5 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 ang = 39;
-h2=text(64,0.9*max_y,'5 dias');
+h2=text(76.9,0.9*max_y,'6 dias');
 set(h2,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 ang = 35;
-h3=text(76.9,0.9*max_y,'6 dias');
+h3=text(90,0.9*max_y,'7 dias');
 set(h3,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 ang = 33;
-h4=text(79.1,0.32*max_y,'7 dias');
+h4=text(99,0.65*max_y,'8 dias');
 set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 
 set(gca,'YTickLabel',{'1','10','100','1k','10k','100k'})

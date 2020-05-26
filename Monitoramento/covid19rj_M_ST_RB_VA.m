@@ -391,7 +391,7 @@ fonte_labels = 10;
 fonte_padrao = 9; %numeros dos eixos
 fonte_location = 8;
 
-day_axis = 80;
+day_axis = 100;
 
 Pos = [250,250,600,450];
 set(0, 'DefaultFigurePosition', Pos);
@@ -413,10 +413,10 @@ hold on;
 y_init=10;
 for (i=0:1:day_axis-1)
 y(i+1) = y_init*2^i;
-x1(i+1) = 4*i;
-x2(i+1) = 5*i;
-x3(i+1) = 6*i;
-x4(i+1) = 7*i;
+x1(i+1) = 5*i;
+x2(i+1) = 6*i;
+x3(i+1) = 7*i;
+x4(i+1) = 8*i;
 end
 dobram1=semilogy(x1,y,'color',[0.4,0.4,0.4],'LineStyle','--','HandleVisibility','off');
 hold on;
@@ -429,7 +429,7 @@ hold on;
 
  n = max(max(size(tot_deaths_X)));
  days = 0:1:n-1;
- fig=semilogy(days,tot_deaths_X,'DisplayName',[country,' ',num2str(max(tot_deaths)),' mortes'],"color",color,'LineWidth', 1.25);
+ fig=semilogy(days,tot_deaths_X,'DisplayName',[country,' ',num2str(max(tot_deaths)),' mortes'],"color",color,'LineWidth', linew);
  hold on;
  text (n-1, tot_deaths_X(n,1), [' ',country],'FontSize',fonte_location,"color",color);
 
@@ -452,7 +452,7 @@ hold on;
 
 
  n = max(max(size(tot_deaths)));
- fig=loglog(tot_deaths,new_deaths7,'DisplayName',[country,' ',num2str(max(tot_deaths)),' mortes'],"color",color,'LineWidth', 1.25);
+ fig=loglog(tot_deaths,new_deaths7,'DisplayName',[country,' ',num2str(max(tot_deaths)),' mortes'],"color",color,'LineWidth', linew);
  hold on;
  text (tot_deaths(n,1), new_deaths7(n,1), [' ',country],'FontSize',fonte_location,"color",color);
 
@@ -474,10 +474,10 @@ hold on;
 y_init=10;
 for (i=0:1:day_axis-1)
 y(i+1) = y_init*2^i;
-x1(i+1) = 4*i;
-x2(i+1) = 5*i;
-x3(i+1) = 6*i;
-x4(i+1) = 7*i;
+x1(i+1) = 5*i;
+x2(i+1) = 6*i;
+x3(i+1) = 7*i;
+x4(i+1) = 8*i;
 end
 dobram1=semilogy(x1,y,'color',[0.4,0.4,0.4],'LineStyle','--','HandleVisibility','off');
 hold on;
@@ -490,7 +490,7 @@ hold on;
 
  n = max(max(size(new_deaths_X)));
  days = 0:1:n-1;
- fig=plot(days,new_deaths7_X,'DisplayName',[country,' ',num2str(max(tot_deaths)),' mortes'],"color",color,'LineWidth', 1.25);
+ fig=plot(days,new_deaths7_X,'DisplayName',[country,' ',num2str(max(tot_deaths)),' mortes'],"color",color,'LineWidth', linew);
  hold on;
  text (n-1, new_deaths7_X(n,1), [' ',country],'FontSize',fonte_location,"color",color);
 end
@@ -512,10 +512,10 @@ hold on;
 y_init=100;
 for (i=0:1:day_axis-1)
 y(i+1) = y_init*2^i;
-x1(i+1) = 4*i;
-x2(i+1) = 5*i;
-x3(i+1) = 6*i;
-x4(i+1) = 7*i;
+x1(i+1) = 5*i;
+x2(i+1) = 6*i;
+x3(i+1) = 7*i;
+x4(i+1) = 8*i;
 end
 dobram1=semilogy(x1,y,'color',[0.4,0.4,0.4],'LineStyle','--','HandleVisibility','off');
 hold on;
@@ -528,7 +528,7 @@ hold on;
 
  n = max(max(size(tot_cases_X)));
  days = 0:1:n-1;
- fig=semilogy(days,tot_cases_X,'DisplayName',[country,' ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', 1.25);
+ fig=semilogy(days,tot_cases_X,'DisplayName',[country,' ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', linew);
  hold on;
  text (n-1, tot_cases_X(n,1), [' ',country],'FontSize',fonte_location,"color",color);
 
@@ -553,7 +553,7 @@ grid44=loglog(1000000*(ones(2, 1)),[1,1000000],'color',[0.8,0.8,0.8],'HandleVisi
 hold on;
 
  n = max(max(size(tot_cases)));
- fig=loglog(tot_cases,new_cases7,'DisplayName',[country,' ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', 1.25);
+ fig=loglog(tot_cases,new_cases7,'DisplayName',[country,' ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', linew);
  hold on;
  text (tot_cases(n,1), new_cases7(n,1), [' ',country],'FontSize',fonte_location,"color",color);
 
@@ -575,10 +575,10 @@ hold on;
 y_init=100;
 for (i=0:1:day_axis-1)
 y(i+1) = y_init*2^i;
-x1(i+1) = 4*i;
-x2(i+1) = 5*i;
-x3(i+1) = 6*i;
-x4(i+1) = 7*i;
+x1(i+1) = 5*i;
+x2(i+1) = 6*i;
+x3(i+1) = 7*i;
+x4(i+1) = 8*i;
 end
 dobram1=semilogy(x1,y,'color',[0.4,0.4,0.4],'LineStyle','--','HandleVisibility','off');
 hold on;
@@ -591,7 +591,7 @@ hold on;
 
  n = max(max(size(new_cases_X)));
  days = 0:1:n-1;
- fig=plot(days,new_cases7_X,'DisplayName',[country,' ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', 1.25);
+ fig=plot(days,new_cases7_X,'DisplayName',[country,' ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', linew);
  hold on;
  text (n-1, new_cases7_X(n,1), [' ',country],'FontSize',fonte_location,"color",color);
 
@@ -619,16 +619,16 @@ max_y=100000;
 max_x=day_axis;
 
 ang = 49;
-h1=text(51,0.9*max_y,'números dobram a cada 4 dias');
+h1=text(64,0.9*max_y,'números dobram a cada 5 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 ang = 45;
-h2=text(64,0.9*max_y,'5 dias');
+h2=text(76.9,0.9*max_y,'6 dias');
 set(h2,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 ang = 40;
-h3=text(76.9,0.9*max_y,'6 dias');
+h3=text(90,0.9*max_y,'7 dias');
 set(h3,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 ang = 38;
-h4=text(79.1,0.32*max_y,'7 dias');
+h4=text(99,0.65*max_y,'8 dias');
 set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 
 set(gca,'YTickLabel',{'10','100','1k','10k','100k'})
@@ -676,16 +676,16 @@ max_y=1000000;
 max_x=day_axis;
 
 ang = 49;
-h1=text(51,0.9*max_y,'números dobram a cada 4 dias');
+h1=text(64,0.9*max_y,'números dobram a cada 5 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 ang = 45;
-h2=text(64,0.9*max_y,'5 dias');
+h2=text(76.9,0.9*max_y,'6 dias');
 set(h2,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 ang = 40;
-h3=text(76.9,0.9*max_y,'6 dias');
+h3=text(90,0.9*max_y,'7 dias');
 set(h3,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 ang = 38;
-h4=text(79.1,0.32*max_y,'7 dias');
+h4=text(99,0.65*max_y,'8 dias');
 set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 
 set(gca,'YTickLabel',{'100','1k','10k','100k','1M'})
@@ -766,13 +766,13 @@ ylabel(['Novos casos por semana'],'FontSize',fonte_labels);
 xlabel ("Total de casos",'FontSize',fonte_labels);
 legend ("location", "northwest");
 
-max_x = 2000000;
-max_y = 200000;
+max_x = 10000000;
+max_y = 1000000;
 axis([100 max_x 100 max_y]);
 
 
-set(gca,'YTickLabel',{'100','1k','10k','100k'})
-set(gca,'XTickLabel',{'100','1k','10k','100k','1M'})
+set(gca,'YTickLabel',{'100','1k','10k','100k','1M'})
+set(gca,'XTickLabel',{'100','1k','10k','100k','1M','10M'})
 
 hfonte=text(max_x,max_y,'Fonte: https://covid.saude.gov.br/');
 set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
@@ -812,19 +812,19 @@ max_y=100000;
 max_x=day_axis;
 
 ang = 43;
-h1=text(51.2,0.9*max_y,'números dobram a cada 4 dias');
+h1=text(64,0.9*max_y,'números dobram a cada 5 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 ang = 39;
-h2=text(64,0.9*max_y,'5 dias');
+h2=text(76.9,0.9*max_y,'6 dias');
 set(h2,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 ang = 35;
-h3=text(76.9,0.9*max_y,'6 dias');
+h3=text(90,0.9*max_y,'7 dias');
 set(h3,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 ang = 33;
-h4=text(79.1,0.32*max_y,'7 dias');
+h4=text(99,0.65*max_y,'8 dias');
 set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 
-set(gca,'YTickLabel',{'1','10','100','1k','10k','100k'})
+set(gca,'YTickLabel',{'0.1','1','10','100','1k','10k'})
 
 hfonte=text(max_x,max_y,'Fonte: https://covid.saude.gov.br/');
 set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
@@ -868,19 +868,19 @@ max_y=1000000;
 max_x=day_axis;
 
 ang = 43;
-h1=text(51.2,0.9*max_y,'números dobram a cada 4 dias');
+h1=text(64,0.9*max_y,'números dobram a cada 5 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 ang = 39;
-h2=text(64,0.9*max_y,'5 dias');
+h2=text(76.9,0.9*max_y,'6 dias');
 set(h2,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 ang = 35;
-h3=text(76.9,0.9*max_y,'6 dias');
+h3=text(90,0.9*max_y,'7 dias');
 set(h3,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 ang = 33;
-h4=text(79.1,0.32*max_y,'7 dias');
+h4=text(99,0.65*max_y,'8 dias');
 set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 
-set(gca,'YTickLabel',{'10','100','1k','10k','100k','1M'})
+set(gca,'YTickLabel',{'1','10','100','1k','10k','100k'})
 
 
 hfonte=text(max_x,max_y,'Fonte: https://covid.saude.gov.br/');

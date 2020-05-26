@@ -134,7 +134,7 @@ for(i=1:length(Estados))
 text (i, obitos_acumulados_pm(i,max_size), mat2str(round(obitos_acumulados_pm(i,max_size))),'HorizontalAlignment', 'center','VerticalAlignment', 'bottom','FontSize',8)
 end
 
-set(gca, 'XTick', 1:1:length(Estados));
+set(gca, 'XTick', 1.4:1:length(Estados)+0.4);
 set(gca,'XTickLabel',Estados_leg, 'FontSize',9);
 xtickangle(45);
 
@@ -183,7 +183,7 @@ for(i=1:length(Estados))
 text (i, 100*obitos_acumulados_pm(i,max_size)./casos_acumulados_pm(i,max_size),[mat2str(round(100*obitos_acumulados_pm(i,max_size)./casos_acumulados_pm(i,max_size))),'%'],'HorizontalAlignment', 'center','VerticalAlignment', 'bottom','FontSize',8)
 end
 
-set(gca, 'XTick', 1:1:length(Estados));
+set(gca, 'XTick', 1.4:1:length(Estados)+0.4);
 set(gca,'XTickLabel',Estados_leg, 'FontSize',9);
 xtickangle(45);
 
