@@ -202,7 +202,7 @@ hold on;
 
  n = max(max(size(tot_deaths_X)));
  days = 0:1:n-1;
- fig=semilogy(days,tot_deaths_X,'DisplayName',[city,'  ',num2str(max(tot_deaths)),' mortes'],"color",color,'LineWidth', 1.25);
+ fig=semilogy(days,tot_deaths_X,'DisplayName',[city,'  ',num2str(tot_deaths(max(size(tot_deaths)),1)),' mortes'],"color",color,'LineWidth', 1.25);
  hold on;
  text (n-1, tot_deaths_X(n,1), [' ',city],'FontSize',fonte_location,"color",color,"Clipping",'on');
 
@@ -229,7 +229,7 @@ grid7=loglog(10000*(ones(2, 1)),[1,10000],'color',[0.8,0.8,0.8],'HandleVisibilit
 hold on;
 
  n = max(max(size(tot_deaths)));
- fig=loglog(tot_deaths,new_deaths7,'DisplayName',[city,'  ',num2str(max(tot_deaths)),' mortes'],"color",color,'LineWidth', 1.25);
+ fig=loglog(tot_deaths,new_deaths7,'DisplayName',[city,'  ',num2str(tot_deaths(max(size(tot_deaths)),1)),' mortes'],"color",color,'LineWidth', 1.25);
  hold on;
  text (tot_deaths(n,1), new_deaths7(n,1), [' ',city],'FontSize',fonte_location,"color",color,"Clipping",'on');
 
@@ -267,7 +267,7 @@ hold on;
 
  n = max(max(size(new_deaths_X)));
  days = 0:1:n-1;
- fig=plot(days,new_deaths7_X,'DisplayName',[city,'  ',num2str(max(tot_deaths)),' mortes'],"color",color,'LineWidth', 1.25);
+ fig=plot(days,new_deaths7_X,'DisplayName',[city,'  ',num2str(tot_deaths(max(size(tot_deaths)),1)),' mortes'],"color",color,'LineWidth', 1.25);
  hold on;
  text (n-1, new_deaths7_X(n,1), [' ',city],'FontSize',fonte_location,"color",color,"Clipping",'on');
 
@@ -306,7 +306,7 @@ hold on;
 
  n = max(max(size(tot_cases_X)));
  days = 0:1:n-1;
- fig=semilogy(days,tot_cases_X,'DisplayName',[city,'  ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', 1.25);
+ fig=semilogy(days,tot_cases_X,'DisplayName',[city,'  ',num2str(tot_cases(max(size(tot_cases)),1)),' casos'],"color",color,'LineWidth', 1.25);
  hold on;
  text (n-1, tot_cases_X(n,1), [' ',city],'FontSize',fonte_location,"color",color,"Clipping",'on');
 
@@ -332,7 +332,7 @@ hold on;
 
 
  n = max(max(size(tot_cases)));
- fig=loglog(tot_cases,new_cases7,'DisplayName',[city,'  ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', 1.25);
+ fig=loglog(tot_cases,new_cases7,'DisplayName',[city,'  ',num2str(tot_cases(max(size(tot_cases)),1)),' casos'],"color",color,'LineWidth', 1.25);
  hold on;
  text (tot_cases(n,1), new_cases7(n,1), [' ',city],'FontSize',fonte_location,"color",color,"Clipping",'on');
 
@@ -370,7 +370,7 @@ hold on;
 
  n = max(max(size(new_cases_X)));
  days = 0:1:n-1;
- fig=plot(days,new_cases7_X,'DisplayName',[city,'  ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', 1.25);
+ fig=plot(days,new_cases7_X,'DisplayName',[city,'  ',num2str(tot_cases(max(size(tot_cases)),1)),' casos'],"color",color,'LineWidth', 1.25);
  hold on;
  text (n-1, new_cases7_X(n,1), [' ',city],'FontSize',fonte_location,"color",color,"Clipping",'on');
 

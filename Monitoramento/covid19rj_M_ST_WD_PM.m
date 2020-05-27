@@ -255,7 +255,7 @@ hold on;
 
  n = max(max(size(tot_deaths_pmX)));
  days = 0:1:n-1;
- fig=semilogy(days,tot_deaths_pmX,'DisplayName',[country,'  ',num2str(max(tot_deaths)),' mortes'],"color",color,'LineWidth', linew);
+ fig=semilogy(days,tot_deaths_pmX,'DisplayName',[country,'  ',num2str(tot_deaths(max(size(tot_deaths)),1)),' mortes'],"color",color,'LineWidth', linew);
  hold on;
  text (n-1, tot_deaths_pmX(n,1), [' ',country],'FontSize',fonte_location,"color",color,"Clipping",'on');
 
@@ -278,7 +278,7 @@ grid5=loglog(1000*(ones(2, 1)),[1,1000],'color',[0.8,0.8,0.8],'HandleVisibility'
 hold on;
 
  n = max(max(size(tot_deaths_pm)));
- fig=loglog(tot_deaths_pm,new_deaths7_pm,'DisplayName',[country,'  ',num2str(max(tot_deaths)),' mortes'],"color",color,'LineWidth', linew);
+ fig=loglog(tot_deaths_pm,new_deaths7_pm,'DisplayName',[country,'  ',num2str(tot_deaths(max(size(tot_deaths)),1)),' mortes'],"color",color,'LineWidth', linew);
  hold on;
  text (tot_deaths_pm(n,1), new_deaths7_pm(n,1), [' ',country],'FontSize',fonte_location,"color",color,"Clipping",'on');
 
@@ -316,7 +316,7 @@ hold on;
 
  n = max(max(size(new_deaths_pmX)));
  days = 0:1:n-1;
- fig=semilogy(days,new_deaths7_pmX,'DisplayName',[country,'  ',num2str(max(tot_deaths)),' mortes'],"color",color,'LineWidth', linew);
+ fig=semilogy(days,new_deaths7_pmX,'DisplayName',[country,'  ',num2str(tot_deaths(max(size(tot_deaths)),1)),' mortes'],"color",color,'LineWidth', linew);
  hold on;
  text (n-1, new_deaths7_pmX(n,1), [' ',country],'FontSize',fonte_location,"color",color,"Clipping",'on');
 
@@ -355,7 +355,7 @@ hold on;
 
  n = max(max(size(tot_cases_pmX)));
  days = 0:1:n-1;
- fig=semilogy(days,tot_cases_pmX,'DisplayName',[country,'  ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', linew);
+ fig=semilogy(days,tot_cases_pmX,'DisplayName',[country,'  ',num2str(tot_cases(max(size(tot_cases)),1)),' casos'],"color",color,'LineWidth', linew);
  hold on;
  text (n-1, tot_cases_pmX(n,1), [' ',country],'FontSize',fonte_location,"color",color,"Clipping",'on');
 
@@ -376,7 +376,7 @@ grid5=loglog(10000*(ones(2, 1)),[1,10000],'color',[0.8,0.8,0.8],'HandleVisibilit
 hold on;
 
  n = max(max(size(tot_cases_pm)));
- fig=loglog(tot_cases_pm,new_cases7_pm,'DisplayName',[country,'  ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', linew);
+ fig=loglog(tot_cases_pm,new_cases7_pm,'DisplayName',[country,'  ',num2str(tot_cases(max(size(tot_cases)),1)),' casos'],"color",color,'LineWidth', linew);
  hold on;
  text (tot_cases_pm(n,1), new_cases7_pm(n,1), [' ',country],'FontSize',fonte_location,"color",color,"Clipping",'on');
 
@@ -414,7 +414,7 @@ hold on;
 
  n = max(max(size(new_cases_pmX)));
  days = 0:1:n-1;
- fig=semilogy(days,new_cases7_pmX,'DisplayName',[country,'  ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', linew);
+ fig=semilogy(days,new_cases7_pmX,'DisplayName',[country,'  ',num2str(tot_cases(max(size(tot_cases)),1)),' casos'],"color",color,'LineWidth', linew);
  hold on;
  text (n-1, new_cases7_pmX(n,1), [' ',country],'FontSize',fonte_location,"color",color,"Clipping",'on');
 
