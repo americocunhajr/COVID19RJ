@@ -1102,6 +1102,5 @@ close all
 
 end
 
-copyfile( [pwd '/Dados/cases-brazil-states.txt'], [pwd '/',outputdir,'/',outputdir2,'/cases-brazil-states.txt']);
-copyfile( [pwd '/Dados/HIST_PAINEL_COVIDBR.xlsx'], [pwd '/',outputdir,'/',outputdir2,'/HIST_PAINEL_COVIDBR.xlsx']);
-
+copyfile( [pwd '/Dados/cases-brazil-states.txt'], [pwd '/',outputdir,'/cases-brazil-states.txt']);
+copyfile( [pwd '/Dados/HIST_PAINEL_COVIDBR.xlsx'], [pwd '/',outputdir,'/HIST_PAINEL_COVIDBR.xlsx']);
