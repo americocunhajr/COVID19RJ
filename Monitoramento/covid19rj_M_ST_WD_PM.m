@@ -125,7 +125,7 @@ location = data(find(strcmp([all_data.location], country)),1:8);
 dates = all_data.date(find(strcmp([all_data.location],country)),:);
 end_time = max(datenum(dates))-1;
 
-if strcmp(country, 'United States') country = 'EUA             '; end 
+if strcmp(country, 'United States') country = 'EUA            '; end 
 if strcmp(country, 'United Kingdom') country = 'Reino Unido  '; end
 if strcmp(country, 'Belgium') country = 'Bélgica            '; end 
 if strcmp(country, 'Brazil') country = 'Brasil            '; end 
