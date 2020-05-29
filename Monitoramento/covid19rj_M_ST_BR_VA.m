@@ -144,7 +144,7 @@ popBR=popRO+popAC+popAM+popRR+popPA+popAP+popTO+popMA+popPI+popCE+popRN+popPE+po
 
 
 %inicio do loop de plot
-for (regions = 1:1:6)
+for (regions = 4:1:4)
 
 if (regions == 1 )
 begin_states = 0;
@@ -425,7 +425,7 @@ if strcmp(country, 'AL') country = 'AL     '; end
 if strcmp(country, 'RN') country = 'RN    '; end 
 if strcmp(country, 'PI') country = 'PI      '; end 
 if strcmp(country, 'SE') country = 'SE     '; end 
-if strcmp(country, 'SP') country = 'SP  '; end 
+if strcmp(country, 'SP') country = 'SP'; end 
 if strcmp(country, 'RJ') country = 'RJ   '; end 
 if strcmp(country, 'ES') country = 'ES  '; end 
 if strcmp(country, 'MG') country = 'MG   '; end 
