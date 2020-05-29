@@ -113,7 +113,7 @@ set(gca, 'XTick', 1:1:length(Estados));
 xtickangle(45);
 
 ymin = 0;
-ymax = 10000;
+ymax = 14000;
 set(gca,'YLim',[ymin ymax]);
 set(gca, 'YTick', ymin:2000:ymax);
 set(gca,'YTickLabel',{'0','2000','4000','6000','8000','10000','12000','14000'});
@@ -154,10 +154,10 @@ set(gca,'XTickLabel',Estados_leg, 'FontSize',9);
 xtickangle(45);
 
 ymin = 0;
-ymax = 500;
+ymax = 700;
 set(gca,'YLim',[ymin ymax]);
 set(gca, 'YTick', ymin:100:ymax);
-set(gca,'YTickLabel',{'0','100','200','300','400','500'});
+set(gca,'YTickLabel',{'0','100','200','300','400','500','600','700'});
 set(gca,'YGrid', 'on');
 title({'Mortes acumuladas por milhão de habitantes',['Estados do Brasil em ',datestr(end_time,24)]},'FontSize',11);
 
@@ -234,7 +234,7 @@ set(gca,'XTickLabel',Estados_leg, 'FontSize',9);
 xtickangle(45);
 
 ymin = 0;
-ymax = 110;
+ymax = 100;
 set(gca,'YLim',[ymin ymax]);
 set(gca, 'YTick', ymin:10:ymax);
 set(gca,'YTickLabel',{'0','10%','20%','30%','40%','50%','60%','70%','80%','100%',' ',' '});
