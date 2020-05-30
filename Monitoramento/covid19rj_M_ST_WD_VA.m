@@ -71,8 +71,8 @@ if (init == 2) country = 'United Kingdom'; color = [135,85,30]/255; end
 if (init == 3) country = 'Italy'; color = [203,63,23]/255; end
 if (init == 4) country = 'Spain'; color = [191,171,72]/255; end
 if (init == 7) country = 'Belgium'; color = [236,64,122]/255; end
-if (init == 12) country = 'Russia'; color = [0.4,0.4,0.4]; end
-if (init == 11) country = 'Sweden'; color = [0,0.5,0.6]; end
+if (init == 11) country = 'Russia'; color = [0.4,0.4,0.4]; end
+if (init == 12) country = 'Sweden'; color = [0,0.5,0.6]; end
 
 location = data(find(strcmp([all_data.location], country)),1:8);
 
