@@ -49,9 +49,10 @@ xlim([tstart tend]);
 set(gca, 'XTick', linspace(tstart,tend,8))
 datetick('x',19,'keepticks')
 max_x=tend;
-max_y=500000;
+max_y=600000;
 ylim([0 max_y]);
-set(gca,'YTickLabel',{'0','50k','100k','150k','200k','250k','300k','350k','400k','500k','600k'})
+set(gca, 'YTick', 0:100000:max_y)
+set(gca,'YTickLabel',{'0','100k','200k','300k','400k','500k','600k','700k','800k'})
 
 
 legend(strcat("Casos ativos:  ", num2str( sprintf( '%06d', max(BRASIL(:,1)) ))),strcat("Recuperados: ", num2str(sprintf( '%06d', max(BRASIL(:,2)) ))),strcat("Óbitos:           ", num2str( sprintf( '%06d', max(BRASIL(:,3))) )));

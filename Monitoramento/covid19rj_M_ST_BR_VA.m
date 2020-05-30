@@ -33,9 +33,9 @@ clear all;
 close all;
 
 %Lendo o arquivo disponível no site 
-% fullURL = ['https://raw.githubusercontent.com/wcota/covid19br/master/cases-brazil-states.csv'];
-% filename = 'cases-brazil-states.txt';
-% urlwrite(fullURL,[pwd '/Dados/',filename]);
+fullURL = ['https://raw.githubusercontent.com/wcota/covid19br/master/cases-brazil-states.csv'];
+filename = 'cases-brazil-states.txt';
+urlwrite(fullURL,[pwd '/Dados/',filename]);
 
 table = readtable([pwd,'/Dados/cases-brazil-states.txt']);
 data = table2cell(table);
