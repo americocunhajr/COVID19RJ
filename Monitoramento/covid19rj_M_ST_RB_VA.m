@@ -824,7 +824,7 @@ ang = 33;
 h4=text(99,0.65*max_y,'8 dias');
 set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 
-set(gca,'YTickLabel',{'0.1','1','10','100','1k','10k'})
+set(gca,'YTickLabel',{'1','10','100','1k','10k','100k'})
 
 hfonte=text(max_x,max_y,'Fonte: https://covid.saude.gov.br/');
 set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
@@ -880,7 +880,7 @@ ang = 33;
 h4=text(99,0.65*max_y,'8 dias');
 set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 
-set(gca,'YTickLabel',{'1','10','100','1k','10k','100k'})
+set(gca,'YTickLabel',{'10','100','1k','10k','100k','1M'})
 
 
 hfonte=text(max_x,max_y,'Fonte: https://covid.saude.gov.br/');

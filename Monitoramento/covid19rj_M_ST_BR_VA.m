@@ -33,9 +33,9 @@ clear all;
 close all;
 
 %Lendo o arquivo disponível no site 
-fullURL = ['https://raw.githubusercontent.com/wcota/covid19br/master/cases-brazil-states.csv'];
-filename = 'cases-brazil-states.txt';
-urlwrite(fullURL,[pwd '/Dados/',filename]);
+% fullURL = ['https://raw.githubusercontent.com/wcota/covid19br/master/cases-brazil-states.csv'];
+% filename = 'cases-brazil-states.txt';
+% urlwrite(fullURL,[pwd '/Dados/',filename]);
 
 table = readtable([pwd,'/Dados/cases-brazil-states.txt']);
 data = table2cell(table);
@@ -144,7 +144,7 @@ popBR=popRO+popAC+popAM+popRR+popPA+popAP+popTO+popMA+popPI+popCE+popRN+popPE+po
 
 
 %inicio do loop de plot
-for (regions = 4:1:4)
+for (regions = 1:1:6)
 
 if (regions == 1 )
 begin_states = 0;
@@ -976,7 +976,7 @@ ang = 33;
 h4=text(99,0.65*max_y,'8 dias');
 set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 
-set(gca,'YTickLabel',{'0.1','1','10','100','1k','10k'})
+set(gca,'YTickLabel',{'1','10','100','1k','10k','100k'})
 
 hfonte=text(max_x,max_y,'Fonte: https://covid.saude.gov.br/');
 set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
@@ -1037,7 +1037,7 @@ ang = 33;
 h4=text(99,0.65*max_y,'8 dias');
 set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 
-set(gca,'YTickLabel',{'1','10','100','1k','10k','100k'})
+set(gca,'YTickLabel',{'10','100','1k','10k','100k','1M'})
 
 
 hfonte=text(max_x,max_y,'Fonte: https://covid.saude.gov.br/');
