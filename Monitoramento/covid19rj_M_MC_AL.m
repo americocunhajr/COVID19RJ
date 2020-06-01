@@ -290,7 +290,7 @@ urlwrite(fullURL,[pwd '/Dados/',filename]);
 arquivogeral = readtable([pwd '/Dados/owid-covid-data.csv']);
 
 % Definições para os graficos 
-Estados={"Brazil";"Peru";"Chile";"Ecuador";"Colombia";"Argentina";"Bolivia";"Paraguay";"Uruguay";"Venezuela";"Mexico";"Cuba";"Dominican Republic";"Panama";"Costa Rica"};
+Estados={"Argentina";"Bolivia";"Brazil";"Chile";"Colombia";"Costa Rica";"Cuba";"Ecuador";"Mexico";"Panama";"Paraguay";"Peru";"Dominican Republic";"Uruguay";"Venezuela"};
 
 titulos = {"Novos Casos";"Novos Óbitos";"Casos Acumulados";"Óbitos Acumulados"};
 name = 'AL';
@@ -368,7 +368,7 @@ for t=1:4
     end
 
     % Juntando o mapa e a escala
-    space_imag = 850;
+    space_imag = 900;
     img_lins = 4140;
     img_cols = 14*img_lins/9;
     imagem = resizem(img,[img_lins,img_cols]);
@@ -387,7 +387,7 @@ for t=1:4
     ax1 = gca;
     ax1.FontSize = 10;
 
-Estados={"Brasil";"Peru";"Chile";"Equador";"Colômbia";"Argentina";"Bolívia";"Paraguai";"Uruguai";"Venezuela";"México";"Cuba";"R. Dominicana";"Panamá";"Costa Rica"};
+Estados={"Argentina";"Bolívia";"Brasil";"Chile";"Colômbia";"Costa Rica";"Cuba";"Equador";"México";"Panamá";"Paraguai";"Peru";"R. Dominicana";"Uruguai";"Venezuela"};
 
 % Insercao de textos
 position = [round([0:size(imagem,1)/(size(img,1)):size(imagem,1)-(size(imagem,1)/(size(img,1)))] +(size(imagem,1)/(2*size(img,1))))];
@@ -424,10 +424,10 @@ xtickangle(45);
 
 
 
-if (t == 2) title({'Novas mortes por semana',['Comparação entre países em ',datestr(end_date,24)]},'FontSize',12); end
-if (t == 1) title({'Novos casos por semana',['Comparação entre países em ',datestr(end_date,24)]},'FontSize',12); end
-if (t == 4) title({'Mortes acumuladas',['Comparação entre países em ',datestr(end_date,24)]},'FontSize',12); end
-if (t == 3) title({'Casos acumulados',['Comparação entre países em ',datestr(end_date,24)]},'FontSize',12); end
+if (t == 2) title({'Novas mortes por semana',['América Latina em ',datestr(end_date,24)]},'FontSize',12); end
+if (t == 1) title({'Novos casos por semana',['América Latina em ',datestr(end_date,24)]},'FontSize',12); end
+if (t == 4) title({'Mortes acumuladas',['América Latina em ',datestr(end_date,24)]},'FontSize',12); end
+if (t == 3) title({'Casos acumulados',['América Latina em ',datestr(end_date,24)]},'FontSize',12); end
 
 
 hold on

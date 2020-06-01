@@ -60,16 +60,16 @@ end
 if (plot_type == 2)
 
 if (init == 1) city = 'Rio de Janeiro/RJ'; pop = 6718903; color = [69,169,0]/255; end
-if (init == 4) city = 'Duque de Caxias/RJ'; pop = 919596; color = [96,209,224]/255; end
+if (init == 5) city = 'Duque de Caxias/RJ'; pop = 919596; color = [96,209,224]/255; end
 if (init == 3) city = 'Nova Iguaçu/RJ'; pop = 821128; color = [181,147,87]/255; end
-if (init == 5) city = 'São Gonçalo/RJ'; pop = 1084839; color = [255,130,113]/255; end
+if (init == 4) city = 'São Gonçalo/RJ'; pop = 1084839; color = [255,130,113]/255; end
 if (init == 2) city = 'Niterói/RJ'; pop = 524687; color = [209,227,105]/255; end
-if (init == 9) city = 'Belford Roxo/RJ'; pop = 508013; color = [248,187,208]/255; end
+if (init == 8) city = 'Belford Roxo/RJ'; pop = 508013; color = [248,187,208]/255; end
 if (init == 7) city = 'São João de Meriti/RJ'; pop = 472406; color = [0,104,44]/255; end
 if (init == 6) city = 'Itaboraí/RJ'; pop = 240592; color = [0,45,135]/255; end
 if (init == 11) city = 'Mesquita/RJ'; pop = 176103; color = [135,85,30]/255; end
 if (init == 12) city = 'Petrópolis/RJ'; pop = 306191; color = [203,63,23]/255; end
-if (init == 8) city = 'Volta Redonda/RJ'; pop = 273012; color = [191,171,72]/255; end
+if (init == 9) city = 'Volta Redonda/RJ'; pop = 273012; color = [191,171,72]/255; end
 if (init == 10) city = 'Magé/RJ'; pop = 260497; color = [236,64,122]/255; end
 
 location = data(find(strcmp([table.city], city)),:);
@@ -228,8 +228,15 @@ hold on;
 grid7=loglog(10000*(ones(2, 1)),[1,10000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
 hold on;
 
+ %Tirando os zeros de novas mortes
+ new_deaths7w0 = new_deaths7;
+ tot_deathsw0 = tot_deaths;
+  pos0 = new_deaths7(:,1) <= 0;
+ tot_deathsw0(pos0,:) = [];
+ new_deaths7w0(pos0,:) = [];
  n = max(max(size(tot_deaths)));
- fig=loglog(tot_deaths,new_deaths7,'DisplayName',[city,'  ',num2str(tot_deaths(max(size(tot_deaths)),1)),' mortes'],"color",color,'LineWidth', 1.25);
+ 
+ fig=loglog(tot_deathsw0,new_deaths7w0,'DisplayName',[city,'  ',num2str(tot_deaths(max(size(tot_deaths)),1)),' mortes'],"color",color,'LineWidth', 1.25);
  hold on;
  text (tot_deaths(n,1), new_deaths7(n,1), [' ',city],'FontSize',fonte_location,"color",color,"Clipping",'on');
 
@@ -330,9 +337,15 @@ hold on;
 grid7=loglog(100000*(ones(2, 1)),[1,100000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
 hold on;
 
+ %Tirando os zeros de novos casos
+ new_cases7w0 = new_cases7;
+ tot_casesw0 = tot_cases;
+  pos0 = new_cases7(:,1) <= 0;
+ tot_casesw0(pos0,:) = [];
+ new_cases7w0(pos0,:) = [];
 
  n = max(max(size(tot_cases)));
- fig=loglog(tot_cases,new_cases7,'DisplayName',[city,'  ',num2str(tot_cases(max(size(tot_cases)),1)),' casos'],"color",color,'LineWidth', 1.25);
+ fig=loglog(tot_casesw0,new_cases7w0,'DisplayName',[city,'  ',num2str(tot_cases(max(size(tot_cases)),1)),' casos'],"color",color,'LineWidth', 1.25);
  hold on;
  text (tot_cases(n,1), new_cases7(n,1), [' ',city],'FontSize',fonte_location,"color",color,"Clipping",'on');
 

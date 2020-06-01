@@ -336,12 +336,12 @@ if (init == 0) country = 'BR'; color = [0,0,0]/255; pop = popBR; end
 if (init == 4) country = 'AL'; color = [96,209,224]/255; pop = 3337357; end
 if (init == 6) country = 'BA'; color = [0,170,196]/255; pop = 14873064; end
 if (init == 9) country = 'CE'; color = [0,116,136]/255; pop = 9132078; end
-if (init == 7) country = 'MA'; color = [0,74,84]/255; pop = 7075181; end
+if (init == 8) country = 'MA'; color = [0,74,84]/255; pop = 7075181; end
 if (init == 5) country = 'PB'; color = [27,78,142]/255; pop = 4018127; end
-if (init == 8) country = 'PE'; color = [0,99,181]/255; pop = 9557071; end
+if (init == 7) country = 'PE'; color = [0,99,181]/255; pop = 9557071; end
 if (init == 1) country = 'PI'; color = [0,45,135]/255; pop = 3273227; end
-if (init == 2) country = 'RN'; color = [0,34,80]/255; pop = 3506853; end
-if (init == 3) country = 'SE'; color = [0,20,37]/255; pop = 2298696; end
+if (init == 3) country = 'RN'; color = [0,34,80]/255; pop = 3506853; end
+if (init == 2) country = 'SE'; color = [0,20,37]/255; pop = 2298696; end
 end
 
 if (regions == 3)
@@ -364,8 +364,8 @@ end
 if (regions == 5)
 if (init == 0) country = 'BR'; color = [0,0,0]/255; pop = popBR; end
 if (init == 1) country = 'PR'; color = [209,227,105]/255; pop = 11433957; end
-if (init == 2) country = 'RS'; color = [193,203,68]/255; pop = 11377239; end
-if (init == 3) country = 'SC'; color = [191,171,72]/255; pop = 7164788; end
+if (init == 3) country = 'RS'; color = [193,203,68]/255; pop = 11377239; end
+if (init == 2) country = 'SC'; color = [191,171,72]/255; pop = 7164788; end
 end
 
 if (regions == 6)
@@ -425,14 +425,14 @@ if strcmp(country, 'PE') country = 'PE   '; end
 if strcmp(country, 'MA') country = 'MA  '; end 
 if strcmp(country, 'BA') country = 'BA   '; end 
 if strcmp(country, 'PB') country = 'PB   '; end 
-if strcmp(country, 'AL') country = 'AL     '; end 
+if strcmp(country, 'AL') country = 'AL   '; end 
 if strcmp(country, 'RN') country = 'RN    '; end 
 if strcmp(country, 'PI') country = 'PI      '; end 
 if strcmp(country, 'SE') country = 'SE     '; end 
 if strcmp(country, 'SP') country = 'SP'; end 
 if strcmp(country, 'RJ') country = 'RJ   '; end 
 if strcmp(country, 'ES') country = 'ES  '; end 
-if strcmp(country, 'MG') country = 'MG   '; end 
+if strcmp(country, 'MG') country = 'MG '; end 
 if strcmp(country, 'GO') country = 'GO    '; end 
 if strcmp(country, 'DF') country = 'DF     '; end 
 if strcmp(country, 'MT') country = 'MT    '; end 
@@ -578,8 +578,16 @@ hold on;
 grid5=loglog(1000*(ones(2, 1)),[1,1000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
 hold on;
 
+ %Tirando os zeros de novas mortes
+ new_deaths7w0_pm = new_deaths7_pm;
+ tot_deathsw0_pm = tot_deaths_pm;
+  pos0 = new_deaths7_pm(:,1) <= 0;
+ tot_deathsw0_pm(pos0,:) = [];
+ new_deaths7w0_pm(pos0,:) = [];
+
+
  n = max(max(size(tot_deaths_pm)));
- fig=loglog(tot_deaths_pm,new_deaths7_pm,'DisplayName',[country,'  ',num2str(max(tot_deaths)),' mortes'],"color",color,'LineWidth', linew);
+ fig=loglog(tot_deathsw0_pm,new_deaths7w0_pm,'DisplayName',[country,'  ',num2str(max(tot_deaths)),' mortes'],"color",color,'LineWidth', linew);
  hold on;
  text (tot_deaths_pm(n,1), new_deaths7_pm(n,1), [' ',country],'FontSize',fonte_location,"color",color,"Clipping",'on');
 
@@ -675,8 +683,16 @@ hold on;
 grid5=loglog(10000*(ones(2, 1)),[1,10000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
 hold on;
 
+
+ %Tirando os zeros de novos casos
+ new_cases7w0_pm = new_cases7_pm;
+ tot_casesw0_pm = tot_cases_pm;
+  pos0 = new_cases7_pm(:,1) <= 0;
+ tot_casesw0_pm(pos0,:) = [];
+ new_cases7w0_pm(pos0,:) = [];
+
  n = max(max(size(tot_cases_pm)));
- fig=loglog(tot_cases_pm,new_cases7_pm,'DisplayName',[country,'  ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', linew);
+ fig=loglog(tot_casesw0_pm,new_cases7w0_pm,'DisplayName',[country,'  ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', linew);
  hold on;
  text (tot_cases_pm(n,1), new_cases7_pm(n,1), [' ',country],'FontSize',fonte_location,"color",color,"Clipping",'on');
 

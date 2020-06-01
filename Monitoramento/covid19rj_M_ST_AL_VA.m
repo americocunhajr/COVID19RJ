@@ -281,9 +281,17 @@ grid7=loglog(10000*(ones(2, 1)),[1,100000],'color',[0.8,0.8,0.8],'HandleVisibili
 hold on;
 grid77=loglog(100000*(ones(2, 1)),[1,100000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
 hold on;
-
+ 
+ %Tirando os zeros de novas mortes
+ new_deaths7w0 = new_deaths7;
+ tot_deathsw0 = tot_deaths;
+  pos0 = new_deaths7(:,1) <= 0;
+ tot_deathsw0(pos0,:) = [];
+ new_deaths7w0(pos0,:) = [];
  n = max(max(size(tot_deaths)));
- fig=loglog(tot_deaths,new_deaths7,'DisplayName',[country,'  ',num2str(max(tot_deaths)),' mortes'],"color",color,'LineWidth', linew);
+ 
+  n = max(max(size(tot_deaths)));
+ fig=loglog(tot_deathsw0,new_deaths7w0,'DisplayName',[country,'  ',num2str(max(tot_deaths)),' mortes'],"color",color,'LineWidth', linew);
  hold on;
  text (tot_deaths(n,1), new_deaths7(n,1), [' ',country],'FontSize',fonte_location,"color",color,"Clipping",'on');
 
@@ -384,8 +392,15 @@ hold on;
 grid7=loglog(1000000*(ones(2, 1)),[1,1000000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
 hold on;
 
+ %Tirando os zeros de novos casos
+ new_cases7w0 = new_cases7;
+ tot_casesw0 = tot_cases;
+  pos0 = new_cases7(:,1) <= 0;
+ tot_casesw0(pos0,:) = [];
+ new_cases7w0(pos0,:) = [];
+ 
  n = max(max(size(tot_cases)));
- fig=loglog(tot_cases,new_cases7,'DisplayName',[country,'  ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', linew);
+ fig=loglog(tot_casesw0,new_cases7w0,'DisplayName',[country,'  ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', linew);
  hold on;
  text (tot_cases(n,1), new_cases7(n,1), [' ',country],'FontSize',fonte_location,"color",color,"Clipping",'on');
 
