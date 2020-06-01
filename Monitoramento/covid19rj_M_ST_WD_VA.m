@@ -61,7 +61,7 @@ if (plot_type == 1)
 if (init == 4) country = 'Brazil'; color = [0,0,0]/255; linew = 1.75; end
 if (init == 15) country = 'South Korea'; color = [69,169,0]/255; end
 if (init == 11) country = 'Turkey'; color = [96,209,224]/255; end  
-if (init == 13) country = 'Peru'; color = [181,147,87]/255; end
+if (init == 12) country = 'Peru'; color = [181,147,87]/255; end
 if (init == 9) country = 'Iran'; color = [255,130,113]/255; end
 if (init == 8) country = 'Germany'; color = [209,227,105]/255; end
 if (init == 14) country = 'Chile'; color = [248,187,208]/255; end
@@ -72,14 +72,14 @@ if (init == 3) country = 'Italy'; color = [203,63,23]/255; end
 if (init == 6) country = 'Spain'; color = [191,171,72]/255; end
 if (init == 7) country = 'Belgium'; color = [236,64,122]/255; end
 if (init == 10) country = 'Russia'; color = [0.4,0.4,0.4]; end
-if (init == 12) country = 'Sweden'; color = [0,0.5,0.6]; end
+if (init == 13) country = 'Sweden'; color = [0,0.5,0.6]; end
 
 location = data(find(strcmp([all_data.location], country)),1:8);
 
 dates = all_data.date(find(strcmp([all_data.location],country)),:);
 end_time = max(datenum(dates))-1;
 
-if strcmp(country, 'United States') country = 'EUA           '; end 
+if strcmp(country, 'United States') country = 'EUA            '; end 
 if strcmp(country, 'United Kingdom') country = 'Reino Unido'; end
 if strcmp(country, 'Belgium') country = 'Bélgica          '; end 
 if strcmp(country, 'Brazil') country = 'Brasil          '; end 
@@ -87,7 +87,7 @@ if strcmp(country, 'Iran') country = 'Irã                 '; end
 if strcmp(country, 'South Korea') country = 'Coréia do Sul  '; end 
 if strcmp(country, 'Turkey') country = 'Turquia         '; end 
 if strcmp(country, 'Peru') country = 'Peru              '; end 
-if strcmp(country, 'Chile') country = 'Chile               '; end 
+if strcmp(country, 'Chile') country = 'Chile             '; end 
 if strcmp(country, 'France') country = 'França        '; end 
 if strcmp(country, 'Spain') country = 'Espanha     '; end 
 if strcmp(country, 'Italy') country = 'Itália           '; end 
@@ -101,8 +101,8 @@ if (plot_type == 2)
 %ordem por países que tem mais caso
 if (init == 2) country = 'Brazil'; color = [0,0,0]/255; linew = 1.75; end
 if (init == 15) country = 'South Korea'; color = [69,169,0]/255; end
-if (init == 8) country = 'Turkey'; color = [96,209,224]/255; end  
-if (init == 9) country = 'Peru'; color = [181,147,87]/255; end
+if (init == 9) country = 'Turkey'; color = [96,209,224]/255; end  
+if (init == 8) country = 'Peru'; color = [181,147,87]/255; end
 if (init == 11) country = 'Iran'; color = [255,130,113]/255; end
 if (init == 7) country = 'Germany'; color = [209,227,105]/255; end
 if (init == 12) country = 'Chile'; color = [248,187,208]/255; end

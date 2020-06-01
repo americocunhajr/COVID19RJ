@@ -87,17 +87,17 @@ if strcmp(country, 'Brazil') country = 'Brasil           '; end
 if strcmp(country, 'Peru') country = 'Peru               '; end
 if strcmp(country, 'Chile') country = 'Chile               '; end 
 if strcmp(country, 'Ecuador') country = 'Equador         '; end 
-if strcmp(country, 'Colombia') country = 'Colômbia        '; end 
-if strcmp(country, 'Argentina') country = 'Argentina        '; end 
-if strcmp(country, 'Bolivia') country = 'Bolívia             '; end 
-if strcmp(country, 'Paraguay') country = 'Paraguai            '; end 
-if strcmp(country, 'Uruguay') country = 'Uruguai             '; end 
-if strcmp(country, 'Venezuela') country = 'Venezuela         '; end 
+if strcmp(country, 'Colombia') country = 'Colômbia         '; end 
+if strcmp(country, 'Argentina') country = 'Argentina         '; end 
+if strcmp(country, 'Bolivia') country = 'Bolívia              '; end 
+if strcmp(country, 'Paraguay') country = 'Paraguai             '; end 
+if strcmp(country, 'Uruguay') country = 'Uruguai              '; end 
+if strcmp(country, 'Venezuela') country = 'Venezuela          '; end 
 if strcmp(country, 'Mexico') country = 'México           '; end 
-if strcmp(country, 'Cuba') country = 'Cuba                 '; end 
-if strcmp(country, 'Dominican Republic') country = 'R. Dominicana'; end 
-if strcmp(country, 'Panama') country = 'Panamá           '; end 
-if strcmp(country, 'Costa Rica') country = 'Costa Rica         '; end 
+if strcmp(country, 'Cuba') country = 'Cuba                  '; end 
+if strcmp(country, 'Dominican Republic') country = 'R. Dominicana '; end 
+if strcmp(country, 'Panama') country = 'Panamá            '; end 
+if strcmp(country, 'Costa Rica') country = 'Costa Rica          '; end 
 
 end
 
