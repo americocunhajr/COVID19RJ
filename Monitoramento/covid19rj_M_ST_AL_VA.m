@@ -79,7 +79,7 @@ location = data(find(strcmp([all_data.location], country)),1:8);
 dates = all_data.date(find(strcmp([all_data.location],country)),:);
 end_time = max(datenum(dates))-1;
 
-if strcmp(country, 'Brazil') country = 'Brasil           '; end 
+if strcmp(country, 'Brazil') country = 'Brasil             '; end 
 if strcmp(country, 'Peru') country = 'Peru               '; end
 if strcmp(country, 'Chile') country = 'Chile               '; end 
 if strcmp(country, 'Ecuador') country = 'Equador         '; end 
@@ -124,11 +124,11 @@ end_time = max(datenum(dates))-1;
 
 if strcmp(country, 'Brazil') country = 'Brasil           '; end 
 if strcmp(country, 'Peru') country = 'Peru             '; end
-if strcmp(country, 'Chile') country = 'Chile              '; end 
+if strcmp(country, 'Chile') country = 'Chile            '; end 
 if strcmp(country, 'Ecuador') country = 'Equador         '; end 
 if strcmp(country, 'Colombia') country = 'Colômbia        '; end 
 if strcmp(country, 'Argentina') country = 'Argentina        '; end 
-if strcmp(country, 'Bolivia') country = 'Bolívia               '; end 
+if strcmp(country, 'Bolivia') country = 'Bolívia             '; end 
 if strcmp(country, 'Paraguay') country = 'Paraguai              '; end 
 if strcmp(country, 'Uruguay') country = 'Uruguai               '; end 
 if strcmp(country, 'Venezuela') country = 'Venezuela         '; end 
@@ -290,10 +290,16 @@ hold on;
  new_deaths7w0(pos0,:) = [];
  n = max(max(size(tot_deaths)));
  
-  n = max(max(size(tot_deaths)));
+ n = max(max(size(tot_deathsw0)));
+
+ if strcmp(country, 'Costa Rica          ') new_deaths7w0 = zeros(n,1); end
+ if strcmp(country, 'Paraguai             ') new_deaths7w0 = zeros(n,1); end
+ if strcmp(country, 'Venezuela          ') new_deaths7w0 = zeros(n,1); end
+ if strcmp(country, 'Uruguai              ') new_deaths7w0 = zeros(n,1); end
+
  fig=loglog(tot_deathsw0,new_deaths7w0,'DisplayName',[country,'  ',num2str(max(tot_deaths)),' mortes'],"color",color,'LineWidth', linew);
  hold on;
- text (tot_deaths(n,1), new_deaths7(n,1), [' ',country],'FontSize',fonte_location,"color",color,"Clipping",'on');
+ text (tot_deathsw0(n,1), new_deaths7w0(n,1), [' ',country],'FontSize',fonte_location,"color",color,"Clipping",'on');
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Plotar novas de mortes por tempo (dia zero definido por mortes/milhao)
@@ -327,7 +333,11 @@ hold on;
 dobram4=semilogy(x4,y,'color',[0.4,0.4,0.4],'LineStyle','--','HandleVisibility','off');
 hold on;
 
- n = max(max(size(new_deaths_X)));
+ n = max(max(size(new_deaths7_X)));
+  if strcmp(country, 'Costa Rica          ') new_deaths7_X = zeros(n,1); end
+ if strcmp(country, 'Paraguai             ') new_deaths7_X = zeros(n,1); end
+ if strcmp(country, 'Venezuela          ') new_deaths7_X = zeros(n,1); end
+ if strcmp(country, 'Uruguai              ') new_deaths7_X = zeros(n,1); end
  days = 0:1:n-1;
  fig=semilogy(days,new_deaths7_X,'DisplayName',[country,'  ',num2str(max(tot_deaths)),' mortes'],"color",color,'LineWidth', linew);
  hold on;
@@ -399,10 +409,11 @@ hold on;
  tot_casesw0(pos0,:) = [];
  new_cases7w0(pos0,:) = [];
  
- n = max(max(size(tot_cases)));
- fig=loglog(tot_casesw0,new_cases7w0,'DisplayName',[country,'  ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', linew);
+ n = max(max(size(tot_casesw0)));
+   if strcmp(country, 'Equador         ') new_cases7w0 = zeros(n,1); end
+ fig=loglog(tot_casesw0,new_cases7w0,'DisplayName',[country,'  ',num2str(tot_cases(max(size(tot_cases)),1)),' casos'],"color",color,'LineWidth', linew);
  hold on;
- text (tot_cases(n,1), new_cases7(n,1), [' ',country],'FontSize',fonte_location,"color",color,"Clipping",'on');
+ text (tot_casesw0(n,1), new_cases7w0(n,1), [' ',country],'FontSize',fonte_location,"color",color,"Clipping",'on');
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Plotar novos casos por tempo (dia zero definido por casos/milhao)
@@ -436,7 +447,10 @@ hold on;
 dobram4=semilogy(x4,y,'color',[0.4,0.4,0.4],'LineStyle','--','HandleVisibility','off');
 hold on;
 
- n = max(max(size(new_cases_X)));
+
+ 
+ n = max(max(size(new_cases7_X)));
+    if strcmp(country, 'Equador         ') new_cases7_X = zeros(n,1); end
  days = 0:1:n-1;
  fig=semilogy(days,new_cases7_X,'DisplayName',[country,'  ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', linew);
  hold on;
@@ -581,6 +595,10 @@ set(gca,'XTickLabel',{'1','10','100','1k','10k','100k','1M'})
 hfonte=text(max_x,max_y,'Fonte: https://ourworldindata.org/coronavirus-source-data');
 set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
 
+dim = [0.705 0.035 0.8 0.2];
+str = {'Obs: Alguns países que estão na legenda não','foram plotados neste gráfico, pois os seus','dados ainda não seguem um padrão,','resultando em curvas de difícil análise.'};
+annotation('textbox',dim,'String',str,'FitBoxToText','on','FontSize',6);
+
 
 % pra botar o logo no inferior direito
 ha =gca;
@@ -619,6 +637,11 @@ set(gca,'XTickLabel',{'100','1k','10k','100k','1M','10M'})
 
 hfonte=text(max_x,max_y,'Fonte: https://ourworldindata.org/coronavirus-source-data');
 set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
+
+dim = [0.705 0.035 0.8 0.2];
+str = {'Obs: Alguns países que estão na legenda não','foram plotados neste gráfico, pois os seus','dados não foram atualizados continuamente,','resultando em curvas de difícil análise.'};
+annotation('textbox',dim,'String',str,'FitBoxToText','on','FontSize',6);
+
 
 % pra botar o logo no inferior direito
 ha =gca;
@@ -672,6 +695,10 @@ set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','vertica
 
 axis([0 day_axis y_init max_y]);
 
+dim = [0.705 0.035 0.8 0.2];
+str = {'Obs: Alguns países que estão na legenda não','foram plotados neste gráfico, pois os seus','dados ainda não seguem um padrão,','resultando em curvas de difícil análise.'};
+annotation('textbox',dim,'String',str,'FitBoxToText','on','FontSize',6);
+
 
 % pra botar o logo no inferior direito
 ha =gca;
@@ -723,6 +750,9 @@ set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','vertica
 
 axis([0 day_axis y_init max_y]);
 
+dim = [0.705 0.035 0.8 0.2];
+str = {'Obs: Alguns países que estão na legenda não','foram plotados neste gráfico, pois os seus','dados não foram atualizados continuamente,','resultando em curvas de difícil análise.'};
+annotation('textbox',dim,'String',str,'FitBoxToText','on','FontSize',6);
 
 
 % pra botar o logo no inferior direito

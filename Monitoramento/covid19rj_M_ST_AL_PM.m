@@ -83,7 +83,7 @@ location = data(find(strcmp([all_data.location], country)),1:8);
 dates = all_data.date(find(strcmp([all_data.location],country)),:);
 end_time = max(datenum(dates))-1;
 
-if strcmp(country, 'Brazil') country = 'Brasil           '; end 
+if strcmp(country, 'Brazil') country = 'Brasil             '; end 
 if strcmp(country, 'Peru') country = 'Peru               '; end
 if strcmp(country, 'Chile') country = 'Chile               '; end 
 if strcmp(country, 'Ecuador') country = 'Equador         '; end 
@@ -127,11 +127,11 @@ end_time = max(datenum(dates))-1;
 
 if strcmp(country, 'Brazil') country = 'Brasil           '; end 
 if strcmp(country, 'Peru') country = 'Peru             '; end
-if strcmp(country, 'Chile') country = 'Chile              '; end 
+if strcmp(country, 'Chile') country = 'Chile            '; end 
 if strcmp(country, 'Ecuador') country = 'Equador         '; end 
 if strcmp(country, 'Colombia') country = 'Colômbia        '; end 
 if strcmp(country, 'Argentina') country = 'Argentina        '; end 
-if strcmp(country, 'Bolivia') country = 'Bolívia               '; end 
+if strcmp(country, 'Bolivia') country = 'Bolívia             '; end 
 if strcmp(country, 'Paraguay') country = 'Paraguai              '; end 
 if strcmp(country, 'Uruguay') country = 'Uruguai               '; end 
 if strcmp(country, 'Venezuela') country = 'Venezuela         '; end 
@@ -284,10 +284,14 @@ hold on;
  tot_deathsw0_pm(pos0,:) = [];
  new_deaths7w0_pm(pos0,:) = [];
 
- n = max(max(size(tot_deaths_pm)));
+ n = max(max(size(tot_deathsw0_pm)));
+ if strcmp(country, 'Costa Rica          ') new_deaths7w0_pm = zeros(n,1); end
+ if strcmp(country, 'Paraguai             ') new_deaths7w0_pm = zeros(n,1); end
+ if strcmp(country, 'Venezuela          ') new_deaths7w0_pm = zeros(n,1); end
+ if strcmp(country, 'Uruguai              ') new_deaths7w0_pm = zeros(n,1); end
  fig=loglog(tot_deathsw0_pm,new_deaths7w0_pm,'DisplayName',[country,'  ',num2str(tot_deaths(max(size(tot_deaths)),1)),' mortes'],"color",color,'LineWidth', linew);
  hold on;
- text (tot_deaths_pm(n,1), new_deaths7_pm(n,1), [' ',country],'FontSize',fonte_location,"color",color,"Clipping",'on');
+ text (tot_deathsw0_pm(n,1), new_deaths7w0_pm(n,1), [' ',country],'FontSize',fonte_location,"color",color,"Clipping",'on');
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Plotar novas de mortes/milhao por tempo (dia zero definido por mortes/milhao)
@@ -322,7 +326,11 @@ dobram4=semilogy(x4,y,'color',[0.4,0.4,0.4],'LineStyle','--','HandleVisibility',
 hold on;
 
 
- n = max(max(size(new_deaths_pmX)));                    
+ n = max(max(size(new_deaths7_pmX)));   
+ if strcmp(country, 'Costa Rica          ') new_deaths7_pmX = zeros(n,1); end
+ if strcmp(country, 'Paraguai             ') new_deaths7_pmX = zeros(n,1); end
+ if strcmp(country, 'Venezuela          ') new_deaths7_pmX = zeros(n,1); end
+ if strcmp(country, 'Uruguai              ') new_deaths7_pmX = zeros(n,1); end
  days = 0:1:n-1;
  fig=semilogy(days,new_deaths7_pmX,'DisplayName',[country,'  ',num2str(tot_deaths(max(size(tot_deaths)),1)),' mortes'],"color",color,'LineWidth', linew);
  hold on;
@@ -390,10 +398,11 @@ hold on;
  tot_casesw0_pm(pos0,:) = [];
  new_cases7w0_pm(pos0,:) = [];
  
- n = max(max(size(tot_cases_pm)));
+ n = max(max(size(tot_casesw0_pm)));
+   if strcmp(country, 'Equador         ') new_cases7w0_pm = zeros(n,1); end
  fig=loglog(tot_casesw0_pm,new_cases7w0_pm,'DisplayName',[country,'  ',num2str(tot_cases(max(size(tot_cases)),1)),' casos'],"color",color,'LineWidth', linew);
  hold on;
- text (tot_cases_pm(n,1), new_cases7_pm(n,1), [' ',country],'FontSize',fonte_location,"color",color,"Clipping",'on');
+ text (tot_casesw0_pm(n,1), new_cases7w0_pm(n,1), [' ',country],'FontSize',fonte_location,"color",color,"Clipping",'on');
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Plotar novos casos/milhao por tempo (dia zero definido por casos/milhao)
@@ -428,13 +437,9 @@ dobram4=semilogy(x4,y,'color',[0.4,0.4,0.4],'LineStyle','--','HandleVisibility',
 hold on;
 
 
-%  %Tirando os zeros de novos casos
-%  new_cases7w0_pmX = new_cases7_pmX;
-%  for (i=2:length(new_cases7w0_pmX))
-%      if (new_cases7w0_pmX(i) <= 0) new_cases7w0_pmX(i) = 0.0000001; end
-%  end
  
- n = max(max(size(new_cases_pmX)));
+ n = max(max(size(new_cases7_pmX)));
+    if strcmp(country, 'Equador         ') new_cases7_pmX = zeros(n,1); end
  days = 0:1:n-1;
  fig=semilogy(days,new_cases7_pmX,'DisplayName',[country,'  ',num2str(tot_cases(max(size(tot_cases)),1)),' casos'],"color",color,'LineWidth', linew);
  hold on;
@@ -577,6 +582,10 @@ set(gca,'XTickLabel',{'0.1','1','10','100','1k','10k'})
 hfonte=text(max_x,max_y,'Fonte: https://ourworldindata.org/coronavirus-source-data');
 set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
 
+dim = [0.705 0.035 0.8 0.2];
+str = {'Obs: Alguns países que estão na legenda não','foram plotados neste gráfico, pois os seus','dados ainda não seguem um padrão,','resultando em curvas de difícil análise.'};
+annotation('textbox',dim,'String',str,'FitBoxToText','on','FontSize',6);
+
 
 % pra botar o logo no inferior direito
 ha =gca;
@@ -617,6 +626,11 @@ set(gca,'XTickLabel',{'10','100','1k','10k','100k'})
 
 hfonte=text(max_x,max_y,'Fonte: https://ourworldindata.org/coronavirus-source-data');
 set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
+
+dim = [0.705 0.035 0.8 0.2];
+str = {'Obs: Alguns países que estão na legenda não','foram plotados neste gráfico, pois os seus','dados não foram atualizados continuamente,','resultando em curvas de difícil análise.'};
+annotation('textbox',dim,'String',str,'FitBoxToText','on','FontSize',6);
+
 
 % pra botar o logo no inferior direito
 ha =gca;
@@ -670,6 +684,10 @@ set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','vertica
 
 axis([0 day_axis y_init max_y]);
 
+dim = [0.705 0.035 0.8 0.2];
+str = {'Obs: Alguns países que estão na legenda não','foram plotados neste gráfico, pois os seus','dados ainda não seguem um padrão,','resultando em curvas de difícil análise.'};
+annotation('textbox',dim,'String',str,'FitBoxToText','on','FontSize',6);
+
 
 % pra botar o logo no inferior direito
 ha =gca;
@@ -720,6 +738,10 @@ hfonte=text(day_axis,max_y,'Fonte: https://ourworldindata.org/coronavirus-source
 set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
 
 axis([0 day_axis y_init max_y]);
+
+dim = [0.705 0.035 0.8 0.2];
+str = {'Obs: Alguns países que estão na legenda não','foram plotados neste gráfico, pois os seus','dados não foram atualizados continuamente,','resultando em curvas de difícil análise.'};
+annotation('textbox',dim,'String',str,'FitBoxToText','on','FontSize',6);
 
 
 % pra botar o logo no inferior direito

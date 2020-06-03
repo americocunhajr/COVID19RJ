@@ -193,12 +193,12 @@ if (plot_type == 1)
 
 if (regions == 1)
 if (init == 0) country = 'BR'; color = [0,0,0]/255; pop = popBR; end
-if (init == 4) country = 'AC'; color = [69,169,0]/255; pop = 881935; end
+if (init == 3) country = 'AC'; color = [69,169,0]/255; pop = 881935; end
 if (init == 5) country = 'AP'; color = [5,163,29]/255; pop = 845731; end
 if (init == 6) country = 'AM'; color = [53,143,31]/255; pop = 4144597; end  
 if (init == 7) country = 'PA'; color = [0,169,74]/255; pop = 8602865; end
 if (init == 1) country = 'TO'; color = [0,109,22]/255; pop = 1572866; end
-if (init == 3) country = 'RO'; color = [0,104,44]/255; pop = 1777225; end
+if (init == 4) country = 'RO'; color = [0,104,44]/255; pop = 1777225; end
 if (init == 2) country = 'RR'; color = [0,67,21]/255; pop = 605761; end
 end
 
@@ -360,8 +360,8 @@ end
 if (regions == 5)
 if (init == 0) country = 'BR'; color = [0,0,0]/255; pop = popBR; end
 if (init == 1) country = 'PR'; color = [209,227,105]/255; pop = 11433957; end
-if (init == 2) country = 'RS'; color = [193,203,68]/255; pop = 11377239; end
-if (init == 3) country = 'SC'; color = [191,171,72]/255; pop = 7164788; end
+if (init == 3) country = 'RS'; color = [193,203,68]/255; pop = 11377239; end
+if (init == 2) country = 'SC'; color = [191,171,72]/255; pop = 7164788; end
 end
 
 if (regions == 6)
@@ -411,7 +411,7 @@ end
 if strcmp(country, 'BR') country = 'BR'; end 
 if strcmp(country, 'AM') country = 'AM  '; end 
 if strcmp(country, 'PA') country = 'PA   '; end 
-if strcmp(country, 'AP') country = 'AP    '; end 
+if strcmp(country, 'AP') country = 'AP  '; end 
 if strcmp(country, 'AC') country = 'AC    '; end 
 if strcmp(country, 'RO') country = 'RO    '; end 
 if strcmp(country, 'RR') country = 'RR    '; end 

@@ -97,10 +97,10 @@ xtickangle(45);
 
 
 ymin = 0;
-ymax = 6000;
+ymax = 7000;
 set(gca,'YLim',[ymin ymax]);
 set(gca, 'YTick', ymin:1000:ymax);
-set(gca,'YTickLabel',{'0','1000','2000','3000','4000','5000','6000'});
+set(gca,'YTickLabel',{'0','1000','2000','3000','4000','5000','6000','7000'});
 set(gca,'YGrid', 'on');
 title({'Casos acumulados por milhão de habitantes',['Comparação entre países em ',datestr(end_time,24)]},'FontSize',11);
 

@@ -49,7 +49,7 @@ data = table2array(all_data(:,4:end));
 %plot_type é pra diferenciar mortes e casos pra organizarmos a ordem da legenda de acordo com o número de mortes ou de casos
 for( plot_type = 1:1:2)
 %loop nos 13 países estudados
-for( init = 1:1:15)
+for( init = 1:1:16)
 
 clearvars -except plot_type init all_data data name paises tot_mortes tot_casos
 
@@ -59,12 +59,12 @@ linew = 1.25;
 if (plot_type == 1)
 %ordem por países que tem mais morte
 if (init == 4) country = 'Brazil'; color = [0,0,0]/255; linew = 1.75; end
-if (init == 15) country = 'South Korea'; color = [69,169,0]/255; end
-if (init == 11) country = 'Turkey'; color = [96,209,224]/255; end  
-if (init == 12) country = 'Peru'; color = [181,147,87]/255; end
+if (init == 16) country = 'South Korea'; color = [69,169,0]/255; end
+if (init == 13) country = 'Turkey'; color = [96,209,224]/255; end  
+if (init == 11) country = 'Peru'; color = [181,147,87]/255; end
 if (init == 9) country = 'Iran'; color = [255,130,113]/255; end
 if (init == 8) country = 'Germany'; color = [209,227,105]/255; end
-if (init == 14) country = 'Chile'; color = [248,187,208]/255; end
+if (init == 15) country = 'Chile'; color = [248,187,208]/255; end
 if (init == 1) country = 'United States'; color = [0,104,44]/255; end
 if (init == 5) country = 'France'; color = [0,45,135]/255; end
 if (init == 2) country = 'United Kingdom'; color = [135,85,30]/255; end
@@ -72,7 +72,8 @@ if (init == 3) country = 'Italy'; color = [203,63,23]/255; end
 if (init == 6) country = 'Spain'; color = [191,171,72]/255; end
 if (init == 7) country = 'Belgium'; color = [236,64,122]/255; end
 if (init == 10) country = 'Russia'; color = [0.4,0.4,0.4]; end
-if (init == 13) country = 'Sweden'; color = [0,0.5,0.6]; end
+if (init == 14) country = 'Sweden'; color = [0,0.5,0.6]; end
+if (init == 12) country = 'China'; color = [185,205,140]/255; end
 
 location = data(find(strcmp([all_data.location], country)),1:8);
 
@@ -94,13 +95,14 @@ if strcmp(country, 'Italy') country = 'Itália           '; end
 if strcmp(country, 'Germany') country = 'Alemanha     '; end 
 if strcmp(country, 'Russia') country = 'Rússia           '; end 
 if strcmp(country, 'Sweden') country = 'Suécia           '; end 
+if strcmp(country, 'China') country = 'China            '; end 
 
 end
 
 if (plot_type == 2)
 %ordem por países que tem mais caso
 if (init == 2) country = 'Brazil'; color = [0,0,0]/255; linew = 1.75; end
-if (init == 15) country = 'South Korea'; color = [69,169,0]/255; end
+if (init == 16) country = 'South Korea'; color = [69,169,0]/255; end
 if (init == 9) country = 'Turkey'; color = [96,209,224]/255; end  
 if (init == 8) country = 'Peru'; color = [181,147,87]/255; end
 if (init == 11) country = 'Iran'; color = [255,130,113]/255; end
@@ -111,9 +113,10 @@ if (init == 10) country = 'France'; color = [0,45,135]/255; end
 if (init == 4) country = 'United Kingdom'; color = [135,85,30]/255; end
 if (init == 6) country = 'Italy'; color = [203,63,23]/255; end
 if (init == 5) country = 'Spain'; color = [191,171,72]/255; end
-if (init == 13) country = 'Belgium'; color = [236,64,122]/255; end
+if (init == 14) country = 'Belgium'; color = [236,64,122]/255; end
 if (init == 3) country = 'Russia'; color = [0.4,0.4,0.4]; end
-if (init == 14) country = 'Sweden'; color = [0,0.5,0.6]; end
+if (init == 15) country = 'Sweden'; color = [0,0.5,0.6]; end
+if (init == 13) country = 'China'; color = [185,205,140]/255; end
 
 
 location = data(find(strcmp([all_data.location], country)),1:8);
@@ -121,7 +124,7 @@ location = data(find(strcmp([all_data.location], country)),1:8);
 dates = all_data.date(find(strcmp([all_data.location],country)),:);
 end_time = max(datenum(dates))-1;
 
-if strcmp(country, 'United States') country = 'EUA             '; end 
+if strcmp(country, 'United States') country = 'EUA            '; end 
 if strcmp(country, 'United Kingdom') country = 'Reino Unido  '; end
 if strcmp(country, 'Belgium') country = 'Bélgica            '; end 
 if strcmp(country, 'Brazil') country = 'Brasil            '; end 
@@ -129,13 +132,14 @@ if strcmp(country, 'Iran') country = 'Irã                 '; end
 if strcmp(country, 'South Korea') country = 'Coréia do Sul  '; end 
 if strcmp(country, 'Turkey') country = 'Turquia         '; end 
 if strcmp(country, 'Peru') country = 'Peru              '; end 
-if strcmp(country, 'Chile') country = 'Chile               '; end 
+if strcmp(country, 'Chile') country = 'Chile             '; end 
 if strcmp(country, 'France') country = 'França          '; end 
 if strcmp(country, 'Spain') country = 'Espanha       '; end 
 if strcmp(country, 'Italy') country = 'Itália             '; end 
 if strcmp(country, 'Germany') country = 'Alemanha     '; end 
 if strcmp(country, 'Russia') country = 'Rússia           '; end 
 if strcmp(country, 'Sweden') country = 'Suécia            '; end 
+if strcmp(country, 'China') country = 'China              '; end 
 
 end
 
@@ -286,10 +290,11 @@ hold on;
  new_deaths7w0(pos0,:) = [];
  n = max(max(size(tot_deaths)));
 
- n = max(max(size(tot_deaths)));
+ n = max(max(size(tot_deathsw0)));
+ if strcmp(country, 'China            ') new_deaths7w0 = zeros(n,1); end
  fig=loglog(tot_deathsw0,new_deaths7w0,'DisplayName',[country,'  ',num2str(max(tot_deaths)),' mortes'],"color",color,'LineWidth', linew);
  hold on;
- text (tot_deaths(n,1), new_deaths7(n,1), [' ',country],'FontSize',fonte_location,"color",color,"Clipping",'on');
+ text (tot_deathsw0(n,1), new_deaths7w0(n,1), [' ',country],'FontSize',fonte_location,"color",color,"Clipping",'on');
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Plotar novas de mortes por tempo (dia zero definido por mortes/milhao)
@@ -323,7 +328,8 @@ hold on;
 dobram4=semilogy(x4,y,'color',[0.4,0.4,0.4],'LineStyle','--','HandleVisibility','off');
 hold on;
 
- n = max(max(size(new_deaths_X)));
+ n = max(max(size(new_deaths7_X)));
+ if strcmp(country, 'China            ') new_deaths7_X = zeros(n,1); end
  days = 0:1:n-1;
  fig=semilogy(days,new_deaths7_X,'DisplayName',[country,'  ',num2str(max(tot_deaths)),' mortes'],"color",color,'LineWidth', linew);
  hold on;
@@ -395,10 +401,11 @@ hold on;
  tot_casesw0(pos0,:) = [];
  new_cases7w0(pos0,:) = [];
 
- n = max(max(size(tot_cases)));
- fig=loglog(tot_casesw0,new_cases7w0,'DisplayName',[country,'  ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', linew);
+ n = max(max(size(tot_casesw0)));
+%if strcmp(country, 'China              ') new_cases7w0 = zeros(n,1); end
+fig=loglog(tot_casesw0,new_cases7w0,'DisplayName',[country,'  ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', linew);
  hold on;
- text (tot_cases(n,1), new_cases7(n,1), [' ',country],'FontSize',fonte_location,"color",color,"Clipping",'on');
+ text (tot_casesw0(n,1), new_cases7w0(n,1), [' ',country],'FontSize',fonte_location,"color",color,"Clipping",'on');
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Plotar novos casos por tempo (dia zero definido por casos/milhao)
@@ -433,6 +440,7 @@ dobram4=semilogy(x4,y,'color',[0.4,0.4,0.4],'LineStyle','--','HandleVisibility',
 hold on;
 
  n = max(max(size(new_cases_X)));
+ %if strcmp(country, 'China              ') new_cases7_X = zeros(n,1); end
  days = 0:1:n-1;
  fig=semilogy(days,new_cases7_X,'DisplayName',[country,'  ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', linew);
  hold on;
@@ -491,7 +499,8 @@ uistack(ha,'bottom');
 % To create the logo at the bottom left corner of the plot use 
 % the next two lines
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[-0.13 -0.15], .2,.15,]);
+ha2=axes('position',[haPos([3 1])-[-0.135 -0.13], .2,.15,]);
+
 % To place the logo at the bottom left corner of the figure window
 % uncomment the line below and comment the above two lines
 %ha2=axes('position',[0, 0, .1,.04,]);
@@ -544,7 +553,7 @@ uistack(ha,'bottom');
 % To create the logo at the bottom left corner of the plot use 
 % the next two lines
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[-0.13 -0.15], .2,.15,]);
+ha2=axes('position',[haPos([3 1])-[-0.135 -0.13], .2,.15,]);
 % To place the logo at the bottom left corner of the figure window
 % uncomment the line below and comment the above two lines
 %ha2=axes('position',[0, 0, .1,.04,]);
@@ -577,6 +586,11 @@ set(gca,'XTickLabel',{'10','100','1k','10k','100k','1M'})
 hfonte=text(max_x,max_y,'Fonte: https://ourworldindata.org/coronavirus-source-data');
 set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
 
+dim = [0.705 0.035 0.8 0.2];
+str = {'Obs: Alguns países que estão na legenda não','foram plotados neste gráfico, pois os seus','dados não foram atualizados continuamente,','resultando em curvas de difícil análise.'};
+annotation('textbox',dim,'String',str,'FitBoxToText','on','FontSize',6);
+
+
 
 % pra botar o logo no inferior direito
 ha =gca;
@@ -585,7 +599,7 @@ uistack(ha,'bottom');
 % To create the logo at the bottom left corner of the plot use 
 % the next two lines
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[-0.13 -0.15], .2,.15,]);
+ha2=axes('position',[haPos([3 1])-[-0.135 -0.13], .2,.15,]);
 % To place the logo at the bottom left corner of the figure window
 % uncomment the line below and comment the above two lines
 %ha2=axes('position',[0, 0, .1,.04,]);
@@ -616,6 +630,12 @@ set(gca,'XTickLabel',{'1k','10k','100k','1M','10M'})
 hfonte=text(max_x,max_y,'Fonte: https://ourworldindata.org/coronavirus-source-data');
 set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
 
+% dim = [0.705 0.035 0.8 0.2];
+% str = {'Obs: Alguns países que estão na legenda não','foram plotados neste gráfico, pois os seus','dados não foram atualizados continuamente,','resultando em curvas de difícil análise.'};
+% annotation('textbox',dim,'String',str,'FitBoxToText','on','FontSize',6);
+
+
+
 % pra botar o logo no inferior direito
 ha =gca;
 uistack(ha,'bottom');
@@ -623,7 +643,7 @@ uistack(ha,'bottom');
 % To create the logo at the bottom left corner of the plot use 
 % the next two lines
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[-0.13 -0.15], .2,.15,]);
+ha2=axes('position',[haPos([3 1])-[-0.135 -0.13], .2,.15,]);
 % To place the logo at the bottom left corner of the figure window
 % uncomment the line below and comment the above two lines
 %ha2=axes('position',[0, 0, .1,.04,]);
@@ -668,6 +688,10 @@ set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','vertica
 
 axis([0 day_axis y_init max_y]);
 
+dim = [0.705 0.035 0.8 0.2];
+str = {'Obs: Alguns países que estão na legenda não','foram plotados neste gráfico, pois os seus','dados não foram atualizados continuamente,','resultando em curvas de difícil análise.'};
+annotation('textbox',dim,'String',str,'FitBoxToText','on','FontSize',6);
+
 
 % pra botar o logo no inferior direito
 ha =gca;
@@ -676,7 +700,7 @@ uistack(ha,'bottom');
 % To create the logo at the bottom left corner of the plot use 
 % the next two lines
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[-0.13 -0.15], .2,.15,]);
+ha2=axes('position',[haPos([3 1])-[-0.135 -0.13], .2,.15,]);
 % To place the logo at the bottom left corner of the figure window
 % uncomment the line below and comment the above two lines
 %ha2=axes('position',[0, 0, .1,.04,]);
@@ -719,6 +743,10 @@ set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','vertica
 
 axis([0 day_axis y_init max_y]);
 
+% dim = [0.705 0.035 0.8 0.2];
+% str = {'Obs: Alguns países que estão na legenda não','foram plotados neste gráfico, pois os seus','dados não foram atualizados continuamente,','resultando em curvas de difícil análise.'};
+% annotation('textbox',dim,'String',str,'FitBoxToText','on','FontSize',6);
+
 
 
 % pra botar o logo no inferior direito
@@ -728,7 +756,7 @@ uistack(ha,'bottom');
 % To create the logo at the bottom left corner of the plot use 
 % the next two lines
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[-0.13 -0.15], .2,.15,]);
+ha2=axes('position',[haPos([3 1])-[-0.135 -0.13], .2,.15,]);
 % To place the logo at the bottom left corner of the figure window
 % uncomment the line below and comment the above two lines
 %ha2=axes('position',[0, 0, .1,.04,]);

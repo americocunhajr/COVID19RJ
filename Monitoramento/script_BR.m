@@ -2,7 +2,7 @@ clear all;
 close all;
 clc;
 
-%covid19rj_M_ST_BR_VA
+covid19rj_M_ST_BR_VA
 covid19rj_M_ST_BR_PM
 covid19rj_M_MC_BR
 
