@@ -64,14 +64,14 @@ if (init == 5) country = 'Chile'; color = [248,187,208]/255; end
 if (init == 4) country = 'Ecuador'; color = [69,169,0]/255; end
 if (init == 6) country = 'Colombia'; color = [96,209,224]/255; end  
 if (init == 7) country = 'Argentina'; color = [255,130,113]/255; end
-if (init == 10) country = 'Bolivia'; color = [209,227,105]/255; end
+if (init == 9) country = 'Bolivia'; color = [209,227,105]/255; end
 if (init == 14) country = 'Paraguay'; color = [0,104,44]/255; end
 if (init == 12) country = 'Uruguay'; color = [0,45,135]/255; end
 if (init == 13) country = 'Venezuela'; color = [135,85,30]/255; end
 if (init == 2) country = 'Mexico'; color = [203,63,23]/255; end
 if (init == 11) country = 'Cuba'; color = [191,171,72]/255; end
 if (init == 8) country = 'Dominican Republic'; color = [236,64,122]/255; end
-if (init == 9) country = 'Panama'; color = [0.4,0.4,0.4]; end
+if (init == 10) country = 'Panama'; color = [0.4,0.4,0.4]; end
 if (init == 15) country = 'Costa Rica'; color = [0,0.5,0.6]; end
 
 location = data(find(strcmp([all_data.location], country)),1:8);
@@ -79,17 +79,17 @@ location = data(find(strcmp([all_data.location], country)),1:8);
 dates = all_data.date(find(strcmp([all_data.location],country)),:);
 end_time = max(datenum(dates))-1;
 
-if strcmp(country, 'Brazil') country = 'Brasil             '; end 
+if strcmp(country, 'Brazil') country = 'Brasil           '; end 
 if strcmp(country, 'Peru') country = 'Peru               '; end
 if strcmp(country, 'Chile') country = 'Chile               '; end 
 if strcmp(country, 'Ecuador') country = 'Equador         '; end 
-if strcmp(country, 'Colombia') country = 'Colômbia         '; end 
+if strcmp(country, 'Colombia') country = 'Colômbia        '; end 
 if strcmp(country, 'Argentina') country = 'Argentina         '; end 
 if strcmp(country, 'Bolivia') country = 'Bolívia              '; end 
 if strcmp(country, 'Paraguay') country = 'Paraguai             '; end 
 if strcmp(country, 'Uruguay') country = 'Uruguai              '; end 
 if strcmp(country, 'Venezuela') country = 'Venezuela          '; end 
-if strcmp(country, 'Mexico') country = 'México           '; end 
+if strcmp(country, 'Mexico') country = 'México         '; end 
 if strcmp(country, 'Cuba') country = 'Cuba                  '; end 
 if strcmp(country, 'Dominican Republic') country = 'R. Dominicana '; end 
 if strcmp(country, 'Panama') country = 'Panamá            '; end 
@@ -104,17 +104,16 @@ if (init == 2) country = 'Peru'; color = [181,147,87]/255; end
 if (init == 3) country = 'Chile'; color = [248,187,208]/255; end
 if (init == 5) country = 'Ecuador'; color = [69,169,0]/255; end
 if (init == 6) country = 'Colombia'; color = [96,209,224]/255; end  
-if (init == 8) country = 'Argentina'; color = [255,130,113]/255; end
+if (init == 7) country = 'Argentina'; color = [255,130,113]/255; end
 if (init == 10) country = 'Bolivia'; color = [209,227,105]/255; end
 if (init == 14) country = 'Paraguay'; color = [0,104,44]/255; end
 if (init == 15) country = 'Uruguay'; color = [0,45,135]/255; end
 if (init == 12) country = 'Venezuela'; color = [135,85,30]/255; end
 if (init == 4) country = 'Mexico'; color = [203,63,23]/255; end
 if (init == 11) country = 'Cuba'; color = [191,171,72]/255; end
-if (init == 7) country = 'Dominican Republic'; color = [236,64,122]/255; end
+if (init == 8) country = 'Dominican Republic'; color = [236,64,122]/255; end
 if (init == 9) country = 'Panama'; color = [0.4,0.4,0.4]; end
 if (init == 13) country = 'Costa Rica'; color = [0,0.5,0.6]; end
-
 
 
 location = data(find(strcmp([all_data.location], country)),1:8);
@@ -129,10 +128,10 @@ if strcmp(country, 'Ecuador') country = 'Equador         '; end
 if strcmp(country, 'Colombia') country = 'Colômbia        '; end 
 if strcmp(country, 'Argentina') country = 'Argentina        '; end 
 if strcmp(country, 'Bolivia') country = 'Bolívia             '; end 
-if strcmp(country, 'Paraguay') country = 'Paraguai              '; end 
+if strcmp(country, 'Paraguay') country = 'Paraguai            '; end 
 if strcmp(country, 'Uruguay') country = 'Uruguai               '; end 
 if strcmp(country, 'Venezuela') country = 'Venezuela         '; end 
-if strcmp(country, 'Mexico') country = 'México           '; end 
+if strcmp(country, 'Mexico') country = 'México         '; end 
 if strcmp(country, 'Cuba') country = 'Cuba                 '; end 
 if strcmp(country, 'Dominican Republic') country = 'R. Dominicana'; end 
 if strcmp(country, 'Panama') country = 'Panamá           '; end 
