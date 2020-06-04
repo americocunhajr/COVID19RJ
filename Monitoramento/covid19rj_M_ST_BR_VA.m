@@ -294,7 +294,7 @@ if strcmp(country, 'RR') country = 'RR    '; end
 if strcmp(country, 'TO') country = 'TO      '; end 
 if strcmp(country, 'CE') country = 'CE   '; end 
 if strcmp(country, 'PE') country = 'PE   '; end 
-if strcmp(country, 'MA') country = 'MA    '; end 
+if strcmp(country, 'MA') country = 'MA  '; end 
 if strcmp(country, 'BA') country = 'BA     '; end 
 if strcmp(country, 'PB') country = 'PB     '; end 
 if strcmp(country, 'AL') country = 'AL     '; end 
@@ -434,8 +434,8 @@ if strcmp(country, 'DF') country = 'DF   '; end
 if strcmp(country, 'MT') country = 'MT    '; end 
 if strcmp(country, 'MS') country = 'MS    '; end 
 if strcmp(country, 'PR') country = 'PR    '; end 
-if strcmp(country, 'RS') country = 'RS    '; end 
-if strcmp(country, 'SC') country = 'SC    '; end 
+if strcmp(country, 'RS') country = 'RS  '; end 
+if strcmp(country, 'SC') country = 'SC  '; end 
 end
 
 
