@@ -17,7 +17,7 @@ end_time_aux = max(dates_aux);
 
 
 
-BRASIL_aux= str2double(y);
+BRASIL_aux= y;%str2double(y);
 
 tstart = datetime(2020,4,19,0,0,0);
 tend = end_time_aux;
