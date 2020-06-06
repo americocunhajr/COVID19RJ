@@ -329,8 +329,8 @@ for i=1:length(Estados)
     tabela_aux = arquivogeral(I_estado,:);
     tabela = tabela_aux;
 
-    img_casos_acumulados_aux(i,max_size-height(tabela_aux)+1:end) = tabela.totalCasesMS;
-    img_obitos_acumulados_aux(i,max_size-height(tabela_aux)+1:end) = tabela.deathsMS;
+    img_casos_acumulados_aux(i,max_size-height(tabela_aux)+1:end) = tabela.totalCases;
+    img_obitos_acumulados_aux(i,max_size-height(tabela_aux)+1:end) = tabela.deaths;
     
     cases_old = [zeros(27,1) , img_casos_acumulados_aux(1:27,1:end-1)];
     deaths_old= [zeros(27,1) , img_obitos_acumulados_aux(1:27,1:end-1)];
@@ -429,7 +429,7 @@ position = [round([0:size(imagem,1)/(size(img,1)):size(imagem,1)-(size(imagem,1)
 
 text((size(imagem,2) + space_imag),-55,'  Máx. valor');
 
-hfonte=text((size(imagem,2) + space_imag+size(img_lista,2)),0,'Fonte: https://covid.saude.gov.br/');
+hfonte=text((size(imagem,2) + space_imag+size(img_lista,2)),0,'Fonte: https://covid19br.wcota.me/');
 set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
 
 

@@ -43,8 +43,8 @@ table = readtable([pwd,'/Dados/cases-brazil-states.txt']);
 data = table2cell(table);
 
 %Calculando casos diários
-casos = table.totalCasesMS;
-mortes = table.deathsMS;
+casos = table.totalCases;
+mortes = table.deaths;
 
 BRASIL = [casos, mortes];
 
@@ -181,7 +181,7 @@ new_cases = -cases_old + tot_cases;
 new_deaths = -deaths_old + tot_deaths;
 end
 if (init == 2)
-country = 'Nordeste         ';
+country = 'Nordeste       ';
 color = [0,99,181]/255;
 pop = popNORDESTE;
 tot_cases = NORDESTE(:,1);
@@ -259,7 +259,7 @@ new_cases = -cases_old + tot_cases;
 new_deaths = -deaths_old + tot_deaths;
 end
 if (init == 2)
-country = 'Nordeste      ';
+country = 'Nordeste       ';
 color = [0,99,181]/255;
 pop = popNORDESTE;
 tot_cases = NORDESTE(:,1);
@@ -271,7 +271,7 @@ new_cases = -cases_old + tot_cases;
 new_deaths = -deaths_old + tot_deaths;
 end
 if (init == 1)
-country = 'Sudeste       ';
+country = 'Sudeste        ';
 color = [254,88,52]/255;
 pop = popSUDESTE;
 tot_cases = SUDESTE(:,1);
@@ -645,7 +645,7 @@ set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','Font
 
 set(gca,'YTickLabel',{'10','100','1k','10k','100k'})
 
-hfonte=text(max_x,max_y,'Fonte: https://covid.saude.gov.br/');
+hfonte=text(max_x,max_y,'Fonte: https://covid19br.wcota.me/');
 set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
 
 axis([0 max_x y_init max_y]);
@@ -702,7 +702,7 @@ set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','Font
 
 set(gca,'YTickLabel',{'100','1k','10k','100k','1M'})
 
-hfonte=text(max_x,max_y,'Fonte: https://covid.saude.gov.br/');
+hfonte=text(max_x,max_y,'Fonte: https://covid19br.wcota.me/');
 set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
 
 axis([0 max_x y_init max_y]);
@@ -745,7 +745,7 @@ axis([10 max_x 10 max_y]);
 set(gca,'YTickLabel',{'10','100','1k','10k'})
 set(gca,'XTickLabel',{'10','100','1k','10k','100k'})
 
-hfonte=text(max_x,max_y,'Fonte: https://covid.saude.gov.br/');
+hfonte=text(max_x,max_y,'Fonte: https://covid19br.wcota.me/');
 set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
 
 % pra botar o logo no inferior direito
@@ -786,7 +786,7 @@ axis([100 max_x 100 max_y]);
 set(gca,'YTickLabel',{'100','1k','10k','100k','1M'})
 set(gca,'XTickLabel',{'100','1k','10k','100k','1M','10M'})
 
-hfonte=text(max_x,max_y,'Fonte: https://covid.saude.gov.br/');
+hfonte=text(max_x,max_y,'Fonte: https://covid19br.wcota.me/');
 set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
 
 % pra botar o logo no inferior direito
@@ -838,7 +838,7 @@ set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','Font
 
 set(gca,'YTickLabel',{'1','10','100','1k','10k','100k'})
 
-hfonte=text(max_x,max_y,'Fonte: https://covid.saude.gov.br/');
+hfonte=text(max_x,max_y,'Fonte: https://covid19br.wcota.me/');
 set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
 
 
@@ -895,7 +895,7 @@ set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','Font
 set(gca,'YTickLabel',{'10','100','1k','10k','100k','1M'})
 
 
-hfonte=text(max_x,max_y,'Fonte: https://covid.saude.gov.br/');
+hfonte=text(max_x,max_y,'Fonte: https://covid19br.wcota.me/');
 set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
 
 

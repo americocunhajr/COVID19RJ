@@ -44,11 +44,18 @@ fullURL = ['https://covid.ourworldindata.org/data/owid-covid-data.csv'];
 filename = 'owid-covid-data.csv';
 urlwrite(fullURL,[pwd '/Dados/',filename]);
 
+fullURL = ['https://raw.githubusercontent.com/wcota/covid19br/master/cases-brazil-states.csv'];
+filename = 'cases-brazil-states.txt';
+urlwrite(fullURL,[pwd '/Dados/',filename]);
 
 %Lendo o arquivo disponível no site 
-all_data = readtable([pwd '/Dados/owid-covid-data.csv']);
+all_data = readtable([pwd,'/Dados/owid-covid-data.csv']);
 data = [all_data.total_cases,all_data.new_cases,all_data.total_deaths,all_data.new_deaths,all_data.total_cases_per_million,all_data.new_cases_per_million,all_data.total_deaths_per_million,all_data.new_deaths_per_million];
 
+%Lendo o arquivo do Brasil
+popBR = 212.559409;
+BR_all_data = readtable([pwd,'/Dados/cases-brazil-states.txt']);
+BR_data = [BR_all_data.totalCases,BR_all_data.newCases,BR_all_data.deaths,BR_all_data.newDeaths,BR_all_data.totalCases/popBR,BR_all_data.newCases/popBR,BR_all_data.deaths/popBR,BR_all_data.newDeaths/popBR];
 
 
 %plot_type é pra diferenciar mortes e casos pra organizarmos a ordem da legenda de acordo com o número de mortes ou de casos
@@ -56,7 +63,7 @@ for( plot_type = 1:1:2)
 %loop nos 13 países estudados
 for( init = 1:1:15)
 
-clearvars -except plot_type init all_data data name paises tot_mortes tot_casos
+clearvars -except plot_type init all_data data name BR_all_data BR_data
 
 %espessura da linha no plot
 linew = 1.25;
@@ -79,10 +86,15 @@ if (init == 8) country = 'Dominican Republic'; color = [236,64,122]/255; end
 if (init == 10) country = 'Panama'; color = [0.4,0.4,0.4]; end
 if (init == 15) country = 'Costa Rica'; color = [0,0.5,0.6]; end
 
-location = data(find(strcmp([all_data.location], country)),1:8);
-
-dates = all_data.date(find(strcmp([all_data.location],country)),:);
+if strcmp(country, 'Brazil')
+    location = BR_data(find(strcmp([BR_all_data.state], 'TOTAL')),1:8);
+    dates = BR_all_data.date(find(strcmp([BR_all_data.state],'TOTAL')),:);
+end_time = max(datenum(dates));
+else
+    location = data(find(strcmp([all_data.location], country)),1:8);
+    dates = all_data.date(find(strcmp([all_data.location],country)),:);
 end_time = max(datenum(dates))-1;
+end
 
 if strcmp(country, 'Brazil') country = 'Brasil           '; end 
 if strcmp(country, 'Peru') country = 'Peru               '; end
@@ -121,10 +133,15 @@ if (init == 9) country = 'Panama'; color = [0.4,0.4,0.4]; end
 if (init == 13) country = 'Costa Rica'; color = [0,0.5,0.6]; end
 
 
-location = data(find(strcmp([all_data.location], country)),1:8);
-
-dates = all_data.date(find(strcmp([all_data.location],country)),:);
+if strcmp(country, 'Brazil')
+    location = BR_data(find(strcmp([BR_all_data.state], 'TOTAL')),1:8);
+    dates = BR_all_data.date(find(strcmp([BR_all_data.state],'TOTAL')),:);
+end_time = max(datenum(dates));
+else
+    location = data(find(strcmp([all_data.location], country)),1:8);
+    dates = all_data.date(find(strcmp([all_data.location],country)),:);
 end_time = max(datenum(dates))-1;
+end
 
 if strcmp(country, 'Brazil') country = 'Brasil           '; end 
 if strcmp(country, 'Peru') country = 'Peru             '; end

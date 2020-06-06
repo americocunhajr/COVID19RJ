@@ -11,6 +11,12 @@ filename = 'owid-covid-data.csv';
 urlwrite(fullURL,[pwd '/Dados/',filename]);
 arquivogeral = readtable([pwd '/Dados/owid-covid-data.csv']);
 
+fullURL = ['https://raw.githubusercontent.com/wcota/covid19br/master/cases-brazil-states.csv'];
+filename = 'cases-brazil-states.txt';
+urlwrite(fullURL,[pwd '/Dados/',filename]);
+BRarquivogeral = readtable([pwd '/Dados/cases-brazil-states.txt']);
+
+
 Estados={"Argentina";"Bolivia";"Brazil";"Chile";"Colombia";"Costa Rica";"Cuba";"Ecuador";"Mexico";"Panama";"Paraguay";"Peru";"Dominican Republic";"Uruguay";"Venezuela"};
 
 %Data final
@@ -44,9 +50,31 @@ tests = zeros(length(Estados),max_size);
 
 %Gerando matrizes para os 4: caso e obitos x diario e acumulados
 for i=1:length(Estados)
+    if (i==3) %Brazil position
+    I_estado=find(BRarquivogeral.state == string("TOTAL"));
+    tabela_aux = BRarquivogeral(I_estado,:);
+    tabela = tabela_aux;
+    
+    casos_diarios(i,max_size-height(tabela_aux)+1:end) = tabela.newCases;
+    obitos_diarios(i,max_size-height(tabela_aux)+1:end) = tabela.newDeaths;
+    casos_acumulados(i,max_size-height(tabela_aux)+1:end) = tabela.totalCases;
+    obitos_acumulados(i,max_size-height(tabela_aux)+1:end) = tabela.deaths;
+ 
+    popBR = 212.559409;
+    casos_diarios_pm(i,max_size-height(tabela_aux)+1:end) = tabela.newCases/popBR;
+    obitos_diarios_pm(i,max_size-height(tabela_aux)+1:end) = tabela.newDeaths/popBR;
+    casos_acumulados_pm(i,max_size-height(tabela_aux)+1:end) = tabela.totalCases/popBR;
+    obitos_acumulados_pm(i,max_size-height(tabela_aux)+1:end) = tabela.deaths/popBR;
+    
+    population(i,max_size-height(tabela_aux)+1:end) = 212559409;
+    tests(i,max_size-height(tabela_aux)+1:end) = tabela.tests;
+    
+    else
+        
     I_estado=find(arquivogeral.location == string(Estados(i,:)));
     tabela_aux = arquivogeral(I_estado,:);
     tabela = tabela_aux;
+    
     casos_diarios(i,max_size-height(tabela_aux)+1:end) = tabela.new_cases;
     obitos_diarios(i,max_size-height(tabela_aux)+1:end) = tabela.new_deaths;
     casos_acumulados(i,max_size-height(tabela_aux)+1:end) = tabela.total_cases;
@@ -58,7 +86,8 @@ for i=1:length(Estados)
     obitos_acumulados_pm(i,max_size-height(tabela_aux)+1:end) = tabela.total_deaths_per_million;
     
     population(i,max_size-height(tabela_aux)+1:end) = tabela.population;
-    tests(i,max_size-height(tabela_aux)+1:end) = tabela.total_tests;
+    tests(i,max_size-height(tabela_aux)+1:end) = tabela.total_tests;   
+    end
 end
 
 for i=1:length(Estados)
@@ -96,10 +125,10 @@ xtickangle(45);
 
 
 ymin = 0;
-ymax = 7000;
+ymax = 8000;
 set(gca,'YLim',[ymin ymax]);
 set(gca, 'YTick', ymin:1000:ymax);
-set(gca,'YTickLabel',{'0','1000','2000','3000','4000','5000','6000','7000'});
+set(gca,'YTickLabel',{'0','1000','2000','3000','4000','5000','6000','7000','8000'});
 set(gca,'YGrid', 'on');
 title({'Casos acumulados por milhão de habitantes',['América Latina em ',datestr(end_time,24)]},'FontSize',11);
 

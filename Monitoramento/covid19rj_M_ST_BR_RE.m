@@ -2,16 +2,20 @@ clear all;
 clc;
 close all;
 
+%Lendo o arquivo disponível no site 
+fullURL = ['https://raw.githubusercontent.com/wcota/covid19br/master/cases-brazil-states.csv'];
+filename = 'cases-brazil-states.txt';
+urlwrite(fullURL,[pwd '/Dados/',filename]);
 
 name = 'BR';
 
-all_data = readtable([pwd,'/Dados/HIST_PAINEL_COVIDBR.xlsx']);
+all_data = readtable([pwd,'/Dados/cases-brazil-states.txt']);
 
-table = all_data(find(strcmp([all_data.coduf], '76')),:);
+table = all_data(find(strcmp([all_data.state], 'TOTAL')),:);
 
 
-y = [table.emAcompanhamentoNovos,table.Recuperadosnovos,table.obitosAcumulado];
-dates_aux = datetime([table.data]);
+y = [table.totalCases - table.recovered-table.deaths,table.recovered,table.deaths];
+dates_aux = datetime([table.date]);
 end_time_aux = max(dates_aux);
 
 
@@ -49,7 +53,7 @@ xlim([tstart tend]);
 set(gca, 'XTick', linspace(tstart,tend,8))
 datetick('x',19,'keepticks')
 max_x=tend;
-max_y=600000;
+max_y=800000;
 ylim([0 max_y]);
 set(gca, 'YTick', 0:100000:max_y)
 set(gca,'YTickLabel',{'0','100k','200k','300k','400k','500k','600k','700k','800k'})
@@ -64,7 +68,7 @@ ax.FontSize = 8;
 
 title({'Evolução dos casos de COVID-19 no Brasil',[datestr(end_time,24)]},'FontSize',10);
 
-hfonte=text(max_x,max_y,'Fonte: https://covid.saude.gov.br/');
+hfonte=text(max_x,max_y,'Fonte: https://covid19br.wcota.me/');
 set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
 
 

@@ -289,6 +289,12 @@ urlwrite(fullURL,[pwd '/Dados/',filename]);
 
 arquivogeral = readtable([pwd '/Dados/owid-covid-data.csv']);
 
+fullURL = ['https://raw.githubusercontent.com/wcota/covid19br/master/cases-brazil-states.csv'];
+filename = 'cases-brazil-states.txt';
+urlwrite(fullURL,[pwd '/Dados/',filename]);
+BRarquivogeral = readtable([pwd '/Dados/cases-brazil-states.txt']);
+
+
 % Definições para os graficos 
 Estados = {"Germany"; "Belgium"; "Brazil"; "Chile";"China"; "South Korea"; "Spain";"United States"; "France";  "Iran";"Italy"; "Peru"; "United Kingdom";"Russia"; "Sweden";"Turkey";  };
 
@@ -315,6 +321,15 @@ img_obitos_acumulados = zeros(length(Estados),max_size);
 
 %Gerando matrizes para os 4: caso e obitos x diario e acumulados
 for i=1:length(Estados)
+    if (i==3) %Brazil position
+    I_estado=find(BRarquivogeral.state == string("TOTAL"));
+    tabela_aux = BRarquivogeral(I_estado,:);
+    tabela = tabela_aux;
+    img_casos_diarios(i,max_size-height(tabela_aux)+1:end) = tabela.newCases;
+    img_obitos_diarios(i,max_size-height(tabela_aux)+1:end) = tabela.newDeaths;
+    img_casos_acumulados(i,max_size-height(tabela_aux)+1:end) = tabela.totalCases;
+    img_obitos_acumulados(i,max_size-height(tabela_aux)+1:end) = tabela.deaths;
+    else
     I_estado=find(arquivogeral.location == string(Estados(i,:)));
     tabela_aux = arquivogeral(I_estado,:);
     tabela = tabela_aux;
@@ -322,6 +337,7 @@ for i=1:length(Estados)
     img_obitos_diarios(i,max_size-height(tabela_aux)+1:end) = tabela.new_deaths;
     img_casos_acumulados(i,max_size-height(tabela_aux)+1:end) = tabela.total_cases;
     img_obitos_acumulados(i,max_size-height(tabela_aux)+1:end) = tabela.total_deaths;
+    end
 end
 
 
