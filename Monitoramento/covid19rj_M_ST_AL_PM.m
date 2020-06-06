@@ -47,7 +47,8 @@ urlwrite(fullURL,[pwd '/Dados/',filename]);
 
 %Lendo o arquivo disponível no site 
 all_data = readtable([pwd '/Dados/owid-covid-data.csv']);
-data = table2array(all_data(:,4:end));
+data = [all_data.total_cases,all_data.new_cases,all_data.total_deaths,all_data.new_deaths,all_data.total_cases_per_million,all_data.new_cases_per_million,all_data.total_deaths_per_million,all_data.new_deaths_per_million];
+
 
 
 %plot_type é pra diferenciar mortes e casos pra organizarmos a ordem da legenda de acordo com o número de mortes ou de casos
