@@ -290,7 +290,7 @@ urlwrite(fullURL,[pwd '/Dados/',filename]);
 arquivogeral = readtable([pwd,'/Dados/cases-brazil-states.txt']);
 
 % Definições para os graficos 
-Estados = {"AC"; "AM"; "AP"; "PA"; "RO"; "RR"; "TO"; "AL"; "BA"; "CE"; "MA"; "PB"; "PE"; "PI"; "RN"; "SE"; "ES"; "MG"; "RJ"; "SP"; "PR"; "RS"; "SC"; "DF"; "GO"; "MS"; "MT"};
+Estados = {"AC";"AL";"AP";"AM";"BA";"CE";"DF";"ES";"GO";"MA";"MT";"MS";"MG";"PA";"PB";"PR";"PE";"PI";"RJ";"RN";"RS";"RO";"RR";"SC";"SP";"SE";"TO"};
 titulos = {"Novos Casos";"Novos Óbitos";"Casos Acumulados";"Óbitos Acumulados"};
 name = 'BR';
 

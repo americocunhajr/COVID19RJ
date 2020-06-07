@@ -11,6 +11,8 @@ covid19rj_M_ST_RB_PM
 covid19rj_M_MC_RB
 
 covid19rj_M_ST_BR_RE
-covid19rj_M_CP_BR
+covid19rj_M_CP_AC_BR
+covid19rj_M_CP_PS_BR
+
 
 script_RJ
