@@ -122,12 +122,12 @@ yticks([])
 
 xlim([dates_cases(1,1) dates_cases(length(dates_cases),1)]);
 set(gca, 'XTick', linspace(dates_cases(1,1),datestr(end_time),3))
-set(gca,'FontSize',7);
+set(gca,'FontSize',6.5);
 datetick('x',19,'keepticks')
 
 title({[country]},'FontSize',11);
 
-xlabel({['Total de casos: ',num2str(max(tot_cases))],' '},'FontSize', 7);
+xlabel({['Total de casos: ',num2str(max(tot_cases))],' '},'FontSize', 6.5);
 
 figure(2)
 
@@ -142,12 +142,12 @@ yticks([])
 
 xlim([dates_deaths(1,1) dates_deaths(length(dates_deaths),1)]);
 set(gca, 'XTick', linspace(dates_deaths(1,1),datestr(end_time),3));
-set(gca,'FontSize',7);
+set(gca,'FontSize',6.5);
 datetick('x',19,'keepticks')
 
 title({[country]},'FontSize',11);
 
-xlabel(['Total de mortes: ',num2str(max(tot_deaths))],'FontSize', 7);
+xlabel(['Total de mortes: ',num2str(max(tot_deaths))],'FontSize', 6.5);
 end
 
 
