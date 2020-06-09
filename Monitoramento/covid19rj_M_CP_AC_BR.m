@@ -8,7 +8,7 @@ name = 'BR';
 %Lendo o arquivo disponível no site 
 arquivogeral = readtable([pwd '/Dados/cases-brazil-states.txt']);
 
-Estados = {"AC"; "AP"; "AM"; "PA"; "TO"; "RO"; "RR"; "AL"; "BA"; "CE"; "MA"; "PB"; "PE"; "PI"; "RN"; "SE"; "DF"; "GO"; "MT"; "MS";"ES"; "MG"; "RJ"; "SP"; "PR"; "RS"; "SC"};
+Estados = {"AC"; "AP"; "AM"; "PA"; "TO"; "RO"; "RR"; "AL"; "BA"; "CE"; "MA"; "PB"; "PE"; "PI"; "RN"; "SE"; "DF"; "GO"; "MT"; "MS";"ES"; "MG"; "RJ"; "SP"; "PR"; "RS"; "SC";"TOTAL"};
 
 colors = [69,169,0
     5,163,29
@@ -37,6 +37,7 @@ colors = [69,169,0
     209,227,105
     193,203,68
     191,171,72
+    0,0,0
     ]/255;
 
 %Data final
@@ -86,7 +87,7 @@ for i=1:length(Estados)
 end
 
 %Legenda
-Estados_leg = {"AC"; "AP"; "AM"; "PA"; "TO"; "RO"; "RR"; "AL"; "BA"; "CE"; "MA"; "PB"; "PE"; "PI"; "RN"; "SE"; "DF"; "GO"; "MT"; "MS";"ES"; "MG"; "RJ"; "SP"; "PR"; "RS"; "SC"};
+Estados_leg = {"AC"; "AP"; "AM"; "PA"; "TO"; "RO"; "RR"; "AL"; "BA"; "CE"; "MA"; "PB"; "PE"; "PI"; "RN"; "SE"; "DF"; "GO"; "MT"; "MS";"ES"; "MG"; "RJ"; "SP"; "PR"; "RS"; "SC";"BR"};
 
 
 
@@ -186,7 +187,7 @@ b.EdgeColor = 'flat';
 b.CData(:,:) = colors;
 
 for(i=1:length(Estados))
-text (i, 100*obitos_acumulados_pm(i,max_size)./casos_acumulados_pm(i,max_size),[' ',mat2str(round(100*obitos_acumulados_pm(i,max_size)./casos_acumulados_pm(i,max_size))),'%'],'HorizontalAlignment', 'left','VerticalAlignment', 'middle','FontSize',8,'Rotation',90)
+text (i, 100*obitos_acumulados_pm(i,max_size)./casos_acumulados_pm(i,max_size),[sprintf(' %.1f',(100*obitos_acumulados_pm(i,max_size)./casos_acumulados_pm(i,max_size))),'%'],'HorizontalAlignment', 'left','VerticalAlignment', 'middle','FontSize',8,'Rotation',90)
 end
 
 set(gca, 'XTick', 1:1:length(Estados));
@@ -226,7 +227,7 @@ b.EdgeColor = 'flat';
 b.CData(:,:) = colors;
 
 for(i=1:length(Estados))
-text (i, 100*recuperados_acumulados(i,max_size)./casos_acumulados(i,max_size),[' ',mat2str(round(100*recuperados_acumulados(i,max_size)./casos_acumulados(i,max_size))),'%'],'HorizontalAlignment', 'left','VerticalAlignment', 'middle','FontSize',8,'Rotation',90)
+text (i, 100*recuperados_acumulados(i,max_size)./casos_acumulados(i,max_size),[sprintf(' %.1f',(100*recuperados_acumulados(i,max_size)./casos_acumulados(i,max_size))),'%'],'HorizontalAlignment', 'left','VerticalAlignment', 'middle','FontSize',8,'Rotation',90)
 end
 
 set(gca, 'XTick', 1:1:length(Estados));
@@ -268,17 +269,17 @@ if ~exist([pwd,'/',outputdir,'/',outputdir2], 'dir')
 end
 
 %Controle do site
-print(figure(1),[pwd '/upload/',name,'/covid19rj_M_CP_NC_AC_PM_',name,'.png'],'-dpng','-r500'); 
-print(figure(2),[pwd '/upload/',name,'/covid19rj_M_CP_NM_AC_PM_',name,'.png'],'-dpng','-r500'); 
-print(figure(3),[pwd '/upload/',name,'/covid19rj_M_CP_NM_NA_AC_',name,'.png'],'-dpng','-r500'); 
-print(figure(4),[pwd '/upload/',name,'/covid19rj_M_CP_RE_NA_AC_',name,'.png'],'-dpng','-r500'); 
+print(figure(1),[pwd '/upload/',name,'/covid19rj_M_CP_NC_AC_PM_',name,'.png'],'-dpng','-r400'); 
+print(figure(2),[pwd '/upload/',name,'/covid19rj_M_CP_NM_AC_PM_',name,'.png'],'-dpng','-r400'); 
+print(figure(3),[pwd '/upload/',name,'/covid19rj_M_CP_NM_NA_AC_',name,'.png'],'-dpng','-r400'); 
+print(figure(4),[pwd '/upload/',name,'/covid19rj_M_CP_RE_NA_AC_',name,'.png'],'-dpng','-r400'); 
 
 
 %Controle github
-print(figure(1),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_CP_NC_AC_PM_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r500'); 
-print(figure(2),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_CP_NM_AC_PM_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r500'); 
-print(figure(3),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_CP_NM_NA_PM_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r500'); 
-print(figure(4),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_CP_RE_NA_PM_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r500'); 
+print(figure(1),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_CP_NC_AC_PM_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r400'); 
+print(figure(2),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_CP_NM_AC_PM_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r400'); 
+print(figure(3),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_CP_NM_NA_PM_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r400'); 
+print(figure(4),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_CP_RE_NA_PM_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r400'); 
 
 
 close all

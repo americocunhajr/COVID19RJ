@@ -37,9 +37,9 @@ clear all;
 close all;
 
 %Lendo o arquivo disponível no site 
-fullURL = ['https://raw.githubusercontent.com/wcota/covid19br/master/cases-brazil-states.csv'];
-filename = 'cases-brazil-states.txt';
-urlwrite(fullURL,[pwd '/Dados/',filename]);
+% fullURL = ['https://raw.githubusercontent.com/wcota/covid19br/master/cases-brazil-states.csv'];
+% filename = 'cases-brazil-states.txt';
+% urlwrite(fullURL,[pwd '/Dados/',filename]);
 
 table = readtable([pwd,'/Dados/cases-brazil-states.txt']);
 data = table2cell(table);
@@ -295,7 +295,7 @@ if strcmp(country, 'AP') country = 'AP     '; end
 if strcmp(country, 'AC') country = 'AC    '; end 
 if strcmp(country, 'RO') country = 'RO    '; end 
 if strcmp(country, 'RR') country = 'RR    '; end 
-if strcmp(country, 'TO') country = 'TO      '; end 
+if strcmp(country, 'TO') country = 'TO    '; end 
 if strcmp(country, 'CE') country = 'CE   '; end 
 if strcmp(country, 'PE') country = 'PE   '; end 
 if strcmp(country, 'MA') country = 'MA  '; end 
@@ -326,9 +326,9 @@ if (init == 3) country = 'AC'; color = [69,169,0]/255; pop = 881935; end
 if (init == 5) country = 'AP'; color = [5,163,29]/255; pop = 845731; end
 if (init == 7) country = 'AM'; color = [53,143,31]/255; pop = 4144597; end  
 if (init == 6) country = 'PA'; color = [0,169,74]/255; pop = 8602865; end
-if (init == 1) country = 'TO'; color = [0,109,22]/255; pop = 1572866; end
+if (init == 2) country = 'TO'; color = [0,109,22]/255; pop = 1572866; end
 if (init == 4) country = 'RO'; color = [0,104,44]/255; pop = 1777225; end
-if (init == 2) country = 'RR'; color = [0,67,21]/255; pop = 605761; end
+if (init == 1) country = 'RR'; color = [0,67,21]/255; pop = 605761; end
 end
 
 if (regions == 2)
@@ -749,11 +749,11 @@ figure(1)
 
 set(gca,'FontSize',fonte_padrao)
 if (regions < 6)
-title({'Letalidade da epidemia',['Estados da região ',name_title,' em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
+title({'Mortalidade da epidemia',['Estados da região ',name_title,' em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
 legend ("location", "northwest");
 end
 if (regions == 6)
-title({'Letalidade da epidemia',['Todos os estados do Brasil em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
+title({'Mortalidade da epidemia',['Todos os estados do Brasil em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
 legend = "off";
 end
 xlabel({['Dias desde que se ultrapassou ',num2str(X_deaths_pm),' morte'],['(por milhão de habitantes)']},'FontSize',fonte_labels);
@@ -964,11 +964,11 @@ figure(5)
 
 set(gca,'FontSize',fonte_padrao)
 if (regions < 6)
-title({'Letalidade semanal da epidemia',['Estados da região ',name_title,' em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
+title({'Mortalidade semanal da epidemia',['Estados da região ',name_title,' em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
 legend ("location", "northwest");
 end
 if (regions == 6)
-title({'Letalidade semanal da epidemia',['Todos os estados do Brasil em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
+title({'Mortalidade semanal da epidemia',['Todos os estados do Brasil em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
 legend = "off";
 end
 xlabel({['Dias desde que se ultrapassou ',num2str(X_deaths_pm),' morte'],'(por milhão de habitantes)'},'FontSize',fonte_labels);
@@ -1096,20 +1096,20 @@ if ~exist([pwd,'/',outputdir,'/',outputdir2], 'dir')
 end
 
 %Controle do site
-print(figure(1),[pwd '/upload/',name,'/covid19rj_M_ST_NM_AC_PM_',name,'.png'],'-dpng','-r500'); 
-print(figure(2),[pwd '/upload/',name,'/covid19rj_M_ST_NC_AC_PM_',name,'.png'],'-dpng','-r500'); 
-print(figure(3),[pwd '/upload/',name,'/covid19rj_M_EF_NM_NA_PM_',name,'.png'],'-dpng','-r500'); 
-print(figure(4),[pwd '/upload/',name,'/covid19rj_M_EF_NC_NA_PM_',name,'.png'],'-dpng','-r500'); 
-print(figure(5),[pwd '/upload/',name,'/covid19rj_M_ST_NM_PS_PM_',name,'.png'],'-dpng','-r500'); 
-print(figure(6),[pwd '/upload/',name,'/covid19rj_M_ST_NC_PS_PM_',name,'.png'],'-dpng','-r500'); 
+print(figure(1),[pwd '/upload/',name,'/covid19rj_M_ST_NM_AC_PM_',name,'.png'],'-dpng','-r400'); 
+print(figure(2),[pwd '/upload/',name,'/covid19rj_M_ST_NC_AC_PM_',name,'.png'],'-dpng','-r400'); 
+print(figure(3),[pwd '/upload/',name,'/covid19rj_M_EF_NM_NA_PM_',name,'.png'],'-dpng','-r400'); 
+print(figure(4),[pwd '/upload/',name,'/covid19rj_M_EF_NC_NA_PM_',name,'.png'],'-dpng','-r400'); 
+print(figure(5),[pwd '/upload/',name,'/covid19rj_M_ST_NM_PS_PM_',name,'.png'],'-dpng','-r400'); 
+print(figure(6),[pwd '/upload/',name,'/covid19rj_M_ST_NC_PS_PM_',name,'.png'],'-dpng','-r400'); 
 
 %Controle do github
-print(figure(1),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_ST_NM_AC_PM_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r500'); 
-print(figure(2),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_ST_NC_AC_PM_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r500'); 
-print(figure(3),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_EF_NM_NA_PM_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r500'); 
-print(figure(4),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_EF_NC_NA_PM_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r500'); 
-print(figure(5),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_ST_NM_PS_PM_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r500'); 
-print(figure(6),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_ST_NC_PS_PM_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r500'); 
+print(figure(1),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_ST_NM_AC_PM_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r400'); 
+print(figure(2),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_ST_NC_AC_PM_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r400'); 
+print(figure(3),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_EF_NM_NA_PM_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r400'); 
+print(figure(4),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_EF_NC_NA_PM_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r400'); 
+print(figure(5),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_ST_NM_PS_PM_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r400'); 
+print(figure(6),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_ST_NC_PS_PM_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r400'); 
 
 close all
 

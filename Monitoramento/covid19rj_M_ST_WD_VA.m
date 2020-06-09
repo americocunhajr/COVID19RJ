@@ -36,13 +36,13 @@ close all;
 %nome que aparece nos arquivos
 name = 'WD';
 
-fullURL = ['https://covid.ourworldindata.org/data/owid-covid-data.csv'];
-filename = 'owid-covid-data.csv';
-urlwrite(fullURL,[pwd '/Dados/',filename]);
-
-fullURL = ['https://raw.githubusercontent.com/wcota/covid19br/master/cases-brazil-states.csv'];
-filename = 'cases-brazil-states.txt';
-urlwrite(fullURL,[pwd '/Dados/',filename]);
+% fullURL = ['https://covid.ourworldindata.org/data/owid-covid-data.csv'];
+% filename = 'owid-covid-data.csv';
+% urlwrite(fullURL,[pwd '/Dados/',filename]);
+% 
+% fullURL = ['https://raw.githubusercontent.com/wcota/covid19br/master/cases-brazil-states.csv'];
+% filename = 'cases-brazil-states.txt';
+% urlwrite(fullURL,[pwd '/Dados/',filename]);
 
 %Lendo o arquivo disponível no site 
 all_data = readtable([pwd,'/Dados/owid-covid-data.csv']);
@@ -480,7 +480,7 @@ end
 figure(1)
 
 set(gca,'FontSize',fonte_padrao)
-title({'Letalidade da epidemia',['Comparação entre países em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
+title({'Mortalidade da epidemia',['Comparação entre países em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
 xlabel(['Dias desde que se ultrapassou ',num2str(X_deaths),' mortes'],'FontSize',fonte_labels);
 ylabel ("Total de mortes",'FontSize',fonte_labels);
 legend ("location", "northeastoutside");
@@ -681,7 +681,7 @@ set(ha2,'handlevisibility','off','visible','off')
 figure(5)
 
 set(gca,'FontSize',fonte_padrao)
-title({'Letalidade semanal da epidemia',['Comparação entre países em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
+title({'Mortalidade semanal da epidemia',['Comparação entre países em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
 xlabel({['Dias desde que se ultrapassou ',num2str(X_deaths),' mortes']},'FontSize',fonte_labels);
 ylabel ({'Novas mortes por semana'},'FontSize',fonte_labels);
 legend ("location", "northeastoutside");
@@ -802,20 +802,20 @@ if ~exist([pwd,'/',outputdir,'/',outputdir2], 'dir')
 end
 
 %Controle do site
-print(figure(1),[pwd '/upload/',name,'/covid19rj_M_ST_NM_AC_VA_',name,'.png'],'-dpng','-r500'); 
-print(figure(2),[pwd '/upload/',name,'/covid19rj_M_ST_NC_AC_VA_',name,'.png'],'-dpng','-r500'); 
-print(figure(3),[pwd '/upload/',name,'/covid19rj_M_EF_NM_NA_VA_',name,'.png'],'-dpng','-r500'); 
-print(figure(4),[pwd '/upload/',name,'/covid19rj_M_EF_NC_NA_VA_',name,'.png'],'-dpng','-r500'); 
-print(figure(5),[pwd '/upload/',name,'/covid19rj_M_ST_NM_PS_VA_',name,'.png'],'-dpng','-r500'); 
-print(figure(6),[pwd '/upload/',name,'/covid19rj_M_ST_NC_PS_VA_',name,'.png'],'-dpng','-r500'); 
+print(figure(1),[pwd '/upload/',name,'/covid19rj_M_ST_NM_AC_VA_',name,'.png'],'-dpng','-r400'); 
+print(figure(2),[pwd '/upload/',name,'/covid19rj_M_ST_NC_AC_VA_',name,'.png'],'-dpng','-r400'); 
+print(figure(3),[pwd '/upload/',name,'/covid19rj_M_EF_NM_NA_VA_',name,'.png'],'-dpng','-r400'); 
+print(figure(4),[pwd '/upload/',name,'/covid19rj_M_EF_NC_NA_VA_',name,'.png'],'-dpng','-r400'); 
+print(figure(5),[pwd '/upload/',name,'/covid19rj_M_ST_NM_PS_VA_',name,'.png'],'-dpng','-r400'); 
+print(figure(6),[pwd '/upload/',name,'/covid19rj_M_ST_NC_PS_VA_',name,'.png'],'-dpng','-r400'); 
 
 %Controle do github
-print(figure(1),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_ST_NM_AC_VA_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r500'); 
-print(figure(2),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_ST_NC_AC_VA_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r500'); 
-print(figure(3),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_EF_NM_NA_VA_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r500'); 
-print(figure(4),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_EF_NC_NA_VA_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r500'); 
-print(figure(5),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_ST_NM_PS_VA_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r500'); 
-print(figure(6),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_ST_NC_PS_VA_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r500'); 
+print(figure(1),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_ST_NM_AC_VA_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r400'); 
+print(figure(2),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_ST_NC_AC_VA_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r400'); 
+print(figure(3),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_EF_NM_NA_VA_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r400'); 
+print(figure(4),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_EF_NC_NA_VA_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r400'); 
+print(figure(5),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_ST_NM_PS_VA_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r400'); 
+print(figure(6),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_ST_NC_PS_VA_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r400'); 
 
 close all
 

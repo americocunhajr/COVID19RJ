@@ -5,9 +5,9 @@ clc
 %nome que aparece nos arquivos
 name = 'WD';
 
-fullURL = ['https://covid.ourworldindata.org/data/owid-covid-data.csv'];
-filename = 'owid-covid-data.csv';
-urlwrite(fullURL,[pwd '/Dados/',filename]);
+% fullURL = ['https://covid.ourworldindata.org/data/owid-covid-data.csv'];
+% filename = 'owid-covid-data.csv';
+% urlwrite(fullURL,[pwd '/Dados/',filename]);
 
 %Lendo o arquivo disponível no site 
 all_data = readtable([pwd '/Dados/owid-covid-data.csv']);

@@ -283,15 +283,16 @@ malu = [1	1	1
 ];
 
 %Fontes de dados
-fullURL = ['https://covid.ourworldindata.org/data/owid-covid-data.csv'];
-filename = 'owid-covid-data.csv';
-urlwrite(fullURL,[pwd '/Dados/',filename]);
+% fullURL = ['https://covid.ourworldindata.org/data/owid-covid-data.csv'];
+% filename = 'owid-covid-data.csv';
+% urlwrite(fullURL,[pwd '/Dados/',filename]);
 
 arquivogeral = readtable([pwd '/Dados/owid-covid-data.csv']);
 
-fullURL = ['https://raw.githubusercontent.com/wcota/covid19br/master/cases-brazil-states.csv'];
-filename = 'cases-brazil-states.txt';
-urlwrite(fullURL,[pwd '/Dados/',filename]);
+% fullURL = ['https://raw.githubusercontent.com/wcota/covid19br/master/cases-brazil-states.csv'];
+% filename = 'cases-brazil-states.txt';
+% urlwrite(fullURL,[pwd '/Dados/',filename]);
+
 BRarquivogeral = readtable([pwd '/Dados/cases-brazil-states.txt']);
 
 % Definições para os graficos 

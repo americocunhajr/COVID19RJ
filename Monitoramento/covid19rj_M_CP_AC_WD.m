@@ -6,14 +6,14 @@ clc
 name = 'WD';
 
 %Lendo o arquivo disponível no site 
-fullURL = ['https://covid.ourworldindata.org/data/owid-covid-data.csv'];
-filename = 'owid-covid-data.csv';
-urlwrite(fullURL,[pwd '/Dados/',filename]);
+% fullURL = ['https://covid.ourworldindata.org/data/owid-covid-data.csv'];
+% filename = 'owid-covid-data.csv';
+% urlwrite(fullURL,[pwd '/Dados/',filename]);
 arquivogeral = readtable([pwd '/Dados/owid-covid-data.csv']);
-
-fullURL = ['https://raw.githubusercontent.com/wcota/covid19br/master/cases-brazil-states.csv'];
-filename = 'cases-brazil-states.txt';
-urlwrite(fullURL,[pwd '/Dados/',filename]);
+% 
+% fullURL = ['https://raw.githubusercontent.com/wcota/covid19br/master/cases-brazil-states.csv'];
+% filename = 'cases-brazil-states.txt';
+% urlwrite(fullURL,[pwd '/Dados/',filename]);
 BRarquivogeral = readtable([pwd '/Dados/cases-brazil-states.txt']);
 
 Estados = {"Germany"; "Belgium"; "Brazil"; "Chile";"China"; "South Korea";"Spain"; "United States"; "France";"Iran";"Italy"; "Peru"; "United Kingdom";"Russia"; "Sweden"; "Turkey"};
@@ -327,14 +327,14 @@ if ~exist([pwd,'/',outputdir,'/',outputdir2], 'dir')
 end
 
 %Controle do site
-print(figure(1),[pwd '/upload/',name,'/covid19rj_M_CP_NC_AC_PM_',name,'.png'],'-dpng','-r500'); 
-print(figure(2),[pwd '/upload/',name,'/covid19rj_M_CP_NM_AC_PM_',name,'.png'],'-dpng','-r500'); 
-print(figure(3),[pwd '/upload/',name,'/covid19rj_M_CP_NM_NA_PM_',name,'.png'],'-dpng','-r500'); 
+print(figure(1),[pwd '/upload/',name,'/covid19rj_M_CP_NC_AC_PM_',name,'.png'],'-dpng','-r400'); 
+print(figure(2),[pwd '/upload/',name,'/covid19rj_M_CP_NM_AC_PM_',name,'.png'],'-dpng','-r400'); 
+print(figure(3),[pwd '/upload/',name,'/covid19rj_M_CP_NM_NA_PM_',name,'.png'],'-dpng','-r400'); 
 
 %Controle github
-print(figure(1),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_CP_NC_AC_PM_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r500'); 
-print(figure(2),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_CP_NM_AC_PM_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r500'); 
-print(figure(3),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_CP_NM_NA_PM_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r500'); 
+print(figure(1),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_CP_NC_AC_PM_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r400'); 
+print(figure(2),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_CP_NM_AC_PM_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r400'); 
+print(figure(3),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_CP_NM_NA_PM_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r400'); 
 
 
 

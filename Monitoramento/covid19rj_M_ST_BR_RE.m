@@ -3,9 +3,9 @@ clc;
 close all;
 
 %Lendo o arquivo disponível no site 
-fullURL = ['https://raw.githubusercontent.com/wcota/covid19br/master/cases-brazil-states.csv'];
-filename = 'cases-brazil-states.txt';
-urlwrite(fullURL,[pwd '/Dados/',filename]);
+% fullURL = ['https://raw.githubusercontent.com/wcota/covid19br/master/cases-brazil-states.csv'];
+% filename = 'cases-brazil-states.txt';
+% urlwrite(fullURL,[pwd '/Dados/',filename]);
 
 name = 'BR';
 
@@ -48,9 +48,9 @@ b(2).EdgeColor = [0 0.4470 0.7410];
 b(3).EdgeColor = [0.8500 0.3250 0.0980];
 
 
-tend = datetime(2020,6,7,0,0,0);
+tend = datetime(2020,6,14,0,0,0);
 xlim([tstart tend]);
-set(gca, 'XTick', linspace(tstart,tend,8))
+set(gca, 'XTick', linspace(tstart,tend,9))
 datetick('x',19,'keepticks')
 max_x=tend;
 max_y=800000;
@@ -103,9 +103,9 @@ if ~exist([pwd,'/',outputdir,'/',outputdir2], 'dir')
   mkdir([pwd,'/',outputdir,'/',outputdir2]);
 end
 
-if (t==1) print(figure(1),[pwd '/upload/',name,'/covid19rj_M_ST_RE_AC_VA_',name,'.png'],'-dpng','-r500'); end
+if (t==1) print(figure(1),[pwd '/upload/',name,'/covid19rj_M_ST_RE_AC_VA_',name,'.png'],'-dpng','-r400'); end
 
-if (t == 1) print(gcf,[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_ST_RE_AC_VA_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r500'); end
+if (t == 1) print(gcf,[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_ST_RE_AC_VA_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r400'); end
 
 %dates(end,:) = [];
 %BRASIL(end,:) = [];
@@ -159,9 +159,9 @@ p2 = plot(dates,BRASIL(:,3),'linewidth',2,'color',[0 0.4470 0.7410]);
 hold on
 p3 = plot(dates,BRASIL(:,4),'linewidth',2,'color',[0.8500 0.3250 0.0980]);
 
-tend = datetime(2020,6,7,0,0,0);
+tend = datetime(2020,6,14,0,0,0);
 xlim([tstart tend]);
-set(gca, 'XTick', linspace(tstart,tend,8))
+set(gca, 'XTick', linspace(tstart,tend,9))
 datetick('x',19,'keepticks')
 max_x=tend;
 max_y=800000;
@@ -204,8 +204,8 @@ colormap (map)
 % into the axes again. Also, make the axes invisible
 set(ha2,'handlevisibility','off','visible','off')
 
-print(figure(1),[pwd '/upload/',name,'/covid19rj_M_ST_RE_AC_NA_',name,'.png'],'-dpng','-r500'); 
-print(gcf,[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_ST_RE_AC_NA_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r500'); 
+print(figure(1),[pwd '/upload/',name,'/covid19rj_M_ST_RE_AC_NA_',name,'.png'],'-dpng','-r400'); 
+print(gcf,[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_ST_RE_AC_NA_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r400'); 
 
 close all
 

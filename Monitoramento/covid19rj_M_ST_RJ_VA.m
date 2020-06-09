@@ -4,9 +4,9 @@ close all;
 
 
 %Lendo o arquivo disponível no site 
-fullURL = ['https://raw.githubusercontent.com/wcota/covid19br/master/cases-brazil-cities-time.csv'];
-filename = 'cases-brazil-cities-time.txt';
-urlwrite(fullURL,[pwd '/Dados/',filename]);
+% fullURL = ['https://raw.githubusercontent.com/wcota/covid19br/master/cases-brazil-cities-time.csv'];
+% filename = 'cases-brazil-cities-time.txt';
+% urlwrite(fullURL,[pwd '/Dados/',filename]);
 
 table = readtable([pwd,'/Dados/cases-brazil-cities-time.txt']);
 data = table2cell(table);
@@ -401,7 +401,7 @@ end
 figure(1)
 
 set(gca,'FontSize',fonte_padrao)
-title({'Letalidade da epidemia',['Municípios do RJ em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
+title({'Mortalidade da epidemia',['Municípios do RJ em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
 xlabel(['Dias desde que se ultrapassou ',num2str(X_deaths),' mortes'],'FontSize',fonte_labels);
 ylabel ("Total de mortes",'FontSize',fonte_labels);
 legend ("location", "northeastoutside");
@@ -596,7 +596,7 @@ set(ha2,'handlevisibility','off','visible','off')
 figure(5)
 
 set(gca,'FontSize',fonte_padrao)
-title({'Letalidade semanal da epidemia',['Municípios do RJ em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
+title({'Mortalidade semanal da epidemia',['Municípios do RJ em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
 xlabel({['Dias desde que se ultrapassou ',num2str(X_deaths),' mortes']},'FontSize',fonte_labels);
 ylabel ({'Novas mortes por semana'},'FontSize',fonte_labels);
 legend ("location", "northeastoutside");
