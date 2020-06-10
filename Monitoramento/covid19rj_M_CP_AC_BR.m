@@ -114,10 +114,10 @@ set(gca, 'XTick', 1:1:length(Estados));
 xtickangle(45);
 
 ymin = 0;
-ymax = 18000;
+ymax = 20000;
 set(gca,'YLim',[ymin ymax]);
 set(gca, 'YTick', ymin:2000:ymax);
-set(gca,'YTickLabel',{'0','2000','4000','6000','8000','10000','12000','14000','16000','18000'});
+set(gca,'YTickLabel',{'0','2000','4000','6000','8000','10000','12000','14000','16000','18000','20000'});
 set(gca,'YGrid', 'on');
 title({'Casos acumulados por milhão de habitantes',['Estados do Brasil em ',datestr(end_time,24)]},'FontSize',11);
 
@@ -235,10 +235,10 @@ set(gca,'XTickLabel',Estados_leg, 'FontSize',9);
 xtickangle(45);
 
 ymin = 0;
-ymax = 100;
+ymax = 110;
 set(gca,'YLim',[ymin ymax]);
 set(gca, 'YTick', ymin:10:ymax);
-set(gca,'YTickLabel',{'0','10%','20%','30%','40%','50%','60%','70%','80%','100%',' ',' '});
+set(gca,'YTickLabel',{'0','10%','20%','30%','40%','50%','60%','70%','80%','90%','100%',' ',' '});
 set(gca,'YGrid', 'on');
 title({'Recuperados em relação aos casos confirmados',['Estados do Brasil em ',datestr(end_time,24)]},'FontSize',11);
 
