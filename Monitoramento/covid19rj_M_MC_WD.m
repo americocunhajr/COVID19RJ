@@ -340,6 +340,8 @@ for i=1:length(Estados)
     img_obitos_acumulados(i,max_size-height(tabela_aux)+1:end) = tabela.total_deaths;
     end
 end
+img_casos_acumulados(isnan(img_casos_acumulados))=0;
+img_obitos_acumulados(isnan(img_obitos_acumulados))=0;
 
 
     end_date = datestr(datenum(max(arquivogeral.date)-1));
