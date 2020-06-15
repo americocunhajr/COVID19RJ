@@ -177,7 +177,7 @@ set(gca,'XTickLabel',Estados_leg, 'FontSize',9);
 xtickangle(45);
 
 ymin = 0;
-ymax = 250;
+ymax = 300;
 set(gca,'YLim',[ymin ymax]);
 set(gca, 'YTick', ymin:50:ymax);
 set(gca,'YTickLabel',{'0','50','100','150','200','250','300','350','400'});
