@@ -194,11 +194,11 @@ if (plot_type == 1)
 if (regions == 1)
 if (init == 0) country = 'BR'; color = [0,0,0]/255; pop = popBR; end
 if (init == 3) country = 'AC'; color = [69,169,0]/255; pop = 881935; end
-if (init == 5) country = 'AP'; color = [5,163,29]/255; pop = 845731; end
+if (init == 4) country = 'AP'; color = [5,163,29]/255; pop = 845731; end
 if (init == 6) country = 'AM'; color = [53,143,31]/255; pop = 4144597; end  
 if (init == 7) country = 'PA'; color = [0,169,74]/255; pop = 8602865; end
 if (init == 1) country = 'TO'; color = [0,109,22]/255; pop = 1572866; end
-if (init == 4) country = 'RO'; color = [0,104,44]/255; pop = 1777225; end
+if (init == 5) country = 'RO'; color = [0,104,44]/255; pop = 1777225; end
 if (init == 2) country = 'RR'; color = [0,67,21]/255; pop = 605761; end
 end
 
@@ -218,8 +218,8 @@ end
 if (regions == 3)
 if (init == 0) country = 'BR'; color = [0,0,0]/255; pop = popBR; end
 if (init == 4) country = 'DF'; color = [181,147,87]/255; pop = 3015268; end
-if (init == 3) country = 'GO'; color = [135,85,30]/255; pop = 7018354; end
-if (init == 2) country = 'MT'; color = [110,71,28]/255; pop = 3484466; end
+if (init == 2) country = 'GO'; color = [135,85,30]/255; pop = 7018354; end
+if (init == 3) country = 'MT'; color = [110,71,28]/255; pop = 3484466; end
 if (init == 1) country = 'MS'; color = [86,62,32]/255; pop = 2778986; end
 end
 
@@ -336,8 +336,8 @@ if (init == 8) country = 'MA'; color = [0,74,84]/255; pop = 7075181; end
 if (init == 5) country = 'PB'; color = [27,78,142]/255; pop = 4018127; end
 if (init == 7) country = 'PE'; color = [0,99,181]/255; pop = 9557071; end
 if (init == 1) country = 'PI'; color = [0,45,135]/255; pop = 3273227; end
-if (init == 3) country = 'RN'; color = [0,34,80]/255; pop = 3506853; end
-if (init == 2) country = 'SE'; color = [0,20,37]/255; pop = 2298696; end
+if (init == 2) country = 'RN'; color = [0,34,80]/255; pop = 3506853; end
+if (init == 3) country = 'SE'; color = [0,20,37]/255; pop = 2298696; end
 end
 
 if (regions == 3)
@@ -412,7 +412,7 @@ if strcmp(country, 'BR') country = 'BR'; end
 if strcmp(country, 'AM') country = 'AM  '; end 
 if strcmp(country, 'PA') country = 'PA   '; end 
 if strcmp(country, 'AP') country = 'AP   '; end 
-if strcmp(country, 'AC') country = 'AC    '; end 
+if strcmp(country, 'AC') country = 'AC  '; end 
 if strcmp(country, 'RO') country = 'RO  '; end 
 if strcmp(country, 'RR') country = 'RR    '; end 
 if strcmp(country, 'TO') country = 'TO    '; end 
@@ -429,11 +429,11 @@ if strcmp(country, 'SP') country = 'SP'; end
 if strcmp(country, 'RJ') country = 'RJ   '; end 
 if strcmp(country, 'ES') country = 'ES  '; end 
 if strcmp(country, 'MG') country = 'MG '; end 
-if strcmp(country, 'GO') country = 'GO    '; end 
+if strcmp(country, 'GO') country = 'GO  '; end 
 if strcmp(country, 'DF') country = 'DF   '; end 
 if strcmp(country, 'MT') country = 'MT    '; end 
 if strcmp(country, 'MS') country = 'MS    '; end 
-if strcmp(country, 'PR') country = 'PR    '; end 
+if strcmp(country, 'PR') country = 'PR  '; end 
 if strcmp(country, 'RS') country = 'RS  '; end 
 if strcmp(country, 'SC') country = 'SC  '; end 
 end

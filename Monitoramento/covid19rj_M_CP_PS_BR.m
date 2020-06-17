@@ -5,10 +5,7 @@ close all;
 %nome que aparece nos arquivos
 name = 'BR';
 
-% fullURL = ['https://covid.ourworldindata.org/data/owid-covid-data.csv'];
-% filename = 'owid-covid-data.csv';
-% urlwrite(fullURL,[pwd '/Dados/',filename]);
-% 
+
 % fullURL = ['https://raw.githubusercontent.com/wcota/covid19br/master/cases-brazil-states.csv'];
 % filename = 'cases-brazil-states.txt';
 % urlwrite(fullURL,[pwd '/Dados/',filename]);
@@ -155,7 +152,7 @@ figure(1)
 sgtitle({'Brasil enfrentando o COVID-19',datestr(end_time,24),' ','Comparação do número de novos casos por semana'})
 
 hold on;
-hfonte=text(max(dates)+160,0,{'Gráfico inspirado em: https://www.endcoronavirus.org/countries','Fonte: https://covid19br.wcota.me/'});
+hfonte=text(max(dates)+170,0,{'Gráfico inspirado em: https://www.endcoronavirus.org/countries','Fonte: https://covid19br.wcota.me/'});
 set(hfonte,'Rotation',90,'color',[0,0,0],'FontSize',7.5);
 
 % pra botar o logo no inferior direito
@@ -189,7 +186,7 @@ figure(2)
 sgtitle({'Brasil enfrentando o COVID-19',datestr(end_time,24),' ','Comparação do número de novas mortes por semana'})
 
 hold on;
-hfonte=text(max(dates)+110,0,{'Gráfico inspirado em: https://www.endcoronavirus.org/countries','Fonte: https://covid19br.wcota.me/'});
+hfonte=text(max(dates)+120,0,{'Gráfico inspirado em: https://www.endcoronavirus.org/countries','Fonte: https://covid19br.wcota.me/'});
 set(hfonte,'Rotation',90,'color',[0,0,0],'FontSize',7.5);
 
 % pra botar o logo no inferior direito

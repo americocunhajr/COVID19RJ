@@ -78,23 +78,31 @@ X_deaths = 1;
 X_cases = 1;
 
 n=0;
-for (i=1:1:max(max(size(dates))) )
+for (i=2:1:max(max(size(dates))) )
 if (tot_deaths(i,1) >= X_deaths)
 n=n+1;
 tot_deaths_X(n,1) = tot_deaths(i,1);
 new_deaths_X(n,1) = new_deaths(i,1);
 new_deaths7_X(n,1) = new_deaths7(i,1);
-dates_deaths(n,1) = dates(i,1);
+    if strcmp(country, 'Brazil')
+       dates_deaths(n,1) = dates(i,1);
+    else
+        dates_deaths(n,1) = dates(i-1,1);
+    end
 end
 end
 n=0;
-for (i=1:1:max(max(size(dates))) )
+for (i=2:1:max(max(size(dates))) )
 if (tot_cases(i,1) >= X_cases)
 n=n+1;
 tot_cases_X(n,1) = tot_cases(i,1);
 new_cases_X(n,1) = new_cases(i,1);
 new_cases7_X(n,1) = new_cases7(i,1);
-dates_cases(n,1) = dates(i,1);
+    if strcmp(country, 'Brazil')
+       dates_cases(n,1) = dates(i,1);
+    else
+        dates_cases(n,1) = dates(i-1,1);
+    end
 end
 end
 
@@ -110,7 +118,7 @@ plot(dates_cases,new_cases7_X,'linewidth',2,'color',color)
 yticks([])
 
 xlim([dates_cases(1,1) dates_cases(length(dates_cases),1)]);
-set(gca, 'XTick', linspace(dates_cases(1,1),datestr(end_time),4))
+set(gca, 'XTick', linspace(dates_cases(1,1),dates_cases(length(dates_cases)),4))
 set(gca,'FontSize',8);
 datetick('x',19,'keepticks')
 
@@ -130,7 +138,7 @@ plot(dates_deaths,new_deaths7_X,'linewidth',2,'color',color)
 yticks([])
 
 xlim([dates_deaths(1,1) dates_deaths(length(dates_deaths),1)]);
-set(gca, 'XTick', linspace(dates_deaths(1,1),datestr(end_time),4))
+set(gca, 'XTick', linspace(dates_deaths(1,1),dates_deaths(length(dates_deaths)),4))
 set(gca,'FontSize',8);
 datetick('x',19,'keepticks')
 

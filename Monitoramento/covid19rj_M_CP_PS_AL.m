@@ -78,23 +78,31 @@ X_deaths = 1;
 X_cases = 1;
 
 n=0;
-for (i=1:1:max(max(size(dates))) )
+for (i=2:1:max(max(size(dates))) )
 if (tot_deaths(i,1) >= X_deaths)
 n=n+1;
 tot_deaths_X(n,1) = tot_deaths(i,1);
 new_deaths_X(n,1) = new_deaths(i,1);
 new_deaths7_X(n,1) = new_deaths7(i,1);
-dates_deaths(n,1) = dates(i,1);
+    if strcmp(country, 'Brazil')
+       dates_deaths(n,1) = dates(i,1);
+    else
+        dates_deaths(n,1) = dates(i-1,1);
+    end
 end
 end
 n=0;
-for (i=1:1:max(max(size(dates))) )
+for (i=2:1:max(max(size(dates))) )
 if (tot_cases(i,1) >= X_cases)
 n=n+1;
 tot_cases_X(n,1) = tot_cases(i,1);
 new_cases_X(n,1) = new_cases(i,1);
 new_cases7_X(n,1) = new_cases7(i,1);
-dates_cases(n,1) = dates(i,1);
+    if strcmp(country, 'Brazil')
+       dates_cases(n,1) = dates(i,1);
+    else
+        dates_cases(n,1) = dates(i-1,1);
+    end
 end
 end
 
@@ -110,7 +118,7 @@ plot(dates_cases,new_cases7_X,'linewidth',2,'color',color)
 yticks([])
 
 xlim([dates_cases(1,1) dates_cases(length(dates_cases),1)]);
-set(gca, 'XTick', linspace(dates_cases(1,1),datestr(end_time),4))
+set(gca, 'XTick', linspace(dates_cases(1,1),dates_cases(length(dates_cases),1),4))
 set(gca,'FontSize',8);
 datetick('x',19,'keepticks')
 
@@ -130,7 +138,7 @@ plot(dates_deaths,new_deaths7_X,'linewidth',2,'color',color)
 yticks([])
 
 xlim([dates_deaths(1,1) dates_deaths(length(dates_deaths),1)]);
-set(gca, 'XTick', linspace(dates_deaths(1,1),datestr(end_time),4))
+set(gca, 'XTick', linspace(dates_deaths(1,1),dates_deaths(length(dates_deaths),1),4))
 set(gca,'FontSize',8);
 datetick('x',19,'keepticks')
 
@@ -144,14 +152,14 @@ figure(1)
 sgtitle({'América Latina enfrentando o COVID-19',datestr(end_time,24),' ','Comparação do número de novos casos por semana'})
 
 hold on;
-hfonte=text(max(dates)+135,0,{'Gráfico inspirado em: https://www.endcoronavirus.org/countries','Fonte: https://ourworldindata.org/coronavirus-source-data'});
+hfonte=text(max(dates)+165,0,{'Gráfico inspirado em: https://www.endcoronavirus.org/countries','Fonte: https://ourworldindata.org/coronavirus-source-data'});
 set(hfonte,'Rotation',90,'color',[0,0,0],'FontSize',7.5);
 
 % pra botar o logo no inferior direito
 ha =gca;
 uistack(ha,'bottom');
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[-0.56 -0.33], .2,.11,]);
+ha2=axes('position',[haPos([3 1])-[-0.58 -0.33], .18,.1,]);
 [x, map]=imread('logo.png');
 image(x)
 % Setting the colormap to the colormap of the imported logo image
@@ -160,12 +168,10 @@ colormap (map)
 % into the axes again. Also, make the axes invisible
 set(ha2,'handlevisibility','off','visible','off')
 
-hold on;
-
 ha =gca;
 uistack(ha,'bottom');
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[0.02 -0.55], .16,.09,]);
+ha2=axes('position',[haPos([3 1])-[0.02 -0.55], .14,.08,]);
 [x, map]=imread('legenda.png');
 image(x)
 % Setting the colormap to the colormap of the imported logo image
@@ -174,18 +180,19 @@ colormap (map)
 % into the axes again. Also, make the axes invisible
 set(ha2,'handlevisibility','off','visible','off')
 
+
 figure(2)
 sgtitle({'América Latina enfrentando o COVID-19',datestr(end_time,24),' ','Comparação do número de novas mortes por semana'})
 
 hold on;
-hfonte=text(max(dates)+115,0,{'Gráfico inspirado em: https://www.endcoronavirus.org/countries','Fonte: https://ourworldindata.org/coronavirus-source-data'});
+hfonte=text(max(dates)+135,0,{'Gráfico inspirado em: https://www.endcoronavirus.org/countries','Fonte: https://ourworldindata.org/coronavirus-source-data'});
 set(hfonte,'Rotation',90,'color',[0,0,0],'FontSize',7.5);
 
 % pra botar o logo no inferior direito
 ha =gca;
 uistack(ha,'bottom');
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[-0.56 -0.33], .2,.11,]);
+ha2=axes('position',[haPos([3 1])-[-0.58 -0.33], .18,.1,]);
 [x, map]=imread('logo.png');
 image(x)
 % Setting the colormap to the colormap of the imported logo image
@@ -197,7 +204,7 @@ set(ha2,'handlevisibility','off','visible','off')
 ha =gca;
 uistack(ha,'bottom');
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[0.02 -0.55], .16,.09,]);
+ha2=axes('position',[haPos([3 1])-[0.02 -0.55], .14,.08,]);
 [x, map]=imread('legenda.png');
 image(x)
 % Setting the colormap to the colormap of the imported logo image
