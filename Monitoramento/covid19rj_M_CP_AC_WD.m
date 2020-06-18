@@ -16,7 +16,7 @@ arquivogeral = readtable([pwd '/Dados/owid-covid-data.csv']);
 % urlwrite(fullURL,[pwd '/Dados/',filename]);
 BRarquivogeral = readtable([pwd '/Dados/cases-brazil-states.txt']);
 
-Estados = {"Germany"; "Belgium"; "Brazil"; "Chile";"China"; "South Korea";"Spain"; "United States"; "France";"Iran";"Italy"; "Peru"; "United Kingdom";"Russia"; "Sweden"; "Turkey"};
+Estados = {"Germany"; "Belgium"; "Brazil"; "Chile";"China";"Spain"; "United States"; "France";"India";"Iran";"Italy"; "Peru"; "United Kingdom";"Russia"; "Sweden"; "Turkey"};
 
 %Data final
 end_time = datestr(datenum(max(arquivogeral.date)-1));
@@ -94,7 +94,7 @@ for i=1:length(Estados)
 end
 
 %Legenda
-Estados_leg = {"Alemanha     "; "Bélgica     "; "Brasil     "; "Chile     ";"China     "; "Coréia do Sul     ";"Espanha     "; "EUA     ";"França     "; "Irã     ";"Itália     "; "Peru     "; "Reino Unido     "; "Rússia     "; "Suécia     ";"Turquia     "};
+Estados_leg = {"Alemanha     "; "Bélgica     "; "Brasil     "; "Chile     ";"China     "; "Espanha     "; "EUA     ";"França     ";"Índia     " ; "Irã     ";"Itália     "; "Peru     "; "Reino Unido     "; "Rússia     "; "Suécia     ";"Turquia     "};
 
 
 
@@ -125,10 +125,10 @@ xtickangle(45);
 
 
 ymin = 0;
-ymax = 10000;
+ymax = 12000;
 set(gca,'YLim',[ymin ymax]);
-set(gca, 'YTick', ymin:1000:ymax);
-set(gca,'YTickLabel',{'0','1000','2000','3000','4000','5000','6000','7000','8000','9000','10000'});
+set(gca, 'YTick', ymin:2000:ymax);
+set(gca,'YTickLabel',{'0','2000','4000','6000','8000','10000','12000'});
 set(gca,'YGrid', 'on');
 title({'Casos acumulados por milhão de habitantes',['Comparação entre países em ',datestr(end_time,24)]},'FontSize',11);
 
@@ -151,7 +151,7 @@ set(ha2,'handlevisibility','off','visible','off')
 ha =gca;
 uistack(ha,'bottom');
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[0.6115 -0.015], 0.7075,.038,]);
+ha2=axes('position',[haPos([3 1])-[0.6115 -0.005], 0.7075,.038,]);
 [x, map]=imread('bandeiras.png');
 image(x)
 colormap (map)
@@ -202,7 +202,7 @@ set(ha2,'handlevisibility','off','visible','off')
 ha =gca;
 uistack(ha,'bottom');
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[0.6115 -0.015], 0.7075,.038,]);
+ha2=axes('position',[haPos([3 1])-[0.6115 -0.005], 0.7075,.038,]);
 [x, map]=imread('bandeiras.png');
 image(x)
 colormap (map)
@@ -252,7 +252,7 @@ set(ha2,'handlevisibility','off','visible','off')
 ha =gca;
 uistack(ha,'bottom');
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[0.6115 -0.015], 0.7075,.038,]);
+ha2=axes('position',[haPos([3 1])-[0.6115 -0.005], 0.7075,.038,]);
 [x, map]=imread('bandeiras.png');
 image(x)
 colormap (map)
@@ -309,7 +309,7 @@ set(ha2,'handlevisibility','off','visible','off')
 ha =gca;
 uistack(ha,'bottom');
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[0.6115 -0.015], 0.7075,.038,]);
+ha2=axes('position',[haPos([3 1])-[0.6115 -0.005], 0.7075,.038,]);
 [x, map]=imread('bandeiras.png');
 image(x)
 colormap (map)

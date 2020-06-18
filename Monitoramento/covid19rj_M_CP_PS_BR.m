@@ -21,7 +21,7 @@ set(0, 'DefaultFigurePosition', Pos);
 
 
 
-for (init=1:1:27)
+for (init=1:1:28)
 
 clearvars -except plot_type init all_data data name BR_all_data BR_data
 r = [255, 0, 0 ]/255;
@@ -54,12 +54,14 @@ if (init == 25) country = 'SP'; color = r; end
 if (init == 16) country = 'PR'; color = r; end
 if (init == 21) country = 'RS'; color = r; end
 if (init == 24) country = 'SC'; color = r; end
+if (init == 28) country = 'TOTAL'; color = r; end
 
 
     location = BR_data(find(strcmp([BR_all_data.state], country)),1:8);
     dates = BR_all_data.date(find(strcmp([BR_all_data.state],country)),:);
 end_time = max(datenum(dates));
 
+if strcmp(country, 'TOTAL') country = 'Brasil'; end
 
 tot_cases = location(:,1);
 new_cases = location(:,2);
@@ -152,14 +154,14 @@ figure(1)
 sgtitle({'Brasil enfrentando o COVID-19',datestr(end_time,24),' ','Comparação do número de novos casos por semana'})
 
 hold on;
-hfonte=text(max(dates)+170,0,{'Gráfico inspirado em: https://www.endcoronavirus.org/countries','Fonte: https://covid19br.wcota.me/'});
+hfonte=text(max(dates)+80,0,{'Gráfico inspirado em: https://www.endcoronavirus.org/countries','Fonte: https://covid19br.wcota.me/'});
 set(hfonte,'Rotation',90,'color',[0,0,0],'FontSize',7.5);
 
 % pra botar o logo no inferior direito
 ha =gca;
 uistack(ha,'bottom');
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[-0.63 -0.18], .2,.11,]);
+ha2=axes('position',[haPos([3 1])-[-0.62 -0.07], .2,.11,]);
 [x, map]=imread('logo.png');
 image(x)
 % Setting the colormap to the colormap of the imported logo image
@@ -173,7 +175,7 @@ hold on;
 ha =gca;
 uistack(ha,'bottom');
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[-0.05 -0.3], .16,.09,]);
+ha2=axes('position',[haPos([3 1])-[-0.05 -0.2], .16,.09,]);
 [x, map]=imread('legenda.png');
 image(x)
 % Setting the colormap to the colormap of the imported logo image
@@ -186,14 +188,14 @@ figure(2)
 sgtitle({'Brasil enfrentando o COVID-19',datestr(end_time,24),' ','Comparação do número de novas mortes por semana'})
 
 hold on;
-hfonte=text(max(dates)+120,0,{'Gráfico inspirado em: https://www.endcoronavirus.org/countries','Fonte: https://covid19br.wcota.me/'});
+hfonte=text(max(dates)+80,0,{'Gráfico inspirado em: https://www.endcoronavirus.org/countries','Fonte: https://covid19br.wcota.me/'});
 set(hfonte,'Rotation',90,'color',[0,0,0],'FontSize',7.5);
 
 % pra botar o logo no inferior direito
 ha =gca;
 uistack(ha,'bottom');
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[-0.63 -0.18], .2,.11,]);
+ha2=axes('position',[haPos([3 1])-[-0.62 -0.07], .2,.11,]);
 [x, map]=imread('logo.png');
 image(x)
 % Setting the colormap to the colormap of the imported logo image
@@ -205,7 +207,7 @@ set(ha2,'handlevisibility','off','visible','off')
 ha =gca;
 uistack(ha,'bottom');
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[-0.05 -0.3], .16,.09,]);
+ha2=axes('position',[haPos([3 1])-[-0.05 -0.2], .16,.09,]);
 [x, map]=imread('legenda.png');
 image(x)
 % Setting the colormap to the colormap of the imported logo image

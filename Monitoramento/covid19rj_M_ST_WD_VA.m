@@ -67,21 +67,21 @@ linew = 1.25;
 if (plot_type == 1)
 %ordem por países que tem mais morte
 if (init == 2) country = 'Brazil'; color = [0,0,0]/255; linew = 1.75; end
-if (init == 16) country = 'South Korea'; color = [69,169,0]/255; end
-if (init == 13) country = 'Turkey'; color = [96,209,224]/255; end  
-if (init == 11) country = 'Peru'; color = [181,147,87]/255; end
+if (init == 7) country = 'India'; color = [69,169,0]/255; end
+if (init == 14) country = 'Turkey'; color = [96,209,224]/255; end  
+if (init == 12) country = 'Peru'; color = [181,147,87]/255; end
 if (init == 9) country = 'Iran'; color = [255,130,113]/255; end
-if (init == 8) country = 'Germany'; color = [209,227,105]/255; end
-if (init == 15) country = 'Chile'; color = [248,187,208]/255; end
+if (init == 10) country = 'Germany'; color = [209,227,105]/255; end
+if (init == 16) country = 'Chile'; color = [248,187,208]/255; end
 if (init == 1) country = 'United States'; color = [0,104,44]/255; end
 if (init == 5) country = 'France'; color = [0,45,135]/255; end
 if (init == 3) country = 'United Kingdom'; color = [135,85,30]/255; end
 if (init == 4) country = 'Italy'; color = [203,63,23]/255; end
 if (init == 6) country = 'Spain'; color = [191,171,72]/255; end
-if (init == 7) country = 'Belgium'; color = [236,64,122]/255; end
-if (init == 10) country = 'Russia'; color = [0.4,0.4,0.4]; end
-if (init == 12) country = 'Sweden'; color = [0,0.5,0.6]; end
-if (init == 14) country = 'China'; color = [185,205,140]/255; end
+if (init == 8) country = 'Belgium'; color = [236,64,122]/255; end
+if (init == 11) country = 'Russia'; color = [0.4,0.4,0.4]; end
+if (init == 13) country = 'Sweden'; color = [0,0.5,0.6]; end
+if (init == 15) country = 'China'; color = [185,205,140]/255; end
 
 if strcmp(country, 'Brazil')
     location = BR_data(find(strcmp([BR_all_data.state], 'TOTAL')),1:8);
@@ -98,9 +98,9 @@ if strcmp(country, 'United Kingdom') country = 'Reino Unido'; end
 if strcmp(country, 'Belgium') country = 'Bélgica         '; end 
 if strcmp(country, 'Brazil') country = 'Brasil          '; end 
 if strcmp(country, 'Iran') country = 'Irã                 '; end 
-if strcmp(country, 'South Korea') country = 'Coréia do Sul  '; end 
-if strcmp(country, 'Turkey') country = 'Turquia         '; end 
 if strcmp(country, 'Peru') country = 'Peru              '; end 
+if strcmp(country, 'Turkey') country = 'Turquia         '; end 
+if strcmp(country, 'India') country = 'Índia           '; end 
 if strcmp(country, 'Chile') country = 'Chile             '; end 
 if strcmp(country, 'France') country = 'França        '; end 
 if strcmp(country, 'Spain') country = 'Espanha     '; end 
@@ -115,21 +115,21 @@ end
 if (plot_type == 2)
 %ordem por países que tem mais caso
 if (init == 2) country = 'Brazil'; color = [0,0,0]/255; linew = 1.75; end
-if (init == 16) country = 'South Korea'; color = [69,169,0]/255; end
-if (init == 10) country = 'Turkey'; color = [96,209,224]/255; end  
+if (init == 4) country = 'India'; color = [69,169,0]/255; end
+if (init == 12) country = 'Turkey'; color = [96,209,224]/255; end  
 if (init == 7) country = 'Peru'; color = [181,147,87]/255; end
 if (init == 9) country = 'Iran'; color = [255,130,113]/255; end
-if (init == 8) country = 'Germany'; color = [209,227,105]/255; end
+if (init == 10) country = 'Germany'; color = [209,227,105]/255; end
 if (init == 11) country = 'Chile'; color = [248,187,208]/255; end
 if (init == 1) country = 'United States'; color = [0,104,44]/255; end
-if (init == 12) country = 'France'; color = [0,45,135]/255; end
-if (init == 4) country = 'United Kingdom'; color = [135,85,30]/255; end
-if (init == 6) country = 'Italy'; color = [203,63,23]/255; end
-if (init == 5) country = 'Spain'; color = [191,171,72]/255; end
-if (init == 14) country = 'Belgium'; color = [236,64,122]/255; end
+if (init == 13) country = 'France'; color = [0,45,135]/255; end
+if (init == 5) country = 'United Kingdom'; color = [135,85,30]/255; end
+if (init == 8) country = 'Italy'; color = [203,63,23]/255; end
+if (init == 6) country = 'Spain'; color = [191,171,72]/255; end
+if (init == 15) country = 'Belgium'; color = [236,64,122]/255; end
 if (init == 3) country = 'Russia'; color = [0.4,0.4,0.4]; end
-if (init == 15) country = 'Sweden'; color = [0,0.5,0.6]; end
-if (init == 13) country = 'China'; color = [185,205,140]/255; end
+if (init == 16) country = 'Sweden'; color = [0,0.5,0.6]; end
+if (init == 14) country = 'China'; color = [185,205,140]/255; end
 
 
 if strcmp(country, 'Brazil')
@@ -149,9 +149,9 @@ if strcmp(country, 'United Kingdom') country = 'Reino Unido  '; end
 if strcmp(country, 'Belgium') country = 'Bélgica            '; end 
 if strcmp(country, 'Brazil') country = 'Brasil            '; end 
 if strcmp(country, 'Iran') country = 'Irã                 '; end 
-if strcmp(country, 'South Korea') country = 'Coréia do Sul   '; end 
-if strcmp(country, 'Turkey') country = 'Turquia         '; end 
 if strcmp(country, 'Peru') country = 'Peru              '; end 
+if strcmp(country, 'Turkey') country = 'Turquia         '; end 
+if strcmp(country, 'India') country = 'Índia              '; end 
 if strcmp(country, 'Chile') country = 'Chile             '; end 
 if strcmp(country, 'France') country = 'França          '; end 
 if strcmp(country, 'Spain') country = 'Espanha       '; end 

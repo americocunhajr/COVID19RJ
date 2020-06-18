@@ -37,16 +37,16 @@ g = [0, 125, 0]/255;
 if (init == 1) country = 'Germany'; color = g; pais = 'Alemanha'; end
 if (init == 2) country = 'Belgium'; color = g; pais = 'Bélgica'; end
 if (init == 3) country = 'Brazil'; color = r; pais = 'Brasil'; end
-if (init == 6) country = 'South Korea'; color = g; pais = 'Coréia do Sul'; end
+if (init == 9) country = 'India'; color = g; pais = 'Índia'; end
 if (init == 16) country = 'Turkey'; color = y; pais = 'Turquia'; end  
 if (init == 12) country = 'Peru'; color = r; pais = 'Peru'; end
-if (init == 10) country = 'Iran'; color = r; pais = 'Irã';end
+if (init == 11) country = 'Iran'; color = r; pais = 'Irã';end
 if (init == 4) country = 'Chile'; color = r; pais = 'Chile'; end
-if (init == 8) country = 'United States'; color = y; pais = 'EUA'; end
-if (init == 9) country = 'France'; color = g; pais = 'França'; end
+if (init == 7) country = 'United States'; color = y; pais = 'EUA'; end
+if (init == 8) country = 'France'; color = g; pais = 'França'; end
 if (init == 13) country = 'United Kingdom'; color = y; pais = 'Reino Unido'; end
-if (init == 11) country = 'Italy'; color = g; pais = 'Itália'; end
-if (init == 7) country = 'Spain'; color = g; pais = 'Espanha'; end
+if (init == 10) country = 'Italy'; color = g; pais = 'Itália'; end
+if (init == 6) country = 'Spain'; color = g; pais = 'Espanha'; end
 if (init == 14) country = 'Russia'; color = r; pais = 'Rússia'; end
 if (init == 15) country = 'Sweden'; color = r; pais = 'Suécia'; end
 if (init == 5) country = 'China'; color = g; pais = 'China'; end
