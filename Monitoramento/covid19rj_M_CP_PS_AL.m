@@ -66,6 +66,11 @@ new_cases = location(:,2);
 tot_deaths = location(:,3);
 new_deaths = location(:,4);
 
+tot_cases(isnan(tot_cases))=0;
+new_cases(isnan(new_cases))=0;
+tot_deaths(isnan(tot_deaths))=0;
+new_deaths(isnan(new_deaths))=0;
+
 %consolidando os novos casos e mortes por semana
 for (i=7:1:max(max(size(dates))) ) 
 new_cases7(i,1) = new_cases(i,1)+new_cases(i-1,1)+new_cases(i-2,1)+new_cases(i-3,1)+new_cases(i-4,1)+new_cases(i-5,1)+new_cases(i-6,1);

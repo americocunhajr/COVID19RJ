@@ -341,7 +341,8 @@ for i=1:length(Estados)
 end
 img_casos_acumulados(isnan(img_casos_acumulados))=0;
 img_obitos_acumulados(isnan(img_obitos_acumulados))=0;
-
+img_casos_diarios(isnan(img_casos_diarios))=0;
+img_obitos_diarios(isnan(img_obitos_diarios))=0;
 
 
     end_date = datestr(datenum(max(arquivogeral.date)-1));

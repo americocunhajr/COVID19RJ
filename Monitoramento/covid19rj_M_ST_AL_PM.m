@@ -174,6 +174,17 @@ new_cases_pm = location(:,6);
 tot_deaths_pm = location(:,7);
 new_deaths_pm = location(:,8);
 
+tot_cases(isnan(tot_cases))=0;
+new_cases(isnan(new_cases))=0;
+tot_deaths(isnan(tot_deaths))=0;
+new_deaths(isnan(new_deaths))=0;
+
+tot_cases_pm(isnan(tot_cases_pm))=0;
+new_cases_pm(isnan(new_cases_pm))=0;
+tot_deaths_pm(isnan(tot_deaths_pm))=0;
+new_deaths_pm(isnan(new_deaths_pm))=0;
+
+
 %consolidando os Casos e mortes por semana
 new_cases7 = new_cases;
 for (i=7:1:max(max(size(dates))) ) 
