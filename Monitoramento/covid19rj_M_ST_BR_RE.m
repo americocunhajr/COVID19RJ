@@ -53,10 +53,10 @@ xlim([tstart tend]);
 set(gca, 'XTick', linspace(tstart,tend,10))
 datetick('x',19,'keepticks')
 max_x=tend;
-max_y=1000000;
+max_y=1200000;
 ylim([0 max_y]);
 set(gca, 'YTick', 0:200000:max_y)
-set(gca,'YTickLabel',{'0','200k','400k','600k','800k','1M'})
+set(gca,'YTickLabel',{'0','200k','400k','600k','800k','1M','1.2M'})
 
 
 legend(strcat("Casos ativos:  ", num2str( sprintf( '%06d', max(BRASIL(:,1)) ))),strcat("Recuperados: ", num2str(sprintf( '%06d', max(BRASIL(:,2)) ))),strcat("Óbitos:           ", num2str( sprintf( '%06d', max(BRASIL(:,3))) )));
@@ -164,10 +164,10 @@ xlim([tstart tend]);
 set(gca, 'XTick', linspace(tstart,tend,10))
 datetick('x',19,'keepticks')
 max_x=tend;
-max_y=1000000;
+max_y=1200000;
 ylim([0 max_y]);
 set(gca, 'YTick', 0:200000:max_y)
-set(gca,'YTickLabel',{'0','200k','400k','600k','800k','1M'})
+set(gca,'YTickLabel',{'0','200k','400k','600k','800k','1M','1.2M'})
 
 
 legend(strcat("Total de casos: ", num2str(sprintf( '%06d', max(BRASIL(:,1)) ))),strcat("Casos ativos:    ", num2str( sprintf( '%06d', max(BRASIL(:,2)) ))), strcat("Recuperados:   ", num2str(sprintf( '%06d', max(BRASIL(:,3)) ))),strcat("Óbitos:             ", num2str( sprintf( '%06d', max(BRASIL(:,4))) )));
