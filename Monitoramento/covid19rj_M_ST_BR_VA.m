@@ -336,8 +336,8 @@ if (init == 8) country = 'MA'; color = [0,74,84]/255; pop = 7075181; end
 if (init == 5) country = 'PB'; color = [27,78,142]/255; pop = 4018127; end
 if (init == 7) country = 'PE'; color = [0,99,181]/255; pop = 9557071; end
 if (init == 1) country = 'PI'; color = [0,45,135]/255; pop = 3273227; end
-if (init == 2) country = 'RN'; color = [0,34,80]/255; pop = 3506853; end
-if (init == 3) country = 'SE'; color = [0,20,37]/255; pop = 2298696; end
+if (init == 3) country = 'RN'; color = [0,34,80]/255; pop = 3506853; end
+if (init == 2) country = 'SE'; color = [0,20,37]/255; pop = 2298696; end
 end
 
 if (regions == 3)

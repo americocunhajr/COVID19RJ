@@ -226,10 +226,10 @@ set(gca,'XTickLabel',Estados_leg, 'FontSize',9);
 xtickangle(45);
 
 ymin = 0;
-ymax = 30;
+ymax = 20;
 set(gca,'YLim',[ymin ymax]);
-set(gca, 'YTick', ymin:10:ymax);
-set(gca,'YTickLabel',{'0','10%','20%','30%','40%','50%'});
+set(gca, 'YTick', ymin:5:ymax);
+set(gca,'YTickLabel',{'0','5%','10%','15%','20%','25%','30%'});
 set(gca,'YGrid', 'on');
 title({'Letalidade em relação aos casos confirmados',['Comparação entre países em ',datestr(end_time,24)]},'FontSize',11);
 

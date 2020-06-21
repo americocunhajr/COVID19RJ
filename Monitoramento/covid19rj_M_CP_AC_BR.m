@@ -114,10 +114,10 @@ set(gca, 'XTick', 1:1:length(Estados));
 xtickangle(45);
 
 ymin = 0;
-ymax = 28000;
+ymax = 30000;
 set(gca,'YLim',[ymin ymax]);
-set(gca, 'YTick', ymin:4000:ymax);
-set(gca,'YTickLabel',{'0','4k','8k','12k','16k','20k','24k','28k'});
+set(gca, 'YTick', ymin:5000:ymax);
+set(gca,'YTickLabel',{'0','5k','10k','15k','20k','25k','30k','35k'});
 set(gca,'YGrid', 'on');
 title({'Casos acumulados por milhão de habitantes',['Estados do Brasil em ',datestr(end_time,24)]},'FontSize',11);
 

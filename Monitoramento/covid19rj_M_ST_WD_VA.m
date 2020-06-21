@@ -74,10 +74,10 @@ if (init == 9) country = 'Iran'; color = [255,130,113]/255; end
 if (init == 10) country = 'Germany'; color = [209,227,105]/255; end
 if (init == 16) country = 'Chile'; color = [248,187,208]/255; end
 if (init == 1) country = 'United States'; color = [0,104,44]/255; end
-if (init == 5) country = 'France'; color = [0,45,135]/255; end
+if (init == 6) country = 'France'; color = [0,45,135]/255; end
 if (init == 3) country = 'United Kingdom'; color = [135,85,30]/255; end
 if (init == 4) country = 'Italy'; color = [203,63,23]/255; end
-if (init == 6) country = 'Spain'; color = [191,171,72]/255; end
+if (init == 5) country = 'Spain'; color = [191,171,72]/255; end
 if (init == 8) country = 'Belgium'; color = [236,64,122]/255; end
 if (init == 11) country = 'Russia'; color = [0.4,0.4,0.4]; end
 if (init == 13) country = 'Sweden'; color = [0,0.5,0.6]; end
@@ -117,15 +117,15 @@ if (plot_type == 2)
 if (init == 2) country = 'Brazil'; color = [0,0,0]/255; linew = 1.75; end
 if (init == 4) country = 'India'; color = [69,169,0]/255; end
 if (init == 12) country = 'Turkey'; color = [96,209,224]/255; end  
-if (init == 7) country = 'Peru'; color = [181,147,87]/255; end
-if (init == 9) country = 'Iran'; color = [255,130,113]/255; end
-if (init == 10) country = 'Germany'; color = [209,227,105]/255; end
-if (init == 11) country = 'Chile'; color = [248,187,208]/255; end
+if (init == 6) country = 'Peru'; color = [181,147,87]/255; end
+if (init == 10) country = 'Iran'; color = [255,130,113]/255; end
+if (init == 11) country = 'Germany'; color = [209,227,105]/255; end
+if (init == 9) country = 'Chile'; color = [248,187,208]/255; end
 if (init == 1) country = 'United States'; color = [0,104,44]/255; end
 if (init == 13) country = 'France'; color = [0,45,135]/255; end
 if (init == 5) country = 'United Kingdom'; color = [135,85,30]/255; end
 if (init == 8) country = 'Italy'; color = [203,63,23]/255; end
-if (init == 6) country = 'Spain'; color = [191,171,72]/255; end
+if (init == 7) country = 'Spain'; color = [191,171,72]/255; end
 if (init == 15) country = 'Belgium'; color = [236,64,122]/255; end
 if (init == 3) country = 'Russia'; color = [0.4,0.4,0.4]; end
 if (init == 16) country = 'Sweden'; color = [0,0.5,0.6]; end
@@ -147,7 +147,7 @@ end
 if strcmp(country, 'United States') country = 'EUA            '; end 
 if strcmp(country, 'United Kingdom') country = 'Reino Unido  '; end
 if strcmp(country, 'Belgium') country = 'Bélgica            '; end 
-if strcmp(country, 'Brazil') country = 'Brasil            '; end 
+if strcmp(country, 'Brazil') country = 'Brasil          '; end 
 if strcmp(country, 'Iran') country = 'Irã                 '; end 
 if strcmp(country, 'Peru') country = 'Peru              '; end 
 if strcmp(country, 'Turkey') country = 'Turquia         '; end 
