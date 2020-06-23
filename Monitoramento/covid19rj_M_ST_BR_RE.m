@@ -48,9 +48,9 @@ b(2).EdgeColor = [0 0.4470 0.7410];
 b(3).EdgeColor = [0.8500 0.3250 0.0980];
 
 
-tend = datetime(2020,6,21,0,0,0);
+tend = datetime(2020,6,28,0,0,0);
 xlim([tstart tend]);
-set(gca, 'XTick', linspace(tstart,tend,10))
+set(gca, 'XTick', linspace(tstart,tend,11))
 datetick('x',19,'keepticks')
 max_x=tend;
 max_y=1200000;
@@ -159,9 +159,9 @@ p2 = plot(dates,BRASIL(:,3),'linewidth',2,'color',[0 0.4470 0.7410]);
 hold on
 p3 = plot(dates,BRASIL(:,4),'linewidth',2,'color',[0.8500 0.3250 0.0980]);
 
-tend = datetime(2020,6,21,0,0,0);
+tend = datetime(2020,6,28,0,0,0);
 xlim([tstart tend]);
-set(gca, 'XTick', linspace(tstart,tend,10))
+set(gca, 'XTick', linspace(tstart,tend,11))
 datetick('x',19,'keepticks')
 max_x=tend;
 max_y=1200000;
@@ -170,7 +170,7 @@ set(gca, 'YTick', 0:200000:max_y)
 set(gca,'YTickLabel',{'0','200k','400k','600k','800k','1M','1.2M'})
 
 
-legend(strcat("Total de casos: ", num2str(sprintf( '%06d', max(BRASIL(:,1)) ))),strcat("Casos ativos:    ", num2str( sprintf( '%06d', max(BRASIL(:,2)) ))), strcat("Recuperados:   ", num2str(sprintf( '%06d', max(BRASIL(:,3)) ))),strcat("Óbitos:             ", num2str( sprintf( '%06d', max(BRASIL(:,4))) )));
+legend(strcat("Total de casos: ", num2str(sprintf( '%06d', max(BRASIL(:,1)) ))),strcat("Casos ativos:      ", num2str( sprintf( '%06d', max(BRASIL(:,2)) ))), strcat("Recuperados:     ", num2str(sprintf( '%06d', max(BRASIL(:,3)) ))),strcat("Óbitos:               ", num2str( sprintf( '%06d', max(BRASIL(:,4))) )));
 legend("location","northwest");
 
 legend("FontSize",9);

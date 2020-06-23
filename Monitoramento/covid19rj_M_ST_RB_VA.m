@@ -204,7 +204,7 @@ deaths_old= [zeros(1,1) ; tot_deaths(1:end-1,:)];
 new_cases = -cases_old + tot_cases;
 new_deaths = -deaths_old + tot_deaths;
 end
-if (init == 4)
+if (init == 5)
 country = 'Sul                  ';
 color = [193,203,68]/255;
 pop = popSUL;
@@ -216,7 +216,7 @@ deaths_old= [zeros(1,1) ; tot_deaths(1:end-1,:)];
 new_cases = -cases_old + tot_cases;
 new_deaths = -deaths_old + tot_deaths;
 end
-if (init == 5)
+if (init == 4)
 country = 'Centro-Oeste  ';
 color = [135,85,30]/255;
 pop = popCENTRO;
