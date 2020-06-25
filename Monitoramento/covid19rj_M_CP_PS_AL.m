@@ -154,7 +154,7 @@ end
 
 
 figure(1)
-sgtitle({'América Latina enfrentando o COVID-19',datestr(end_time,24),' ','Comparação do número de novos casos por semana'})
+sgtitle({'América Latina enfrentando o COVID-19',datestr(end_time,24),' ','Comparação da curva de novos casos por semana'})
 
 hold on;
 hfonte=text(max(dates)+165,0,{'Gráfico inspirado em: https://www.endcoronavirus.org/countries','Fonte: https://ourworldindata.org/coronavirus-source-data'});
@@ -187,7 +187,7 @@ set(ha2,'handlevisibility','off','visible','off')
 
 
 figure(2)
-sgtitle({'América Latina enfrentando o COVID-19',datestr(end_time,24),' ','Comparação do número de novas mortes por semana'})
+sgtitle({'América Latina enfrentando o COVID-19',datestr(end_time,24),' ','Comparação da curva de novas mortes por semana'})
 
 hold on;
 hfonte=text(max(dates)+135,0,{'Gráfico inspirado em: https://www.endcoronavirus.org/countries','Fonte: https://ourworldindata.org/coronavirus-source-data'});

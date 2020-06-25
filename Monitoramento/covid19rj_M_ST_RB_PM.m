@@ -545,16 +545,16 @@ hold on;
 %Plotar Casos X total de casos (por milhao de hab.)
 figure (4);
 
-grid1=loglog([1,100000],100*(ones(2, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+grid1=loglog([1,1000000],1000*(ones(2, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
 hold on;
-grid2=loglog([1,100000],1000*(ones(2, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+grid2=loglog([1,1000000],10000*(ones(2, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
 hold on;
 
-grid3=loglog(100*(ones(2, 1)),[1,10000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
+grid3=loglog(1000*(ones(2, 1)),[1,100000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
 hold on;
-grid4=loglog(1000*(ones(2, 1)),[1,10000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
+grid4=loglog(10000*(ones(2, 1)),[1,100000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
 hold on;
-grid5=loglog(10000*(ones(2, 1)),[1,10000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
+grid5=loglog(100000*(ones(2, 1)),[1,100000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
 hold on;
 
  %Tirando os zeros de Casos
@@ -776,13 +776,13 @@ ylabel({'Casos por semana','(por milhão de habitantes)'},'FontSize',fonte_label
 xlabel ({'Total de casos','(por milhão de habitantes)'},'FontSize',fonte_labels);
 legend ("location", "northwest");
 
-max_x = 100000;
-max_y = 10000;
-axis([10 max_x 10 max_y]);
+max_x = 1000000;
+max_y = 100000;
+axis([100 max_x 100 max_y]);
 
 
-set(gca,'YTickLabel',{'10','100','1k','10k'})
-set(gca,'XTickLabel',{'10','100','1k','10k','100k'})
+set(gca,'YTickLabel',{'100','1k','10k','100k'})
+set(gca,'XTickLabel',{'100','1k','10k','100k','1M'})
 
 hfonte=text(max_x,max_y,'Fonte: https://covid19br.wcota.me/');
 set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
@@ -874,7 +874,7 @@ ylabel ({'Novos casos por dia por milhão de habitantes','(Média móvel de 7 di
 legend ("location", "northwest");;
 
 y_init=1;
-max_y=1000;
+max_y=10000;
 max_x=day_axis;
 
 % ang = 43;

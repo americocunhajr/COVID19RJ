@@ -151,7 +151,7 @@ end
 
 
 figure(1)
-sgtitle({'Brasil enfrentando o COVID-19',datestr(end_time,24),' ','Comparação do número de novos casos por semana'})
+sgtitle({'Brasil enfrentando o COVID-19',datestr(end_time,24),' ','Comparação da curva de novos casos por semana'})
 
 hold on;
 hfonte=text(max(dates)+80,0,{'Gráfico inspirado em: https://www.endcoronavirus.org/countries','Fonte: https://covid19br.wcota.me/'});
@@ -185,7 +185,7 @@ colormap (map)
 set(ha2,'handlevisibility','off','visible','off')
 
 figure(2)
-sgtitle({'Brasil enfrentando o COVID-19',datestr(end_time,24),' ','Comparação do número de novas mortes por semana'})
+sgtitle({'Brasil enfrentando o COVID-19',datestr(end_time,24),' ','Comparação da curva de novas mortes por semana'})
 
 hold on;
 hfonte=text(max(dates)+80,0,{'Gráfico inspirado em: https://www.endcoronavirus.org/countries','Fonte: https://covid19br.wcota.me/'});

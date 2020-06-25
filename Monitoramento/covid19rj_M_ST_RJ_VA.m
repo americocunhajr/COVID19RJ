@@ -9,7 +9,6 @@ close all;
 % urlwrite(fullURL,[pwd '/Dados/',filename]);
 
 table = readtable([pwd,'/Dados/cases-brazil-cities-time.txt']);
-data = table2cell(table);
 
 %nome dos arquivos que serão salvos
 name = 'RJ';
@@ -37,7 +36,11 @@ if (init == 11) city = 'Petrópolis/RJ'; pop = 306191; color = [203,63,23]/255; 
 if (init == 12) city = 'Volta Redonda/RJ'; pop = 273012; color = [191,171,72]/255; end
 if (init == 8) city = 'Magé/RJ'; pop = 260497; color = [236,64,122]/255; end
 
-location = data(find(strcmp([table.city], city)),:);
+%Definindo os números de casos e mortes
+tot_cases = table.totalCases(find(strcmp([table.city],city)),:);
+new_cases = table.newCases(find(strcmp([table.city],city)),:);
+tot_deaths = table.deaths(find(strcmp([table.city],city)),:);
+new_deaths = table.newDeaths(find(strcmp([table.city],city)),:);
 
 dates = table.date(find(strcmp([table.city],city)),:);
 end_time = max(datenum(dates));
@@ -72,7 +75,11 @@ if (init == 11) city = 'Petrópolis/RJ'; pop = 306191; color = [203,63,23]/255; 
 if (init == 9) city = 'Volta Redonda/RJ'; pop = 273012; color = [191,171,72]/255; end
 if (init == 8) city = 'Magé/RJ'; pop = 260497; color = [236,64,122]/255; end
 
-location = data(find(strcmp([table.city], city)),:);
+%Definindo os números de casos e mortes
+tot_cases = table.totalCases(find(strcmp([table.city],city)),:);
+new_cases = table.newCases(find(strcmp([table.city],city)),:);
+tot_deaths = table.deaths(find(strcmp([table.city],city)),:);
+new_deaths = table.newDeaths(find(strcmp([table.city],city)),:);
 
 dates = table.date(find(strcmp([table.city],city)),:);
 end_time = max(datenum(dates));
@@ -93,11 +100,7 @@ if strcmp(city, 'Magé/RJ') city = 'Magé                             '; end
 end
 
 
-%Definindo os números de casos e mortes
-tot_cases = cell2mat(location(:,9));
-new_cases = cell2mat(location(:,8));
-tot_deaths = cell2mat(location(:,7));
-new_deaths = cell2mat(location(:,6));
+
 
 %Por milhão de hab
 tot_cases_pm = tot_cases / ( pop / 1000000 );

@@ -96,21 +96,21 @@ else
 end_time = max(datenum(dates))-1;
 end
 
-if strcmp(country, 'Brazil') country = 'Brasil           '; end 
-if strcmp(country, 'Peru') country = 'Peru               '; end
-if strcmp(country, 'Chile') country = 'Chile               '; end 
-if strcmp(country, 'Ecuador') country = 'Equador          '; end 
-if strcmp(country, 'Colombia') country = 'Colômbia        '; end 
-if strcmp(country, 'Argentina') country = 'Argentina         '; end 
-if strcmp(country, 'Bolivia') country = 'Bolívia              '; end 
-if strcmp(country, 'Paraguay') country = 'Paraguai              '; end 
-if strcmp(country, 'Uruguay') country = 'Uruguai               '; end 
-if strcmp(country, 'Venezuela') country = 'Venezuela           '; end 
-if strcmp(country, 'Mexico') country = 'México         '; end 
-if strcmp(country, 'Cuba') country = 'Cuba                   '; end 
-if strcmp(country, 'Dominican Republic') country = 'R. Dominicana  '; end 
-if strcmp(country, 'Panama') country = 'Panamá            '; end 
-if strcmp(country, 'Costa Rica') country = 'Costa Rica           '; end 
+if strcmp(country, 'Brazil') country_leg = 'Brasil           '; end 
+if strcmp(country, 'Peru') country_leg = 'Peru               '; end
+if strcmp(country, 'Chile') country_leg = 'Chile               '; end 
+if strcmp(country, 'Ecuador') country_leg = 'Equador          '; end 
+if strcmp(country, 'Colombia') country_leg = 'Colômbia        '; end 
+if strcmp(country, 'Argentina') country_leg = 'Argentina         '; end 
+if strcmp(country, 'Bolivia') country_leg = 'Bolívia              '; end 
+if strcmp(country, 'Paraguay') country_leg = 'Paraguai              '; end 
+if strcmp(country, 'Uruguay') country_leg = 'Uruguai               '; end 
+if strcmp(country, 'Venezuela') country_leg = 'Venezuela           '; end 
+if strcmp(country, 'Mexico') country_leg = 'México         '; end 
+if strcmp(country, 'Cuba') country_leg = 'Cuba                   '; end 
+if strcmp(country, 'Dominican Republic') country_leg = 'R. Dominicana  '; end 
+if strcmp(country, 'Panama') country_leg = 'Panamá            '; end 
+if strcmp(country, 'Costa Rica') country_leg = 'Costa Rica           '; end 
 
 end
 
@@ -143,21 +143,21 @@ else
 end_time = max(datenum(dates))-1;
 end
 
-if strcmp(country, 'Brazil') country = 'Brasil          '; end 
-if strcmp(country, 'Peru') country = 'Peru              '; end
-if strcmp(country, 'Chile') country = 'Chile             '; end 
-if strcmp(country, 'Ecuador') country = 'Equador          '; end 
-if strcmp(country, 'Colombia') country = 'Colômbia        '; end 
-if strcmp(country, 'Argentina') country = 'Argentina        '; end 
-if strcmp(country, 'Bolivia') country = 'Bolívia             '; end 
-if strcmp(country, 'Paraguay') country = 'Paraguai            '; end 
-if strcmp(country, 'Uruguay') country = 'Uruguai               '; end 
-if strcmp(country, 'Venezuela') country = 'Venezuela         '; end 
-if strcmp(country, 'Mexico') country = 'México          '; end 
-if strcmp(country, 'Cuba') country = 'Cuba                 '; end 
-if strcmp(country, 'Dominican Republic') country = 'R. Dominicana '; end 
-if strcmp(country, 'Panama') country = 'Panamá           '; end 
-if strcmp(country, 'Costa Rica') country = 'Costa Rica         '; end 
+if strcmp(country, 'Brazil') country_leg = 'Brasil          '; end 
+if strcmp(country, 'Peru') country_leg = 'Peru              '; end
+if strcmp(country, 'Chile') country_leg = 'Chile             '; end 
+if strcmp(country, 'Ecuador') country_leg = 'Equador          '; end 
+if strcmp(country, 'Colombia') country_leg = 'Colômbia        '; end 
+if strcmp(country, 'Argentina') country_leg = 'Argentina        '; end 
+if strcmp(country, 'Bolivia') country_leg = 'Bolívia             '; end 
+if strcmp(country, 'Paraguay') country_leg = 'Paraguai            '; end 
+if strcmp(country, 'Uruguay') country_leg = 'Uruguai               '; end 
+if strcmp(country, 'Venezuela') country_leg = 'Venezuela         '; end 
+if strcmp(country, 'Mexico') country_leg = 'México          '; end 
+if strcmp(country, 'Cuba') country_leg = 'Cuba                 '; end 
+if strcmp(country, 'Dominican Republic') country_leg = 'R. Dominicana '; end 
+if strcmp(country, 'Panama') country_leg = 'Panamá           '; end 
+if strcmp(country, 'Costa Rica') country_leg = 'Costa Rica         '; end 
 
 end
 
@@ -284,9 +284,9 @@ hold on;
 
  n = max(max(size(tot_deaths_pmX)));
  days = 0:1:n-1;
- fig=semilogy(days,tot_deaths_pmX,'DisplayName',[country,'  ',num2str(tot_deaths(max(size(tot_deaths)),1)),' mortes'],"color",color,'LineWidth', linew);
+ fig=semilogy(days,tot_deaths_pmX,'DisplayName',[country_leg,'  ',num2str(tot_deaths(max(size(tot_deaths)),1)),' mortes'],"color",color,'LineWidth', linew);
  hold on;
- text (n-1, tot_deaths_pmX(n,1), [' ',country],'FontSize',fonte_location,"color",color,"Clipping",'on');
+ text (n-1, tot_deaths_pmX(n,1), [' ',country_leg],'FontSize',fonte_location,"color",color,"Clipping",'on');
 
 tot_mortes(init,1) = max(tot_deaths);
 
@@ -314,13 +314,13 @@ hold on;
  new_deaths7w0_pm(pos0,:) = [];
 
  n = max(max(size(tot_deathsw0_pm)));
- if strcmp(country, 'Costa Rica          ') new_deaths7w0_pm = zeros(n,1); end
- if strcmp(country, 'Paraguai             ') new_deaths7w0_pm = zeros(n,1); end
- if strcmp(country, 'Venezuela          ') new_deaths7w0_pm = zeros(n,1); end
- if strcmp(country, 'Uruguai              ') new_deaths7w0_pm = zeros(n,1); end
- fig=loglog(tot_deathsw0_pm,new_deaths7w0_pm,'DisplayName',[country,'  ',num2str(tot_deaths(max(size(tot_deaths)),1)),' mortes'],"color",color,'LineWidth', linew);
+ if strcmp(country, 'Costa Rica') new_deaths7w0_pm = zeros(n,1); end
+ if strcmp(country, 'Paraguay') new_deaths7w0_pm = zeros(n,1); end
+ if strcmp(country, 'Venezuela') new_deaths7w0_pm = zeros(n,1); end
+ if strcmp(country, 'Uruguay') new_deaths7w0_pm = zeros(n,1); end
+ fig=loglog(tot_deathsw0_pm,new_deaths7w0_pm,'DisplayName',[country_leg,'  ',num2str(tot_deaths(max(size(tot_deaths)),1)),' mortes'],"color",color,'LineWidth', linew);
  hold on;
- text (tot_deathsw0_pm(n,1), new_deaths7w0_pm(n,1), [' ',country],'FontSize',fonte_location,"color",color,"Clipping",'on');
+ text (tot_deathsw0_pm(n,1), new_deaths7w0_pm(n,1), [' ',country_leg],'FontSize',fonte_location,"color",color,"Clipping",'on');
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Plotar novas de mortes/milhao por tempo (dia zero definido por mortes/milhao)
@@ -356,14 +356,14 @@ hold on;
 
 
  n = max(max(size(new_deaths7_pmX)));   
- if strcmp(country, 'Costa Rica          ') new_deaths7_pmX = zeros(n,1); end
- if strcmp(country, 'Paraguai             ') new_deaths7_pmX = zeros(n,1); end
- if strcmp(country, 'Venezuela          ') new_deaths7_pmX = zeros(n,1); end
- if strcmp(country, 'Uruguai              ') new_deaths7_pmX = zeros(n,1); end
+ if strcmp(country, 'Costa Rica') new_deaths7_pmX = zeros(n,1); end
+ if strcmp(country, 'Paraguay') new_deaths7_pmX = zeros(n,1); end
+ if strcmp(country, 'Venezuela') new_deaths7_pmX = zeros(n,1); end
+ if strcmp(country, 'Uruguay') new_deaths7_pmX = zeros(n,1); end
  days = 0:1:n-1;
- fig=semilogy(days,new_deaths7_pmX/7,'DisplayName',[country,'  ',num2str(tot_deaths(max(size(tot_deaths)),1)),' mortes'],"color",color,'LineWidth', linew);
+ fig=semilogy(days,new_deaths7_pmX/7,'DisplayName',[country_leg,'  ',num2str(tot_deaths(max(size(tot_deaths)),1)),' mortes'],"color",color,'LineWidth', linew);
  hold on;
- text (n-1, new_deaths7_pmX(n,1)/7, [' ',country],'FontSize',fonte_location,"color",color,"Clipping",'on');
+ text (n-1, new_deaths7_pmX(n,1)/7, [' ',country_leg],'FontSize',fonte_location,"color",color,"Clipping",'on');
 
 end
 
@@ -402,9 +402,9 @@ hold on;
 
  n = max(max(size(tot_cases_pmX)));
  days = 0:1:n-1;
- fig=semilogy(days,tot_cases_pmX,'DisplayName',[country,'  ',num2str(tot_cases(max(size(tot_cases)),1)),' casos'],"color",color,'LineWidth', linew);
+ fig=semilogy(days,tot_cases_pmX,'DisplayName',[country_leg,'  ',num2str(tot_cases(max(size(tot_cases)),1)),' casos'],"color",color,'LineWidth', linew);
  hold on;
- text (n-1, tot_cases_pmX(n,1), [' ',country],'FontSize',fonte_location,"color",color,"Clipping",'on');
+ text (n-1, tot_cases_pmX(n,1), [' ',country_leg],'FontSize',fonte_location,"color",color,"Clipping",'on');
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Plotar Casos X total de casos (por milhao de hab.)
@@ -430,10 +430,10 @@ hold on;
  new_cases7w0_pm(pos0,:) = [];
  
  n = max(max(size(tot_casesw0_pm)));
-   if strcmp(country, 'Equador         ') new_cases7w0_pm = zeros(n,1); end
- fig=loglog(tot_casesw0_pm,new_cases7w0_pm,'DisplayName',[country,'  ',num2str(tot_cases(max(size(tot_cases)),1)),' casos'],"color",color,'LineWidth', linew);
+   if strcmp(country, 'Ecuador') new_cases7w0_pm = zeros(n,1); end
+ fig=loglog(tot_casesw0_pm,new_cases7w0_pm,'DisplayName',[country_leg,'  ',num2str(tot_cases(max(size(tot_cases)),1)),' casos'],"color",color,'LineWidth', linew);
  hold on;
- text (tot_casesw0_pm(n,1), new_cases7w0_pm(n,1), [' ',country],'FontSize',fonte_location,"color",color,"Clipping",'on');
+ text (tot_casesw0_pm(n,1), new_cases7w0_pm(n,1), [' ',country_leg],'FontSize',fonte_location,"color",color,"Clipping",'on');
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Plotar Casos/milhao por tempo (dia zero definido por casos/milhao)
@@ -470,11 +470,11 @@ hold on;
 
  
  n = max(max(size(new_cases7_pmX)));
-    if strcmp(country, 'Equador         ') new_cases7_pmX = zeros(n,1); end
+    if strcmp(country, 'Ecuador') new_cases7_pmX = zeros(n,1); end
  days = 0:1:n-1;
- fig=semilogy(days,new_cases7_pmX/7,'DisplayName',[country,'  ',num2str(tot_cases(max(size(tot_cases)),1)),' casos'],"color",color,'LineWidth', linew);
+ fig=semilogy(days,new_cases7_pmX/7,'DisplayName',[country_leg,'  ',num2str(tot_cases(max(size(tot_cases)),1)),' casos'],"color",color,'LineWidth', linew);
  hold on;
- text (n-1, new_cases7_pmX(n,1)/7, [' ',country],'FontSize',fonte_location,"color",color,"Clipping",'on');
+ text (n-1, new_cases7_pmX(n,1)/7, [' ',country_leg],'FontSize',fonte_location,"color",color,"Clipping",'on');
 
 
 end
