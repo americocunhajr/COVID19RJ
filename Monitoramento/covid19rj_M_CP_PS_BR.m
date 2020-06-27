@@ -12,8 +12,7 @@ name = 'BR';
 
 %Lendo o arquivo do Brasil
 popBR = 212.559409;
-BR_all_data = readtable([pwd,'/Dados/cases-brazil-states.txt']);
-BR_data = [BR_all_data.totalCases,BR_all_data.newCases,BR_all_data.deaths,BR_all_data.newDeaths,BR_all_data.totalCases/popBR,BR_all_data.newCases/popBR,BR_all_data.deaths/popBR,BR_all_data.newDeaths/popBR];
+table = readtable([pwd,'/Dados/cases-brazil-states.txt']);
 
 Pos = [0,500,900,750];
 set(0, 'DefaultFigurePosition', Pos);
@@ -23,7 +22,7 @@ set(0, 'DefaultFigurePosition', Pos);
 
 for (init=1:1:28)
 
-clearvars -except plot_type init all_data data name BR_all_data BR_data
+clearvars -except plot_type init all_data data name table
 r = [255, 0, 0 ]/255;
 y = [255, 225, 0]/255;
 g = [0, 125, 0]/255; 
@@ -56,17 +55,21 @@ if (init == 21) country = 'RS'; color = r; end
 if (init == 24) country = 'SC'; color = r; end
 if (init == 28) country = 'TOTAL'; color = r; end
 
+%Definindo os números de casos e mortes
+tot_cases = table.totalCases(find(strcmp([table.state],country)),:);
+new_cases = table.newCases(find(strcmp([table.state],country)),:);
+tot_deaths = table.deaths(find(strcmp([table.state],country)),:);
+new_deaths = table.newDeaths(find(strcmp([table.state],country)),:);
+recovered = table.recovered(find(strcmp([table.state],country)),:);
+recovered(isnan(recovered))=0;
+active_cases = tot_cases-recovered;
 
-    location = BR_data(find(strcmp([BR_all_data.state], country)),1:8);
-    dates = BR_all_data.date(find(strcmp([BR_all_data.state],country)),:);
+dates = table.date(find(strcmp([table.state],country)),:);
 end_time = max(datenum(dates));
 
 if strcmp(country, 'TOTAL') country = 'Brasil'; end
 
-tot_cases = location(:,1);
-new_cases = location(:,2);
-tot_deaths = location(:,3);
-new_deaths = location(:,4);
+
 
 %consolidando os novos casos e mortes por semana
 for (i=7:1:max(max(size(dates))) ) 
@@ -96,6 +99,8 @@ n=n+1;
 tot_cases_X(n,1) = tot_cases(i,1);
 new_cases_X(n,1) = new_cases(i,1);
 new_cases7_X(n,1) = new_cases7(i,1);
+active_cases_X(n,1) = active_cases(i,1);
+recovered_X(n,1) = recovered(i,1);
 dates_cases(n,1) = dates(i,1);
 end
 end
@@ -147,6 +152,49 @@ datetick('x',19,'keepticks')
 title({[country]},'FontSize',11);
 
 xlabel(['Total de mortes: ',num2str(max(tot_deaths))],'FontSize', 6.5);
+
+figure(3)
+
+color = r;
+if (active_cases_X(length(active_cases_X)) < 0.5 * max(active_cases_X)) color = y; end
+if (active_cases_X(length(active_cases_X)) < 0.2 * max(active_cases_X)) color = g; end
+
+
+subplot(4,7,init)
+plot(dates_cases,active_cases_X,'linewidth',2,'color',color)
+
+yticks([])
+
+xlim([dates_cases(1,1) dates_cases(length(dates_cases),1)]);
+set(gca, 'XTick', linspace(dates_cases(1,1),datestr(end_time),3))
+set(gca,'FontSize',6.5);
+datetick('x',19,'keepticks')
+
+title({[country]},'FontSize',11);
+
+xlabel({['Casos ativos: ',num2str(max(active_cases))],' '},'FontSize', 6.5);
+% 
+% figure(4)
+% 
+% color = r;
+% if (recovered_X(length(recovered_X)) < 0.5 * max(recovered_X)) color = y; end
+% if (recovered_X(length(recovered_X)) < 0.2 * max(recovered_X)) color = g; end
+% 
+% 
+% subplot(4,7,init)
+% plot(dates_cases,recovered_X,'linewidth',2,'color',color)
+% 
+% yticks([])
+% 
+% xlim([dates_cases(1,1) dates_cases(length(dates_cases),1)]);
+% set(gca, 'XTick', linspace(dates_cases(1,1),datestr(end_time),3))
+% set(gca,'FontSize',6.5);
+% datetick('x',19,'keepticks')
+% 
+% title({[country]},'FontSize',11);
+% 
+% xlabel({['Casos ativos: ',num2str(max(active_cases))],' '},'FontSize', 6.5);
+
 end
 
 
@@ -218,6 +266,41 @@ set(ha2,'handlevisibility','off','visible','off')
 
 
 
+% figure(3)
+% sgtitle({'Brasil enfrentando o COVID-19',datestr(end_time,24),' ','Comparação da curva de casos ativos'})
+% 
+% 
+% hold on;
+% hfonte=text(max(dates)+80,0,{'Gráfico inspirado em: https://www.endcoronavirus.org/countries','Fonte: https://covid19br.wcota.me/'});
+% set(hfonte,'Rotation',90,'color',[0,0,0],'FontSize',7.5);
+% 
+% % pra botar o logo no inferior direito
+% ha =gca;
+% uistack(ha,'bottom');
+% haPos = get(ha,'position');
+% ha2=axes('position',[haPos([3 1])-[-0.62 -0.07], .2,.11,]);
+% [x, map]=imread('logo.png');
+% image(x)
+% % Setting the colormap to the colormap of the imported logo image
+% colormap (map)
+% % Turn the handlevisibility off so that we don't inadvertently plot
+% % into the axes again. Also, make the axes invisible
+% set(ha2,'handlevisibility','off','visible','off')
+% 
+% hold on;
+% 
+% ha =gca;
+% uistack(ha,'bottom');
+% haPos = get(ha,'position');
+% ha2=axes('position',[haPos([3 1])-[-0.05 -0.2], .16,.09,]);
+% [x, map]=imread('legenda.png');
+% image(x)
+% % Setting the colormap to the colormap of the imported logo image
+% colormap (map)
+% % Turn the handlevisibility off so that we don't inadvertently plot
+% % into the axes again. Also, make the axes invisible
+% set(ha2,'handlevisibility','off','visible','off')
+
 outputdir = datestr(end_time,29);
 if ~exist([pwd,'/',outputdir], 'dir')
   mkdir([pwd,'/',outputdir]);
@@ -237,7 +320,7 @@ print(figure(2),[pwd '/upload/',name,'/covid19rj_M_CP_NM_PS_NA_',name,'.png'],'-
 print(figure(2),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_CP_NM_PS_NA_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r400'); 
 
 
-close all
+% close all
 
 
 
