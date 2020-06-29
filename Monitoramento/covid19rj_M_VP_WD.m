@@ -166,9 +166,9 @@ set(gca,'FontSize',fonte_padrao)
 title({'Percentual de novas mortes por semana em relação ao total',['Comparação entre países em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
 legend ("location", "northeastoutside");
 tstart = datetime(2020,4,1,0,0,0);
-tend = datetime(2020,6,30,0,0,0);
+tend = datetime(2020,7,28,0,0,0);
 xlim([tstart tend]);
-set(gca, 'XTick', linspace(tstart,tend,9))
+set(gca, 'XTick', linspace(tstart,tend,10))
 datetick('x',19,'keepticks')
 ylim([0 120]);
 
@@ -202,13 +202,13 @@ set(gca,'FontSize',fonte_padrao)
 title({'Percentual de novos casos por semana em relação ao total',['Comparação entre países em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
 legend ("location", "northeastoutside");
 tstart = datetime(2020,4,1,0,0,0);
-tend = datetime(2020,6,30,0,0,0);
+tend = datetime(2020,7,28,0,0,0);
 xlim([tstart tend]);
-set(gca, 'XTick', linspace(tstart,tend,10))
+set(gca, 'XTick', linspace(tstart,tend,11))
 datetick('x',19,'keepticks')
 ylim([0 120]);
 
-set(gca, 'XTick', linspace(tstart,tend,10))
+
 yticks([0 20 40 60 80 100 120]);
 set(gca,'YTickLabel',{'0','20%','40%','60%','80%','100%','120%'})
 

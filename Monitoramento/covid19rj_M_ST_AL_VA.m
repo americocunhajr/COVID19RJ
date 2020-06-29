@@ -98,7 +98,7 @@ if strcmp(country, 'Peru') country_leg = 'Peru               '; end
 if strcmp(country, 'Chile') country_leg = 'Chile               '; end 
 if strcmp(country, 'Ecuador') country_leg = 'Equador          '; end 
 if strcmp(country, 'Colombia') country_leg = 'Colômbia        '; end 
-if strcmp(country, 'Argentina') country_leg = 'Argentina         '; end 
+if strcmp(country, 'Argentina') country_leg = 'Argentina       '; end 
 if strcmp(country, 'Bolivia') country_leg = 'Bolívia              '; end 
 if strcmp(country, 'Paraguay') country_leg = 'Paraguai              '; end 
 if strcmp(country, 'Uruguay') country_leg = 'Uruguai               '; end 
@@ -116,18 +116,18 @@ if (plot_type == 2)
 if (init == 1) country = 'Brazil'; color = [0,0,0]/255; linew = 1.75; end
 if (init == 2) country = 'Peru'; color = [181,147,87]/255; end
 if (init == 3) country = 'Chile'; color = [248,187,208]/255; end
-if (init == 6) country = 'Ecuador'; color = [69,169,0]/255; end
+if (init == 7) country = 'Ecuador'; color = [69,169,0]/255; end
 if (init == 5) country = 'Colombia'; color = [96,209,224]/255; end  
-if (init == 7) country = 'Argentina'; color = [255,130,113]/255; end
-if (init == 10) country = 'Bolivia'; color = [209,227,105]/255; end
+if (init == 6) country = 'Argentina'; color = [255,130,113]/255; end
+if (init == 8) country = 'Bolivia'; color = [209,227,105]/255; end
 if (init == 14) country = 'Paraguay'; color = [0,104,44]/255; end
 if (init == 15) country = 'Uruguay'; color = [0,45,135]/255; end
 if (init == 11) country = 'Venezuela'; color = [135,85,30]/255; end
 if (init == 4) country = 'Mexico'; color = [203,63,23]/255; end
-if (init == 12) country = 'Cuba'; color = [191,171,72]/255; end
-if (init == 8) country = 'Dominican Republic'; color = [236,64,122]/255; end
+if (init == 13) country = 'Cuba'; color = [191,171,72]/255; end
+if (init == 10) country = 'Dominican Republic'; color = [236,64,122]/255; end
 if (init == 9) country = 'Panama'; color = [0.4,0.4,0.4]; end
-if (init == 13) country = 'Costa Rica'; color = [0,0.5,0.6]; end
+if (init == 12) country = 'Costa Rica'; color = [0,0.5,0.6]; end
 
 
 if strcmp(country, 'Brazil')

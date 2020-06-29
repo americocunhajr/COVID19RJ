@@ -72,20 +72,20 @@ if (plot_type == 1)
 %ordem por países que tem mais morte
 if (init == 2) country = 'Brazil'; color = [0,0,0]/255; linew = 1.75; end
 if (init == 7) country = 'India'; color = [69,169,0]/255; end
-if (init == 14) country = 'Turkey'; color = [96,209,224]/255; end  
-if (init == 12) country = 'Peru'; color = [181,147,87]/255; end
-if (init == 9) country = 'Iran'; color = [255,130,113]/255; end
-if (init == 10) country = 'Germany'; color = [209,227,105]/255; end
-if (init == 16) country = 'Chile'; color = [248,187,208]/255; end
+if (init == 15) country = 'Turkey'; color = [96,209,224]/255; end  
+if (init == 10) country = 'Peru'; color = [181,147,87]/255; end
+if (init == 8) country = 'Iran'; color = [255,130,113]/255; end
+if (init == 12) country = 'Germany'; color = [209,227,105]/255; end
+if (init == 13) country = 'Chile'; color = [248,187,208]/255; end
 if (init == 1) country = 'United States'; color = [0,104,44]/255; end
-if (init == 6) country = 'France'; color = [0,45,135]/255; end
+if (init == 5) country = 'France'; color = [0,45,135]/255; end
 if (init == 3) country = 'United Kingdom'; color = [135,85,30]/255; end
 if (init == 4) country = 'Italy'; color = [203,63,23]/255; end
-if (init == 5) country = 'Spain'; color = [191,171,72]/255; end
-if (init == 8) country = 'Belgium'; color = [236,64,122]/255; end
+if (init == 6) country = 'Spain'; color = [191,171,72]/255; end
+if (init == 9) country = 'Belgium'; color = [236,64,122]/255; end
 if (init == 11) country = 'Russia'; color = [0.4,0.4,0.4]; end
-if (init == 13) country = 'Sweden'; color = [0,0.5,0.6]; end
-if (init == 15) country = 'China'; color = [185,205,140]/255; end
+if (init == 14) country = 'Sweden'; color = [0,0.5,0.6]; end
+if (init == 16) country = 'China'; color = [185,205,140]/255; end
 
 if strcmp(country, 'Brazil')
     location = BR_data(find(strcmp([BR_all_data.state], 'TOTAL')),1:8);
@@ -101,7 +101,7 @@ if strcmp(country, 'United States') country_leg = 'EUA           '; end
 if strcmp(country, 'United Kingdom') country_leg = 'Reino Unido'; end
 if strcmp(country, 'Belgium') country_leg = 'Bélgica         '; end 
 if strcmp(country, 'Brazil') country_leg = 'Brasil          '; end 
-if strcmp(country, 'Iran') country_leg = 'Irã                 '; end 
+if strcmp(country, 'Iran') country_leg = 'Irã               '; end 
 if strcmp(country, 'Peru') country_leg = 'Peru              '; end 
 if strcmp(country, 'Turkey') country_leg = 'Turquia         '; end 
 if strcmp(country, 'India') country_leg = 'Índia           '; end 
@@ -120,19 +120,19 @@ if (plot_type == 2)
 %ordem por países que tem mais caso
 if (init == 2) country = 'Brazil'; color = [0,0,0]/255; linew = 1.75; end
 if (init == 4) country = 'India'; color = [69,169,0]/255; end
-if (init == 12) country = 'Turkey'; color = [96,209,224]/255; end  
+if (init == 11) country = 'Turkey'; color = [96,209,224]/255; end  
 if (init == 6) country = 'Peru'; color = [181,147,87]/255; end
 if (init == 10) country = 'Iran'; color = [255,130,113]/255; end
-if (init == 11) country = 'Germany'; color = [209,227,105]/255; end
+if (init == 12) country = 'Germany'; color = [209,227,105]/255; end
 if (init == 9) country = 'Chile'; color = [248,187,208]/255; end
 if (init == 1) country = 'United States'; color = [0,104,44]/255; end
 if (init == 13) country = 'France'; color = [0,45,135]/255; end
 if (init == 5) country = 'United Kingdom'; color = [135,85,30]/255; end
 if (init == 8) country = 'Italy'; color = [203,63,23]/255; end
 if (init == 7) country = 'Spain'; color = [191,171,72]/255; end
-if (init == 15) country = 'Belgium'; color = [236,64,122]/255; end
+if (init == 16) country = 'Belgium'; color = [236,64,122]/255; end
 if (init == 3) country = 'Russia'; color = [0.4,0.4,0.4]; end
-if (init == 16) country = 'Sweden'; color = [0,0.5,0.6]; end
+if (init == 15) country = 'Sweden'; color = [0,0.5,0.6]; end
 if (init == 14) country = 'China'; color = [185,205,140]/255; end
 
 
@@ -166,7 +166,6 @@ if strcmp(country, 'Sweden') country_leg = 'Suécia             '; end
 if strcmp(country, 'China') country_leg = 'China              '; end 
 
 end
-
 
 
 
@@ -687,9 +686,9 @@ set(ha2,'handlevisibility','off','visible','off')
 figure(5)
 
 set(gca,'FontSize',fonte_padrao)
-title({'Mortalidade semanal da epidemia',['Comparação entre países em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
+title({'Mortalidade diária da epidemia',['Comparação entre países em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
 xlabel({['Dias desde que se ultrapassou ',num2str(X_deaths_pm),' morte'],'(por milhão de habitantes)'},'FontSize',fonte_labels);
-ylabel ({'Mortes por semana','(por milhão de habitantes)'},'FontSize',fonte_labels);
+ylabel ({'Mortes diárias','(por milhão de habitantes)'},'FontSize',fonte_labels);
 legend ("location", "northeastoutside");
 
 y_init=0.01;
@@ -743,9 +742,9 @@ set(ha2,'handlevisibility','off','visible','off')
 figure (6)
 
 set(gca,'FontSize',fonte_padrao)
-title({'Contágio semanal da epidemia',['Comparação entre países em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
+title({'Contágio diário da epidemia',['Comparação entre países em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
 xlabel({['Dias desde que se ultrapassou ',num2str(X_cases_pm),' casos'],'(por milhão de habitantes)'},'FontSize',fonte_labels);
-ylabel ({'Casos por semana','(por milhão de habitantes)'},'FontSize',fonte_labels);
+ylabel ({'Novos casos por dia','(por milhão de habitantes)'},'FontSize',fonte_labels);
 legend ("location", "northeastoutside");
 y_init=0.1;
 max_y=1000;

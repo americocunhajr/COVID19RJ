@@ -62,7 +62,7 @@ tot_deaths = table.deaths(find(strcmp([table.state],country)),:);
 new_deaths = table.newDeaths(find(strcmp([table.state],country)),:);
 recovered = table.recovered(find(strcmp([table.state],country)),:);
 recovered(isnan(recovered))=0;
-active_cases = tot_cases-recovered;
+active_cases = tot_cases-recovered - tot_deaths;
 
 dates = table.date(find(strcmp([table.state],country)),:);
 end_time = max(datenum(dates));
@@ -266,40 +266,40 @@ set(ha2,'handlevisibility','off','visible','off')
 
 
 
-% figure(3)
-% sgtitle({'Brasil enfrentando o COVID-19',datestr(end_time,24),' ','Comparação da curva de casos ativos'})
-% 
-% 
-% hold on;
-% hfonte=text(max(dates)+80,0,{'Gráfico inspirado em: https://www.endcoronavirus.org/countries','Fonte: https://covid19br.wcota.me/'});
-% set(hfonte,'Rotation',90,'color',[0,0,0],'FontSize',7.5);
-% 
-% % pra botar o logo no inferior direito
-% ha =gca;
-% uistack(ha,'bottom');
-% haPos = get(ha,'position');
-% ha2=axes('position',[haPos([3 1])-[-0.62 -0.07], .2,.11,]);
-% [x, map]=imread('logo.png');
-% image(x)
-% % Setting the colormap to the colormap of the imported logo image
-% colormap (map)
-% % Turn the handlevisibility off so that we don't inadvertently plot
-% % into the axes again. Also, make the axes invisible
-% set(ha2,'handlevisibility','off','visible','off')
-% 
-% hold on;
-% 
-% ha =gca;
-% uistack(ha,'bottom');
-% haPos = get(ha,'position');
-% ha2=axes('position',[haPos([3 1])-[-0.05 -0.2], .16,.09,]);
-% [x, map]=imread('legenda.png');
-% image(x)
-% % Setting the colormap to the colormap of the imported logo image
-% colormap (map)
-% % Turn the handlevisibility off so that we don't inadvertently plot
-% % into the axes again. Also, make the axes invisible
-% set(ha2,'handlevisibility','off','visible','off')
+figure(3)
+sgtitle({'Brasil enfrentando o COVID-19',datestr(end_time,24),' ','Comparação da curva de casos ativos'})
+
+
+hold on;
+hfonte=text(max(dates)+80,0,{'Gráfico inspirado em: https://www.endcoronavirus.org/countries','Fonte: https://covid19br.wcota.me/','Casos ativos são calculados pela subtração da soma de recuperados e óbitos dos casos acumulados.','O estado de Goiás ainda não forneceu dados sobre recuperados.'});
+set(hfonte,'Rotation',90,'color',[0,0,0],'FontSize',7.5);
+
+% pra botar o logo no inferior direito
+ha =gca;
+uistack(ha,'bottom');
+haPos = get(ha,'position');
+ha2=axes('position',[haPos([3 1])-[-0.62 -0.07], .2,.11,]);
+[x, map]=imread('logo.png');
+image(x)
+% Setting the colormap to the colormap of the imported logo image
+colormap (map)
+% Turn the handlevisibility off so that we don't inadvertently plot
+% into the axes again. Also, make the axes invisible
+set(ha2,'handlevisibility','off','visible','off')
+
+hold on;
+
+ha =gca;
+uistack(ha,'bottom');
+haPos = get(ha,'position');
+ha2=axes('position',[haPos([3 1])-[-0.05 -0.2], .16,.09,]);
+[x, map]=imread('legenda.png');
+image(x)
+% Setting the colormap to the colormap of the imported logo image
+colormap (map)
+% Turn the handlevisibility off so that we don't inadvertently plot
+% into the axes again. Also, make the axes invisible
+set(ha2,'handlevisibility','off','visible','off')
 
 outputdir = datestr(end_time,29);
 if ~exist([pwd,'/',outputdir], 'dir')
@@ -318,6 +318,9 @@ print(figure(1),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_CP_NC_PS_NA_',na
 
 print(figure(2),[pwd '/upload/',name,'/covid19rj_M_CP_NM_PS_NA_',name,'.png'],'-dpng','-r400'); 
 print(figure(2),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_CP_NM_PS_NA_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r400'); 
+
+print(figure(3),[pwd '/upload/',name,'/covid19rj_M_CP_AT_AC_NA_',name,'.png'],'-dpng','-r400'); 
+print(figure(3),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_CP_AT_AC_NA_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r400'); 
 
 
 % close all

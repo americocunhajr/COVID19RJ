@@ -47,11 +47,14 @@ table = readtable([pwd,'/Dados/cases-brazil-cities-time.txt']);
 all_dates = table.date;
 
 Data = table(table.date == (all_dates(length(all_dates))), :);
+    indices = (find(strcmp([Data.city],'CASO SEM LOCALIZAÇÃO DEFINIDA/RJ')));
+    Data(indices,:) = [];
 
 deaths = Data.deaths(find(strcmp([Data.state],'RJ')),:);
 cities = Data.city(find(strcmp([Data.state],'RJ')),:);
-[E,index] = sortrows(deaths,'descend');
 
+
+[E,index] = sortrows(deaths,'descend');
 cities_order = cities(index);
 
 %nome dos arquivos que serão salvos
