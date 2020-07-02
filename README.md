@@ -7,7 +7,7 @@ www.covid19rj.org
 ## Equipe:
 
 Professores:
-- Adriano Cortês
+- Adriano Côrtes
 - Americo Cunha
 - Karla Figueiredo
 - Lisandro Lovisolo
