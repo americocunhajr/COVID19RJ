@@ -262,7 +262,7 @@ deaths_old= [zeros(1,1) ; tot_deaths(1:end-1,:)];
 new_cases = -cases_old + tot_cases;
 new_deaths = -deaths_old + tot_deaths;
 end
-if (init == 1)
+if (init == 2)
 country = 'Nordeste        ';
 color = [0,99,181]/255;
 pop = popNORDESTE;
@@ -274,7 +274,7 @@ deaths_old= [zeros(1,1) ; tot_deaths(1:end-1,:)];
 new_cases = -cases_old + tot_cases;
 new_deaths = -deaths_old + tot_deaths;
 end
-if (init == 2)
+if (init == 1)
 country = 'Sudeste          ';
 color = [254,88,52]/255;
 pop = popSUDESTE;
@@ -299,7 +299,7 @@ new_cases = -cases_old + tot_cases;
 new_deaths = -deaths_old + tot_deaths;
 end
 if (init == 4)
-country = 'Centro-Oeste    ';
+country = 'Centro-Oeste  ';
 color = [135,85,30]/255;
 pop = popCENTRO;
 tot_cases = CENTRO(:,1);
@@ -393,7 +393,7 @@ fonte_labels = 10;
 fonte_padrao = 9; %numeros dos eixos
 fonte_location = 8;
 
-day_axis = 120;
+day_axis = 160;
 
 Pos = [250,250,600,450];
 set(0, 'DefaultFigurePosition', Pos);
@@ -628,14 +628,14 @@ y_init=1;
 max_y=10000;
 max_x=day_axis;
 
-ang = 45;
-h1=text(90,0.9*max_y,'números dobram a cada 7 dias');
+ang = 52;
+h1=text(90,0.92*max_y,'números dobram a cada 7 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 26;
-h2=text(118,0.04*max_y,'14 dias');
+ang = 32;
+h2=text(158,0.29*max_y,'14 dias');
 set(h2,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
- ang = 20;
- h3=text(118,0.006*max_y,'21 dias');
+ ang = 25;
+ h3=text(158,0.022*max_y,'21 dias');
  set(h3,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 % ang = 38;
 % h4=text(99,0.65*max_y,'8 dias');
@@ -685,14 +685,14 @@ y_init=10;
 max_y=100000;
 max_x=day_axis;
 
-ang = 45;
-h1=text(90,0.9*max_y,'números dobram a cada 7 dias');
+ang = 52;
+h1=text(90,0.92*max_y,'números dobram a cada 7 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 26;
-h2=text(118,0.04*max_y,'14 dias');
+ang = 32;
+h2=text(158,0.29*max_y,'14 dias');
 set(h2,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
- ang = 20;
- h3=text(118,0.006*max_y,'21 dias');
+ ang = 25;
+ h3=text(158,0.022*max_y,'21 dias');
  set(h3,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 % ang = 38;
 % h4=text(99,0.65*max_y,'8 dias');
@@ -776,8 +776,8 @@ ylabel({'Casos por semana','(por milhão de habitantes)'},'FontSize',fonte_label
 xlabel ({'Total de casos','(por milhão de habitantes)'},'FontSize',fonte_labels);
 legend ("location", "northwest");
 
-max_x = 1000000;
-max_y = 100000;
+max_x = 200000;
+max_y = 20000;
 axis([100 max_x 100 max_y]);
 
 

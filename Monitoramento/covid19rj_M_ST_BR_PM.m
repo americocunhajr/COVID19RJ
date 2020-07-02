@@ -214,16 +214,16 @@ if (init == 9) country = 'CE'; color = [0,116,136]/255; pop = 9132078; end
 if (init == 7) country = 'MA'; color = [0,74,84]/255; pop = 7075181; end
 if (init == 3) country = 'PB'; color = [27,78,142]/255; pop = 4018127; end
 if (init == 8) country = 'PE'; color = [0,99,181]/255; pop = 9557071; end
-if (init == 2) country = 'PI'; color = [0,45,135]/255; pop = 3273227; end
+if (init == 1) country = 'PI'; color = [0,45,135]/255; pop = 3273227; end
 if (init == 4) country = 'RN'; color = [0,34,80]/255; pop = 3506853; end
-if (init == 1) country = 'SE'; color = [0,20,37]/255; pop = 2298696; end
+if (init == 2) country = 'SE'; color = [0,20,37]/255; pop = 2298696; end
 end
 
 if (regions == 3)
 if (init == 0) country = 'BR'; color = [0,0,0]/255; pop = popBR; end
-if (init == 4) country = 'DF'; color = [181,147,87]/255; pop = 3015268; end
+if (init == 3) country = 'DF'; color = [181,147,87]/255; pop = 3015268; end
 if (init == 2) country = 'GO'; color = [135,85,30]/255; pop = 7018354; end
-if (init == 3) country = 'MT'; color = [110,71,28]/255; pop = 3484466; end
+if (init == 4) country = 'MT'; color = [110,71,28]/255; pop = 3484466; end
 if (init == 1) country = 'MS'; color = [86,62,32]/255; pop = 2778986; end
 end
 
@@ -300,15 +300,15 @@ if strcmp(country, 'CE') country = 'CE   '; end
 if strcmp(country, 'PE') country = 'PE   '; end 
 if strcmp(country, 'MA') country = 'MA  '; end 
 if strcmp(country, 'BA') country = 'BA   '; end 
-if strcmp(country, 'PB') country = 'PB     '; end 
-if strcmp(country, 'AL') country = 'AL     '; end 
-if strcmp(country, 'RN') country = 'RN     '; end 
+if strcmp(country, 'PB') country = 'PB   '; end 
+if strcmp(country, 'AL') country = 'AL   '; end 
+if strcmp(country, 'RN') country = 'RN   '; end 
 if strcmp(country, 'PI') country = 'PI      '; end 
 if strcmp(country, 'SE') country = 'SE     '; end 
 if strcmp(country, 'SP') country = 'SP'; end 
-if strcmp(country, 'RJ') country = 'RJ   '; end 
+if strcmp(country, 'RJ') country = 'RJ '; end 
 if strcmp(country, 'ES') country = 'ES  '; end 
-if strcmp(country, 'MG') country = 'MG   '; end 
+if strcmp(country, 'MG') country = 'MG '; end 
 if strcmp(country, 'GO') country = 'GO    '; end 
 if strcmp(country, 'DF') country = 'DF    '; end 
 if strcmp(country, 'MT') country = 'MT    '; end 
@@ -419,7 +419,7 @@ if strcmp(country, 'AP') country = 'AP     '; end
 if strcmp(country, 'AC') country = 'AC    '; end 
 if strcmp(country, 'RO') country = 'RO    '; end 
 if strcmp(country, 'RR') country = 'RR    '; end 
-if strcmp(country, 'TO') country = 'TO      '; end 
+if strcmp(country, 'TO') country = 'TO    '; end 
 if strcmp(country, 'CE') country = 'CE   '; end 
 if strcmp(country, 'PE') country = 'PE     '; end 
 if strcmp(country, 'MA') country = 'MA    '; end 
@@ -518,7 +518,7 @@ fonte_labels = 10;
 fonte_padrao = 9; %numeros dos eixos
 fonte_location = 8;
 
-day_axis = 120;
+day_axis = 160;
 
 Pos = [250,250,600,450];
 set(0, 'DefaultFigurePosition', Pos);
@@ -763,14 +763,14 @@ y_init=1;
 max_y=10000;
 max_x=day_axis;
 
-ang = 45;
-h1=text(90,0.9*max_y,'números dobram a cada 7 dias');
+ang = 52;
+h1=text(90,0.92*max_y,'números dobram a cada 7 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 26;
-h2=text(118,0.04*max_y,'14 dias');
+ang = 32;
+h2=text(158,0.29*max_y,'14 dias');
 set(h2,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
- ang = 20;
- h3=text(118,0.0058*max_y,'21 dias');
+ ang = 25;
+ h3=text(158,0.022*max_y,'21 dias');
  set(h3,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 % ang = 38;
 % h4=text(99,0.65*max_y,'8 dias');
@@ -826,14 +826,14 @@ y_init=10;
 max_y=100000;
 max_x=day_axis;
 
-ang = 45;
-h1=text(90,0.9*max_y,'números dobram a cada 7 dias');
+ang = 52;
+h1=text(90,0.92*max_y,'números dobram a cada 7 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 26;
-h2=text(118,0.04*max_y,'14 dias');
+ang = 32;
+h2=text(158,0.29*max_y,'14 dias');
 set(h2,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
- ang = 20;
- h3=text(118,0.0058*max_y,'21 dias');
+ ang = 25;
+ h3=text(158,0.022*max_y,'21 dias');
  set(h3,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 % ang = 38;
 % h4=text(99,0.65*max_y,'8 dias');
@@ -927,12 +927,12 @@ legend = "off";
 end
 ylabel({'Casos por semana','(por milhão de habitantes)'},'FontSize',fonte_labels);
 xlabel ({'Total de casos','(por milhão de habitantes)'},'FontSize',fonte_labels);
-max_x = 1000000;
-max_y = 100000;
+max_x = 200000;
+max_y = 20000;
 axis([100 max_x 100 max_y]);
 
 
-set(gca,'YTickLabel',{'100','1k','10k''100k'})
+set(gca,'YTickLabel',{'100','1k','10k','100k'})
 set(gca,'XTickLabel',{'100','1k','10k','100k','1M'})
 
 hfonte=text(max_x,max_y,'Fonte: https://covid19br.wcota.me/');

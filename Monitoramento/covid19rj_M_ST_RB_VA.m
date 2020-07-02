@@ -258,7 +258,7 @@ deaths_old= [zeros(1,1) ; tot_deaths(1:end-1,:)];
 new_cases = -cases_old + tot_cases;
 new_deaths = -deaths_old + tot_deaths;
 end
-if (init == 1)
+if (init == 2)
 country = 'Nordeste        ';
 color = [0,99,181]/255;
 pop = popNORDESTE;
@@ -270,7 +270,7 @@ deaths_old= [zeros(1,1) ; tot_deaths(1:end-1,:)];
 new_cases = -cases_old + tot_cases;
 new_deaths = -deaths_old + tot_deaths;
 end
-if (init == 2)
+if (init == 1)
 country = 'Sudeste          ';
 color = [254,88,52]/255;
 pop = popSUDESTE;
@@ -295,7 +295,7 @@ new_cases = -cases_old + tot_cases;
 new_deaths = -deaths_old + tot_deaths;
 end
 if (init == 4)
-country = 'Centro-Oeste    ';
+country = 'Centro-Oeste  ';
 color = [135,85,30]/255;
 pop = popCENTRO;
 tot_cases = CENTRO(:,1);
@@ -390,7 +390,7 @@ fonte_labels = 10;
 fonte_padrao = 9; %numeros dos eixos
 fonte_location = 8;
 
-day_axis = 120;
+day_axis = 160;
 
 Pos = [250,250,600,450];
 set(0, 'DefaultFigurePosition', Pos);
@@ -639,14 +639,14 @@ y_init=10;
 max_y=1000000;
 max_x=day_axis;
 
-ang = 38;
-h1=text(113,0.9*max_y,'números dobram a cada 7 dias');
+ang = 47;
+h1=text(113,0.93*max_y,'números dobram a cada 7 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 24;
-h2=text(118,0.0044*max_y,'14 dias');
+ang = 26;
+h2=text(158,0.03*max_y,'14 dias');
 set(h2,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
- ang = 15;
- h3=text(118,0.0006*max_y,'21 dias');
+ ang = 19;
+ h3=text(158,0.0023*max_y,'21 dias');
  set(h3,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 % ang = 38;
 % h4=text(99,0.65*max_y,'8 dias');
@@ -696,14 +696,14 @@ y_init=100;
 max_y=10000000;
 max_x=day_axis;
 
-ang = 38;
-h1=text(113,0.9*max_y,'números dobram a cada 7 dias');
+ang = 47;
+h1=text(113,0.93*max_y,'números dobram a cada 7 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 24;
-h2=text(118,0.0044*max_y,'14 dias');
+ang = 26;
+h2=text(158,0.03*max_y,'14 dias');
 set(h2,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
- ang = 15;
- h3=text(118,0.0006*max_y,'21 dias');
+ ang = 19;
+ h3=text(158,0.0023*max_y,'21 dias');
  set(h3,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 % ang = 38;
 % h4=text(99,0.65*max_y,'8 dias');
