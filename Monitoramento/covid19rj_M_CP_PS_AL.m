@@ -71,6 +71,12 @@ new_cases(isnan(new_cases))=0;
 tot_deaths(isnan(tot_deaths))=0;
 new_deaths(isnan(new_deaths))=0;
 
+ %Tirando os numeros menores que zero dos novos casos e mortes
+ posc0 = new_cases(:,1) <= 0;
+ new_cases(posc0,:) = 0;
+ posd0 = new_deaths(:,1) <= 0;
+ new_deaths(posd0,:) = 0;
+
 %consolidando os novos casos e mortes por semana
 for (i=7:1:max(max(size(dates))) ) 
 new_cases7(i,1) = new_cases(i,1)+new_cases(i-1,1)+new_cases(i-2,1)+new_cases(i-3,1)+new_cases(i-4,1)+new_cases(i-5,1)+new_cases(i-6,1);
@@ -154,10 +160,10 @@ end
 
 
 figure(1)
-sgtitle({'América Latina enfrentando o COVID-19',datestr(end_time,24),' ','Comparação da curva de novos casos por semana'})
+sgtitle({'América Latina enfrentando a Covid-19',datestr(end_time,24),' ','Comparação da curva de novos casos por semana'})
 
 hold on;
-hfonte=text(max(dates)+165,0,{'Gráfico inspirado em: https://www.endcoronavirus.org/countries','Fonte: https://ourworldindata.org/coronavirus-source-data'});
+hfonte=text(max(dates)+185,0,{'Gráfico inspirado em: https://www.endcoronavirus.org/countries','Fonte: https://ourworldindata.org/coronavirus-source-data'});
 set(hfonte,'Rotation',90,'color',[0,0,0],'FontSize',7.5);
 
 % pra botar o logo no inferior direito
@@ -187,10 +193,10 @@ set(ha2,'handlevisibility','off','visible','off')
 
 
 figure(2)
-sgtitle({'América Latina enfrentando o COVID-19',datestr(end_time,24),' ','Comparação da curva de novas mortes por semana'})
+sgtitle({'América Latina enfrentando a Covid-19',datestr(end_time,24),' ','Comparação da curva de novas mortes por semana'})
 
 hold on;
-hfonte=text(max(dates)+135,0,{'Gráfico inspirado em: https://www.endcoronavirus.org/countries','Fonte: https://ourworldindata.org/coronavirus-source-data'});
+hfonte=text(max(dates)+165,0,{'Gráfico inspirado em: https://www.endcoronavirus.org/countries','Fonte: https://ourworldindata.org/coronavirus-source-data'});
 set(hfonte,'Rotation',90,'color',[0,0,0],'FontSize',7.5);
 
 % pra botar o logo no inferior direito

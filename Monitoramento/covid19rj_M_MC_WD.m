@@ -338,12 +338,15 @@ for i=1:length(Estados)
     img_obitos_diarios(i,max_size-height(tabela_aux)+1:end) = tabela.new_deaths;
     img_casos_acumulados(i,max_size-height(tabela_aux)+1:end) = tabela.total_cases;
     img_obitos_acumulados(i,max_size-height(tabela_aux)+1:end) = tabela.total_deaths;
-    end
+    end  
 end
+
 img_casos_acumulados(isnan(img_casos_acumulados))=0;
 img_obitos_acumulados(isnan(img_obitos_acumulados))=0;
 img_casos_diarios(isnan(img_casos_diarios))=0;
-img_obitos_diarios(isnan(img_obitos_diarios))=0;
+img_casos_diarios(isnan(img_obitos_diarios))=0;
+
+
 
 
     end_date = datestr(datenum(max(arquivogeral.date)-1));

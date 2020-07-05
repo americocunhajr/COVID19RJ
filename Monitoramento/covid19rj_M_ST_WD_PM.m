@@ -73,7 +73,7 @@ if (plot_type == 1)
 if (init == 2) country = 'Brazil'; color = [0,0,0]/255; linew = 1.75; end
 if (init == 7) country = 'India'; color = [69,169,0]/255; end
 if (init == 15) country = 'Turkey'; color = [96,209,224]/255; end  
-if (init == 10) country = 'Peru'; color = [181,147,87]/255; end
+if (init == 9) country = 'Peru'; color = [181,147,87]/255; end
 if (init == 8) country = 'Iran'; color = [255,130,113]/255; end
 if (init == 12) country = 'Germany'; color = [209,227,105]/255; end
 if (init == 13) country = 'Chile'; color = [248,187,208]/255; end
@@ -82,8 +82,8 @@ if (init == 5) country = 'France'; color = [0,45,135]/255; end
 if (init == 3) country = 'United Kingdom'; color = [135,85,30]/255; end
 if (init == 4) country = 'Italy'; color = [203,63,23]/255; end
 if (init == 6) country = 'Spain'; color = [191,171,72]/255; end
-if (init == 9) country = 'Belgium'; color = [236,64,122]/255; end
-if (init == 11) country = 'Russia'; color = [0.4,0.4,0.4]; end
+if (init == 11) country = 'Belgium'; color = [236,64,122]/255; end
+if (init == 10) country = 'Russia'; color = [0.4,0.4,0.4]; end
 if (init == 14) country = 'Sweden'; color = [0,0.5,0.6]; end
 if (init == 16) country = 'China'; color = [185,205,140]/255; end
 
@@ -102,7 +102,7 @@ if strcmp(country, 'United Kingdom') country_leg = 'Reino Unido'; end
 if strcmp(country, 'Belgium') country_leg = 'Bélgica         '; end 
 if strcmp(country, 'Brazil') country_leg = 'Brasil          '; end 
 if strcmp(country, 'Iran') country_leg = 'Irã               '; end 
-if strcmp(country, 'Peru') country_leg = 'Peru              '; end 
+if strcmp(country, 'Peru') country_leg = 'Peru            '; end 
 if strcmp(country, 'Turkey') country_leg = 'Turquia         '; end 
 if strcmp(country, 'India') country_leg = 'Índia           '; end 
 if strcmp(country, 'Chile') country_leg = 'Chile             '; end 
@@ -110,7 +110,7 @@ if strcmp(country, 'France') country_leg = 'França        '; end
 if strcmp(country, 'Spain') country_leg = 'Espanha     '; end 
 if strcmp(country, 'Italy') country_leg = 'Itália           '; end 
 if strcmp(country, 'Germany') country_leg = 'Alemanha     '; end 
-if strcmp(country, 'Russia') country_leg = 'Rússia           '; end 
+if strcmp(country, 'Russia') country_leg = 'Rússia         '; end 
 if strcmp(country, 'Sweden') country_leg = 'Suécia           '; end 
 if strcmp(country, 'China') country_leg = 'China            '; end 
 
@@ -121,19 +121,20 @@ if (plot_type == 2)
 if (init == 2) country = 'Brazil'; color = [0,0,0]/255; linew = 1.75; end
 if (init == 4) country = 'India'; color = [69,169,0]/255; end
 if (init == 11) country = 'Turkey'; color = [96,209,224]/255; end  
-if (init == 6) country = 'Peru'; color = [181,147,87]/255; end
+if (init == 5) country = 'Peru'; color = [181,147,87]/255; end
 if (init == 10) country = 'Iran'; color = [255,130,113]/255; end
 if (init == 12) country = 'Germany'; color = [209,227,105]/255; end
-if (init == 9) country = 'Chile'; color = [248,187,208]/255; end
+if (init == 6) country = 'Chile'; color = [248,187,208]/255; end
 if (init == 1) country = 'United States'; color = [0,104,44]/255; end
 if (init == 13) country = 'France'; color = [0,45,135]/255; end
-if (init == 5) country = 'United Kingdom'; color = [135,85,30]/255; end
-if (init == 8) country = 'Italy'; color = [203,63,23]/255; end
-if (init == 7) country = 'Spain'; color = [191,171,72]/255; end
+if (init == 7) country = 'United Kingdom'; color = [135,85,30]/255; end
+if (init == 9) country = 'Italy'; color = [203,63,23]/255; end
+if (init == 8) country = 'Spain'; color = [191,171,72]/255; end
 if (init == 16) country = 'Belgium'; color = [236,64,122]/255; end
 if (init == 3) country = 'Russia'; color = [0.4,0.4,0.4]; end
 if (init == 15) country = 'Sweden'; color = [0,0.5,0.6]; end
 if (init == 14) country = 'China'; color = [185,205,140]/255; end
+
 
 
 if strcmp(country, 'Brazil')
@@ -251,7 +252,7 @@ fonte_labels = 10;
 fonte_padrao = 9; %numeros dos eixos
 fonte_location = 8;
 
-day_axis = 160;
+day_axis = 200;
 
 Pos = [0,250,900,450];
 set(0, 'DefaultFigurePosition', Pos);
@@ -489,16 +490,16 @@ legend ("location", "northeastoutside");
 
 y_init=1;
 max_y=10000;
-ang = 64;
-h1=text(51,0.9*max_y,'números dobram a cada 4 dias');
+ang = 68;
+h1=text(50.5,0.9*max_y,'números dobram a cada 4 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 58;
+ang = 66;
 h2=text(64,0.9*max_y,'5 dias');
 set(h2,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 53;
+ang = 59;
 h3=text(76.9,0.9*max_y,'6 dias');
 set(h3,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 51;
+ang = 57;
 h4=text(90,0.9*max_y,'7 dias');
 set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 
@@ -547,16 +548,16 @@ legend ("location", "northeastoutside");
 
 y_init=10;
 max_y=100000;
-ang = 64;
-h1=text(51,0.9*max_y,'números dobram a cada 4 dias');
+ang = 68;
+h1=text(50.5,0.9*max_y,'números dobram a cada 4 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 58;
+ang = 66;
 h2=text(64,0.9*max_y,'5 dias');
 set(h2,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 53;
+ang = 59;
 h3=text(76.9,0.9*max_y,'6 dias');
 set(h3,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 51;
+ang = 57;
 h4=text(90,0.9*max_y,'7 dias');
 set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 
@@ -606,7 +607,8 @@ axis([1 max_x 1 max_y]);
 set(gca,'YTickLabel',{'1','10','100','1k'})
 set(gca,'XTickLabel',{'1','10','100','1k','10k'})
 
-hfonte=text(max_x,max_y,'Fonte: https://ourworldindata.org/coronavirus-source-data');
+
+hfonte=text(max_x,max_y,{'Gráfico inspirado em: https://aatishb.com/covidtrends/','Fonte: https://ourworldindata.org/coronavirus-source-data'});
 set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
 
 dim = [0.705 0.035 0.8 0.2];
@@ -648,11 +650,10 @@ max_y = 10000;
 axis([10 max_x 10 max_y]);
 
 
-
 set(gca,'YTickLabel',{'10','100','1k','10k'})
 set(gca,'XTickLabel',{'10','100','1k','10k','100k'})
 
-hfonte=text(max_x,max_y,'Fonte: https://ourworldindata.org/coronavirus-source-data');
+hfonte=text(max_x,max_y,{'Gráfico inspirado em: https://aatishb.com/covidtrends/','Fonte: https://ourworldindata.org/coronavirus-source-data'});
 set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
 
 % dim = [0.705 0.035 0.8 0.2];

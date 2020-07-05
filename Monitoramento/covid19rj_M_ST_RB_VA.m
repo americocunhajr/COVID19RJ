@@ -754,7 +754,7 @@ axis([10 max_x 10 max_y]);
 set(gca,'YTickLabel',{'10','100','1k','10k','100k'})
 set(gca,'XTickLabel',{'10','100','1k','10k','100k','1M'})
 
-hfonte=text(max_x,max_y,'Fonte: https://covid19br.wcota.me/');
+hfonte=text(max_x,max_y,{'Gráfico inspirado em: https://aatishb.com/covidtrends/','Fonte: https://covid19br.wcota.me/'});
 set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
 
 % pra botar o logo no inferior direito
@@ -795,7 +795,7 @@ axis([100 max_x 100 max_y]);
 set(gca,'YTickLabel',{'100','1k','10k','100k','1M'})
 set(gca,'XTickLabel',{'100','1k','10k','100k','1M','10M'})
 
-hfonte=text(max_x,max_y,'Fonte: https://covid19br.wcota.me/');
+hfonte=text(max_x,max_y,{'Gráfico inspirado em: https://aatishb.com/covidtrends/','Fonte: https://covid19br.wcota.me/'});
 set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
 
 % pra botar o logo no inferior direito

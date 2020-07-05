@@ -94,12 +94,12 @@ end_time = max(datenum(dates))-1;
 end
 
 if strcmp(country, 'Brazil') country_leg = 'Brasil           '; end 
-if strcmp(country, 'Peru') country_leg = 'Peru               '; end
+if strcmp(country, 'Peru') country_leg = 'Peru             '; end
 if strcmp(country, 'Chile') country_leg = 'Chile               '; end 
 if strcmp(country, 'Ecuador') country_leg = 'Equador          '; end 
 if strcmp(country, 'Colombia') country_leg = 'Colômbia        '; end 
 if strcmp(country, 'Argentina') country_leg = 'Argentina       '; end 
-if strcmp(country, 'Bolivia') country_leg = 'Bolívia              '; end 
+if strcmp(country, 'Bolivia') country_leg = 'Bolívia            '; end 
 if strcmp(country, 'Paraguay') country_leg = 'Paraguai              '; end 
 if strcmp(country, 'Uruguay') country_leg = 'Uruguai               '; end 
 if strcmp(country, 'Venezuela') country_leg = 'Venezuela           '; end 
@@ -140,11 +140,11 @@ else
 end_time = max(datenum(dates))-1;
 end
 
-if strcmp(country, 'Brazil') country_leg = 'Brasil          '; end 
+if strcmp(country, 'Brazil') country_leg = 'Brasil           '; end 
 if strcmp(country, 'Peru') country_leg = 'Peru              '; end
 if strcmp(country, 'Chile') country_leg = 'Chile             '; end 
 if strcmp(country, 'Ecuador') country_leg = 'Equador          '; end 
-if strcmp(country, 'Colombia') country_leg = 'Colômbia        '; end 
+if strcmp(country, 'Colombia') country_leg = 'Colômbia      '; end 
 if strcmp(country, 'Argentina') country_leg = 'Argentina        '; end 
 if strcmp(country, 'Bolivia') country_leg = 'Bolívia             '; end 
 if strcmp(country, 'Paraguay') country_leg = 'Paraguai            '; end 
@@ -623,7 +623,8 @@ axis([1 max_x 1 max_y]);
 set(gca,'YTickLabel',{'1','10','100','1k','10k','100k'})
 set(gca,'XTickLabel',{'1','10','100','1k','10k','100k','1M'})
 
-hfonte=text(max_x,max_y,'Fonte: https://ourworldindata.org/coronavirus-source-data');
+
+hfonte=text(max_x,max_y,{'Gráfico inspirado em: https://aatishb.com/covidtrends/','Fonte: https://ourworldindata.org/coronavirus-source-data'});
 set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
 
 dim = [0.705 0.035 0.8 0.2];
@@ -666,7 +667,8 @@ axis([100 max_x 100 max_y]);
 set(gca,'YTickLabel',{'100','1k','10k','100k','1M'})
 set(gca,'XTickLabel',{'100','1k','10k','100k','1M','10M'})
 
-hfonte=text(max_x,max_y,'Fonte: https://ourworldindata.org/coronavirus-source-data');
+
+hfonte=text(max_x,max_y,{'Gráfico inspirado em: https://aatishb.com/covidtrends/','Fonte: https://ourworldindata.org/coronavirus-source-data'});
 set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
 
 dim = [0.705 0.035 0.8 0.2];

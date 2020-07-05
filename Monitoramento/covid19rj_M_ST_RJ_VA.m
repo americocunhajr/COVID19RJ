@@ -24,9 +24,9 @@ clearvars -except plot_type init table data name
 if (plot_type == 1)
 
 if (init == 1) city = 'Rio de Janeiro/RJ'; pop = 6718903; color = [69,169,0]/255; end
-if (init == 2) city = 'Duque de Caxias/RJ'; pop = 919596; color = [96,209,224]/255; end
+if (init == 3) city = 'Duque de Caxias/RJ'; pop = 919596; color = [96,209,224]/255; end
 if (init == 4) city = 'Nova Iguaçu/RJ'; pop = 821128; color = [181,147,87]/255; end
-if (init == 3) city = 'São Gonçalo/RJ'; pop = 1084839; color = [255,130,113]/255; end
+if (init == 2) city = 'São Gonçalo/RJ'; pop = 1084839; color = [255,130,113]/255; end
 if (init == 6) city = 'Niterói/RJ'; pop = 524687; color = [209,227,105]/255; end
 if (init == 7) city = 'Belford Roxo/RJ'; pop = 508013; color = [248,187,208]/255; end
 if (init == 5) city = 'São João de Meriti/RJ'; pop = 472406; color = [0,104,44]/255; end
@@ -68,12 +68,12 @@ if (init == 4) city = 'Nova Iguaçu/RJ'; pop = 821128; color = [181,147,87]/255;
 if (init == 3) city = 'São Gonçalo/RJ'; pop = 1084839; color = [255,130,113]/255; end
 if (init == 2) city = 'Niterói/RJ'; pop = 524687; color = [209,227,105]/255; end
 if (init == 10) city = 'Belford Roxo/RJ'; pop = 508013; color = [248,187,208]/255; end
-if (init == 9) city = 'São João de Meriti/RJ'; pop = 472406; color = [0,104,44]/255; end
+if (init == 8) city = 'São João de Meriti/RJ'; pop = 472406; color = [0,104,44]/255; end
 if (init == 6) city = 'Itaboraí/RJ'; pop = 240592; color = [0,45,135]/255; end
 if (init == 12) city = 'Mesquita/RJ'; pop = 176103; color = [135,85,30]/255; end
 if (init == 11) city = 'Petrópolis/RJ'; pop = 306191; color = [203,63,23]/255; end
 if (init == 7) city = 'Volta Redonda/RJ'; pop = 273012; color = [191,171,72]/255; end
-if (init == 8) city = 'Magé/RJ'; pop = 260497; color = [236,64,122]/255; end
+if (init == 9) city = 'Magé/RJ'; pop = 260497; color = [236,64,122]/255; end
 
 %Definindo os números de casos e mortes
 tot_cases = table.totalCases(find(strcmp([table.city],city)),:);
@@ -107,6 +107,7 @@ tot_cases_pm = tot_cases / ( pop / 1000000 );
 new_cases_pm = new_cases / ( pop / 1000000 );
 tot_deaths_pm = tot_deaths / ( pop / 1000000 );
 new_deaths_pm = new_deaths / ( pop / 1000000 );
+
 
 
 %consolidando os Casos e mortes por semana
@@ -529,7 +530,7 @@ axis([1 max_x 1 max_y]);
 set(gca,'YTickLabel',{'1','10','100','1k','10k'})
 set(gca,'XTickLabel',{'1','10','100','1k','10k','100k'})
 
-hfonte=text(max_x,max_y,'Fonte: https://covid19br.wcota.me/');
+hfonte=text(max_x,max_y,{'Gráfico inspirado em: https://aatishb.com/covidtrends','Fonte: https://covid19br.wcota.me/'});
 set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
 
 
@@ -569,9 +570,8 @@ axis([10 max_x 10 max_y]);
 set(gca,'YTickLabel',{'10','100','1k','10k','10k'})
 set(gca,'XTickLabel',{'10','100','1k','10k','100k','1M'})
 
-hfonte=text(max_x,max_y,'Fonte: https://covid19br.wcota.me/');
+hfonte=text(max_x,max_y,{'Gráfico inspirado em: https://aatishb.com/covidtrends','Fonte: https://covid19br.wcota.me/'});
 set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
-
 
 % pra botar o logo no inferior direito
 ha =gca;
@@ -622,8 +622,9 @@ max_x=day_axis;
 
 set(gca,'YTickLabel',{'0.1','1','10','100','1k','10k','100k'})
 
-hfonte=text(max_x,max_y,'Fonte: https://covid19br.wcota.me/');
+hfonte=text(max_x,max_y,{'Fonte: https://covid19br.wcota.me/'});
 set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
+
 
 axis([0 max_x y_init max_y]);
 Pos = [250,250,600,450];

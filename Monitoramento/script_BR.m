@@ -24,4 +24,4 @@ covid19rj_M_CP_PS_BR
 
 
 script_RJ
-% script_WD
+%script_WD
