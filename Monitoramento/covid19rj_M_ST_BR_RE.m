@@ -48,7 +48,7 @@ b(2).EdgeColor = [0 0.4470 0.7410];
 b(3).EdgeColor = [0.8500 0.3250 0.0980];
 
 
-tend = datetime(2020,7,5,0,0,0);
+tend = datetime(2020,7,12,0,0,0);
 xlim([tstart tend]);
 set(gca, 'XTick', linspace(tstart,tend,12))
 datetick('x',19,'keepticks')
@@ -59,7 +59,7 @@ set(gca, 'YTick', 0:250000:max_y)
 set(gca,'YTickLabel',{'0','250k','500k','750k','1M','1.25M','1.5M','1.75M','2M'})
 
 
-legend(strcat("Casos ativos:  ", num2str( sprintf( '%06d', max(BRASIL(:,1)) ))),strcat("Recuperados: ", num2str(sprintf( '%06d', max(BRASIL(:,2)) ))),strcat("Óbitos:           ", num2str( sprintf( '%06d', max(BRASIL(:,3))) )));
+legend(strcat("Casos ativos:  ", num2str( sprintf( '%07d', max(BRASIL(:,1)) ))),strcat("Recuperados: ", num2str(sprintf( '%07d', max(BRASIL(:,2)) ))),strcat("Óbitos:           ", num2str( sprintf( '%07d', max(BRASIL(:,3))) )));
 legend("location","northwest");
 
 legend("FontSize",9);
@@ -159,7 +159,7 @@ p2 = plot(dates,BRASIL(:,3),'linewidth',2,'color',[0 0.4470 0.7410]);
 hold on
 p3 = plot(dates,BRASIL(:,4),'linewidth',2,'color',[0.8500 0.3250 0.0980]);
 
-tend = datetime(2020,7,5,0,0,0);
+tend = datetime(2020,7,12,0,0,0);
 xlim([tstart tend]);
 set(gca, 'XTick', linspace(tstart,tend,12))
 datetick('x',19,'keepticks')
@@ -170,7 +170,7 @@ set(gca, 'YTick', 0:250000:max_y)
 set(gca,'YTickLabel',{'0','250k','500k','750k''1M','1.25M','1.5M','1.75M','2M'})
 
 
-legend(strcat("Total de casos: ", num2str(sprintf( '%06d', max(BRASIL(:,1)) ))),strcat("Casos ativos:      ", num2str( sprintf( '%06d', max(BRASIL(:,2)) ))), strcat("Recuperados:     ", num2str(sprintf( '%06d', max(BRASIL(:,3)) ))),strcat("Óbitos:               ", num2str( sprintf( '%06d', max(BRASIL(:,4))) )));
+legend(strcat("Total de casos: ", num2str(sprintf( '%07d', max(BRASIL(:,1)) ))),strcat("Casos ativos:    ", num2str( sprintf( '%07d', max(BRASIL(:,2)) ))), strcat("Recuperados:   ", num2str(sprintf( '%07d', max(BRASIL(:,3)) ))),strcat("Óbitos:             ", num2str( sprintf( '%07d', max(BRASIL(:,4))) )));
 legend("location","northwest");
 
 legend("FontSize",9);

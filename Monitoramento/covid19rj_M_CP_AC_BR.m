@@ -155,10 +155,10 @@ set(gca,'XTickLabel',Estados_leg, 'FontSize',9);
 xtickangle(45);
 
 ymin = 0;
-ymax = 800;
+ymax =900;
 set(gca,'YLim',[ymin ymax]);
 set(gca, 'YTick', ymin:100:ymax);
-set(gca,'YTickLabel',{'0','100','200','300','400','500','600','700','800'});
+set(gca,'YTickLabel',{'0','100','200','300','400','500','600','700','800','900'});
 set(gca,'YGrid', 'on');
 title({'Mortes acumuladas por milhão de habitantes',['Estados do Brasil em ',datestr(end_time,24)]},'FontSize',11);
 
@@ -195,10 +195,10 @@ set(gca,'XTickLabel',Estados_leg, 'FontSize',9);
 xtickangle(45);
 
 ymin = 0;
-ymax = 15;
+ymax = 12;
 set(gca,'YLim',[ymin ymax]);
-set(gca, 'YTick', ymin:5:ymax);
-set(gca,'YTickLabel',{'0','5%','10%','15%','20%','25%'});
+set(gca, 'YTick', ymin:2:ymax);
+set(gca,'YTickLabel',{'0','2%','4%','6%','8%','10%','12%','14%','16%','18%','20%'});
 set(gca,'YGrid', 'on');
 title({'Letalidade em relação aos casos confirmados',['Estados do Brasil em ',datestr(end_time,24)]},'FontSize',11);
 

@@ -173,7 +173,7 @@ popCENTRO = popMS + popMT + popGO + popDF;
 if (plot_type == 1)
 %ordem por países que tem mais morte
 if (init == 3)
-country = 'Norte              ';
+country = 'Norte            ';
 color = [0,169,74]/255; 
 pop = popNORTE;
 tot_cases = NORTE(:,1);
