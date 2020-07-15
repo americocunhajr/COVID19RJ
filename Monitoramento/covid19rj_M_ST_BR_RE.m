@@ -48,9 +48,9 @@ b(2).EdgeColor = [0 0.4470 0.7410];
 b(3).EdgeColor = [0.8500 0.3250 0.0980];
 
 
-tend = datetime(2020,7,12,0,0,0);
+tend = datetime(2020,7,19,0,0,0);
 xlim([tstart tend]);
-set(gca, 'XTick', linspace(tstart,tend,12))
+set(gca, 'XTick', linspace(tstart,tend,13))
 datetick('x',19,'keepticks')
 max_x=tend;
 max_y=2000000;
@@ -159,9 +159,9 @@ p2 = plot(dates,BRASIL(:,3),'linewidth',2,'color',[0 0.4470 0.7410]);
 hold on
 p3 = plot(dates,BRASIL(:,4),'linewidth',2,'color',[0.8500 0.3250 0.0980]);
 
-tend = datetime(2020,7,12,0,0,0);
+tend = datetime(2020,7,19,0,0,0);
 xlim([tstart tend]);
-set(gca, 'XTick', linspace(tstart,tend,12))
+set(gca, 'XTick', linspace(tstart,tend,13))
 datetick('x',19,'keepticks')
 max_x=tend;
 max_y=2000000;

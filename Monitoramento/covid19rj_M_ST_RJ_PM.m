@@ -170,7 +170,7 @@ fonte_labels = 10;
 fonte_padrao = 9; %numeros dos eixos
 fonte_location = 8;
 
-day_axis = 120;
+day_axis = 160;
 
 if (plot_type == 1)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -415,15 +415,16 @@ legend ("location", "northeastoutside");
 y_init=1;
 max_y=1000;
 
-ang = 52;
-h1=text(67,0.9*max_y,'números dobram a cada 7 dias');
+ang = 60;
+h1=text(66,0.9*max_y,'números dobram a cada 7 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 35;
-h2=text(119,0.4*max_y,'14 dias');
+ang = 38;
+h2=text(135,0.9*max_y,'14 dias');
 set(h2,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 ang = 25;
-h3=text(119,0.057*max_y,'21 dias');
+h3=text(158,0.2*max_y,'21 dias');
 set(h3,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
+ang = 48;
 % ang = 45;
 % h4=text(76.7,0.9*max_y,'8 dias');
 % set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
@@ -473,15 +474,16 @@ y_init=10;
 max_y=10000;
 ang = 60;
 
-ang = 52;
-h1=text(67,0.9*max_y,'números dobram a cada 7 dias');
+ang = 60;
+h1=text(66,0.9*max_y,'números dobram a cada 7 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 35;
-h2=text(119,0.4*max_y,'14 dias');
+ang = 38;
+h2=text(135,0.9*max_y,'14 dias');
 set(h2,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 ang = 25;
-h3=text(119,0.057*max_y,'21 dias');
+h3=text(158,0.2*max_y,'21 dias');
 set(h3,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
+ang = 48;
 % h4=text(76.7,0.9*max_y,'8 dias');
 % set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 

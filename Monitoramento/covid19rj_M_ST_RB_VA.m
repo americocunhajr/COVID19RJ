@@ -283,7 +283,7 @@ new_cases = -cases_old + tot_cases;
 new_deaths = -deaths_old + tot_deaths;
 end
 if (init == 5)
-country = 'Sul                    ';
+country = 'Sul                  ';
 color = [193,203,68]/255;
 pop = popSUL;
 tot_cases = SUL(:,1);

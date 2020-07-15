@@ -70,18 +70,18 @@ if (plot_type == 1)
 if (init == 1) country = 'Brazil'; color = [0,0,0]/255; linew = 1.75; end
 if (init == 3) country = 'Peru'; color = [181,147,87]/255; end
 if (init == 4) country = 'Chile'; color = [248,187,208]/255; end
-if (init == 5) country = 'Ecuador'; color = [69,169,0]/255; end
-if (init == 6) country = 'Colombia'; color = [96,209,224]/255; end  
+if (init == 6) country = 'Ecuador'; color = [69,169,0]/255; end
+if (init == 5) country = 'Colombia'; color = [96,209,224]/255; end  
 if (init == 7) country = 'Argentina'; color = [255,130,113]/255; end
 if (init == 8) country = 'Bolivia'; color = [209,227,105]/255; end
-if (init == 14) country = 'Paraguay'; color = [0,104,44]/255; end
+if (init == 15) country = 'Paraguay'; color = [0,104,44]/255; end
 if (init == 13) country = 'Uruguay'; color = [0,45,135]/255; end
 if (init == 12) country = 'Venezuela'; color = [135,85,30]/255; end
 if (init == 2) country = 'Mexico'; color = [203,63,23]/255; end
 if (init == 11) country = 'Cuba'; color = [191,171,72]/255; end
-if (init == 9) country = 'Dominican Republic'; color = [236,64,122]/255; end
-if (init == 10) country = 'Panama'; color = [0.4,0.4,0.4]; end
-if (init == 15) country = 'Costa Rica'; color = [0,0.5,0.6]; end
+if (init == 10) country = 'Dominican Republic'; color = [236,64,122]/255; end
+if (init == 9) country = 'Panama'; color = [0.4,0.4,0.4]; end
+if (init == 14) country = 'Costa Rica'; color = [0,0.5,0.6]; end
 
 if strcmp(country, 'Brazil')
     location = BR_data(find(strcmp([BR_all_data.state], 'TOTAL')),1:8);
@@ -119,14 +119,14 @@ if (init == 3) country = 'Chile'; color = [248,187,208]/255; end
 if (init == 7) country = 'Ecuador'; color = [69,169,0]/255; end
 if (init == 5) country = 'Colombia'; color = [96,209,224]/255; end  
 if (init == 6) country = 'Argentina'; color = [255,130,113]/255; end
-if (init == 8) country = 'Bolivia'; color = [209,227,105]/255; end
+if (init == 9) country = 'Bolivia'; color = [209,227,105]/255; end
 if (init == 14) country = 'Paraguay'; color = [0,104,44]/255; end
 if (init == 15) country = 'Uruguay'; color = [0,45,135]/255; end
 if (init == 11) country = 'Venezuela'; color = [135,85,30]/255; end
 if (init == 4) country = 'Mexico'; color = [203,63,23]/255; end
 if (init == 13) country = 'Cuba'; color = [191,171,72]/255; end
-if (init == 10) country = 'Dominican Republic'; color = [236,64,122]/255; end
-if (init == 9) country = 'Panama'; color = [0.4,0.4,0.4]; end
+if (init == 8) country = 'Dominican Republic'; color = [236,64,122]/255; end
+if (init == 10) country = 'Panama'; color = [0.4,0.4,0.4]; end
 if (init == 12) country = 'Costa Rica'; color = [0,0.5,0.6]; end
 
 
@@ -244,7 +244,7 @@ fonte_labels = 10;
 fonte_padrao = 9; %numeros dos eixos
 fonte_location = 8;
 
-day_axis = 140;
+day_axis = 180;
 
 Pos = [0,250,900,450];
 set(0, 'DefaultFigurePosition', Pos);
@@ -508,16 +508,16 @@ legend ("location", "northeastoutside");
 
 y_init=10;
 max_y=100000;
-ang = 56;
+ang = 62;
 h1=text(63.5,0.9*max_y,'números dobram a cada 5 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 50;
+ang = 57;
 h2=text(76.9,0.9*max_y,'6 dias');
 set(h2,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 45;
+ang = 51;
 h3=text(90,0.9*max_y,'7 dias');
 set(h3,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 42;
+ang = 47;
 h4=text(103,0.9*max_y,'8 dias');
 set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 
@@ -565,16 +565,16 @@ legend ("location", "northeastoutside");
 
 y_init=100;
 max_y=10000000;
-ang = 50;
+ang = 57;
 h1=text(80,0.9*max_y,'números dobram a cada 5 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 46;
+ang = 53;
 h2=text(96.5,0.9*max_y,'6 dias');
 set(h2,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 42;
+ang = 48;
 h3=text(112.8,0.9*max_y,'7 dias');
 set(h3,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 39;
+ang = 45;
 h4=text(129.1,0.9*max_y,'8 dias');
 set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 
