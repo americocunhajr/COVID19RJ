@@ -9,10 +9,11 @@ Dessa forma, os objetivos da presente iniciativa se articulam em tornos dos segu
 - Desenvolver material educativo de alto nível na área de modelagem matemática de epidemias;
 - Desenvolver e divulgar material informativo de qualidade para o público interessado.
 
-www.covid19rj.org
-www.instagram.com/portalcovid19rj
-www.facebook.com/portalcovid19rj
-www.twitter.com/portalcovid19rj
+Nossas análises são divulgadas nos seguintes canais:
+- www.covid19rj.org
+- www.instagram.com/portalcovid19rj
+- www.facebook.com/portalcovid19rj
+- www.twitter.com/portalcovid19rj
 
 ## Equipe:
 
