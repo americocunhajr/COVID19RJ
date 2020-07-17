@@ -57,7 +57,7 @@ BR_data = [BR_all_data.totalCases,BR_all_data.newCases,BR_all_data.deaths,BR_all
 %plot_type é pra diferenciar mortes e casos pra organizarmos a ordem da legenda de acordo com o número de mortes ou de casos
 for( plot_type = 1:1:2)
 %loop nos 13 países estudados
-for( init = 1:1:16)
+for( init = 1:1:20)
 
 clearvars -except plot_type init all_data data name BR_all_data BR_data
 
@@ -67,21 +67,25 @@ linew = 1.25;
 if (plot_type == 1)
 %ordem por países que tem mais morte
 if (init == 2) country = 'Brazil'; color = [0,0,0]/255; linew = 1.75; end
-if (init == 7) country = 'India'; color = [69,169,0]/255; end
-if (init == 15) country = 'Turkey'; color = [96,209,224]/255; end  
-if (init == 9) country = 'Peru'; color = [181,147,87]/255; end
-if (init == 8) country = 'Iran'; color = [255,130,113]/255; end
-if (init == 12) country = 'Germany'; color = [209,227,105]/255; end
-if (init == 13) country = 'Chile'; color = [248,187,208]/255; end
+if (init == 8) country = 'India'; color = [69,169,0]/255; end
+if (init == 17) country = 'Turkey'; color = [96,209,224]/255; end  
+if (init == 10) country = 'Peru'; color = [181,147,87]/255; end
+if (init == 9) country = 'Iran'; color = [255,130,113]/255; end
+if (init == 13) country = 'Germany'; color = [209,227,105]/255; end
+if (init == 14) country = 'Chile'; color = [248,187,208]/255; end
 if (init == 1) country = 'United States'; color = [0,104,44]/255; end
-if (init == 5) country = 'France'; color = [0,45,135]/255; end
+if (init == 6) country = 'France'; color = [0,45,135]/255; end
 if (init == 3) country = 'United Kingdom'; color = [135,85,30]/255; end
-if (init == 4) country = 'Italy'; color = [203,63,23]/255; end
-if (init == 6) country = 'Spain'; color = [191,171,72]/255; end
-if (init == 11) country = 'Belgium'; color = [236,64,122]/255; end
-if (init == 10) country = 'Russia'; color = [0.4,0.4,0.4]; end
-if (init == 14) country = 'Sweden'; color = [0,0.5,0.6]; end
-if (init == 16) country = 'China'; color = [185,205,140]/255; end
+if (init == 5) country = 'Italy'; color = [203,63,23]/255; end
+if (init == 7) country = 'Spain'; color = [191,171,72]/255; end
+if (init == 12) country = 'Belgium'; color = [236,64,122]/255; end
+if (init == 11) country = 'Russia'; color = [0.4,0.4,0.4]; end
+if (init == 16) country = 'Sweden'; color = [0,0.5,0.6]; end
+if (init == 18) country = 'China'; color = [185,205,140]/255; end
+if (init == 4) country = 'Mexico'; color = [253, 250, 145]/255; end
+if (init == 15) country = 'Colombia'; color = [221, 160, 221]/255; end
+if (init == 19) country = 'South Africa'; color = [129, 165, 220]/255; end
+if (init == 20) country = 'Saudi Arabia'; color = [255, 228, 181]/255; end
 
 if strcmp(country, 'Brazil')
     location = BR_data(find(strcmp([BR_all_data.state], 'TOTAL')),1:8);
@@ -93,44 +97,50 @@ else
 end_time = max(datenum(dates))-1;
 end
 
-if strcmp(country, 'United States') country_leg = 'EUA           '; end 
-if strcmp(country, 'United Kingdom') country_leg = 'Reino Unido'; end
-if strcmp(country, 'Belgium') country_leg = 'Bélgica         '; end 
-if strcmp(country, 'Brazil') country_leg = 'Brasil          '; end 
-if strcmp(country, 'Iran') country_leg = 'Irã               '; end 
-if strcmp(country, 'Peru') country_leg = 'Peru            '; end 
-if strcmp(country, 'Turkey') country_leg = 'Turquia         '; end 
-if strcmp(country, 'India') country_leg = 'Índia           '; end 
-if strcmp(country, 'Chile') country_leg = 'Chile             '; end 
-if strcmp(country, 'France') country_leg = 'França        '; end 
-if strcmp(country, 'Spain') country_leg = 'Espanha     '; end 
-if strcmp(country, 'Italy') country_leg = 'Itália           '; end 
-if strcmp(country, 'Germany') country_leg = 'Alemanha     '; end 
-if strcmp(country, 'Russia') country_leg = 'Rússia         '; end 
-if strcmp(country, 'Sweden') country_leg = 'Suécia           '; end 
-if strcmp(country, 'China') country_leg = 'China            '; end 
-
+if strcmp(country, 'United States') country_leg = 'EUA            '; end 
+if strcmp(country, 'United Kingdom') country_leg = 'Reino Unido '; end
+if strcmp(country, 'Belgium') country_leg = 'Bélgica          '; end 
+if strcmp(country, 'Brazil') country_leg = 'Brasil           '; end 
+if strcmp(country, 'Iran') country_leg = 'Irã                '; end 
+if strcmp(country, 'Peru') country_leg = 'Peru             '; end 
+if strcmp(country, 'Turkey') country_leg = 'Turquia          '; end 
+if strcmp(country, 'India') country_leg = 'Índia            '; end 
+if strcmp(country, 'Chile') country_leg = 'Chile              '; end 
+if strcmp(country, 'France') country_leg = 'França         '; end 
+if strcmp(country, 'Spain') country_leg = 'Espanha      '; end 
+if strcmp(country, 'Italy') country_leg = 'Itália            '; end 
+if strcmp(country, 'Germany') country_leg = 'Alemanha      '; end 
+if strcmp(country, 'Russia') country_leg = 'Rússia          '; end 
+if strcmp(country, 'Sweden') country_leg = 'Suécia            '; end 
+if strcmp(country, 'China') country_leg = 'China             '; end 
+if strcmp(country, 'Mexico') country_leg = 'México         '; end 
+if strcmp(country, 'Saudi Arabia') country_leg = 'Arábia Saudita'; end 
+if strcmp(country, 'South Africa') country_leg = 'África do Sul  '; end 
+if strcmp(country, 'Colombia') country_leg = 'Colômbia       '; end 
 end
 
 if (plot_type == 2)
 %ordem por países que tem mais caso
 if (init == 2) country = 'Brazil'; color = [0,0,0]/255; linew = 1.75; end
 if (init == 3) country = 'India'; color = [69,169,0]/255; end
-if (init == 11) country = 'Turkey'; color = [96,209,224]/255; end  
+if (init == 14) country = 'Turkey'; color = [96,209,224]/255; end  
 if (init == 5) country = 'Peru'; color = [181,147,87]/255; end
-if (init == 8) country = 'Iran'; color = [255,130,113]/255; end
-if (init == 12) country = 'Germany'; color = [209,227,105]/255; end
+if (init == 10) country = 'Iran'; color = [255,130,113]/255; end
+if (init == 15) country = 'Germany'; color = [209,227,105]/255; end
 if (init == 6) country = 'Chile'; color = [248,187,208]/255; end
 if (init == 1) country = 'United States'; color = [0,104,44]/255; end
-if (init == 13) country = 'France'; color = [0,45,135]/255; end
-if (init == 7) country = 'United Kingdom'; color = [135,85,30]/255; end
-if (init == 10) country = 'Italy'; color = [203,63,23]/255; end
-if (init == 9) country = 'Spain'; color = [191,171,72]/255; end
-if (init == 16) country = 'Belgium'; color = [236,64,122]/255; end
+if (init == 16) country = 'France'; color = [0,45,135]/255; end
+if (init == 9) country = 'United Kingdom'; color = [135,85,30]/255; end
+if (init == 12) country = 'Italy'; color = [203,63,23]/255; end
+if (init == 11) country = 'Spain'; color = [191,171,72]/255; end
+if (init == 20) country = 'Belgium'; color = [236,64,122]/255; end
 if (init == 4) country = 'Russia'; color = [0.4,0.4,0.4]; end
-if (init == 15) country = 'Sweden'; color = [0,0.5,0.6]; end
-if (init == 14) country = 'China'; color = [185,205,140]/255; end
-
+if (init == 19) country = 'Sweden'; color = [0,0.5,0.6]; end
+if (init == 18) country = 'China'; color = [185,205,140]/255; end
+if (init == 7) country = 'Mexico'; color = [253, 250, 145]/255; end
+if (init == 17) country = 'Colombia'; color = [221, 160, 221]/255; end
+if (init == 8) country = 'South Africa'; color = [129, 165, 220]/255; end
+if (init == 13) country = 'Saudi Arabia'; color = [255, 228, 181]/255; end
 
 if strcmp(country, 'Brazil')
     location = BR_data(find(strcmp([BR_all_data.state], 'TOTAL')),1:8);
@@ -144,23 +154,26 @@ end
 
 
 
-if strcmp(country, 'United States') country_leg = 'EUA            '; end 
-if strcmp(country, 'United Kingdom') country_leg = 'Reino Unido  '; end
-if strcmp(country, 'Belgium') country_leg = 'Bélgica            '; end 
-if strcmp(country, 'Brazil') country_leg = 'Brasil          '; end 
-if strcmp(country, 'Iran') country_leg = 'Irã                 '; end 
-if strcmp(country, 'Peru') country_leg = 'Peru              '; end 
-if strcmp(country, 'Turkey') country_leg = 'Turquia         '; end 
-if strcmp(country, 'India') country_leg = 'Índia              '; end 
-if strcmp(country, 'Chile') country_leg = 'Chile             '; end 
-if strcmp(country, 'France') country_leg = 'França          '; end 
-if strcmp(country, 'Spain') country_leg = 'Espanha       '; end 
-if strcmp(country, 'Italy') country_leg = 'Itália             '; end 
-if strcmp(country, 'Germany') country_leg = 'Alemanha     '; end 
-if strcmp(country, 'Russia') country_leg = 'Rússia           '; end 
-if strcmp(country, 'Sweden') country_leg = 'Suécia             '; end 
-if strcmp(country, 'China') country_leg = 'China              '; end 
-
+if strcmp(country, 'United States') country_leg = 'EUA              '; end 
+if strcmp(country, 'United Kingdom') country_leg = 'Reino Unido    '; end
+if strcmp(country, 'Belgium') country_leg = 'Bélgica              '; end 
+if strcmp(country, 'Brazil') country_leg = 'Brasil            '; end 
+if strcmp(country, 'Iran') country_leg = 'Irã                   '; end 
+if strcmp(country, 'Peru') country_leg = 'Peru                '; end 
+if strcmp(country, 'Turkey') country_leg = 'Turquia           '; end 
+if strcmp(country, 'India') country_leg = 'Índia                '; end 
+if strcmp(country, 'Chile') country_leg = 'Chile               '; end 
+if strcmp(country, 'France') country_leg = 'França            '; end 
+if strcmp(country, 'Spain') country_leg = 'Espanha         '; end 
+if strcmp(country, 'Italy') country_leg = 'Itália               '; end 
+if strcmp(country, 'Germany') country_leg = 'Alemanha       '; end 
+if strcmp(country, 'Russia') country_leg = 'Rússia             '; end 
+if strcmp(country, 'Sweden') country_leg = 'Suécia               '; end 
+if strcmp(country, 'China') country_leg = 'China                '; end 
+if strcmp(country, 'Mexico') country_leg = 'México           '; end 
+if strcmp(country, 'Saudi Arabia') country_leg = 'Arábia Saudita'; end 
+if strcmp(country, 'South Africa') country_leg = 'África do Sul   '; end 
+if strcmp(country, 'Colombia') country_leg = 'Colômbia         '; end 
 end
 
 
@@ -321,7 +334,7 @@ hold on;
  n = max(max(size(tot_deaths)));
 
  n = max(max(size(tot_deathsw0)));
- if strcmp(country, 'China') new_deaths7w0 = zeros(n,1); end
+%  if strcmp(country, 'China') new_deaths7w0 = zeros(n,1); end
  fig=loglog(tot_deathsw0,new_deaths7w0,'DisplayName',[country_leg,'  ',num2str(tot_deaths(max(size(tot_deaths)),1)),' mortes'],"color",color,'LineWidth', linew);
  hold on;
  text (tot_deathsw0(n,1), new_deaths7w0(n,1), [' ',country_leg],'FontSize',fonte_location,"color",color,"Clipping",'on');
@@ -529,7 +542,7 @@ uistack(ha,'bottom');
 % To create the logo at the bottom left corner of the plot use 
 % the next two lines
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[-0.135 -0.13], .2,.15,]);
+ha2=axes('position',[haPos([3 1])-[-0.135 0.0], .2,.15,]);
 
 % To place the logo at the bottom left corner of the figure window
 % uncomment the line below and comment the above two lines
@@ -583,7 +596,7 @@ uistack(ha,'bottom');
 % To create the logo at the bottom left corner of the plot use 
 % the next two lines
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[-0.135 -0.13], .2,.15,]);
+ha2=axes('position',[haPos([3 1])-[-0.135 0.0], .2,.15,]);
 % To place the logo at the bottom left corner of the figure window
 % uncomment the line below and comment the above two lines
 %ha2=axes('position',[0, 0, .1,.04,]);
@@ -616,9 +629,9 @@ set(gca,'XTickLabel',{'10','100','1k','10k','100k','1M'})
 hfonte=text(max_x,max_y,{'Gráfico inspirado em: https://aatishb.com/covidtrends/','Fonte: https://ourworldindata.org/coronavirus-source-data'});
 set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
 
-dim = [0.705 0.035 0.8 0.2];
-str = {'Obs: Alguns países que estão na legenda não','foram plotados neste gráfico, pois os seus','dados não foram atualizados continuamente,','resultando em curvas de difícil análise.'};
-annotation('textbox',dim,'String',str,'FitBoxToText','on','FontSize',6);
+% dim = [0.705 0.035 0.8 0.2];
+% str = {'Obs: Alguns países que estão na legenda não','foram plotados neste gráfico, pois os seus','dados não foram atualizados continuamente,','resultando em curvas de difícil análise.'};
+% annotation('textbox',dim,'String',str,'FitBoxToText','on','FontSize',6);
 
 
 
@@ -629,7 +642,7 @@ uistack(ha,'bottom');
 % To create the logo at the bottom left corner of the plot use 
 % the next two lines
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[-0.135 -0.13], .2,.15,]);
+ha2=axes('position',[haPos([3 1])-[-0.135 0.0], .2,.15,]);
 % To place the logo at the bottom left corner of the figure window
 % uncomment the line below and comment the above two lines
 %ha2=axes('position',[0, 0, .1,.04,]);
@@ -674,7 +687,7 @@ uistack(ha,'bottom');
 % To create the logo at the bottom left corner of the plot use 
 % the next two lines
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[-0.135 -0.13], .2,.15,]);
+ha2=axes('position',[haPos([3 1])-[-0.135 0.0], .2,.15,]);
 % To place the logo at the bottom left corner of the figure window
 % uncomment the line below and comment the above two lines
 %ha2=axes('position',[0, 0, .1,.04,]);
@@ -719,9 +732,9 @@ set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','vertica
 
 axis([0 day_axis y_init max_y]);
 
-dim = [0.705 0.035 0.8 0.2];
-str = {'Obs: Alguns países que estão na legenda não','foram plotados neste gráfico, pois os seus','dados não foram atualizados continuamente,','resultando em curvas de difícil análise.'};
-annotation('textbox',dim,'String',str,'FitBoxToText','on','FontSize',6);
+% dim = [0.705 0.035 0.8 0.2];
+% str = {'Obs: Alguns países que estão na legenda não','foram plotados neste gráfico, pois os seus','dados não foram atualizados continuamente,','resultando em curvas de difícil análise.'};
+% annotation('textbox',dim,'String',str,'FitBoxToText','on','FontSize',6);
 
 
 % pra botar o logo no inferior direito
@@ -731,7 +744,7 @@ uistack(ha,'bottom');
 % To create the logo at the bottom left corner of the plot use 
 % the next two lines
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[-0.135 -0.13], .2,.15,]);
+ha2=axes('position',[haPos([3 1])-[-0.135 0.0], .2,.15,]);
 % To place the logo at the bottom left corner of the figure window
 % uncomment the line below and comment the above two lines
 %ha2=axes('position',[0, 0, .1,.04,]);
@@ -787,7 +800,7 @@ uistack(ha,'bottom');
 % To create the logo at the bottom left corner of the plot use 
 % the next two lines
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[-0.135 -0.13], .2,.15,]);
+ha2=axes('position',[haPos([3 1])-[-0.135 0.0], .2,.15,]);
 % To place the logo at the bottom left corner of the figure window
 % uncomment the line below and comment the above two lines
 %ha2=axes('position',[0, 0, .1,.04,]);

@@ -297,7 +297,7 @@ BRarquivogeral = readtable([pwd '/Dados/cases-brazil-states.txt']);
 
 
 % Definições para os graficos 
-Estados = {"Germany"; "Belgium"; "Brazil"; "Chile";"China"; "Spain";"United States"; "France"; "India";"Iran";"Italy";"Peru";"United Kingdom";"Russia"; "Sweden";"Turkey";  };
+Estados = {"South Africa";"Germany";"Saudi Arabia"; "Belgium"; "Brazil"; "Chile";"China";"Colombia";"Spain";"United States"; "France"; "India";"Iran";"Italy";"Mexico";"Peru";"United Kingdom";"Russia"; "Sweden";"Turkey";  };
 
 titulos = {"Novos Casos";"Novos Óbitos";"Casos Acumulados";"Óbitos Acumulados"};
 name = 'WD';
@@ -392,7 +392,7 @@ for t=1:4
     end
 
     % Juntando o mapa e a escala
-    space_imag = 850;
+    space_imag = 1000;
     img_lins = 4140;
     img_cols = 14*img_lins/9;
     imagem = resizem(img,[img_lins,img_cols]);
@@ -411,7 +411,7 @@ for t=1:4
     ax1 = gca;
     ax1.FontSize = 10;
 
-Estados = {"Alemanha"; "Bélgica"; "Brasil"; "Chile";"China";"Espanha"; "EUA";"França"; "Índia";"Irã";"Itália";"Peru";"Reino Unido"; "Rússia";"Suécia"; "Turquia"};
+Estados = {"África do Sul";"Alemanha";"Arábia Saudita";"Bélgica"; "Brasil"; "Chile";"China";"Colômbia";"Espanha"; "EUA";"França"; "Índia";"Irã";"Itália";"México";"Peru";"Reino Unido"; "Rússia";"Suécia"; "Turquia"};
 
 % Insercao de textos
 position = [round([0:size(imagem,1)/(size(img,1)):size(imagem,1)-(size(imagem,1)/(size(img,1)))] +(size(imagem,1)/(2*size(img,1))))];

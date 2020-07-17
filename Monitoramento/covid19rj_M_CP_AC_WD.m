@@ -16,7 +16,7 @@ arquivogeral = readtable([pwd '/Dados/owid-covid-data.csv']);
 % urlwrite(fullURL,[pwd '/Dados/',filename]);
 BRarquivogeral = readtable([pwd '/Dados/cases-brazil-states.txt']);
 
-Estados = {"Germany"; "Belgium"; "Brazil"; "Chile";"China";"Spain"; "United States"; "France";"India";"Iran";"Italy"; "Peru"; "United Kingdom";"Russia"; "Sweden"; "Turkey"};
+Estados = {"South Africa";"Germany";"Saudi Arabia"; "Belgium"; "Brazil"; "Chile";"China";"Colombia";"Spain";"United States"; "France"; "India";"Iran";"Italy";"Mexico";"Peru";"United Kingdom";"Russia"; "Sweden";"Turkey";  };
 
 %Data final
 end_time = datestr(datenum(max(arquivogeral.date)-1));
@@ -94,7 +94,7 @@ for i=1:length(Estados)
 end
 
 %Legenda
-Estados_leg = {"Alemanha     "; "Bélgica     "; "Brasil     "; "Chile     ";"China     "; "Espanha     "; "EUA     ";"França     ";"Índia     " ; "Irã     ";"Itália     "; "Peru     "; "Reino Unido     "; "Rússia     "; "Suécia     ";"Turquia     "};
+Estados_leg = {"África do Sul     ";"Alemanha     ";"Arábia Saudita     "; "Bélgica     "; "Brasil     "; "Chile     ";"China     ";"Colômbia     ";"Espanha     "; "EUA     ";"França     ";"Índia     " ; "Irã     ";"Itália     ";"México     "; "Peru     "; "Reino Unido     "; "Rússia     "; "Suécia     ";"Turquia     "};
 
 
 
@@ -113,10 +113,10 @@ hold on;
 
 b.FaceColor = 'flat';
 b.EdgeColor = 'flat';
-b.CData(3,:) = color_brasil;
+b.CData(5,:) = color_brasil;
 
 for(i=1:length(Estados))
-text (i, casos_acumulados_pm(i,max_size), mat2str(round(casos_acumulados_pm(i,max_size))),'HorizontalAlignment', 'center','VerticalAlignment', 'bottom','FontSize',7.5)
+text (i, casos_acumulados_pm(i,max_size), mat2str(round(casos_acumulados_pm(i,max_size))),'HorizontalAlignment', 'center','VerticalAlignment', 'bottom','FontSize',6)
 end
 
 set(gca,'XTickLabel',Estados_leg, 'FontSize',9);
@@ -151,7 +151,7 @@ set(ha2,'handlevisibility','off','visible','off')
 ha =gca;
 uistack(ha,'bottom');
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[0.6115 -0.005], 0.7075,.038,]);
+ha2=axes('position',[haPos([3 1])-[0.618 -0.03], 0.722,.035,]);
 [x, map]=imread('bandeiras.png');
 image(x)
 colormap (map)
@@ -166,10 +166,10 @@ hold on;
 
 b.FaceColor = 'flat';
 b.EdgeColor = 'flat';
-b.CData(3,:) = color_brasil;
+b.CData(5,:) = color_brasil;
 
 for(i=1:length(Estados))
-text (i, obitos_acumulados_pm(i,max_size), mat2str(round(obitos_acumulados_pm(i,max_size))),'HorizontalAlignment', 'center','VerticalAlignment', 'bottom','FontSize',7.5)
+text (i, obitos_acumulados_pm(i,max_size), mat2str(round(obitos_acumulados_pm(i,max_size))),'HorizontalAlignment', 'center','VerticalAlignment', 'bottom','FontSize',6)
 end
 
 set(gca, 'XTick', 1.4:1:length(Estados)+0.4);
@@ -202,7 +202,7 @@ set(ha2,'handlevisibility','off','visible','off')
 ha =gca;
 uistack(ha,'bottom');
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[0.6115 -0.005], 0.7075,.038,]);
+ha2=axes('position',[haPos([3 1])-[0.618 -0.03], 0.722,.035,]);
 [x, map]=imread('bandeiras.png');
 image(x)
 colormap (map)
@@ -215,10 +215,10 @@ hold on;
 
 b.FaceColor = 'flat';
 b.EdgeColor = 'flat';
-b.CData(3,:) = color_brasil;
+b.CData(5,:) = color_brasil;
 
 for(i=1:length(Estados))
-text (i, 100*obitos_acumulados_pm(i,max_size)./casos_acumulados_pm(i,max_size),[sprintf('%.1f',(100*obitos_acumulados_pm(i,max_size)./casos_acumulados_pm(i,max_size))),'%'],'HorizontalAlignment', 'center','VerticalAlignment', 'bottom','FontSize',7.5)
+text (i, 100*obitos_acumulados_pm(i,max_size)./casos_acumulados_pm(i,max_size),[sprintf('%.1f',(100*obitos_acumulados_pm(i,max_size)./casos_acumulados_pm(i,max_size))),'%'],'HorizontalAlignment', 'center','VerticalAlignment', 'bottom','FontSize',6)
 end
 
 set(gca, 'XTick', 1.4:1:length(Estados)+0.4);
@@ -252,7 +252,7 @@ set(ha2,'handlevisibility','off','visible','off')
 ha =gca;
 uistack(ha,'bottom');
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[0.6115 -0.005], 0.7075,.038,]);
+ha2=axes('position',[haPos([3 1])-[0.618 -0.03], 0.722,.035,]);
 [x, map]=imread('bandeiras.png');
 image(x)
 colormap (map)
@@ -309,7 +309,7 @@ set(ha2,'handlevisibility','off','visible','off')
 ha =gca;
 uistack(ha,'bottom');
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[0.6115 -0.005], 0.7075,.038,]);
+ha2=axes('position',[haPos([3 1])-[0.6115 -0.01], 0.75,.038,]);
 [x, map]=imread('bandeiras.png');
 image(x)
 colormap (map)

@@ -28,28 +28,32 @@ set(0, 'DefaultFigurePosition', Pos);
 
 
 
-for (init=1:1:16)
+for (init=1:1:20)
 
 clearvars -except plot_type init all_data data name BR_all_data BR_data
 r = [255, 0, 0 ]/255;
 y = [255, 225, 0]/255;
 g = [0, 125, 0]/255; 
-if (init == 1) country = 'Germany'; color = g; pais = 'Alemanha'; end
-if (init == 2) country = 'Belgium'; color = g; pais = 'Bélgica'; end
-if (init == 3) country = 'Brazil'; color = r; pais = 'Brasil'; end
-if (init == 9) country = 'India'; color = g; pais = 'Índia'; end
-if (init == 16) country = 'Turkey'; color = y; pais = 'Turquia'; end  
-if (init == 12) country = 'Peru'; color = r; pais = 'Peru'; end
-if (init == 11) country = 'Iran'; color = r; pais = 'Irã';end
-if (init == 4) country = 'Chile'; color = r; pais = 'Chile'; end
-if (init == 7) country = 'United States'; color = y; pais = 'EUA'; end
-if (init == 8) country = 'France'; color = g; pais = 'França'; end
-if (init == 13) country = 'United Kingdom'; color = y; pais = 'Reino Unido'; end
-if (init == 10) country = 'Italy'; color = g; pais = 'Itália'; end
-if (init == 6) country = 'Spain'; color = g; pais = 'Espanha'; end
-if (init == 14) country = 'Russia'; color = r; pais = 'Rússia'; end
-if (init == 15) country = 'Sweden'; color = r; pais = 'Suécia'; end
-if (init == 5) country = 'China'; color = g; pais = 'China'; end
+if (init == 1) country = 'South Africa'; color = g; pais = 'África do Sul'; end
+if (init == 2) country = 'Germany'; color = g; pais = 'Alemanha'; end
+if (init == 3) country = 'Saudi Arabia'; color = g; pais = 'Arábia Saudita'; end
+if (init == 4) country = 'Belgium'; color = g; pais = 'Bélgica'; end
+if (init == 5) country = 'Brazil'; color = r; pais = 'Brasil'; end
+if (init == 6) country = 'Chile'; color = r; pais = 'Chile'; end
+if (init == 7) country = 'China'; color = g; pais = 'China'; end
+if (init == 8) country = 'Colombia'; color = g; pais = 'Colômbia'; end
+if (init == 9) country = 'Spain'; color = g; pais = 'Espanha'; end
+if (init == 10) country = 'United States'; color = y; pais = 'EUA'; end
+if (init == 11) country = 'France'; color = g; pais = 'França'; end
+if (init == 12) country = 'India'; color = g; pais = 'Índia'; end
+if (init == 13) country = 'Italy'; color = g; pais = 'Itália'; end
+if (init == 14) country = 'Iran'; color = r; pais = 'Irã';end
+if (init == 15) country = 'Mexico'; color = r; pais = 'México';end
+if (init == 16) country = 'Peru'; color = r; pais = 'Peru'; end
+if (init == 17) country = 'United Kingdom'; color = y; pais = 'Reino Unido'; end
+if (init == 18) country = 'Russia'; color = r; pais = 'Rússia'; end
+if (init == 19) country = 'Sweden'; color = r; pais = 'Suécia'; end
+if (init == 20) country = 'Turkey'; color = y; pais = 'Turquia'; end  
 
 if strcmp(country, 'Brazil')
     location = BR_data(find(strcmp([BR_all_data.state], 'TOTAL')),1:8);
@@ -123,7 +127,7 @@ color = r;
 if (new_cases7_X(length(new_cases7_X)) < 0.5 * max(new_cases7_X)) color = y; end
 if (new_cases7_X(length(new_cases7_X)) < 0.2 * max(new_cases7_X)) color = g; end
 
-subplot(4,4,init)
+subplot(4,5,init)
 plot(dates_cases,new_cases7_X,'linewidth',2,'color',color)
 
 yticks([])
@@ -143,7 +147,7 @@ color = r;
 if (new_deaths7_X(length(new_deaths7_X)) < 0.5 * max(new_deaths7_X)) color = y; end
 if (new_deaths7_X(length(new_deaths7_X)) < 0.2 * max(new_deaths7_X)) color = g; end
 
-subplot(4,4,init)
+subplot(4,5,init)
 plot(dates_deaths,new_deaths7_X,'linewidth',2,'color',color)
 
 yticks([])
@@ -163,7 +167,7 @@ figure(1)
 sgtitle({'Países enfrentando a Covid-19',datestr(end_time,24),' ','Comparação da curva de novos casos por semana'})
 
 hold on;
-hfonte=text(max(dates)+30,0,{'Gráfico inspirado em: https://www.endcoronavirus.org/countries','Fonte: https://ourworldindata.org/coronavirus-source-data'});
+hfonte=text(max(dates)+50,0,{'Gráfico inspirado em: https://www.endcoronavirus.org/countries','Fonte: https://ourworldindata.org/coronavirus-source-data'});
 set(hfonte,'Rotation',90,'color',[0,0,0],'FontSize',7.5);
 
 
@@ -171,7 +175,7 @@ set(hfonte,'Rotation',90,'color',[0,0,0],'FontSize',7.5);
 ha =gca;
 uistack(ha,'bottom');
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[-0.55 -0.13], .2,.11,]);
+ha2=axes('position',[haPos([3 1])-[-0.6 -0.10], .2,.11,]);
 [x, map]=imread('logo.png');
 image(x)
 % Setting the colormap to the colormap of the imported logo image
@@ -185,7 +189,7 @@ hold on;
 ha =gca;
 uistack(ha,'bottom');
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[0.02 -0.35], .16,.09,]);
+ha2=axes('position',[haPos([3 1])-[-0.01 -0.27], .16,.09,]);
 [x, map]=imread('legenda.png');
 image(x)
 % Setting the colormap to the colormap of the imported logo image
@@ -198,14 +202,14 @@ figure(2)
 sgtitle({'Países enfrentando a Covid-19',datestr(end_time,24),' ','Comparação da curva de novas mortes por semana'})
 
 hold on;
-hfonte=text(max(dates)+30,0,{'Gráfico inspirado em: https://www.endcoronavirus.org/countries','Fonte: https://ourworldindata.org/coronavirus-source-data'});
+hfonte=text(max(dates)+50,0,{'Gráfico inspirado em: https://www.endcoronavirus.org/countries','Fonte: https://ourworldindata.org/coronavirus-source-data'});
 set(hfonte,'Rotation',90,'color',[0,0,0],'FontSize',7.5);
 
 % pra botar o logo no inferior direito
 ha =gca;
 uistack(ha,'bottom');
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[-0.55 -0.13], .2,.11,]);
+ha2=axes('position',[haPos([3 1])-[-0.6 -0.10], .2,.11,]);
 [x, map]=imread('logo.png');
 image(x)
 % Setting the colormap to the colormap of the imported logo image
@@ -214,10 +218,12 @@ colormap (map)
 % into the axes again. Also, make the axes invisible
 set(ha2,'handlevisibility','off','visible','off')
 
+hold on;
+
 ha =gca;
 uistack(ha,'bottom');
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[0.02 -0.35], .16,.09,]);
+ha2=axes('position',[haPos([3 1])-[-0.01 -0.27], .16,.09,]);
 [x, map]=imread('legenda.png');
 image(x)
 % Setting the colormap to the colormap of the imported logo image
