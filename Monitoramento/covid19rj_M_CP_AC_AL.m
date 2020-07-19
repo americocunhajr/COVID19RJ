@@ -125,10 +125,10 @@ xtickangle(45);
 
 
 ymin = 0;
-ymax = 18000;
+ymax = 20000;
 set(gca,'YLim',[ymin ymax]);
 set(gca, 'YTick', ymin:2000:ymax);
-set(gca,'YTickLabel',{'0','2000','4000','6000','8000','10000','12000','14000','16000','18000'});
+set(gca,'YTickLabel',{'0','2000','4000','6000','8000','10000','12000','14000','16000','18000','20000'});
 set(gca,'YGrid', 'on');
 title({'Casos acumulados por milhão de habitantes',['América Latina em ',datestr(end_time,24)]},'FontSize',11);
 
@@ -177,10 +177,10 @@ set(gca,'XTickLabel',Estados_leg, 'FontSize',9);
 xtickangle(45);
 
 ymin = 0;
-ymax = 450;
+ymax = 600;
 set(gca,'YLim',[ymin ymax]);
 set(gca, 'YTick', ymin:50:ymax);
-set(gca,'YTickLabel',{'0','50','100','150','200','250','300','350','400','450'});
+set(gca,'YTickLabel',{'0','50','100','150','200','250','300','350','400','450','500','550','600'});
 set(gca,'YGrid', 'on');
 title({'Mortes acumuladas por milhão de habitantes',['América Latina em ',datestr(end_time,24)]},'FontSize',11);
 

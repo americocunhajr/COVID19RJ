@@ -31,8 +31,8 @@ if (init == 6) city = 'Niterói/RJ'; pop = 524687; color = [209,227,105]/255; en
 if (init == 7) city = 'Belford Roxo/RJ'; pop = 508013; color = [248,187,208]/255; end
 if (init == 5) city = 'São João de Meriti/RJ'; pop = 472406; color = [0,104,44]/255; end
 if (init == 9) city = 'Itaboraí/RJ'; pop = 240592; color = [0,45,135]/255; end
-if (init == 10) city = 'Mesquita/RJ'; pop = 176103; color = [135,85,30]/255; end
-if (init == 11) city = 'Petrópolis/RJ'; pop = 306191; color = [203,63,23]/255; end
+if (init == 11) city = 'Mesquita/RJ'; pop = 176103; color = [135,85,30]/255; end
+if (init == 10) city = 'Petrópolis/RJ'; pop = 306191; color = [203,63,23]/255; end
 if (init == 12) city = 'Volta Redonda/RJ'; pop = 273012; color = [191,171,72]/255; end
 if (init == 8) city = 'Magé/RJ'; pop = 260497; color = [236,64,122]/255; end
 
@@ -54,7 +54,7 @@ if strcmp(city, 'Belford Roxo/RJ') city = 'Belford Roxo                 '; end
 if strcmp(city, 'São João de Meriti/RJ') city = 'São João de Meriti         '; end 
 if strcmp(city, 'Itaboraí/RJ') city = 'Itaboraí                         '; end 
 if strcmp(city, 'Mesquita/RJ') city = 'Mesquita                       '; end 
-if strcmp(city, 'Petrópolis/RJ') city = 'Petrópolis                        '; end 
+if strcmp(city, 'Petrópolis/RJ') city = 'Petrópolis                      '; end 
 if strcmp(city, 'Volta Redonda/RJ') city = 'Volta Redonda                '; end 
 if strcmp(city, 'Magé/RJ') city = 'Magé                             '; end 
 
