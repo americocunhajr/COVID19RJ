@@ -43,21 +43,21 @@ location = data(find(strcmp([all_data.location], country)),1:8);
 dates = all_data.date(find(strcmp([all_data.location],country)),:);
 end_time = max(datenum(dates))-1;
 
-if strcmp(country, 'Brazil') country = 'Brasil           '; end 
+if strcmp(country, 'Brazil') country = 'Brasil            '; end 
 if strcmp(country, 'Peru') country = 'Peru               '; end
 if strcmp(country, 'Chile') country = 'Chile               '; end 
 if strcmp(country, 'Ecuador') country = 'Equador         '; end 
 if strcmp(country, 'Colombia') country = 'Colômbia        '; end 
-if strcmp(country, 'Argentina') country = 'Argentina         '; end 
-if strcmp(country, 'Bolivia') country = 'Bolívia              '; end 
-if strcmp(country, 'Paraguay') country = 'Paraguai             '; end 
-if strcmp(country, 'Uruguay') country = 'Uruguai              '; end 
-if strcmp(country, 'Venezuela') country = 'Venezuela          '; end 
-if strcmp(country, 'Mexico') country = 'México         '; end 
-if strcmp(country, 'Cuba') country = 'Cuba                  '; end 
-if strcmp(country, 'Dominican Republic') country = 'R. Dominicana '; end 
-if strcmp(country, 'Panama') country = 'Panamá            '; end 
-if strcmp(country, 'Costa Rica') country = 'Costa Rica          '; end 
+if strcmp(country, 'Argentina') country = 'Argentina       '; end 
+if strcmp(country, 'Bolivia') country = 'Bolívia            '; end 
+if strcmp(country, 'Paraguay') country = 'Paraguai           '; end 
+if strcmp(country, 'Uruguay') country = 'Uruguai            '; end 
+if strcmp(country, 'Venezuela') country = 'Venezuela        '; end 
+if strcmp(country, 'Mexico') country = 'México          '; end 
+if strcmp(country, 'Cuba') country = 'Cuba                '; end 
+if strcmp(country, 'Dominican Republic') country = 'R. Dominicana'; end 
+if strcmp(country, 'Panama') country = 'Panamá          '; end 
+if strcmp(country, 'Costa Rica') country = 'Costa Rica        '; end 
 end
 
 if (plot_type == 2)
@@ -83,21 +83,21 @@ location = data(find(strcmp([all_data.location], country)),1:8);
 dates = all_data.date(find(strcmp([all_data.location],country)),:);
 end_time = max(datenum(dates))-1;
 
-if strcmp(country, 'Brazil') country = 'Brasil           '; end 
+if strcmp(country, 'Brazil') country = 'Brasil            '; end 
 if strcmp(country, 'Peru') country = 'Peru               '; end
 if strcmp(country, 'Chile') country = 'Chile               '; end 
 if strcmp(country, 'Ecuador') country = 'Equador         '; end 
 if strcmp(country, 'Colombia') country = 'Colômbia        '; end 
-if strcmp(country, 'Argentina') country = 'Argentina         '; end 
-if strcmp(country, 'Bolivia') country = 'Bolívia              '; end 
-if strcmp(country, 'Paraguay') country = 'Paraguai             '; end 
-if strcmp(country, 'Uruguay') country = 'Uruguai              '; end 
-if strcmp(country, 'Venezuela') country = 'Venezuela          '; end 
-if strcmp(country, 'Mexico') country = 'México         '; end 
-if strcmp(country, 'Cuba') country = 'Cuba                  '; end 
-if strcmp(country, 'Dominican Republic') country = 'R. Dominicana '; end 
-if strcmp(country, 'Panama') country = 'Panamá            '; end 
-if strcmp(country, 'Costa Rica') country = 'Costa Rica          '; end 
+if strcmp(country, 'Argentina') country = 'Argentina       '; end 
+if strcmp(country, 'Bolivia') country = 'Bolívia            '; end 
+if strcmp(country, 'Paraguay') country = 'Paraguai           '; end 
+if strcmp(country, 'Uruguay') country = 'Uruguai            '; end 
+if strcmp(country, 'Venezuela') country = 'Venezuela        '; end 
+if strcmp(country, 'Mexico') country = 'México          '; end 
+if strcmp(country, 'Cuba') country = 'Cuba                '; end 
+if strcmp(country, 'Dominican Republic') country = 'R. Dominicana'; end 
+if strcmp(country, 'Panama') country = 'Panamá          '; end 
+if strcmp(country, 'Costa Rica') country = 'Costa Rica        '; end 
 end
 
 tot_cases = location(:,1);
@@ -164,9 +164,9 @@ set(gca,'FontSize',fonte_padrao)
 title({'Percentual de novas mortes por semana em relação ao total',['Comparação entre países em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
 legend ("location", "northeastoutside");
 tstart = datetime(2020,4,1,0,0,0);
-tend = datetime(2020,7,28,0,0,0);
+tend = datetime(2020,9,2,0,0,0);
 xlim([tstart tend]);
-set(gca, 'XTick', linspace(tstart,tend,10))
+set(gca, 'XTick', linspace(tstart,tend,12))
 datetick('x',19,'keepticks')
 ylim([0 120]);
 
@@ -200,9 +200,9 @@ set(gca,'FontSize',fonte_padrao)
 title({'Percentual de novos casos por semana em relação ao total',['Comparação entre países em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
 legend ("location", "northeastoutside");
 tstart = datetime(2020,4,1,0,0,0);
-tend = datetime(2020,7,28,0,0,0);
+tend = datetime(2020,9,2,0,0,0);
 xlim([tstart tend]);
-set(gca, 'XTick', linspace(tstart,tend,10))
+set(gca, 'XTick', linspace(tstart,tend,12))
 datetick('x',19,'keepticks')
 ylim([0 120]);
 

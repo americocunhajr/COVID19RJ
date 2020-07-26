@@ -193,6 +193,7 @@ for( init = end_states:-1:begin_states)
 
 clearvars -except plot_type init BRASIL data table name name_title regions begin_states end_states popBR BR 
 
+
 if (plot_type == 1)
 
 if (regions == 1)
@@ -229,8 +230,8 @@ end
 
 if (regions == 4)
 if (init == 0) country = 'BR'; color = [0,0,0]/255; pop = popBR; end
-if (init == 2) country = 'ES'; color = [255,130,113]/255; pop = 4018650; end
-if (init == 1) country = 'MG'; color = [254,88,52]/255; pop = 21168791; end
+if (init == 1) country = 'ES'; color = [255,130,113]/255; pop = 4018650; end
+if (init == 2) country = 'MG'; color = [254,88,52]/255; pop = 21168791; end
 if (init == 3) country = 'RJ'; color = [248,66,9]/255; pop = 17264943; end
 if (init == 4) country = 'SP'; color = [203,63,23]/255; pop = 45919049; end
 end
@@ -323,11 +324,11 @@ if (plot_type == 2)
 if (regions == 1)
 if (init == 0) country = 'BR'; color = [0,0,0]/255; pop = popBR; end
 if (init == 1) country = 'AC'; color = [69,169,0]/255; pop = 881935; end
-if (init == 5) country = 'AP'; color = [5,163,29]/255; pop = 845731; end
+if (init == 4) country = 'AP'; color = [5,163,29]/255; pop = 845731; end
 if (init == 6) country = 'AM'; color = [53,143,31]/255; pop = 4144597; end  
 if (init == 7) country = 'PA'; color = [0,169,74]/255; pop = 8602865; end
 if (init == 2) country = 'TO'; color = [0,109,22]/255; pop = 1572866; end
-if (init == 4) country = 'RO'; color = [0,104,44]/255; pop = 1777225; end
+if (init == 5) country = 'RO'; color = [0,104,44]/255; pop = 1777225; end
 if (init == 3) country = 'RR'; color = [0,67,21]/255; pop = 605761; end
 end
 
@@ -340,8 +341,8 @@ if (init == 7) country = 'MA'; color = [0,74,84]/255; pop = 7075181; end
 if (init == 5) country = 'PB'; color = [27,78,142]/255; pop = 4018127; end
 if (init == 6) country = 'PE'; color = [0,99,181]/255; pop = 9557071; end
 if (init == 1) country = 'PI'; color = [0,45,135]/255; pop = 3273227; end
-if (init == 3) country = 'RN'; color = [0,34,80]/255; pop = 3506853; end
-if (init == 2) country = 'SE'; color = [0,20,37]/255; pop = 2298696; end
+if (init == 2) country = 'RN'; color = [0,34,80]/255; pop = 3506853; end
+if (init == 3) country = 'SE'; color = [0,20,37]/255; pop = 2298696; end
 end
 
 if (regions == 3)
@@ -363,9 +364,9 @@ end
 
 if (regions == 5)
 if (init == 0) country = 'BR'; color = [0,0,0]/255; pop = popBR; end
-if (init == 3) country = 'PR'; color = [209,227,105]/255; pop = 11433957; end
+if (init == 2) country = 'PR'; color = [209,227,105]/255; pop = 11433957; end
 if (init == 1) country = 'RS'; color = [193,203,68]/255; pop = 11377239; end
-if (init == 2) country = 'SC'; color = [191,171,72]/255; pop = 7164788; end
+if (init == 3) country = 'SC'; color = [191,171,72]/255; pop = 7164788; end
 end
 
 if (regions == 6)
@@ -432,7 +433,7 @@ if strcmp(country, 'SE') country = 'SE     '; end
 if strcmp(country, 'SP') country = 'SP  '; end 
 if strcmp(country, 'RJ') country = 'RJ   '; end 
 if strcmp(country, 'ES') country = 'ES    '; end 
-if strcmp(country, 'MG') country = 'MG   '; end 
+if strcmp(country, 'MG') country = 'MG '; end 
 if strcmp(country, 'GO') country = 'GO    '; end 
 if strcmp(country, 'DF') country = 'DF     '; end 
 if strcmp(country, 'MT') country = 'MT    '; end 
@@ -441,6 +442,8 @@ if strcmp(country, 'PR') country = 'PR    '; end
 if strcmp(country, 'RS') country = 'RS    '; end 
 if strcmp(country, 'SC') country = 'SC    '; end 
 end
+
+
 
 
 

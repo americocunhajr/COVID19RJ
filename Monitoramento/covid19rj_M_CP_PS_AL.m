@@ -163,7 +163,7 @@ figure(1)
 sgtitle({'América Latina enfrentando a Covid-19',datestr(end_time,24),' ','Comparação da curva de novos casos por semana'})
 
 hold on;
-hfonte=text(max(dates)+185,0,{'Gráfico inspirado em: https://www.endcoronavirus.org/countries','Fonte: https://ourworldindata.org/coronavirus-source-data'});
+hfonte=text(max(dates)+225,0,{'Gráfico inspirado em: https://www.endcoronavirus.org/countries','Fonte: https://ourworldindata.org/coronavirus-source-data'});
 set(hfonte,'Rotation',90,'color',[0,0,0],'FontSize',7.5);
 
 % pra botar o logo no inferior direito
@@ -196,7 +196,7 @@ figure(2)
 sgtitle({'América Latina enfrentando a Covid-19',datestr(end_time,24),' ','Comparação da curva de novas mortes por semana'})
 
 hold on;
-hfonte=text(max(dates)+165,0,{'Gráfico inspirado em: https://www.endcoronavirus.org/countries','Fonte: https://ourworldindata.org/coronavirus-source-data'});
+hfonte=text(max(dates)+205,0,{'Gráfico inspirado em: https://www.endcoronavirus.org/countries','Fonte: https://ourworldindata.org/coronavirus-source-data'});
 set(hfonte,'Rotation',90,'color',[0,0,0],'FontSize',7.5);
 
 % pra botar o logo no inferior direito

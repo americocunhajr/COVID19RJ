@@ -177,10 +177,10 @@ set(gca,'XTickLabel',Estados_leg, 'FontSize',9);
 xtickangle(45);
 
 ymin = 0;
-ymax = 600;
+ymax = 800;
 set(gca,'YLim',[ymin ymax]);
-set(gca, 'YTick', ymin:50:ymax);
-set(gca,'YTickLabel',{'0','50','100','150','200','250','300','350','400','450','500','550','600'});
+set(gca, 'YTick', ymin:100:ymax);
+set(gca,'YTickLabel',{'0','100','200','300','400','500','600','700','800'});
 set(gca,'YGrid', 'on');
 title({'Mortes acumuladas por milhão de habitantes',['América Latina em ',datestr(end_time,24)]},'FontSize',11);
 
