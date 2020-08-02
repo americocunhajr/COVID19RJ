@@ -30,11 +30,11 @@ if (init == 2) city = 'São Gonçalo/RJ'; pop = 1084839; color = [255,130,113]/2
 if (init == 6) city = 'Niterói/RJ'; pop = 524687; color = [209,227,105]/255; end
 if (init == 7) city = 'Belford Roxo/RJ'; pop = 508013; color = [248,187,208]/255; end
 if (init == 5) city = 'São João de Meriti/RJ'; pop = 472406; color = [0,104,44]/255; end
-if (init == 9) city = 'Itaboraí/RJ'; pop = 240592; color = [0,45,135]/255; end
+if (init == 8) city = 'Itaboraí/RJ'; pop = 240592; color = [0,45,135]/255; end
 if (init == 11) city = 'Mesquita/RJ'; pop = 176103; color = [135,85,30]/255; end
 if (init == 10) city = 'Petrópolis/RJ'; pop = 306191; color = [203,63,23]/255; end
 if (init == 12) city = 'Volta Redonda/RJ'; pop = 273012; color = [191,171,72]/255; end
-if (init == 8) city = 'Magé/RJ'; pop = 260497; color = [236,64,122]/255; end
+if (init == 9) city = 'Magé/RJ'; pop = 260497; color = [236,64,122]/255; end
 
 %Definindo os números de casos e mortes
 tot_cases = table.totalCases(find(strcmp([table.city],city)),:);
@@ -55,7 +55,7 @@ if strcmp(city, 'São João de Meriti/RJ') city = 'São João de Meriti         
 if strcmp(city, 'Itaboraí/RJ') city = 'Itaboraí                         '; end 
 if strcmp(city, 'Mesquita/RJ') city = 'Mesquita                       '; end 
 if strcmp(city, 'Petrópolis/RJ') city = 'Petrópolis                      '; end 
-if strcmp(city, 'Volta Redonda/RJ') city = 'Volta Redonda                '; end 
+if strcmp(city, 'Volta Redonda/RJ') city = 'Volta Redonda              '; end 
 if strcmp(city, 'Magé/RJ') city = 'Magé                             '; end 
 
 end
@@ -63,17 +63,17 @@ end
 if (plot_type == 2)
 
 if (init == 1) city = 'Rio de Janeiro/RJ'; pop = 6718903; color = [69,169,0]/255; end
-if (init == 5) city = 'Duque de Caxias/RJ'; pop = 919596; color = [96,209,224]/255; end
-if (init == 4) city = 'Nova Iguaçu/RJ'; pop = 821128; color = [181,147,87]/255; end
+if (init == 4) city = 'Duque de Caxias/RJ'; pop = 919596; color = [96,209,224]/255; end
+if (init == 5) city = 'Nova Iguaçu/RJ'; pop = 821128; color = [181,147,87]/255; end
 if (init == 3) city = 'São Gonçalo/RJ'; pop = 1084839; color = [255,130,113]/255; end
 if (init == 2) city = 'Niterói/RJ'; pop = 524687; color = [209,227,105]/255; end
 if (init == 10) city = 'Belford Roxo/RJ'; pop = 508013; color = [248,187,208]/255; end
-if (init == 8) city = 'São João de Meriti/RJ'; pop = 472406; color = [0,104,44]/255; end
-if (init == 6) city = 'Itaboraí/RJ'; pop = 240592; color = [0,45,135]/255; end
+if (init == 9) city = 'São João de Meriti/RJ'; pop = 472406; color = [0,104,44]/255; end
+if (init == 7) city = 'Itaboraí/RJ'; pop = 240592; color = [0,45,135]/255; end
 if (init == 12) city = 'Mesquita/RJ'; pop = 176103; color = [135,85,30]/255; end
 if (init == 11) city = 'Petrópolis/RJ'; pop = 306191; color = [203,63,23]/255; end
-if (init == 7) city = 'Volta Redonda/RJ'; pop = 273012; color = [191,171,72]/255; end
-if (init == 9) city = 'Magé/RJ'; pop = 260497; color = [236,64,122]/255; end
+if (init == 6) city = 'Volta Redonda/RJ'; pop = 273012; color = [191,171,72]/255; end
+if (init == 8) city = 'Magé/RJ'; pop = 260497; color = [236,64,122]/255; end
 
 %Definindo os números de casos e mortes
 tot_cases = table.totalCases(find(strcmp([table.city],city)),:);
@@ -93,10 +93,12 @@ if strcmp(city, 'Belford Roxo/RJ') city = 'Belford Roxo                 '; end
 if strcmp(city, 'São João de Meriti/RJ') city = 'São João de Meriti         '; end 
 if strcmp(city, 'Itaboraí/RJ') city = 'Itaboraí                         '; end 
 if strcmp(city, 'Mesquita/RJ') city = 'Mesquita                         '; end 
-if strcmp(city, 'Petrópolis/RJ') city = 'Petrópolis                        '; end 
+if strcmp(city, 'Petrópolis/RJ') city = 'Petrópolis                      '; end 
 if strcmp(city, 'Volta Redonda/RJ') city = 'Volta Redonda              '; end 
 if strcmp(city, 'Magé/RJ') city = 'Magé                             '; end 
+
 end
+
 
 
 
@@ -170,7 +172,7 @@ fonte_labels = 10;
 fonte_padrao = 9; %numeros dos eixos
 fonte_location = 8;
 
-day_axis = 160;
+day_axis = 200;
 
 if (plot_type == 1)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -415,16 +417,15 @@ legend ("location", "northeastoutside");
 y_init=1;
 max_y=1000;
 
-ang = 60;
+ang = 65;
 h1=text(66,0.9*max_y,'números dobram a cada 7 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 38;
+ang = 44;
 h2=text(135,0.9*max_y,'14 dias');
 set(h2,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 25;
-h3=text(158,0.2*max_y,'21 dias');
+ang = 30;
+h3=text(198,0.8*max_y,'21 dias');
 set(h3,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 48;
 % ang = 45;
 % h4=text(76.7,0.9*max_y,'8 dias');
 % set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
@@ -474,16 +475,15 @@ y_init=10;
 max_y=10000;
 ang = 60;
 
-ang = 60;
+ang = 65;
 h1=text(66,0.9*max_y,'números dobram a cada 7 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 38;
+ang = 44;
 h2=text(135,0.9*max_y,'14 dias');
 set(h2,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 25;
-h3=text(158,0.2*max_y,'21 dias');
+ang = 30;
+h3=text(198,0.8*max_y,'21 dias');
 set(h3,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 48;
 % h4=text(76.7,0.9*max_y,'8 dias');
 % set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 

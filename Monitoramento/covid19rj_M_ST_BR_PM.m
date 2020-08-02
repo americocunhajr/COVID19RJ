@@ -316,7 +316,7 @@ if strcmp(country, 'MT') country = 'MT  '; end
 if strcmp(country, 'MS') country = 'MS    '; end 
 if strcmp(country, 'PR') country = 'PR  '; end 
 if strcmp(country, 'RS') country = 'RS  '; end 
-if strcmp(country, 'SC') country = 'SC    '; end 
+if strcmp(country, 'SC') country = 'SC  '; end 
 end
 
 if (plot_type == 2)
@@ -341,8 +341,8 @@ if (init == 7) country = 'MA'; color = [0,74,84]/255; pop = 7075181; end
 if (init == 5) country = 'PB'; color = [27,78,142]/255; pop = 4018127; end
 if (init == 6) country = 'PE'; color = [0,99,181]/255; pop = 9557071; end
 if (init == 1) country = 'PI'; color = [0,45,135]/255; pop = 3273227; end
-if (init == 2) country = 'RN'; color = [0,34,80]/255; pop = 3506853; end
-if (init == 3) country = 'SE'; color = [0,20,37]/255; pop = 2298696; end
+if (init == 3) country = 'RN'; color = [0,34,80]/255; pop = 3506853; end
+if (init == 2) country = 'SE'; color = [0,20,37]/255; pop = 2298696; end
 end
 
 if (regions == 3)
@@ -414,7 +414,7 @@ if (init == 0)
 end
 
 if strcmp(country, 'BR') country = 'BR'; end 
-if strcmp(country, 'AM') country = 'AM    '; end 
+if strcmp(country, 'AM') country = 'AM  '; end 
 if strcmp(country, 'PA') country = 'PA   '; end 
 if strcmp(country, 'AP') country = 'AP     '; end 
 if strcmp(country, 'AC') country = 'AC    '; end 
@@ -435,7 +435,7 @@ if strcmp(country, 'RJ') country = 'RJ   '; end
 if strcmp(country, 'ES') country = 'ES    '; end 
 if strcmp(country, 'MG') country = 'MG '; end 
 if strcmp(country, 'GO') country = 'GO    '; end 
-if strcmp(country, 'DF') country = 'DF     '; end 
+if strcmp(country, 'DF') country = 'DF   '; end 
 if strcmp(country, 'MT') country = 'MT    '; end 
 if strcmp(country, 'MS') country = 'MS    '; end 
 if strcmp(country, 'PR') country = 'PR    '; end 
@@ -520,7 +520,7 @@ fonte_labels = 10;
 fonte_padrao = 9; %numeros dos eixos
 fonte_location = 8;
 
-day_axis = 160;
+day_axis = 200;
 
 Pos = [250,250,600,450];
 set(0, 'DefaultFigurePosition', Pos);
@@ -752,7 +752,7 @@ figure(1)
 set(gca,'FontSize',fonte_padrao)
 if (regions < 6)
 title({'Mortalidade da epidemia',['Estados da região ',name_title,' em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
-legend ("location", "northwest");
+legend ("location", "southeast");
 end
 if (regions == 6)
 title({'Mortalidade da epidemia',['Todos os estados do Brasil em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
@@ -765,15 +765,16 @@ y_init=1;
 max_y=10000;
 max_x=day_axis;
 
-ang = 52;
-h1=text(90,0.92*max_y,'números dobram a cada 7 dias');
+ang = 58;
+h1=text(89,0.92*max_y,'números dobram a cada 7 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 32;
-h2=text(158,0.29*max_y,'14 dias');
+ang = 36;
+h2=text(180.5,0.92*max_y,'14 dias');
 set(h2,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
- ang = 25;
- h3=text(158,0.022*max_y,'21 dias');
+ ang = 26.5;
+ h3=text(198,0.083*max_y,'21 dias');
  set(h3,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
+
 % ang = 38;
 % h4=text(99,0.65*max_y,'8 dias');
 % set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
@@ -795,7 +796,7 @@ uistack(ha,'bottom');
 % To create the logo at the bottom left corner of the plot use 
 % the next two lines
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[.12 -0.0], .24,.12,]);
+ha2=axes('position',[haPos([3 1])-[.62 -0.65], .24,.12,]);
 % To place the logo at the bottom left corner of the figure window
 % uncomment the line below and comment the above two lines
 %ha2=axes('position',[0, 0, .1,.04,]);
@@ -815,7 +816,7 @@ figure (2)
 set(gca,'FontSize',fonte_padrao)
 if (regions < 6)
 title({'Contágio da epidemia',['Estados da região ',name_title,' em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
-legend ("location", "northwest");
+legend ("location", "southeast");
 end
 if (regions == 6)
 title({'Contágio da epidemia',['Todos os estados do Brasil em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
@@ -828,15 +829,16 @@ y_init=10;
 max_y=100000;
 max_x=day_axis;
 
-ang = 52;
-h1=text(90,0.92*max_y,'números dobram a cada 7 dias');
+ang = 58;
+h1=text(89,0.92*max_y,'números dobram a cada 7 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 32;
-h2=text(158,0.29*max_y,'14 dias');
+ang = 36;
+h2=text(180.5,0.92*max_y,'14 dias');
 set(h2,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
- ang = 25;
- h3=text(158,0.022*max_y,'21 dias');
+ ang = 26.5;
+ h3=text(198,0.083*max_y,'21 dias');
  set(h3,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
+
 % ang = 38;
 % h4=text(99,0.65*max_y,'8 dias');
 % set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
@@ -856,7 +858,7 @@ uistack(ha,'bottom');
 % To create the logo at the bottom left corner of the plot use 
 % the next two lines
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[.12 -0.0], .24,.12,]);
+ha2=axes('position',[haPos([3 1])-[.62 -0.65], .24,.12,]);
 % To place the logo at the bottom left corner of the figure window
 % uncomment the line below and comment the above two lines
 %ha2=axes('position',[0, 0, .1,.04,]);
@@ -967,7 +969,7 @@ figure(5)
 set(gca,'FontSize',fonte_padrao)
 if (regions < 6)
 title({'Mortalidade diária da epidemia',['Estados da região ',name_title,' em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
-legend ("location", "northwest");
+legend ("location", "southeast");
 end
 if (regions == 6)
 title({'Mortalidade diária da epidemia',['Todos os estados do Brasil em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
@@ -1009,7 +1011,7 @@ uistack(ha,'bottom');
 % To create the logo at the bottom left corner of the plot use 
 % the next two lines
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[.12 -0.0], .24,.12,]);
+ha2=axes('position',[haPos([3 1])-[.62 -0.65], .24,.12,]);
 % To place the logo at the bottom left corner of the figure window
 % uncomment the line below and comment the above two lines
 %ha2=axes('position',[0, 0, .1,.04,]);
@@ -1028,7 +1030,7 @@ figure (6)
 set(gca,'FontSize',fonte_padrao)
 if (regions < 6)
 title({'Contágio diário da epidemia',['Estados da região ',name_title,' em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
-legend ("location", "northwest");
+legend ("location", "southeast");
 end
 if (regions == 6)
 title({'Contágio diário da epidemia',['Todos os estados do Brasil em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
@@ -1072,7 +1074,7 @@ uistack(ha,'bottom');
 % To create the logo at the bottom left corner of the plot use 
 % the next two lines
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[.12 -0.0], .24,.12,]);
+ha2=axes('position',[haPos([3 1])-[.62 -0.65], .24,.12,]);
 % To place the logo at the bottom left corner of the figure window
 % uncomment the line below and comment the above two lines
 %ha2=axes('position',[0, 0, .1,.04,]);

@@ -311,7 +311,7 @@ if strcmp(country, 'MT') country = 'MT  '; end
 if strcmp(country, 'MS') country = 'MS    '; end 
 if strcmp(country, 'PR') country = 'PR  '; end 
 if strcmp(country, 'RS') country = 'RS  '; end 
-if strcmp(country, 'SC') country = 'SC    '; end 
+if strcmp(country, 'SC') country = 'SC  '; end 
 end
 
 if (plot_type == 2)
@@ -336,8 +336,8 @@ if (init == 7) country = 'MA'; color = [0,74,84]/255; pop = 7075181; end
 if (init == 5) country = 'PB'; color = [27,78,142]/255; pop = 4018127; end
 if (init == 6) country = 'PE'; color = [0,99,181]/255; pop = 9557071; end
 if (init == 1) country = 'PI'; color = [0,45,135]/255; pop = 3273227; end
-if (init == 2) country = 'RN'; color = [0,34,80]/255; pop = 3506853; end
-if (init == 3) country = 'SE'; color = [0,20,37]/255; pop = 2298696; end
+if (init == 3) country = 'RN'; color = [0,34,80]/255; pop = 3506853; end
+if (init == 2) country = 'SE'; color = [0,20,37]/255; pop = 2298696; end
 end
 
 if (regions == 3)
@@ -409,7 +409,7 @@ if (init == 0)
 end
 
 if strcmp(country, 'BR') country = 'BR'; end 
-if strcmp(country, 'AM') country = 'AM    '; end 
+if strcmp(country, 'AM') country = 'AM  '; end 
 if strcmp(country, 'PA') country = 'PA   '; end 
 if strcmp(country, 'AP') country = 'AP     '; end 
 if strcmp(country, 'AC') country = 'AC    '; end 
@@ -430,7 +430,7 @@ if strcmp(country, 'RJ') country = 'RJ   '; end
 if strcmp(country, 'ES') country = 'ES    '; end 
 if strcmp(country, 'MG') country = 'MG '; end 
 if strcmp(country, 'GO') country = 'GO    '; end 
-if strcmp(country, 'DF') country = 'DF     '; end 
+if strcmp(country, 'DF') country = 'DF   '; end 
 if strcmp(country, 'MT') country = 'MT    '; end 
 if strcmp(country, 'MS') country = 'MS    '; end 
 if strcmp(country, 'PR') country = 'PR    '; end 
@@ -514,7 +514,7 @@ fonte_labels = 10;
 fonte_padrao = 9; %numeros dos eixos
 fonte_location = 8;
 
-day_axis = 160;
+day_axis = 200;
 
 Pos = [250,250,600,450];
 set(0, 'DefaultFigurePosition', Pos);
@@ -772,14 +772,14 @@ y_init=10;
 max_y=1000000;
 max_x=day_axis;
 
-ang = 47;
+ang = 53;
 h1=text(113,0.93*max_y,'números dobram a cada 7 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 26;
-h2=text(158,0.03*max_y,'14 dias');
+ang = 31;
+h2=text(198,0.23*max_y,'14 dias');
 set(h2,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
- ang = 19;
- h3=text(158,0.0023*max_y,'21 dias');
+ ang = 22;
+ h3=text(198,0.0085*max_y,'21 dias');
  set(h3,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 % ang = 38;
 % h4=text(99,0.65*max_y,'8 dias');
@@ -835,14 +835,14 @@ y_init=100;
 max_y=10000000;
 max_x=day_axis;
 
-ang = 47;
+ang = 53;
 h1=text(113,0.93*max_y,'números dobram a cada 7 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 26;
-h2=text(158,0.03*max_y,'14 dias');
+ang = 31;
+h2=text(198,0.23*max_y,'14 dias');
 set(h2,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
- ang = 19;
- h3=text(158,0.0023*max_y,'21 dias');
+ ang = 22;
+ h3=text(198,0.0085*max_y,'21 dias');
  set(h3,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 % ang = 38;
 % h4=text(99,0.65*max_y,'8 dias');

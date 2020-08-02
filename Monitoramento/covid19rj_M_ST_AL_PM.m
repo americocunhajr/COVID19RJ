@@ -72,9 +72,9 @@ if (plot_type == 1)
 %ordem por países que tem mais morte
 if (init == 1) country = 'Brazil'; color = [0,0,0]/255; linew = 1.75; end
 if (init == 3) country = 'Peru'; color = [181,147,87]/255; end
-if (init == 4) country = 'Chile'; color = [248,187,208]/255; end
+if (init == 5) country = 'Chile'; color = [248,187,208]/255; end
 if (init == 6) country = 'Ecuador'; color = [69,169,0]/255; end
-if (init == 5) country = 'Colombia'; color = [96,209,224]/255; end  
+if (init == 4) country = 'Colombia'; color = [96,209,224]/255; end  
 if (init == 7) country = 'Argentina'; color = [255,130,113]/255; end
 if (init == 8) country = 'Bolivia'; color = [209,227,105]/255; end
 if (init == 15) country = 'Paraguay'; color = [0,104,44]/255; end
@@ -100,7 +100,7 @@ if strcmp(country, 'Brazil') country_leg = 'Brasil           '; end
 if strcmp(country, 'Peru') country_leg = 'Peru             '; end
 if strcmp(country, 'Chile') country_leg = 'Chile               '; end 
 if strcmp(country, 'Ecuador') country_leg = 'Equador          '; end 
-if strcmp(country, 'Colombia') country_leg = 'Colômbia        '; end 
+if strcmp(country, 'Colombia') country_leg = 'Colômbia      '; end 
 if strcmp(country, 'Argentina') country_leg = 'Argentina       '; end 
 if strcmp(country, 'Bolivia') country_leg = 'Bolívia            '; end 
 if strcmp(country, 'Paraguay') country_leg = 'Paraguai              '; end 
@@ -110,7 +110,7 @@ if strcmp(country, 'Mexico') country_leg = 'México         '; end
 if strcmp(country, 'Cuba') country_leg = 'Cuba                   '; end 
 if strcmp(country, 'Dominican Republic') country_leg = 'R. Dominicana'; end 
 if strcmp(country, 'Panama') country_leg = 'Panamá          '; end 
-if strcmp(country, 'Costa Rica') country_leg = 'Costa Rica           '; end 
+if strcmp(country, 'Costa Rica') country_leg = 'Costa Rica         '; end 
 
 end
 
@@ -125,12 +125,12 @@ if (init == 6) country = 'Argentina'; color = [255,130,113]/255; end
 if (init == 8) country = 'Bolivia'; color = [209,227,105]/255; end
 if (init == 13) country = 'Paraguay'; color = [0,104,44]/255; end
 if (init == 15) country = 'Uruguay'; color = [0,45,135]/255; end
-if (init == 12) country = 'Venezuela'; color = [135,85,30]/255; end
+if (init == 11) country = 'Venezuela'; color = [135,85,30]/255; end
 if (init == 2) country = 'Mexico'; color = [203,63,23]/255; end
 if (init == 14) country = 'Cuba'; color = [191,171,72]/255; end
 if (init == 9) country = 'Dominican Republic'; color = [236,64,122]/255; end
 if (init == 10) country = 'Panama'; color = [0.4,0.4,0.4]; end
-if (init == 11) country = 'Costa Rica'; color = [0,0.5,0.6]; end
+if (init == 12) country = 'Costa Rica'; color = [0,0.5,0.6]; end
 
 
 if strcmp(country, 'Brazil')
@@ -196,8 +196,8 @@ end
 
 %Criando vetores desde dia zero a partir de X mortes/milhao ("_deaths") ou a partir de X casos/milhao ("_cases")
 %Usuário define dia zero para casos ou mortes
-X_deaths_pm = 0.1;
-X_cases_pm = 1;
+X_deaths_pm = 1;
+X_cases_pm = 10;
 X_deaths = 10;
 X_cases = 100;
 
@@ -247,7 +247,7 @@ fonte_labels = 10;
 fonte_padrao = 9; %numeros dos eixos
 fonte_location = 8;
 
-day_axis = 180;
+day_axis = 200;
 
 Pos = [0,250,900,450];
 set(0, 'DefaultFigurePosition', Pos);
@@ -265,7 +265,7 @@ grid3=semilogy(0:1:(day_axis-1),100*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],'H
 hold on;
 
 %Linhas "dobram"
-y_init=0.1;
+y_init=1;
 for (i=0:1:day_axis-1)
 y(i+1) = y_init*2^i;
 x1(i+1) = 5*i;
@@ -294,16 +294,21 @@ tot_mortes(init,1) = max(tot_deaths);
 %Plotar Mortes X total de mortes (por milhao de hab.)
 figure (3);
 
-grid1=loglog([0.1,10000],1*(ones(2, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+grid1=loglog([0.1,100000],1*(ones(2, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
 hold on;
-grid2=loglog([0.1,10000],10*(ones(2, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+grid2=loglog([0.1,100000],10*(ones(2, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+grid2=loglog([0.1,100000],100*(ones(2, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
 hold on;
 
-grid3=loglog(1*(ones(2, 1)),[0.1,1000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
+
+grid3=loglog(1*(ones(2, 1)),[0.1,10000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
 hold on;
-grid4=loglog(10*(ones(2, 1)),[0.1,1000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
+grid4=loglog(10*(ones(2, 1)),[0.1,10000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
 hold on;
-grid5=loglog(100*(ones(2, 1)),[0.1,1000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
+grid5=loglog(100*(ones(2, 1)),[0.1,10000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+grid5=loglog(1000*(ones(2, 1)),[0.1,10000],'color',[0.8,0.8,0.8],'HandleVisibility','off');
 hold on;
 
  %Tirando os zeros de Mortes
@@ -383,7 +388,7 @@ grid4=semilogy(0:1:(day_axis-1),10000*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],
 hold on;
 
 %Linhas "dobram"
-y_init=1;
+y_init=10;
 for (i=0:1:day_axis-1)
 y(i+1) = y_init*2^i;
 x1(i+1) = 5*i;
@@ -493,19 +498,19 @@ xlabel({['Dias desde que se ultrapassou ',num2str(X_deaths_pm),' morte'],['(por 
 ylabel ({'Total de mortes', '(por milhão de habitantes)'},'FontSize',fonte_labels);
 legend ("location", "northeastoutside");
 
-y_init=0.1;
+y_init=1;
 max_y=1000;
-ang = 62;
-h1=text(63.5,0.9*max_y,'números dobram a cada 5 dias');
+ang = 70;
+h1=text(47,0.9*max_y,'números dobram a cada 5 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 57;
-h2=text(76.9,0.9*max_y,'6 dias');
+ang = 67;
+h2=text(57,0.9*max_y,'6 dias');
 set(h2,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 51;
-h3=text(90,0.9*max_y,'7 dias');
+ang = 64;
+h3=text(66.5,0.9*max_y,'7 dias');
 set(h3,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 47;
-h4=text(103,0.9*max_y,'8 dias');
+ang = 62;
+h4=text(76,0.9*max_y,'8 dias');
 set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 
 set(gca,'YTickLabel',{'0.1','1','10','100','1k','10k'})
@@ -550,19 +555,19 @@ xlabel({['Dias desde que se ultrapassou ',num2str(X_cases_pm),' caso'], '(por mi
 ylabel ({'Total de casos','(por milhão de habitantes)'},'FontSize',fonte_labels);
 legend ("location", "northeastoutside");
 
-y_init=1;
+y_init=10;
 max_y=100000;
-ang = 57;
-h1=text(80,0.9*max_y,'números dobram a cada 5 dias');
+ang = 64;
+h1=text(63,0.9*max_y,'números dobram a cada 5 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang =53;
-h2=text(96.5,0.9*max_y,'6 dias');
+ang = 57;
+h2=text(77,0.9*max_y,'6 dias');
 set(h2,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 48;
-h3=text(112.8,0.9*max_y,'7 dias');
+ang = 56;
+h3=text(90,0.9*max_y,'7 dias');
 set(h3,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 45;
-h4=text(129.1,0.9*max_y,'8 dias');
+ang = 55;
+h4=text(102,0.9*max_y,'8 dias');
 set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 
 set(gca,'YTickLabel',{'1','10','100','1k','10k','100k'})
@@ -603,8 +608,8 @@ title({'Informativo de progresso da epidemia (número de mortes)',['América Lat
 ylabel({'Mortes por semana','(por milhão de habitantes)'},'FontSize',fonte_labels);
 xlabel ({'Total de mortes','(por milhão de habitantes)'},'FontSize',fonte_labels);
 legend ("location", "northeastoutside");
-max_x = 1000;
-max_y = 100;
+max_x = 10000;
+max_y = 1000;
 axis([0.1 max_x 0.1 max_y]);
 
 set(gca,'YTickLabel',{'0.1','1','10','100','1k'})

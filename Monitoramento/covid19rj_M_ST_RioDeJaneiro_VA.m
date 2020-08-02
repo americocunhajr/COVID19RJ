@@ -37,9 +37,9 @@ colors = [
 ];
 
 %Lendo o arquivo disponível no site 
-fullURL = ['https://raw.githubusercontent.com/wcota/covid19br/master/cases-brazil-cities-time.csv'];
-filename = 'cases-brazil-cities-time.txt';
-urlwrite(fullURL,[pwd '/Dados/',filename]);
+% fullURL = ['https://raw.githubusercontent.com/wcota/covid19br/master/cases-brazil-cities-time.csv'];
+% filename = 'cases-brazil-cities-time.txt';
+% urlwrite(fullURL,[pwd '/Dados/',filename]);
 
 table = readtable([pwd,'/Dados/cases-brazil-cities-time.txt']);
 
@@ -63,10 +63,13 @@ name = 'RJ';
 %Separei em dois tipos de plot pra organizar em ordem de mais mortes (tipo 1) e mais casos (tipo 2)
 
 for( init = 1:1:30)
-
+      
 clearvars -except plot_type init table data name colors cities_order
 
+if (init == 0) city = 'Três Rios/RJ'; color = [0,1,0]; cityprint = sprintf('%.0f',init); 
+else
 city = cities_order(init); color = colors(init,:); cityprint = sprintf('%.0f',init);
+end
 
 % if (init == 30) city = 'Rio de Janeiro/RJ'; color = colors(init,:); cityprint = sprintf('%.0f',init); end
 % if (init == 29) city = 'Duque de Caxias/RJ'; color = colors(init,:); cityprint = sprintf('%.0f',init); end
