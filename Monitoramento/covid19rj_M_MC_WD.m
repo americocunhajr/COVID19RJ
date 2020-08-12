@@ -322,7 +322,7 @@ img_obitos_acumulados = zeros(length(Estados),max_size);
 
 %Gerando matrizes para os 4: caso e obitos x diario e acumulados
 for i=1:length(Estados)
-    if (i==3) %Brazil position
+    if (i==5) %Brazil position
     I_estado=find(BRarquivogeral.state == string("TOTAL"));
     tabela_aux = BRarquivogeral(I_estado,:);
     tabela = tabela_aux;

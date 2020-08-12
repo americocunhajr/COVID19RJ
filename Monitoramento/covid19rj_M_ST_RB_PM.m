@@ -173,7 +173,7 @@ popCENTRO = popMS + popMT + popGO + popDF;
 if (plot_type == 1)
 %ordem por países que tem mais morte
 if (init == 3)
-country = 'Norte            ';
+country = 'Norte              ';
 color = [0,169,74]/255; 
 pop = popNORTE;
 tot_cases = NORTE(:,1);
@@ -185,7 +185,7 @@ new_cases = -cases_old + tot_cases;
 new_deaths = -deaths_old + tot_deaths;
 end
 if (init == 2)
-country = 'Nordeste      ';
+country = 'Nordeste        ';
 color = [0,99,181]/255;
 pop = popNORDESTE;
 tot_cases = NORDESTE(:,1);
@@ -197,7 +197,7 @@ new_cases = -cases_old + tot_cases;
 new_deaths = -deaths_old + tot_deaths;
 end
 if (init == 1) 
-country = 'Sudeste        ';
+country = 'Sudeste          ';
 color = [254,88,52]/255;
 pop = popSUDESTE;
 tot_cases = SUDESTE(:,1);
@@ -209,7 +209,7 @@ new_cases = -cases_old + tot_cases;
 new_deaths = -deaths_old + tot_deaths;
 end
 if (init == 5)
-country = 'Sul                  ';
+country = 'Sul                    ';
 color = [193,203,68]/255;
 pop = popSUL;
 tot_cases = SUL(:,1);
@@ -221,7 +221,7 @@ new_cases = -cases_old + tot_cases;
 new_deaths = -deaths_old + tot_deaths;
 end
 if (init == 4)
-country = 'Centro-Oeste  ';
+country = 'Centro-Oeste    ';
 color = [135,85,30]/255;
 pop = popCENTRO;
 tot_cases = CENTRO(:,1);
@@ -275,7 +275,7 @@ new_cases = -cases_old + tot_cases;
 new_deaths = -deaths_old + tot_deaths;
 end
 if (init == 1)
-country = 'Sudeste          ';
+country = 'Sudeste        ';
 color = [254,88,52]/255;
 pop = popSUDESTE;
 tot_cases = SUDESTE(:,1);
