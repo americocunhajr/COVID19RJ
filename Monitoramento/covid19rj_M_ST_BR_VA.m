@@ -144,7 +144,7 @@ popBR=popRO+popAC+popAM+popRR+popPA+popAP+popTO+popMA+popPI+popCE+popRN+popPE+po
 
 
 %inicio do loop de plot
-for (regions = 6:1:6)
+for (regions = 1:1:6)
 
 if (regions == 1 )
 begin_states = 0;

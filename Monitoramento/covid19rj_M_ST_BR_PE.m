@@ -177,12 +177,12 @@ name = 'SU';
 name_title = 'Sul';
 end
 if (regions == 6 )
-begin_states = 0;
+begin_states = 1;
 end_states = 27;
 name = 'BR'
 end
 
-for( plot_type = 1:1:2)
+for( plot_type = 1:1:1)
 
 %loop nos 13 países estudados
 for( init = end_states:-1:begin_states)
@@ -191,53 +191,6 @@ clearvars -except plot_type init BRASIL data table name name_title regions begin
 
 if (plot_type == 1)
 
-if (regions == 1)
-if (init == 0) country = 'BR'; color = [0,0,0]/255; pop = popBR; end
-if (init == 3) country = 'AC'; color = [69,169,0]/255; pop = 881935; end
-if (init == 4) country = 'AP'; color = [5,163,29]/255; pop = 845731; end
-if (init == 6) country = 'AM'; color = [53,143,31]/255; pop = 4144597; end  
-if (init == 7) country = 'PA'; color = [0,169,74]/255; pop = 8602865; end
-if (init == 1) country = 'TO'; color = [0,109,22]/255; pop = 1572866; end
-if (init == 5) country = 'RO'; color = [0,104,44]/255; pop = 1777225; end
-if (init == 2) country = 'RR'; color = [0,67,21]/255; pop = 605761; end
-end
-
-if (regions == 2)
-if (init == 0) country = 'BR'; color = [0,0,0]/255; pop = popBR; end
-if (init == 3) country = 'AL'; color = [96,209,224]/255; pop = 3337357; end
-if (init == 7) country = 'BA'; color = [0,170,196]/255; pop = 14873064; end
-if (init == 9) country = 'CE'; color = [0,116,136]/255; pop = 9132078; end
-if (init == 6) country = 'MA'; color = [0,74,84]/255; pop = 7075181; end
-if (init == 5) country = 'PB'; color = [27,78,142]/255; pop = 4018127; end
-if (init == 8) country = 'PE'; color = [0,99,181]/255; pop = 9557071; end
-if (init == 1) country = 'PI'; color = [0,45,135]/255; pop = 3273227; end
-if (init == 4) country = 'RN'; color = [0,34,80]/255; pop = 3506853; end
-if (init == 2) country = 'SE'; color = [0,20,37]/255; pop = 2298696; end
-end
-
-if (regions == 3)
-if (init == 0) country = 'BR'; color = [0,0,0]/255; pop = popBR; end
-if (init == 2) country = 'DF'; color = [181,147,87]/255; pop = 3015268; end
-if (init == 3) country = 'GO'; color = [135,85,30]/255; pop = 7018354; end
-if (init == 4) country = 'MT'; color = [110,71,28]/255; pop = 3484466; end
-if (init == 1) country = 'MS'; color = [86,62,32]/255; pop = 2778986; end
-end
-
-if (regions == 4)
-if (init == 0) country = 'BR'; color = [0,0,0]/255; pop = popBR; end
-if (init == 1) country = 'ES'; color = [255,130,113]/255; pop = 4018650; end
-if (init == 2) country = 'MG'; color = [254,88,52]/255; pop = 21168791; end
-if (init == 3) country = 'RJ'; color = [248,66,9]/255; pop = 17264943; end
-if (init == 4) country = 'SP'; color = [203,63,23]/255; pop = 45919049; end
-end
-
-if (regions == 5)
-if (init == 0) country = 'BR'; color = [0,0,0]/255; pop = popBR; end
-if (init == 2) country = 'PR'; color = [209,227,105]/255; pop = 11433957; end
-if (init == 3) country = 'RS'; color = [193,203,68]/255; pop = 11377239; end
-if (init == 1) country = 'SC'; color = [191,171,72]/255; pop = 7164788; end
-end
-
 if (regions == 6)
 if (init == 0) country = 'BR'; color = [0,0,0]/255; pop = popBR; end
 if (init == 1) country = 'AC'; color = [69,169,0]/255; pop = 881935; end
@@ -271,136 +224,9 @@ end
 
 if (init > 0)
     location = BRASIL(find(strcmp([table.state], country)),:);
+    location = [zeros((length(BR)-length(location)),2) ; location];
     linew = 1.2;
-    dates = table.date(find(strcmp([table.state],country)),:);
-    end_time = max(datenum(dates));
-    locationBR = BR;
-end
-if (init == 0)
-    location = BR;
-    linew = 1.75;
     dates = table.date(find(strcmp([table.state],'TOTAL')),:);
-    end_time = max(datenum(dates));
-    locationBR = BR;
-end
-
-
-
-if strcmp(country, 'BR') country = 'BR'; end 
-if strcmp(country, 'AM') country = 'AM    '; end 
-if strcmp(country, 'PA') country = 'PA     '; end 
-if strcmp(country, 'AP') country = 'AP      '; end 
-if strcmp(country, 'AC') country = 'AC      '; end 
-if strcmp(country, 'RO') country = 'RO      '; end 
-if strcmp(country, 'RR') country = 'RR      '; end 
-if strcmp(country, 'TO') country = 'TO      '; end 
-if strcmp(country, 'CE') country = 'CE     '; end 
-if strcmp(country, 'PE') country = 'PE     '; end 
-if strcmp(country, 'MA') country = 'MA    '; end 
-if strcmp(country, 'BA') country = 'BA     '; end 
-if strcmp(country, 'PB') country = 'PB     '; end 
-if strcmp(country, 'AL') country = 'AL     '; end 
-if strcmp(country, 'RN') country = 'RN     '; end 
-if strcmp(country, 'PI') country = 'PI      '; end 
-if strcmp(country, 'SE') country = 'SE     '; end 
-if strcmp(country, 'SP') country = 'SP  '; end 
-if strcmp(country, 'RJ') country = 'RJ   '; end 
-if strcmp(country, 'ES') country = 'ES    '; end 
-if strcmp(country, 'MG') country = 'MG   '; end 
-if strcmp(country, 'GO') country = 'GO    '; end 
-if strcmp(country, 'DF') country = 'DF    '; end 
-if strcmp(country, 'MT') country = 'MT    '; end 
-if strcmp(country, 'MS') country = 'MS      '; end 
-if strcmp(country, 'PR') country = 'PR    '; end 
-if strcmp(country, 'RS') country = 'RS    '; end 
-if strcmp(country, 'SC') country = 'SC    '; end 
-end
-
-if (plot_type == 2)
-
-if (regions == 1)
-if (init == 0) country = 'BR'; color = [0,0,0]/255; pop = popBR; end
-if (init == 1) country = 'AC'; color = [69,169,0]/255; pop = 881935; end
-if (init == 4) country = 'AP'; color = [5,163,29]/255; pop = 845731; end
-if (init == 6) country = 'AM'; color = [53,143,31]/255; pop = 4144597; end  
-if (init == 7) country = 'PA'; color = [0,169,74]/255; pop = 8602865; end
-if (init == 2) country = 'TO'; color = [0,109,22]/255; pop = 1572866; end
-if (init == 5) country = 'RO'; color = [0,104,44]/255; pop = 1777225; end
-if (init == 3) country = 'RR'; color = [0,67,21]/255; pop = 605761; end
-end
-
-if (regions == 2)
-if (init == 0) country = 'BR'; color = [0,0,0]/255; pop = popBR; end
-if (init == 4) country = 'AL'; color = [96,209,224]/255; pop = 3337357; end
-if (init == 9) country = 'BA'; color = [0,170,196]/255; pop = 14873064; end
-if (init == 8) country = 'CE'; color = [0,116,136]/255; pop = 9132078; end
-if (init == 7) country = 'MA'; color = [0,74,84]/255; pop = 7075181; end
-if (init == 5) country = 'PB'; color = [27,78,142]/255; pop = 4018127; end
-if (init == 6) country = 'PE'; color = [0,99,181]/255; pop = 9557071; end
-if (init == 2) country = 'PI'; color = [0,45,135]/255; pop = 3273227; end
-if (init == 1) country = 'RN'; color = [0,34,80]/255; pop = 3506853; end
-if (init == 3) country = 'SE'; color = [0,20,37]/255; pop = 2298696; end
-end
-
-if (regions == 3)
-if (init == 0) country = 'BR'; color = [0,0,0]/255; pop = popBR; end
-if (init == 4) country = 'DF'; color = [181,147,87]/255; pop = 3015268; end
-if (init == 3) country = 'GO'; color = [135,85,30]/255; pop = 7018354; end
-if (init == 2) country = 'MT'; color = [110,71,28]/255; pop = 3484466; end
-if (init == 1) country = 'MS'; color = [86,62,32]/255; pop = 2778986; end
-end
-
-
-if (regions == 4)
-if (init == 0) country = 'BR'; color = [0,0,0]/255; pop = popBR; end
-if (init == 1) country = 'ES'; color = [255,130,113]/255; pop = 4018650; end
-if (init == 2) country = 'MG'; color = [254,88,52]/255; pop = 21168791; end
-if (init == 3) country = 'RJ'; color = [248,66,9]/255; pop = 17264943; end
-if (init == 4) country = 'SP'; color = [203,63,23]/255; pop = 45919049; end
-end
-
-if (regions == 5)
-if (init == 0) country = 'BR'; color = [0,0,0]/255; pop = popBR; end
-if (init == 2) country = 'PR'; color = [209,227,105]/255; pop = 11433957; end
-if (init == 1) country = 'RS'; color = [193,203,68]/255; pop = 11377239; end
-if (init == 3) country = 'SC'; color = [191,171,72]/255; pop = 7164788; end
-end
-
-if (regions == 6)
-if (init == 0) country = 'BR'; color = [0,0,0]/255; pop = popBR; end
-if (init == 1) country = 'AC'; color = [69,169,0]/255; pop = 881935; end
-if (init == 2) country = 'AP'; color = [5,163,29]/255; pop = 845731; end
-if (init == 3) country = 'AM'; color = [53,143,31]/255; pop = 4144597; end  
-if (init == 4) country = 'PA'; color = [0,169,74]/255; pop = 8602865; end
-if (init == 5) country = 'TO'; color = [0,109,22]/255; pop = 1572866; end
-if (init == 6) country = 'RO'; color = [0,104,44]/255; pop = 1777225; end
-if (init == 7) country = 'RR'; color = [0,67,21]/255; pop = 605761; end
-if (init == 8) country = 'AL'; color = [96,209,224]/255; pop = 3337357; end
-if (init == 9) country = 'BA'; color = [0,170,196]/255; pop = 14873064; end
-if (init == 10) country = 'CE'; color = [0,116,136]/255; pop = 9132078; end
-if (init == 11) country = 'MA'; color = [0,74,84]/255; pop = 7075181; end
-if (init == 12) country = 'PB'; color = [27,78,142]/255; pop = 4018127; end
-if (init == 13) country = 'PE'; color = [0,99,181]/255; pop = 9557071; end
-if (init == 14) country = 'PI'; color = [0,45,135]/255; pop = 3273227; end
-if (init == 15) country = 'RN'; color = [0,34,80]/255; pop = 3506853; end
-if (init == 16) country = 'SE'; color = [0,20,37]/255; pop = 2298696; end
-if (init == 17) country = 'DF'; color = [181,147,87]/255; pop = 3015268; end
-if (init == 18) country = 'GO'; color = [135,85,30]/255; pop = 7018354; end
-if (init == 19) country = 'MT'; color = [110,71,28]/255; pop = 3484466; end
-if (init == 20) country = 'MS'; color = [86,62,32]/255; pop = 2778986; end
-if (init == 21) country = 'ES'; color = [255,130,113]/255; pop = 4018650; end
-if (init == 22) country = 'MG'; color = [254,88,52]/255; pop = 21168791; end
-if (init == 23) country = 'RJ'; color = [248,66,9]/255; pop = 17264943; end
-if (init == 24) country = 'SP'; color = [203,63,23]/255; pop = 45919049; end
-if (init == 25) country = 'PR'; color = [209,227,105]/255; pop = 11433957; end
-if (init == 26) country = 'RS'; color = [193,203,68]/255; pop = 11377239; end
-if (init == 27) country = 'SC'; color = [191,171,72]/255; pop = 7164788; end
-end
-
-if (init > 0)
-    location = BRASIL(find(strcmp([table.state], country)),:);
-    linew = 1.2;
-    dates = table.date(find(strcmp([table.state],country)),:);
     end_time = max(datenum(dates));
     locationBR = BR;
 end
@@ -537,12 +363,21 @@ day_axis = 200;
 Pos = [250,250,600,450];
 set(0, 'DefaultFigurePosition', Pos);
 
+percentage = new_deaths7./new_deaths7BR;
+
 if (regions == 6)
 figure (7);
 
- fig=plot(dates,(new_cases7/new_cases7BR),'DisplayName',[country,'  ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', linew);
+ fig=plot(dates,[new_deaths7./new_deaths7BR*100],'DisplayName',[country,'  ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', linew);
  hold on;
- text (dates(length(dates)), new_cases7(length(new_cases7))/new_cases7BR(length(new_cases7BR)), [' ',country],'FontSize',fonte_location,"color",color,"Clipping",'on');
+ text (dates(length(dates)), new_deaths7(length(new_deaths7))*100/new_deaths7BR(length(new_deaths7BR)), [' ',country],'FontSize',fonte_location,"color",color,"Clipping",'on')
+ 
+ figure (8);
+
+ fig=plot(dates,[(new_deaths7./new_deaths7BR)/(pop/popBR)],'DisplayName',[country,'  ',num2str(max(tot_cases)),' casos'],"color",color,'LineWidth', linew);
+ hold on;
+ text (dates(length(dates)), (new_deaths7(length(new_deaths7))/new_deaths7BR(length(new_deaths7BR))/(pop/popBR)), [' ',country],'FontSize',fonte_location,"color",color,"Clipping",'on')
+ 
  
  end
 
@@ -559,15 +394,26 @@ figure (7)
 
 set(gca,'FontSize',fonte_padrao)
 if (regions == 6)
-title({'Contágio diário da epidemia ',['Todos os estados do Brasil em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
+title({'Porcentagem entre óbitos diários de cada estado',['e óbitos diários do Brasil até ',datestr(end_time,24)]},'FontSize',fonte_titulo);
 legend = "off";
 end
-xlabel(['Dias desde que se ultrapassou ',num2str(X_cases),' casos '],'FontSize',fonte_labels);
-ylabel ({'Novos casos por dia','(Média móvel de 7 dias)'},'FontSize',fonte_labels);
 
-y_init=10;
 max_y=100000;
 max_x=day_axis;
+
+dia = dates(length(dates),1);
+tend = dia + days(14);
+numdays = datenum(tend) - datenum({'11/03/20'},'dd/mm/yy');
+weeks = round(numdays / 14);
+tstart = tend - days(weeks * 14)
+
+ylim([0 35]);
+xlim([tstart tend]);
+set(gca, 'XTick', linspace(tstart,tend,weeks+1))
+datetick('x',19,'keepticks')
+xtickangle(90);
+set(gca,'YGrid', 'on');
+set(gca,'yminorgrid','off')
 
 %set(gca,'YTickLabel',{'10','100','1k','10k','100k','1M'})
 
@@ -584,7 +430,7 @@ uistack(ha,'bottom');
 % To create the logo at the bottom left corner of the plot use 
 % the next two lines
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[.12 -0.0], .24,.12,]);
+ha2=axes('position',[haPos([3 1])-[.12 -0.65], .24,.12,]);
 % To place the logo at the bottom left corner of the figure window
 % uncomment the line below and comment the above two lines
 %ha2=axes('position',[0, 0, .1,.04,]);
@@ -598,28 +444,77 @@ colormap (map)
 % into the axes again. Also, make the axes invisible
 set(ha2,'handlevisibility','off','visible','off')
 
+figure (8)
 
-
-outputdir = datestr(end_time,29);
-if ~exist([pwd,'/',outputdir], 'dir')
-  mkdir([pwd,'/',outputdir]);
+set(gca,'FontSize',fonte_padrao)
+if (regions == 6)
+title({'Razão entre porcentagem de óbitos diários de cada estado em relação ao total do Brasil',['e a porcentagem da população de cada estado em relação ao total do Brasil até ',datestr(end_time,24)]},'FontSize',8);
+legend = "off";
 end
 
-outputdir2 = name;
-if ~exist([pwd,'/',outputdir,'/',outputdir2], 'dir')
-  mkdir([pwd,'/',outputdir,'/',outputdir2]);
+max_y=100000;
+max_x=day_axis;
+
+dia = dates(length(dates),1);
+tend = dia + days(14);
+numdays = datenum(tend) - datenum({'11/03/20'},'dd/mm/yy');
+weeks = round(numdays / 14);
+tstart = tend - days(weeks * 14)
+
+ylim([0 7]);
+xlim([tstart tend]);
+set(gca, 'XTick', linspace(tstart,tend,weeks+1))
+datetick('x',19,'keepticks')
+xtickangle(90);
+set(gca,'YGrid', 'on');
+set(gca,'yminorgrid','off')
+
+%set(gca,'YTickLabel',{'10','100','1k','10k','100k','1M'})
+
+
+hfonte=text(max_x,max_y,'Fonte: https://covid19br.wcota.me/');
+set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
+
+
+
+% pra botar o logo no inferior direito
+ha =gca;
+uistack(ha,'bottom');
+% Creating a new axes for the logo on the current axes
+% To create the logo at the bottom left corner of the plot use 
+% the next two lines
+haPos = get(ha,'position');
+ha2=axes('position',[haPos([3 1])-[.12 -0.65], .24,.12,]);
+% To place the logo at the bottom left corner of the figure window
+% uncomment the line below and comment the above two lines
+%ha2=axes('position',[0, 0, .1,.04,]);
+% Adding a LOGO to the new axes
+% The logo file(jpeg, png, etc.) must be placed in the working path
+[x, map]=imread('logo.png');
+image(x)
+% Setting the colormap to the colormap of the imported logo image
+colormap (map)
+% Turn the handlevisibility off so that we don't inadvertently plot
+% into the axes again. Also, make the axes invisible
+set(ha2,'handlevisibility','off','visible','off')
+
+% outputdir = datestr(end_time,29);
+% if ~exist([pwd,'/',outputdir], 'dir')
+%   mkdir([pwd,'/',outputdir]);
+% end
+% 
+% outputdir2 = name;
+% if ~exist([pwd,'/',outputdir,'/',outputdir2], 'dir')
+%   mkdir([pwd,'/',outputdir,'/',outputdir2]);
+% end
+% 
+% %Controle do site
+% print(figure(7),[pwd '/upload/',name,'/covid19rj_M_ST_NM_AC_PE_',name,'.png'],'-dpng','-r400'); 
+% 
+% %Controle do github
+% print(figure(7),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_ST_NM_AC_PE_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r400'); 
+% 
+% close all;
+
+
 end
-
-%Controle do site
-print(figure(7),[pwd '/upload/',name,'/covid19rj_M_ST_NM_AC_PE_',name,'.png'],'-dpng','-r400'); 
-
-%Controle do github
-print(figure(7),[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_ST_NM_AC_PE_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r400'); 
-
-close all;
-
-close all
-
-end
-
-copyfile( [pwd '/Dados/cases-brazil-states.txt'], [pwd '/',outputdir,'/cases-brazil-states.txt']);
