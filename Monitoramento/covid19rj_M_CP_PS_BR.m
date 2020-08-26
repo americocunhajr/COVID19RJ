@@ -6,9 +6,9 @@ close all;
 name = 'BR';
 
 
-% fullURL = ['https://raw.githubusercontent.com/wcota/covid19br/master/cases-brazil-states.csv'];
-% filename = 'cases-brazil-states.txt';
-% urlwrite(fullURL,[pwd '/Dados/',filename]);
+fullURL = ['https://raw.githubusercontent.com/wcota/covid19br/master/cases-brazil-states.csv'];
+filename = 'cases-brazil-states.txt';
+urlwrite(fullURL,[pwd '/Dados/',filename]);
 
 %Lendo o arquivo do Brasil
 popBR = 212.559409;

@@ -238,8 +238,8 @@ end
 
 if (regions == 5)
 if (init == 0) country = 'BR'; color = [0,0,0]/255; pop = popBR; end
-if (init == 2) country = 'PR'; color = [209,227,105]/255; pop = 11433957; end
-if (init == 3) country = 'RS'; color = [193,203,68]/255; pop = 11377239; end
+if (init == 3) country = 'PR'; color = [209,227,105]/255; pop = 11433957; end
+if (init == 2) country = 'RS'; color = [193,203,68]/255; pop = 11377239; end
 if (init == 1) country = 'SC'; color = [191,171,72]/255; pop = 7164788; end
 end
 
@@ -294,7 +294,7 @@ if strcmp(country, 'AM') country = 'AM    '; end
 if strcmp(country, 'PA') country = 'PA     '; end 
 if strcmp(country, 'AP') country = 'AP      '; end 
 if strcmp(country, 'AC') country = 'AC      '; end 
-if strcmp(country, 'RO') country = 'RO      '; end 
+if strcmp(country, 'RO') country = 'RO    '; end 
 if strcmp(country, 'RR') country = 'RR      '; end 
 if strcmp(country, 'TO') country = 'TO      '; end 
 if strcmp(country, 'CE') country = 'CE     '; end 
@@ -324,12 +324,12 @@ if (plot_type == 2)
 if (regions == 1)
 if (init == 0) country = 'BR'; color = [0,0,0]/255; pop = popBR; end
 if (init == 1) country = 'AC'; color = [69,169,0]/255; pop = 881935; end
-if (init == 4) country = 'AP'; color = [5,163,29]/255; pop = 845731; end
+if (init == 3) country = 'AP'; color = [5,163,29]/255; pop = 845731; end
 if (init == 6) country = 'AM'; color = [53,143,31]/255; pop = 4144597; end  
 if (init == 7) country = 'PA'; color = [0,169,74]/255; pop = 8602865; end
 if (init == 2) country = 'TO'; color = [0,109,22]/255; pop = 1572866; end
 if (init == 5) country = 'RO'; color = [0,104,44]/255; pop = 1777225; end
-if (init == 3) country = 'RR'; color = [0,67,21]/255; pop = 605761; end
+if (init == 4) country = 'RR'; color = [0,67,21]/255; pop = 605761; end
 end
 
 if (regions == 2)
@@ -434,11 +434,11 @@ if strcmp(country, 'SP') country = 'SP  '; end
 if strcmp(country, 'RJ') country = 'RJ   '; end 
 if strcmp(country, 'ES') country = 'ES    '; end 
 if strcmp(country, 'MG') country = 'MG '; end 
-if strcmp(country, 'GO') country = 'GO    '; end 
+if strcmp(country, 'GO') country = 'GO  '; end 
 if strcmp(country, 'DF') country = 'DF   '; end 
 if strcmp(country, 'MT') country = 'MT    '; end 
 if strcmp(country, 'MS') country = 'MS    '; end 
-if strcmp(country, 'PR') country = 'PR    '; end 
+if strcmp(country, 'PR') country = 'PR  '; end 
 if strcmp(country, 'RS') country = 'RS    '; end 
 if strcmp(country, 'SC') country = 'SC  '; end 
 end
@@ -968,7 +968,7 @@ figure(5)
 set(gca,'FontSize',fonte_padrao)
 if (regions < 6)
 title({'Mortalidade diária da epidemia',['Estados da região ',name_title,' em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
-legend ("location", "southeast");
+legend ("location", "northwest");
 end
 if (regions == 6)
 title({'Mortalidade diária da epidemia',['Todos os estados do Brasil em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
@@ -1010,7 +1010,7 @@ uistack(ha,'bottom');
 % To create the logo at the bottom left corner of the plot use 
 % the next two lines
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[.62 -0.65], .24,.12,]);
+ha2=axes('position',[haPos([3 1])-[.12 -0.0], .24,.12,]);
 % To place the logo at the bottom left corner of the figure window
 % uncomment the line below and comment the above two lines
 %ha2=axes('position',[0, 0, .1,.04,]);
@@ -1029,7 +1029,7 @@ figure (6)
 set(gca,'FontSize',fonte_padrao)
 if (regions < 6)
 title({'Contágio diário da epidemia',['Estados da região ',name_title,' em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
-legend ("location", "southeast");
+legend ("location", "northwest");
 end
 if (regions == 6)
 title({'Contágio diário da epidemia',['Todos os estados do Brasil em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
@@ -1073,7 +1073,7 @@ uistack(ha,'bottom');
 % To create the logo at the bottom left corner of the plot use 
 % the next two lines
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[.62 -0.65], .24,.12,]);
+ha2=axes('position',[haPos([3 1])-[.12 -0.0], .24,.12,]);
 % To place the logo at the bottom left corner of the figure window
 % uncomment the line below and comment the above two lines
 %ha2=axes('position',[0, 0, .1,.04,]);

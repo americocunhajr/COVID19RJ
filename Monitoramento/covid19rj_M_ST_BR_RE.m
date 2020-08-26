@@ -48,15 +48,15 @@ b(2).EdgeColor = [0 0.4470 0.7410];
 b(3).EdgeColor = [0.8500 0.3250 0.0980];
 
 
-tend = datetime(2020,8,23,0,0,0);
+tend = datetime(2020,9,6,0,0,0);
 xlim([tstart tend]);
-set(gca, 'XTick', linspace(tstart,tend,10))
+set(gca, 'XTick', linspace(tstart,tend,11))
 datetick('x',19,'keepticks')
 max_x=tend;
-max_y=3500000;
+max_y=4000000;
 ylim([0 max_y]);
 set(gca, 'YTick', 0:500000:max_y)
-set(gca,'YTickLabel',{'0','500k','1M','1.5M','2M','2.5M','3M','3.5M'})
+set(gca,'YTickLabel',{'0','500k','1M','1.5M','2M','2.5M','3M','3.5M','4M'})
 
 
 legend(strcat("Casos ativos:  ", num2str( sprintf( '%07d', max(BRASIL(:,1)) ))),strcat("Recuperados: ", num2str(sprintf( '%07d', max(BRASIL(:,2)) ))),strcat("Óbitos:           ", num2str( sprintf( '%07d', max(BRASIL(:,3))) )));
@@ -159,15 +159,15 @@ p2 = plot(dates,BRASIL(:,3),'linewidth',2,'color',[0 0.4470 0.7410]);
 hold on
 p3 = plot(dates,BRASIL(:,4),'linewidth',2,'color',[0.8500 0.3250 0.0980]);
 
-tend = datetime(2020,8,23,0,0,0);
+tend = datetime(2020,9,6,0,0,0);
 xlim([tstart tend]);
-set(gca, 'XTick', linspace(tstart,tend,10))
+set(gca, 'XTick', linspace(tstart,tend,11))
 datetick('x',19,'keepticks')
 max_x=tend;
-max_y=3500000;
+max_y=4000000;
 ylim([0 max_y]);
 set(gca, 'YTick', 0:500000:max_y)
-set(gca,'YTickLabel',{'0','500k','1M','1.5M','2M','2.5M','3M','3.5M'})
+set(gca,'YTickLabel',{'0','500k','1M','1.5M','2M','2.5M','3M','3.5M','4M'})
 
 
 legend(strcat("Total de casos: ", num2str(sprintf( '%07d', max(BRASIL(:,1)) ))),strcat("Casos ativos:    ", num2str( sprintf( '%07d', max(BRASIL(:,2)) ))), strcat("Recuperados:   ", num2str(sprintf( '%07d', max(BRASIL(:,3)) ))),strcat("Óbitos:             ", num2str( sprintf( '%07d', max(BRASIL(:,4))) )));

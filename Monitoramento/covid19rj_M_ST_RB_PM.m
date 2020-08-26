@@ -263,7 +263,7 @@ new_cases = -cases_old + tot_cases;
 new_deaths = -deaths_old + tot_deaths;
 end
 if (init == 2)
-country = 'Nordeste        ';
+country = 'Nordeste      ';
 color = [0,99,181]/255;
 pop = popNORDESTE;
 tot_cases = NORDESTE(:,1);
@@ -815,7 +815,7 @@ set(gca,'FontSize',fonte_padrao)
 title({'Mortalidade diária da epidemia',['Regiões do Brasil em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
 xlabel({['Dias desde que se ultrapassou ',num2str(X_deaths_pm),' morte'],'(por milhão de habitantes)'},'FontSize',fonte_labels);
 ylabel ({'Mortes diárias por milhão de habitantes','(Média móvel de 7 dias)'},'FontSize',fonte_labels);
-legend ("location", "southeast");
+legend ("location", "northwest");
 
 y_init=0.1;
 max_y=100;
@@ -850,7 +850,7 @@ uistack(ha,'bottom');
 % To create the logo at the bottom left corner of the plot use 
 % the next two lines
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[.62 -0.65], .24,.12,]);
+ha2=axes('position',[haPos([3 1])-[.12 -0.0], .24,.12,]);
 % To place the logo at the bottom left corner of the figure window
 % uncomment the line below and comment the above two lines
 %ha2=axes('position',[0, 0, .1,.04,]);
@@ -871,7 +871,7 @@ set(gca,'FontSize',fonte_padrao)
 title({'Contágio diário da epidemia',['Regiões do Brasil em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
 xlabel({['Dias desde que se ultrapassou ',num2str(X_cases_pm),' casos'],'(por milhão de habitantes)'},'FontSize',fonte_labels);
 ylabel ({'Novos casos por dia por milhão de habitantes','(Média móvel de 7 dias)'},'FontSize',fonte_labels);
-legend ("location", "southeast");
+legend ("location", "northwest");
 
 y_init=1;
 max_y=10000;
@@ -908,7 +908,7 @@ uistack(ha,'bottom');
 % To create the logo at the bottom left corner of the plot use 
 % the next two lines
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[.62 -0.65], .24,.12,]);
+ha2=axes('position',[haPos([3 1])-[.12 -0.0], .24,.12,]);
 % To place the logo at the bottom left corner of the figure window
 % uncomment the line below and comment the above two lines
 %ha2=axes('position',[0, 0, .1,.04,]);
