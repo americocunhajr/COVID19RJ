@@ -49,3 +49,5 @@ Comunicação:
 ## Instituições dos participantes:
 
 <img src="logos/uerj_logo_cor.jpg" width="13%"> <img src="logos/ufrj_logo_cor.png" width="10%"> <img src="logos/ufrgs_logo_cor.png" width="15%">  <img src="logos/ufu_logo_cor.png" width="12%"> <img src="logos/ifms_logo_cor.png" width="15%"> <img src="logos/unesp_logo_cor.png" width="20%">
+
+Teste Marcos Vinicius
