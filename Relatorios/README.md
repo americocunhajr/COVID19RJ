@@ -1,6 +1,8 @@
-Esses relatórios são distribuidos 
+## Como citar esses relatórios? 
 
-## Como citar os relatórios?  (referências em formato BibTeX)
+Esses relatórios são distribuidos segunda uma licença CC-BY-NC-ND 4.0.
+
+A citação de cada um deles em formato BibTeX pode ser encontrada a seguir.
 
 ```
 @misc{OF-COVID19-Relatorio1,
