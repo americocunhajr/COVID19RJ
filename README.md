@@ -15,7 +15,7 @@ Nossas análises são divulgadas nos seguintes canais:
 - www.facebook.com/portalcovid19rj
 - www.twitter.com/portalcovid19rj
 
-## Equipe:
+## Equipe
 
 Professores:
 - Adriano Côrtes
@@ -46,6 +46,18 @@ Design Gráfico:
 Comunicação:
 - Luthiana Soares
 
-## Instituições dos pesquisadores participantes:
+## Instituições dos pesquisadores participantes
 
 <img src="logos/uerj_logo_cor.jpg" width="13%"> <img src="logos/ufrj_logo_cor.png" width="10%"> <img src="logos/ufrgs_logo_cor.png" width="15%">  <img src="logos/ufu_logo_cor.png" width="12%"> <img src="logos/ifms_logo_cor.png" width="15%"> <img src="logos/unesp_logo_cor.png" width="20%">
+
+## Como citar esses repositório?
+
+```
+@misc{COVID19RJGitHub,
+   title        = {{COVID19}: {O}bserva\'{o}rio {F}luminense},
+   year         = {2020},
+   publisher    = {GitHub},
+   journal      = {GitHub repository},
+   howpublished = {\url{https://americocunhajr.github.io/COVID19RJ/}},
+}
+```
