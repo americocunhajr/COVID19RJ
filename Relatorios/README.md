@@ -167,9 +167,19 @@ A citação de cada um deles em formato BibTeX pode ser encontrada a seguir.
 ```
 @misc{OF-COVID19-Relatorio17,
    author = {A. {Cunha~Jr et al.}},
-   title = {Relatório 17 {P}rogresso da {COVID-19} no {B}rasil e no {E}stado do {R}io de {J}aneiro 35$^{a}$ {S}emana {E}pidemiológica do {C}alendário 2020 (23/8/2020 até 30/8/2020)},
+   title = {Relatório 17 {P}rogresso da {COVID-19} no {B}rasil e no {E}stado do {R}io de {J}aneiro 35$^{a}$ {S}emana {E}pidemiológica do {C}alendário 2020 (23/8/2020 até 29/8/2020)},
    howpublished = {COVID-19: Observatório Fluminense},
    year = {(30-08-2020)},
    note = {\url{https://https://doi.org/10.12957/eduerj.covid19rj.relatorio17}},
+}
+```
+
+```
+@misc{OF-COVID19-Relatorio18,
+   author = {A. {Cunha~Jr et al.}},
+   title = {Relatório 18 {P}rogresso da {COVID-19} no {B}rasil e no {E}stado do {R}io de {J}aneiro 36$^{a}$ a 39$^{a}$ {S}emana {E}pidemiológica do {C}alendário 2020 (30/8/2020 até 26/9/2020)},
+   howpublished = {COVID-19: Observatório Fluminense},
+   year = {(27-09-2020)},
+   note = {\url{https://https://doi.org/10.12957/eduerj.covid19rj.relatorio18}},
 }
 ```
