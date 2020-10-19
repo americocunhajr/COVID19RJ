@@ -58,6 +58,6 @@ Comunicação:
    year         = {2020},
    publisher    = {GitHub},
    journal      = {GitHub repository},
-   howpublished = {\url{https://americocunhajr.github.io/COVID19RJ/}},
+   howpublished = {\url{https://americocunhajr.github.io/COVID19RJ}},
 }
 ```
