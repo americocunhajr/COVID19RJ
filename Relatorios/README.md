@@ -2,7 +2,7 @@
 
 Esses relatórios são distribuidos segunda uma licença CC-BY-NC-ND 4.0.
 
-A citação de cada um deles em formato BibTeX pode ser encontrada a seguir.
+As respectivas informações bibliográficas, em formato BibTeX, são listadas a seguir.
 
 ```
 @misc{OF-COVID19-Relatorio1,
