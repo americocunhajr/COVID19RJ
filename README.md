@@ -1,4 +1,4 @@
-<img src="logos/COVID19_CapaSite_R00.jpg " width="50%">
+<img src="logos/COVID19_CapaSite_R00.jpg " width="65%">
 
 Esta é uma inciativa independente de pesquisadores, que congrega uma equipe multidisciplinar (matemática, engenharias, computação, arquitetura, jornalismo), para responder algumas demandas emergentes com o avanço da pandemia de COVID-19 em âmbito nacional, com ênfase no Estado do Rio de Janeiro. O interesse individual dos membros da equipe pela pandemia levou, naturalmente, ao intercâmbio de informações entre pesquisadores e estudantes, tais como fontes de dados, análises gráficas, notícias, relatórios e artigos científicos e, especialmente, ferramentas matemáticas empregadas na modelagem e análise do progresso de epidemias. Essa interação resultou na organização de uma força tarefa para buscar algumas soluções em termos de análise e visualização de dados, modelagem matemática da epidemia, bem como para produzir material educacional para estudantes interessados no tema e para o público em geral.
 
