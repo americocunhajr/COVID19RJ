@@ -68,7 +68,7 @@ Em formato BibTeX:
 
 Todo material disponível nesse repositório está disponível para uso nos termos da licença CC-BY-NC-ND 4.0.
 
-<img src="logos/CC-BY-ND-NA-40.png" width="10%">
+<img src="logos/CC-BY-NC-NA-40.png" width="10%">
 
 ## Instituições dos pesquisadores participantes
 
