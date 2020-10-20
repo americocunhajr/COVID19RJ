@@ -48,6 +48,10 @@ Comunicação:
 
 ## Como citar esses repositório?
 
+Quer citar o esse repositório em algum documento? Pode usar a seguinte referência:
+
+- COVID19: Observátório Fluminense, GitHub respository, 2020, https://americocunhajr.github.io/COVID19RJ
+
 ```
 @misc{COVID19RJGitHub,
    title        = {{COVID19}: {O}bserva\'{o}rio {F}luminense},
@@ -57,6 +61,10 @@ Comunicação:
    howpublished = {https://americocunhajr.github.io/COVID19RJ},
 }
 ```
+
+## Licença
+
+Todo material disponível nesse repositório está disponível para uso nos termos da licença CC-BY-NC-ND 4.0.
 
 ## Instituições dos pesquisadores participantes
 
