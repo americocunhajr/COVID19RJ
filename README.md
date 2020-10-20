@@ -52,6 +52,8 @@ Quer citar o esse repositório em algum documento? Pode usar a seguinte referên
 
 - COVID19: Observátório Fluminense, GitHub respository, 2020, https://americocunhajr.github.io/COVID19RJ
 
+Em formato BibTeX:
+
 ```
 @misc{COVID19RJGitHub,
    title        = {{COVID19}: {O}bserva\'{o}rio {F}luminense},
@@ -65,6 +67,8 @@ Quer citar o esse repositório em algum documento? Pode usar a seguinte referên
 ## Licença
 
 Todo material disponível nesse repositório está disponível para uso nos termos da licença CC-BY-NC-ND 4.0.
+
+<img src="logos/CC-BY-ND-NA40.png" width="10%">
 
 ## Instituições dos pesquisadores participantes
 
