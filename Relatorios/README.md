@@ -183,3 +183,13 @@ As respectivas informações bibliográficas, em formato BibTeX, são listadas a
    note = {\url{https://https://doi.org/10.12957/eduerj.covid19rj.relatorio18}},
 }
 ```
+
+```
+@misc{OF-COVID19-Relatorio19,
+   author = {A. {Cunha~Jr et al.}},
+   title = {Relatório 19 {P}rogresso da {COVID-19} no {B}rasil e no {E}stado do {R}io de {J}aneiro 40$^{a}$ a 43$^{a}$ {S}emana {E}pidemiológica do {C}alendário 2020 (26/9/2020 até 24/10/2020)},
+   howpublished = {COVID-19: Observatório Fluminense},
+   year = {(25-10-2020)},
+   note = {\url{https://https://doi.org/10.12957/eduerj.covid19rj.relatorio19}},
+}
+```
