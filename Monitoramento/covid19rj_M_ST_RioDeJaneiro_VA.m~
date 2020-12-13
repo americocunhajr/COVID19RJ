@@ -135,7 +135,7 @@ set(0, 'DefaultFigurePosition', Pos);
 %Fontes
 fonte_titulo = 10;
 fonte_labels = 9;
-fonte_padrao = 8; %numeros dos eixos
+fonte_padrao = 6; %numeros dos eixos
 fonte_location = 9;
 
 
@@ -199,7 +199,7 @@ legend ("location", "northwest");
 
 
 xlim([tstart tend]);
-set(gca, 'XTick', linspace(tstart,tend,(weeks/2.0 + 1.0)))
+set(gca, 'XTick', linspace(tstart,tend,(weeks+1)/2.0))
 datetick('x',19,'keepticks')
 xtickangle(90);
 set(gca,'YGrid', 'on');
@@ -219,7 +219,7 @@ legend ("location", "northwest");
 % set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
 
 xlim([tstart tend]);
-set(gca, 'XTick', linspace(tstart,tend,(weeks/2.0 + 1.0)))
+set(gca, 'XTick', linspace(tstart,tend,(weeks+1)/2.0))
 datetick('x',19,'keepticks')
 xtickangle(90);
 set(gca,'YGrid', 'on');
@@ -240,7 +240,7 @@ ylabel ({'Novos casos por semana'},'FontSize',fonte_labels);
 % set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
 
 xlim([tstart tend]);
-set(gca, 'XTick', linspace(tstart,tend,(weeks/2.0 + 1.0)))
+set(gca, 'XTick', linspace(tstart,tend,(weeks+1)/2.0))
 datetick('x',19,'keepticks')
 xtickangle(90);
 set(gca,'YGrid', 'on');
@@ -269,7 +269,7 @@ ylabel ({'Novos óbitos por semana'},'FontSize',fonte_labels);
 % set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
 
 xlim([tstart tend]);
-set(gca, 'XTick', linspace(tstart,tend,(weeks/2.0 + 1.0)))
+set(gca, 'XTick', linspace(tstart,tend,(weeks)/2.0 + 1))
 datetick('x',19,'keepticks')
 xtickangle(90);
 set(gca,'YGrid', 'on');
@@ -278,9 +278,9 @@ set(gca,'yminorgrid','off')
 
 hold on;
 if (any(new_deaths < 0) || any(new_cases < 0))
-hfonte=text(max(dates)+25,0,{'Fonte: https://covid19br.wcota.me/','Obs: números negativos se devem à reavaliação de dados anteriormente divulgados pelos orgãos competentes.'});
+hfonte=text(max(dates)+15,0,{'Fonte: https://covid19br.wcota.me/','Obs: números negativos se devem à reavaliação de dados anteriormente divulgados pelos orgãos competentes.'});
 else
-hfonte=text(max(dates)+25,0,{'Fonte: https://covid19br.wcota.me/'});
+hfonte=text(max(dates)+15,0,{'Fonte: https://covid19br.wcota.me/'});
 end
 set(hfonte,'Rotation',90,'color',[0,0,0],'FontSize',7);
 

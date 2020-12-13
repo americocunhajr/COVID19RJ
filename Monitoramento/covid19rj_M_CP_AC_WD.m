@@ -28,7 +28,7 @@ max_size = 1;
 for i=1:length(Estados)
     I_estado=find(arquivogeral.location == string(Estados(i,:)));
     tabela = arquivogeral(I_estado,:);
-    I = find(tabela.total_cases>= min_casos_acum_consider);
+    I = tabela; %find(tabela.total_cases>= min_casos_acum_consider);
     max_size = max([max(size(I));max_size]);
 end
 
@@ -49,7 +49,7 @@ tests = zeros(length(Estados),max_size);
 
 %Gerando matrizes para os 4: caso e obitos x diario e acumulados
 for i=1:length(Estados)
-    if (i==3) %Brazil position
+    if (i==5) %Brazil position
     I_estado=find(BRarquivogeral.state == string("TOTAL"));
     tabela_aux = BRarquivogeral(I_estado,:);
     tabela = tabela_aux;
@@ -125,10 +125,10 @@ xtickangle(45);
 
 
 ymin = 0;
-ymax = 25000;
+ymax = 55000;
 set(gca,'YLim',[ymin ymax]);
-set(gca, 'YTick', ymin:2500:ymax);
-set(gca,'YTickLabel',{'0','2500','5000','7500','10000','12500','15000','17500','20000','22500','25000','27500'});
+set(gca, 'YTick', ymin:5000:ymax);
+set(gca,'YTickLabel',{'0','5000','10000','15000','20000','25000','30000','35000','40000','45000','50000','55000'});
 set(gca,'YGrid', 'on');
 title({'Casos acumulados por milhão de habitantes',['Comparação entre países em ',datestr(end_time,24)]},'FontSize',11);
 
@@ -177,10 +177,10 @@ set(gca,'XTickLabel',Estados_leg, 'FontSize',9);
 xtickangle(45);
 
 ymin = 0;
-ymax = 1200;
+ymax = 1600;
 set(gca,'YLim',[ymin ymax]);
 set(gca, 'YTick', ymin:200:ymax);
-set(gca,'YTickLabel',{'0','200','400','600','800','1000','1200'});
+set(gca,'YTickLabel',{'0','200','400','600','800','1000','1200','1400','1600'});
 set(gca,'YGrid', 'on');
 title({'Mortes acumuladas por milhão de habitantes',['Comparação entre países em ',datestr(end_time,24)]},'FontSize',11);
 
@@ -226,10 +226,10 @@ set(gca,'XTickLabel',Estados_leg, 'FontSize',9);
 xtickangle(45);
 
 ymin = 0;
-ymax = 20;
+ymax = 14;
 set(gca,'YLim',[ymin ymax]);
-set(gca, 'YTick', ymin:5:ymax);
-set(gca,'YTickLabel',{'0','5%','10%','15%','20%','25%','30%'});
+set(gca, 'YTick', ymin:2:ymax);
+set(gca,'YTickLabel',{'0','2%','4%','6%','8%','10%','12%','14%'});
 set(gca,'YGrid', 'on');
 title({'Letalidade em relação aos casos confirmados',['Comparação entre países em ',datestr(end_time,24)]},'FontSize',11);
 

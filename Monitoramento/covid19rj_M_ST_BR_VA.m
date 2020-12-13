@@ -193,33 +193,33 @@ if (plot_type == 1)
 
 if (regions == 1)
 if (init == 0) country = 'BR'; color = [0,0,0]/255; pop = popBR; end
-if (init == 3) country = 'AC'; color = [69,169,0]/255; pop = 881935; end
-if (init == 4) country = 'AP'; color = [5,163,29]/255; pop = 845731; end
+if (init == 2) country = 'AC'; color = [69,169,0]/255; pop = 881935; end
+if (init == 3) country = 'AP'; color = [5,163,29]/255; pop = 845731; end
 if (init == 6) country = 'AM'; color = [53,143,31]/255; pop = 4144597; end  
 if (init == 7) country = 'PA'; color = [0,169,74]/255; pop = 8602865; end
-if (init == 1) country = 'TO'; color = [0,109,22]/255; pop = 1572866; end
+if (init == 4) country = 'TO'; color = [0,109,22]/255; pop = 1572866; end
 if (init == 5) country = 'RO'; color = [0,104,44]/255; pop = 1777225; end
-if (init == 2) country = 'RR'; color = [0,67,21]/255; pop = 605761; end
+if (init == 1) country = 'RR'; color = [0,67,21]/255; pop = 605761; end
 end
 
 if (regions == 2)
 if (init == 0) country = 'BR'; color = [0,0,0]/255; pop = popBR; end
-if (init == 3) country = 'AL'; color = [96,209,224]/255; pop = 3337357; end
+if (init == 2) country = 'AL'; color = [96,209,224]/255; pop = 3337357; end
 if (init == 7) country = 'BA'; color = [0,170,196]/255; pop = 14873064; end
 if (init == 9) country = 'CE'; color = [0,116,136]/255; pop = 9132078; end
 if (init == 6) country = 'MA'; color = [0,74,84]/255; pop = 7075181; end
 if (init == 5) country = 'PB'; color = [27,78,142]/255; pop = 4018127; end
 if (init == 8) country = 'PE'; color = [0,99,181]/255; pop = 9557071; end
-if (init == 1) country = 'PI'; color = [0,45,135]/255; pop = 3273227; end
+if (init == 3) country = 'PI'; color = [0,45,135]/255; pop = 3273227; end
 if (init == 4) country = 'RN'; color = [0,34,80]/255; pop = 3506853; end
-if (init == 2) country = 'SE'; color = [0,20,37]/255; pop = 2298696; end
+if (init == 1) country = 'SE'; color = [0,20,37]/255; pop = 2298696; end
 end
 
 if (regions == 3)
 if (init == 0) country = 'BR'; color = [0,0,0]/255; pop = popBR; end
 if (init == 2) country = 'DF'; color = [181,147,87]/255; pop = 3015268; end
-if (init == 3) country = 'GO'; color = [135,85,30]/255; pop = 7018354; end
-if (init == 4) country = 'MT'; color = [110,71,28]/255; pop = 3484466; end
+if (init == 4) country = 'GO'; color = [135,85,30]/255; pop = 7018354; end
+if (init == 3) country = 'MT'; color = [110,71,28]/255; pop = 3484466; end
 if (init == 1) country = 'MS'; color = [86,62,32]/255; pop = 2778986; end
 end
 
@@ -233,8 +233,8 @@ end
 
 if (regions == 5)
 if (init == 0) country = 'BR'; color = [0,0,0]/255; pop = popBR; end
-if (init == 3) country = 'PR'; color = [209,227,105]/255; pop = 11433957; end
-if (init == 2) country = 'RS'; color = [193,203,68]/255; pop = 11377239; end
+if (init == 2) country = 'PR'; color = [209,227,105]/255; pop = 11433957; end
+if (init == 3) country = 'RS'; color = [193,203,68]/255; pop = 11377239; end
 if (init == 1) country = 'SC'; color = [191,171,72]/255; pop = 7164788; end
 end
 
@@ -308,7 +308,7 @@ if strcmp(country, 'MG') country = 'MG   '; end
 if strcmp(country, 'GO') country = 'GO    '; end 
 if strcmp(country, 'DF') country = 'DF    '; end 
 if strcmp(country, 'MT') country = 'MT    '; end 
-if strcmp(country, 'MS') country = 'MS      '; end 
+if strcmp(country, 'MS') country = 'MS    '; end 
 if strcmp(country, 'PR') country = 'PR    '; end 
 if strcmp(country, 'RS') country = 'RS    '; end 
 if strcmp(country, 'SC') country = 'SC    '; end 
@@ -319,31 +319,31 @@ if (plot_type == 2)
 if (regions == 1)
 if (init == 0) country = 'BR'; color = [0,0,0]/255; pop = popBR; end
 if (init == 1) country = 'AC'; color = [69,169,0]/255; pop = 881935; end
-if (init == 3) country = 'AP'; color = [5,163,29]/255; pop = 845731; end
+if (init == 2) country = 'AP'; color = [5,163,29]/255; pop = 845731; end
 if (init == 6) country = 'AM'; color = [53,143,31]/255; pop = 4144597; end  
 if (init == 7) country = 'PA'; color = [0,169,74]/255; pop = 8602865; end
-if (init == 2) country = 'TO'; color = [0,109,22]/255; pop = 1572866; end
-if (init == 5) country = 'RO'; color = [0,104,44]/255; pop = 1777225; end
-if (init == 4) country = 'RR'; color = [0,67,21]/255; pop = 605761; end
+if (init == 5) country = 'TO'; color = [0,109,22]/255; pop = 1572866; end
+if (init == 4) country = 'RO'; color = [0,104,44]/255; pop = 1777225; end
+if (init == 3) country = 'RR'; color = [0,67,21]/255; pop = 605761; end
 end
 
 if (regions == 2)
 if (init == 0) country = 'BR'; color = [0,0,0]/255; pop = popBR; end
-if (init == 4) country = 'AL'; color = [96,209,224]/255; pop = 3337357; end
+if (init == 3) country = 'AL'; color = [96,209,224]/255; pop = 3337357; end
 if (init == 9) country = 'BA'; color = [0,170,196]/255; pop = 14873064; end
 if (init == 8) country = 'CE'; color = [0,116,136]/255; pop = 9132078; end
 if (init == 7) country = 'MA'; color = [0,74,84]/255; pop = 7075181; end
 if (init == 5) country = 'PB'; color = [27,78,142]/255; pop = 4018127; end
 if (init == 6) country = 'PE'; color = [0,99,181]/255; pop = 9557071; end
-if (init == 2) country = 'PI'; color = [0,45,135]/255; pop = 3273227; end
+if (init == 4) country = 'PI'; color = [0,45,135]/255; pop = 3273227; end
 if (init == 1) country = 'RN'; color = [0,34,80]/255; pop = 3506853; end
-if (init == 3) country = 'SE'; color = [0,20,37]/255; pop = 2298696; end
+if (init == 2) country = 'SE'; color = [0,20,37]/255; pop = 2298696; end
 end
 
 if (regions == 3)
 if (init == 0) country = 'BR'; color = [0,0,0]/255; pop = popBR; end
-if (init == 4) country = 'DF'; color = [181,147,87]/255; pop = 3015268; end
-if (init == 3) country = 'GO'; color = [135,85,30]/255; pop = 7018354; end
+if (init == 3) country = 'DF'; color = [181,147,87]/255; pop = 3015268; end
+if (init == 4) country = 'GO'; color = [135,85,30]/255; pop = 7018354; end
 if (init == 2) country = 'MT'; color = [110,71,28]/255; pop = 3484466; end
 if (init == 1) country = 'MS'; color = [86,62,32]/255; pop = 2778986; end
 end
@@ -352,15 +352,15 @@ end
 if (regions == 4)
 if (init == 0) country = 'BR'; color = [0,0,0]/255; pop = popBR; end
 if (init == 1) country = 'ES'; color = [255,130,113]/255; pop = 4018650; end
-if (init == 2) country = 'MG'; color = [254,88,52]/255; pop = 21168791; end
-if (init == 3) country = 'RJ'; color = [248,66,9]/255; pop = 17264943; end
+if (init == 3) country = 'MG'; color = [254,88,52]/255; pop = 21168791; end
+if (init == 2) country = 'RJ'; color = [248,66,9]/255; pop = 17264943; end
 if (init == 4) country = 'SP'; color = [203,63,23]/255; pop = 45919049; end
 end
 
 if (regions == 5)
 if (init == 0) country = 'BR'; color = [0,0,0]/255; pop = popBR; end
-if (init == 2) country = 'PR'; color = [209,227,105]/255; pop = 11433957; end
-if (init == 1) country = 'RS'; color = [193,203,68]/255; pop = 11377239; end
+if (init == 1) country = 'PR'; color = [209,227,105]/255; pop = 11433957; end
+if (init == 2) country = 'RS'; color = [193,203,68]/255; pop = 11377239; end
 if (init == 3) country = 'SC'; color = [191,171,72]/255; pop = 7164788; end
 end
 
@@ -420,23 +420,24 @@ if strcmp(country, 'CE') country = 'CE   '; end
 if strcmp(country, 'PE') country = 'PE   '; end 
 if strcmp(country, 'MA') country = 'MA  '; end 
 if strcmp(country, 'BA') country = 'BA   '; end 
-if strcmp(country, 'PB') country = 'PB     '; end 
+if strcmp(country, 'PB') country = 'PB   '; end 
 if strcmp(country, 'AL') country = 'AL     '; end 
 if strcmp(country, 'RN') country = 'RN    '; end 
 if strcmp(country, 'PI') country = 'PI      '; end 
 if strcmp(country, 'SE') country = 'SE     '; end 
 if strcmp(country, 'SP') country = 'SP  '; end 
 if strcmp(country, 'RJ') country = 'RJ   '; end 
-if strcmp(country, 'ES') country = 'ES    '; end 
+if strcmp(country, 'ES') country = 'ES  '; end 
 if strcmp(country, 'MG') country = 'MG '; end 
 if strcmp(country, 'GO') country = 'GO  '; end 
 if strcmp(country, 'DF') country = 'DF   '; end 
-if strcmp(country, 'MT') country = 'MT    '; end 
+if strcmp(country, 'MT') country = 'MT  '; end 
 if strcmp(country, 'MS') country = 'MS    '; end 
 if strcmp(country, 'PR') country = 'PR  '; end 
-if strcmp(country, 'RS') country = 'RS    '; end 
+if strcmp(country, 'RS') country = 'RS  '; end 
 if strcmp(country, 'SC') country = 'SC  '; end 
 end
+
 
 tot_cases = location(:,1);
 tot_deaths = location(:,2);
@@ -511,7 +512,7 @@ fonte_labels = 10;
 fonte_padrao = 9; %numeros dos eixos
 fonte_location = 8;
 
-day_axis = 200;
+day_axis = 300;
 
 Pos = [250,250,600,450];
 set(0, 'DefaultFigurePosition', Pos);
@@ -769,18 +770,15 @@ y_init=10;
 max_y=1000000;
 max_x=day_axis;
 
-ang = 53;
-h1=text(113,0.93*max_y,'números dobram a cada 7 dias');
+ang = 64;
+h1=text(111,0.93*max_y,'números dobram a cada 7 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 31;
-h2=text(198,0.23*max_y,'14 dias');
+ang = 42;
+h2=text(226,0.93*max_y,'14 dias');
 set(h2,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
- ang = 22;
- h3=text(198,0.0085*max_y,'21 dias');
+ ang = 30;
+ h3=text(296,0.2*max_y,'21 dias');
  set(h3,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-% ang = 38;
-% h4=text(99,0.65*max_y,'8 dias');
-% set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 
 set(gca,'YTickLabel',{'10','100','1k','10k','100k','1M'})
 
@@ -831,17 +829,17 @@ ylabel ("Total de casos ",'FontSize',fonte_labels);
 y_init=100;
 max_y=10000000;
 max_x=day_axis;
-
-ang = 53;
-h1=text(113,0.93*max_y,'números dobram a cada 7 dias');
+ang = 64;
+h1=text(111,0.93*max_y,'números dobram a cada 7 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 31;
-h2=text(198,0.23*max_y,'14 dias');
+ang = 42;
+h2=text(226,0.93*max_y,'14 dias');
 set(h2,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
- ang = 22;
- h3=text(198,0.0085*max_y,'21 dias');
+ ang = 30;
+ h3=text(296,0.2*max_y,'21 dias');
  set(h3,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-% ang = 38;
+
+ % ang = 38;
 % h4=text(99,0.65*max_y,'8 dias');
 % set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 
@@ -971,7 +969,7 @@ figure(5)
 set(gca,'FontSize',fonte_padrao)
 if (regions < 6)
 title({'Mortalidade diária da epidemia ',['Estados da região ',name_title,' em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
-legend ("location", "northwest");
+legend ("location", "northwest ");
 end
 if (regions == 6)
 title({'Mortalidade diária da epidemia ',['Todos os estados do Brasil em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
@@ -1013,7 +1011,7 @@ uistack(ha,'bottom');
 % To create the logo at the bottom left corner of the plot use 
 % the next two lines
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[.12 -0.0], .24,.12,]);
+ha2=axes('position',[haPos([3 1])-[.12 -0.0], .24,.12,]); 
 % To place the logo at the bottom left corner of the figure window
 % uncomment the line below and comment the above two lines
 %ha2=axes('position',[0, 0, .1,.04,]);
@@ -1032,7 +1030,7 @@ figure (6)
 set(gca,'FontSize',fonte_padrao)
 if (regions < 6)
 title({'Contágio diário da epidemia ',['Estados da região ',name_title,' em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
-legend ("location", "northwest");
+legend ("location", "northwest ");
 end
 if (regions == 6)
 title({'Contágio diário da epidemia ',['Todos os estados do Brasil em ',datestr(end_time,24)]},'FontSize',fonte_titulo);
@@ -1076,7 +1074,7 @@ uistack(ha,'bottom');
 % To create the logo at the bottom left corner of the plot use 
 % the next two lines
 haPos = get(ha,'position');
-ha2=axes('position',[haPos([3 1])-[.12 -0.0], .24,.12,]);
+ha2=axes('position',[haPos([3 1])-[.12 -0.0], .24,.12,]); 
 % To place the logo at the bottom left corner of the figure window
 % uncomment the line below and comment the above two lines
 %ha2=axes('position',[0, 0, .1,.04,]);

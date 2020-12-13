@@ -29,7 +29,7 @@ max_size = 1;
 for i=1:length(Estados)
     I_estado=find(arquivogeral.location == string(Estados(i,:)));
     tabela = arquivogeral(I_estado,:);
-    I = find(tabela.total_cases>= min_casos_acum_consider);
+    I = tabela;% find(tabela.total_cases>= min_casos_acum_consider);
     max_size = max([max(size(I));max_size]);
 end
 
@@ -125,10 +125,10 @@ xtickangle(45);
 
 
 ymin = 0;
-ymax = 25000;
+ymax = 50000;
 set(gca,'YLim',[ymin ymax]);
-set(gca, 'YTick', ymin:2500:ymax);
-set(gca,'YTickLabel',{'0','2500','5000','7500','10000','12500','15000','17500','20000','22500','25000','27500','30000'});
+set(gca, 'YTick', ymin:5000:ymax);
+set(gca,'YTickLabel',{'0','5000','10000','15000','20000','25000','30000','35000','40000','45000','50000'});
 set(gca,'YGrid', 'on');
 title({'Casos acumulados por milhão de habitantes',['América Latina em ',datestr(end_time,24)]},'FontSize',11);
 
@@ -177,10 +177,10 @@ set(gca,'XTickLabel',Estados_leg, 'FontSize',9);
 xtickangle(45);
 
 ymin = 0;
-ymax = 1200;
+ymax = 1600;
 set(gca,'YLim',[ymin ymax]);
-set(gca, 'YTick', ymin:100:ymax);
-set(gca,'YTickLabel',{'0','100','200','300','400','500','600','700','800','900','1000','1100','1200'});
+set(gca, 'YTick', ymin:200:ymax);
+set(gca,'YTickLabel',{'0','200','400','600','800','1000','1200','1400','1600','1800','2000','2200','2400'});
 set(gca,'YGrid', 'on');
 title({'Mortes acumuladas por milhão de habitantes',['América Latina em ',datestr(end_time,24)]},'FontSize',11);
 
@@ -226,10 +226,10 @@ set(gca,'XTickLabel',Estados_leg, 'FontSize',9);
 xtickangle(45);
 
 ymin = 0;
-ymax = 15;
+ymax = 12;
 set(gca,'YLim',[ymin ymax]);
-set(gca, 'YTick', ymin:5:ymax);
-set(gca,'YTickLabel',{'0','5%','10%','15%','20%','25%'});
+set(gca, 'YTick', ymin:2:ymax);
+set(gca,'YTickLabel',{'0','2%','4%','6%','8%','10%','12%'});
 set(gca,'YGrid', 'on');
 title({'Letalidade em relação aos casos confirmados',['América Latina em ',datestr(end_time,24)]},'FontSize',11);
 

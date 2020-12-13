@@ -44,9 +44,9 @@ name = 'AL';
 % filename = 'owid-covid-data.csv';
 % urlwrite(fullURL,[pwd '/Dados/',filename]);
 
-fullURL = ['https://raw.githubusercontent.com/wcota/covid19br/master/cases-brazil-states.csv'];
-filename = 'cases-brazil-states.txt';
-urlwrite(fullURL,[pwd '/Dados/',filename]);
+% fullURL = ['https://raw.githubusercontent.com/wcota/covid19br/master/cases-brazil-states.csv'];
+% filename = 'cases-brazil-states.txt';
+% urlwrite(fullURL,[pwd '/Dados/',filename]);
 
 %Lendo o arquivo disponível no site 
 all_data = readtable([pwd,'/Dados/owid-covid-data.csv']);
@@ -72,14 +72,14 @@ if (plot_type == 1)
 %ordem por países que tem mais morte
 if (init == 1) country = 'Brazil'; color = [0,0,0]/255; linew = 1.75; end
 if (init == 3) country = 'Peru'; color = [181,147,87]/255; end
-if (init == 5) country = 'Chile'; color = [248,187,208]/255; end
-if (init == 6) country = 'Ecuador'; color = [69,169,0]/255; end
+if (init == 6) country = 'Chile'; color = [248,187,208]/255; end
+if (init == 7) country = 'Ecuador'; color = [69,169,0]/255; end
 if (init == 4) country = 'Colombia'; color = [96,209,224]/255; end  
-if (init == 7) country = 'Argentina'; color = [255,130,113]/255; end
+if (init == 5) country = 'Argentina'; color = [255,130,113]/255; end
 if (init == 8) country = 'Bolivia'; color = [209,227,105]/255; end
-if (init == 13) country = 'Paraguay'; color = [0,104,44]/255; end
+if (init == 12) country = 'Paraguay'; color = [0,104,44]/255; end
 if (init == 15) country = 'Uruguay'; color = [0,45,135]/255; end
-if (init == 12) country = 'Venezuela'; color = [135,85,30]/255; end
+if (init == 13) country = 'Venezuela'; color = [135,85,30]/255; end
 if (init == 2) country = 'Mexico'; color = [203,63,23]/255; end
 if (init == 14) country = 'Cuba'; color = [191,171,72]/255; end
 if (init == 10) country = 'Dominican Republic'; color = [236,64,122]/255; end
@@ -99,15 +99,15 @@ end
 if strcmp(country, 'Brazil') country_leg = 'Brasil         '; end 
 if strcmp(country, 'Peru') country_leg = 'Peru             '; end
 if strcmp(country, 'Chile') country_leg = 'Chile             '; end 
-if strcmp(country, 'Ecuador') country_leg = 'Equador          '; end 
+if strcmp(country, 'Ecuador') country_leg = 'Equador        '; end 
 if strcmp(country, 'Colombia') country_leg = 'Colômbia      '; end 
-if strcmp(country, 'Argentina') country_leg = 'Argentina       '; end 
+if strcmp(country, 'Argentina') country_leg = 'Argentina     '; end 
 if strcmp(country, 'Bolivia') country_leg = 'Bolívia            '; end 
 if strcmp(country, 'Paraguay') country_leg = 'Paraguai            '; end 
 if strcmp(country, 'Uruguay') country_leg = 'Uruguai               '; end 
 if strcmp(country, 'Venezuela') country_leg = 'Venezuela         '; end 
 if strcmp(country, 'Mexico') country_leg = 'México         '; end 
-if strcmp(country, 'Cuba') country_leg = 'Cuba                   '; end 
+if strcmp(country, 'Cuba') country_leg = 'Cuba                 '; end 
 if strcmp(country, 'Dominican Republic') country_leg = 'R. Dominicana'; end 
 if strcmp(country, 'Panama') country_leg = 'Panamá          '; end 
 if strcmp(country, 'Costa Rica') country_leg = 'Costa Rica         '; end 
@@ -118,19 +118,19 @@ if (plot_type == 2)
 %ordem por países que tem mais caso
 if (init == 1) country = 'Brazil'; color = [0,0,0]/255; linew = 1.75; end
 if (init == 3) country = 'Peru'; color = [181,147,87]/255; end
-if (init == 5) country = 'Chile'; color = [248,187,208]/255; end
+if (init == 6) country = 'Chile'; color = [248,187,208]/255; end
 if (init == 7) country = 'Ecuador'; color = [69,169,0]/255; end
-if (init == 4) country = 'Colombia'; color = [96,209,224]/255; end  
-if (init == 6) country = 'Argentina'; color = [255,130,113]/255; end
+if (init == 2) country = 'Colombia'; color = [96,209,224]/255; end  
+if (init == 5) country = 'Argentina'; color = [255,130,113]/255; end
 if (init == 8) country = 'Bolivia'; color = [209,227,105]/255; end
 if (init == 13) country = 'Paraguay'; color = [0,104,44]/255; end
 if (init == 15) country = 'Uruguay'; color = [0,45,135]/255; end
-if (init == 11) country = 'Venezuela'; color = [135,85,30]/255; end
-if (init == 2) country = 'Mexico'; color = [203,63,23]/255; end
+if (init == 12) country = 'Venezuela'; color = [135,85,30]/255; end
+if (init == 4) country = 'Mexico'; color = [203,63,23]/255; end
 if (init == 14) country = 'Cuba'; color = [191,171,72]/255; end
 if (init == 9) country = 'Dominican Republic'; color = [236,64,122]/255; end
 if (init == 10) country = 'Panama'; color = [0.4,0.4,0.4]; end
-if (init == 12) country = 'Costa Rica'; color = [0,0.5,0.6]; end
+if (init == 11) country = 'Costa Rica'; color = [0,0.5,0.6]; end
 
 
 if strcmp(country, 'Brazil')
@@ -143,21 +143,21 @@ else
 end_time = max(datenum(dates))-1;
 end
 
-if strcmp(country, 'Brazil') country_leg = 'Brasil           '; end 
-if strcmp(country, 'Peru') country_leg = 'Peru              '; end
-if strcmp(country, 'Chile') country_leg = 'Chile             '; end 
-if strcmp(country, 'Ecuador') country_leg = 'Equador        '; end 
-if strcmp(country, 'Colombia') country_leg = 'Colômbia      '; end 
-if strcmp(country, 'Argentina') country_leg = 'Argentina      '; end 
-if strcmp(country, 'Bolivia') country_leg = 'Bolívia             '; end 
-if strcmp(country, 'Paraguay') country_leg = 'Paraguai            '; end 
-if strcmp(country, 'Uruguay') country_leg = 'Uruguai             '; end 
-if strcmp(country, 'Venezuela') country_leg = 'Venezuela       '; end 
-if strcmp(country, 'Mexico') country_leg = 'México          '; end 
-if strcmp(country, 'Cuba') country_leg = 'Cuba                 '; end 
-if strcmp(country, 'Dominican Republic') country_leg = 'R. Dominicana '; end 
-if strcmp(country, 'Panama') country_leg = 'Panamá           '; end 
-if strcmp(country, 'Costa Rica') country_leg = 'Costa Rica       '; end 
+if strcmp(country, 'Brazil') country_leg = 'Brasil            '; end 
+if strcmp(country, 'Peru') country_leg = 'Peru               '; end
+if strcmp(country, 'Chile') country_leg = 'Chile              '; end 
+if strcmp(country, 'Ecuador') country_leg = 'Equador         '; end 
+if strcmp(country, 'Colombia') country_leg = 'Colômbia       '; end 
+if strcmp(country, 'Argentina') country_leg = 'Argentina       '; end 
+if strcmp(country, 'Bolivia') country_leg = 'Bolívia            '; end 
+if strcmp(country, 'Paraguay') country_leg = 'Paraguai           '; end 
+if strcmp(country, 'Uruguay') country_leg = 'Uruguai              '; end 
+if strcmp(country, 'Venezuela') country_leg = 'Venezuela        '; end 
+if strcmp(country, 'Mexico') country_leg = 'México           '; end 
+if strcmp(country, 'Cuba') country_leg = 'Cuba                  '; end 
+if strcmp(country, 'Dominican Republic') country_leg = 'R. Dominicana'; end 
+if strcmp(country, 'Panama') country_leg = 'Panamá          '; end 
+if strcmp(country, 'Costa Rica') country_leg = 'Costa Rica        '; end 
 
 end
 
@@ -247,7 +247,7 @@ fonte_labels = 10;
 fonte_padrao = 9; %numeros dos eixos
 fonte_location = 8;
 
-day_axis = 200;
+day_axis = 300;
 
 Pos = [0,250,900,450];
 set(0, 'DefaultFigurePosition', Pos);
@@ -263,6 +263,9 @@ grid2=semilogy(0:1:(day_axis-1),10*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],'Ha
 hold on;
 grid3=semilogy(0:1:(day_axis-1),100*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
 hold on;
+grid3=semilogy(0:1:(day_axis-1),1000*(ones(day_axis, 1)),'color',[0.8,0.8,0.8],'HandleVisibility','off');
+hold on;
+
 
 %Linhas "dobram"
 y_init=1;
@@ -499,21 +502,21 @@ ylabel ({'Total de mortes', '(por milhão de habitantes)'},'FontSize',fonte_labe
 legend ("location", "northeastoutside");
 
 y_init=1;
-max_y=1000;
-ang = 70;
-h1=text(47,0.9*max_y,'números dobram a cada 5 dias');
+max_y=10000;
+ang = 73;
+h1=text(62,0.9*max_y,'números dobram a cada 5 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 67;
-h2=text(57,0.9*max_y,'6 dias');
+ang = 66;
+h2=text(76.5,0.9*max_y,'6 dias');
 set(h2,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 64;
-h3=text(66.5,0.9*max_y,'7 dias');
+ang = 60;
+h3=text(90,0.9*max_y,'7 dias');
 set(h3,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 62;
-h4=text(76,0.9*max_y,'8 dias');
+ang = 58;
+h4=text(104,0.9*max_y,'8 dias');
 set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 
-set(gca,'YTickLabel',{'0.1','1','10','100','1k','10k'})
+set(gca,'YTickLabel',{'1','10','100','1k','10k'})
 
 hfonte=text(day_axis,max_y,'Fonte: https://ourworldindata.org/coronavirus-source-data');
 set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);
@@ -557,20 +560,20 @@ legend ("location", "northeastoutside");
 
 y_init=10;
 max_y=100000;
-ang = 64;
-h1=text(63,0.9*max_y,'números dobram a cada 5 dias');
+ang = 73;
+h1=text(62,0.9*max_y,'números dobram a cada 5 dias');
 set(h1,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 57;
-h2=text(77,0.9*max_y,'6 dias');
+ang = 66;
+h2=text(76.5,0.9*max_y,'6 dias');
 set(h2,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 56;
+ang = 60;
 h3=text(90,0.9*max_y,'7 dias');
 set(h3,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
-ang = 55;
-h4=text(102,0.9*max_y,'8 dias');
+ang = 58;
+h4=text(104,0.9*max_y,'8 dias');
 set(h4,'Rotation',ang,'color',[0.4,0.4,0.4],'horizontalAlignment', 'right','FontSize',7);
 
-set(gca,'YTickLabel',{'1','10','100','1k','10k','100k'})
+set(gca,'YTickLabel',{'10','100','1k','10k','100k'})
 
 hfonte=text(day_axis,max_y,'Fonte: https://ourworldindata.org/coronavirus-source-data');
 set(hfonte,'Rotation',90,'color',[0,0,0],'horizontalAlignment', 'right','verticalAlignment', 'top','FontSize',7);

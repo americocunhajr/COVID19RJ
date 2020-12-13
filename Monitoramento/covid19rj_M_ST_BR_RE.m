@@ -25,7 +25,7 @@ BRASIL_aux= y;%str2double(y);
 
 tstart = datetime(2020,4,19,0,0,0);
 tend = end_time_aux;
-nt = datenum(tend - tstart)+1;
+nt = 1;%datenum(tend - tstart)+1;
 
 for (t=nt:-1:1)
 h = figure('Position',[250,250,600,450]);
@@ -48,15 +48,15 @@ b(2).EdgeColor = [0 0.4470 0.7410];
 b(3).EdgeColor = [0.8500 0.3250 0.0980];
 
 
-tend = datetime(2020,9,6,0,0,0);
+tend = datetime(2020,12,23,0,0,0);
 xlim([tstart tend]);
-set(gca, 'XTick', linspace(tstart,tend,11))
+set(gca, 'XTick', linspace(tstart,tend,18))
 datetick('x',19,'keepticks')
 max_x=tend;
-max_y=4000000;
+max_y=7000000;
 ylim([0 max_y]);
-set(gca, 'YTick', 0:500000:max_y)
-set(gca,'YTickLabel',{'0','500k','1M','1.5M','2M','2.5M','3M','3.5M','4M'})
+set(gca, 'YTick', 0:1000000:max_y)
+set(gca,'YTickLabel',{'0','1M','2M','3M','4M','5M','6M', '7M'})
 
 
 legend(strcat("Casos ativos:  ", num2str( sprintf( '%07d', max(BRASIL(:,1)) ))),strcat("Recuperados: ", num2str(sprintf( '%07d', max(BRASIL(:,2)) ))),strcat("Óbitos:           ", num2str( sprintf( '%07d', max(BRASIL(:,3))) )));
@@ -107,26 +107,25 @@ if (t==1) print(figure(1),[pwd '/upload/',name,'/covid19rj_M_ST_RE_AC_VA_',name,
 
 if (t == 1) print(gcf,[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_ST_RE_AC_VA_',name,'_',datestr(end_time,29),'.png'],'-dpng','-r400'); end
 
-%dates(end,:) = [];
-%BRASIL(end,:) = [];
-
-filename = [pwd '/upload/',name,'/covid19rj_M_ST_RE_AC_VA_',name,'.gif'];
+%%dates(end,:) = [];
+%%BRASIL(end,:) = [];
 
 
-      % Capture the plot as an image 
-      frame = getframe(h); 
-      im = frame2im(frame); 
-      [imind,cm] = rgb2ind(im,256); 
-      % Write to the GIF File 
-      if t == nt 
-          imwrite(imind,cm,filename,'gif', 'Loopcount',inf); 
-      else 
-          imwrite(imind,cm,filename,'gif','WriteMode','append'); 
-      end 
-
-      if t == 1
-          imwrite(imind,cm,filename,'gif','WriteMode','append','DelayTime',2);
-      end
+%filename = [pwd '/upload/',name,'/covid19rj_M_ST_RE_AC_VA_',name,'.gif'];
+%       % Capture the plot as an image 
+%       frame = getframe(h); 
+%       im = frame2im(frame); 
+%       [imind,cm] = rgb2ind(im,256); 
+%       % Write to the GIF File 
+%       if t == nt 
+%           imwrite(imind,cm,filename,'gif', 'Loopcount',inf); 
+%       else 
+%           imwrite(imind,cm,filename,'gif','WriteMode','append'); 
+%       end 
+% 
+%       if t == 1
+%           imwrite(imind,cm,filename,'gif','WriteMode','append','DelayTime',2);
+%       end
 
 close all
 end
@@ -159,16 +158,15 @@ p2 = plot(dates,BRASIL(:,3),'linewidth',2,'color',[0 0.4470 0.7410]);
 hold on
 p3 = plot(dates,BRASIL(:,4),'linewidth',2,'color',[0.8500 0.3250 0.0980]);
 
-tend = datetime(2020,9,6,0,0,0);
+tend = datetime(2020,12,23,0,0,0);
 xlim([tstart tend]);
-set(gca, 'XTick', linspace(tstart,tend,11))
+set(gca, 'XTick', linspace(tstart,tend,18))
 datetick('x',19,'keepticks')
 max_x=tend;
-max_y=4000000;
+max_y=7000000;
 ylim([0 max_y]);
-set(gca, 'YTick', 0:500000:max_y)
-set(gca,'YTickLabel',{'0','500k','1M','1.5M','2M','2.5M','3M','3.5M','4M'})
-
+set(gca, 'YTick', 0:1000000:max_y)
+set(gca,'YTickLabel',{'0','1M','2M','3M','4M','5M','6M', '7M'})
 
 legend(strcat("Total de casos: ", num2str(sprintf( '%07d', max(BRASIL(:,1)) ))),strcat("Casos ativos:    ", num2str( sprintf( '%07d', max(BRASIL(:,2)) ))), strcat("Recuperados:   ", num2str(sprintf( '%07d', max(BRASIL(:,3)) ))),strcat("Óbitos:             ", num2str( sprintf( '%07d', max(BRASIL(:,4))) )));
 legend("location","northwest");
@@ -209,5 +207,5 @@ print(gcf,[pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_ST_RE_AC_NA_',name,'_'
 
 close all
 
-copyfile( filename, [pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_ST_RE_AC_VA_',name,'_',datestr(end_time_aux,29),'.gif']);
+% copyfile( filename, [pwd '/',outputdir,'/',outputdir2,'/covid19rj_M_ST_RE_AC_VA_',name,'_',datestr(end_time_aux,29),'.gif']);
 

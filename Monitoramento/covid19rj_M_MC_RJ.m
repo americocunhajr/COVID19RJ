@@ -287,7 +287,7 @@ malu = [1	1	1
 % filename = 'cases-brazil-cities-time.txt';
 % urlwrite(fullURL,[pwd '/Dados/',filename]);
 
-arquivogeral = readtable([pwd, '/Dados/cases-brazil-cities-time.txt']);
+arquivogeral = readtable([pwd, '/Dados/cases-brazil-cities-time.csv']);
 
 % Definições para os graficos 
 Estados = {

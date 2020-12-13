@@ -308,8 +308,8 @@ max_size = 1;
 for i=1:length(Estados)
     I_estado=find(arquivogeral.location == string(Estados(i,:)));
     tabela = arquivogeral(I_estado,:);
-    I = find(tabela.total_cases>= min_casos_acum_consider);
-    max_size = max([max(size(I));max_size])
+    I = tabela; %find(tabela.total_cases>= min_casos_acum_consider);
+    max_size = max([max(size(I));max_size]);
 end
 
 % Extraindo dados
