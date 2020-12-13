@@ -22,6 +22,6 @@ covid19rj_M_VP_WD
 
 covid19rj_M_ST_AL_VA
 covid19rj_M_ST_AL_PM
-covid19rj_M_MC_AL
 covid19rj_M_CP_AC_AL
 covid19rj_M_CP_PS_AL
+covid19rj_M_MC_AL
