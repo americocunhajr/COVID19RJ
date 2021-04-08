@@ -37,8 +37,10 @@ Estudantes:
 - Luiz Felipe Coelho
 - Lucas Chaves
 - Marcos Vinicius Issa
+- Miriam Ferreira
 - Michel Tosin
 - Roberto Luo
+- Stephane Gomes
 
 Design Gráfico:
 - Amanda Cunha Guyt
