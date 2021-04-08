@@ -56,7 +56,7 @@ Em formato BibTeX:
 
 ```
 @misc{COVID19RJGitHub,
-   title        = {{COVID19}: {O}bserva\'{o}rio {F}luminense},
+   title        = { {COVID19}: {O}bserva\'{o}rio {F}luminense},
    year         = {2020},
    publisher    = {GitHub},
    journal      = {GitHub repository},
