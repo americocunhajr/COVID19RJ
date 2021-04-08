@@ -39,6 +39,7 @@ Estudantes:
 - Marcos Vinicius Issa
 - Miriam Ferreira
 - Michel Tosin
+- Pamella Constantino
 - Roberto Luo
 - Stephane Gomes
 
