@@ -17,7 +17,7 @@ Nossas análises são divulgadas nos seguintes canais:
 
 ## Equipe
 
-Professores:
+Doutores:
 - Adriano Côrtes
 - Americo Cunha
 - Karla Figueiredo
