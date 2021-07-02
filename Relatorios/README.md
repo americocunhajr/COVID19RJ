@@ -243,3 +243,33 @@ As respectivas informações bibliográficas, em formato BibTeX, são listadas a
    note = {\url{https://https://doi.org/10.12957/eduerj.covid19rj.relatorio24}},
 }
 ```
+
+```
+@misc{OF-COVID19-Relatorio25,
+   author = {A. {Cunha~Jr et al.}},
+   title = {Relatório 25 {P}rogresso da {COVID-19} no {B}rasil e no {E}stado do {R}io de {J}aneiro 14$^{a}$ à 18$^{a}$ {S}emana {E}pidemiológica do {C}alendário 2021 (29/03/2021 até 01/05/2021)},
+   howpublished = {COVID-19: Observatório Fluminense},
+   year = {(02-05-2021)},
+   note = {\url{https://https://doi.org/10.12957/eduerj.covid19rj.relatorio25}},
+}
+```
+
+```
+@misc{OF-COVID19-Relatorio26,
+   author = {A. {Cunha~Jr et al.}},
+   title = {Relatório 26 {P}rogresso da {COVID-19} no {B}rasil e no {E}stado do {R}io de {J}aneiro 19$^{a}$ à 22$^{a}$ {S}emana {E}pidemiológica do {C}alendário 2021 (02/05/2021 até 29/05/2021)},
+   howpublished = {COVID-19: Observatório Fluminense},
+   year = {(30-05-2021)},
+   note = {\url{https://https://doi.org/10.12957/eduerj.covid19rj.relatorio26}},
+}
+```
+
+```
+@misc{OF-COVID19-Relatorio27,
+   author = {A. {Cunha~Jr et al.}},
+   title = {Relatório 27 {P}rogresso da {COVID-19} no {B}rasil e no {E}stado do {R}io de {J}aneiro 23$^{a}$ à 26$^{a}$ {S}emana {E}pidemiológica do {C}alendário 2021 (30/05/2021 até 26/06/2021)},
+   howpublished = {COVID-19: Observatório Fluminense},
+   year = {(27-06-2021)},
+   note = {\url{https://https://doi.org/10.12957/eduerj.covid19rj.relatorio27}},
+}
+```
