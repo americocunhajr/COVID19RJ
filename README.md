@@ -23,10 +23,12 @@ Professores:
 - Karla Figueiredo
 - Lisandro Lovisolo
 - Malú Grave
+- Rachel Lucena
 - Rodrigo Burgos
 - Roberto Velho
 
 Estudantes:
+- Beatriz Marshall
 - Bruna Pavlack
 - Diego Catalão
 - Diego Matos
