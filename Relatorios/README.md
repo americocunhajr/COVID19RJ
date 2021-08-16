@@ -273,3 +273,13 @@ As respectivas informações bibliográficas, em formato BibTeX, são listadas a
    note = {\url{https://https://doi.org/10.12957/eduerj.covid19rj.relatorio27}},
 }
 ```
+
+```
+@misc{OF-COVID19-Relatorio28,
+   author = {A. {Cunha~Jr et al.}},
+   title = {Relatório 28 {P}rogresso da {COVID-19} no {B}rasil e no {E}stado do {R}io de {J}aneiro 27$^{a}$ à 31$^{a}$ {S}emana {E}pidemiológica do {C}alendário 2021 (27/06/2021 até 31/07/2021)},
+   howpublished = {COVID-19: Observatório Fluminense},
+   year = {(02-08-2021)},
+   note = {\url{https://https://doi.org/10.12957/eduerj.covid19rj.relatorio28}},
+}
+```
