@@ -55,14 +55,14 @@ Comunicação:
 
 Quer citar o esse repositório em algum documento? Pode usar a seguinte referência:
 
-- COVID19: Observátório Fluminense, GitHub respository, 2020, https://americocunhajr.github.io/COVID19RJ
+- COVID19: Observátório Fluminense, GitHub respository, 2022, https://americocunhajr.github.io/COVID19RJ
 
 Em formato BibTeX:
 
 ```
 @misc{COVID19RJGitHub,
    title        = { {COVID19}: {O}bserva\'{o}rio {F}luminense},
-   year         = {2021},
+   year         = {2022},
    publisher    = {GitHub},
    journal      = {GitHub repository},
    howpublished = {https://americocunhajr.github.io/COVID19RJ},
