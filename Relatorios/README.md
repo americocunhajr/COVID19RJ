@@ -1,8 +1,10 @@
-## Como citar esses relatórios? 
+## Como citar esses relatórios? / How to cite these reports? 
 
 Esses relatórios são distribuidos segunda uma licença CC-BY-NC-ND 4.0.
+These reports are released under a CC-BY-NC-ND 4.0 license.
 
-As respectivas informações bibliográficas, em formato BibTeX, são listadas a seguir.
+As informações bibliográficas dos relatórios são listadas a seguir  em formato BibTeX:
+The bibliographic information of the reports are listed below in BibTeX format:
 
 ```
 @misc{OF-COVID19-Relatorio1,
@@ -278,6 +280,56 @@ As respectivas informações bibliográficas, em formato BibTeX, são listadas a
 @misc{OF-COVID19-Relatorio28,
    author = {A. {Cunha~Jr et al.}},
    title = {Relatório 28 {P}rogresso da {COVID-19} no {B}rasil e no {E}stado do {R}io de {J}aneiro 27$^{a}$ à 31$^{a}$ {S}emana {E}pidemiológica do {C}alendário 2021 (27/06/2021 até 31/07/2021)},
+   howpublished = {COVID-19: Observatório Fluminense},
+   year = {(02-08-2021)},
+   note = {\url{https://https://doi.org/10.12957/eduerj.covid19rj.relatorio28}},
+}
+```
+
+```
+@misc{OF-COVID19-Relatorio29,
+   author = {A. {Cunha~Jr et al.}},
+   title = {Relatório 29 {P}rogresso da {COVID-19} no {B}rasil e no {E}stado do {R}io de {J}aneiro 27$^{a}$ à 31$^{a}$ {S}emana {E}pidemiológica do {C}alendário 2021 (27/06/2021 até 31/07/2021)},
+   howpublished = {COVID-19: Observatório Fluminense},
+   year = {(02-08-2021)},
+   note = {\url{https://https://doi.org/10.12957/eduerj.covid19rj.relatorio28}},
+}
+```
+
+```
+@misc{OF-COVID19-Relatorio30,
+   author = {A. {Cunha~Jr et al.}},
+   title = {Relatório 30 {P}rogresso da {COVID-19} no {B}rasil e no {E}stado do {R}io de {J}aneiro 27$^{a}$ à 31$^{a}$ {S}emana {E}pidemiológica do {C}alendário 2021 (27/06/2021 até 31/07/2021)},
+   howpublished = {COVID-19: Observatório Fluminense},
+   year = {(02-08-2021)},
+   note = {\url{https://https://doi.org/10.12957/eduerj.covid19rj.relatorio28}},
+}
+```
+
+```
+@misc{OF-COVID19-Relatorio31,
+   author = {A. {Cunha~Jr et al.}},
+   title = {Relatório 31 {P}rogresso da {COVID-19} no {B}rasil e no {E}stado do {R}io de {J}aneiro 27$^{a}$ à 31$^{a}$ {S}emana {E}pidemiológica do {C}alendário 2021 (27/06/2021 até 31/07/2021)},
+   howpublished = {COVID-19: Observatório Fluminense},
+   year = {(02-08-2021)},
+   note = {\url{https://https://doi.org/10.12957/eduerj.covid19rj.relatorio28}},
+}
+```
+
+```
+@misc{OF-COVID19-Relatorio32,
+   author = {A. {Cunha~Jr et al.}},
+   title = {Relatório 32 {P}rogresso da {COVID-19} no {B}rasil e no {E}stado do {R}io de {J}aneiro 27$^{a}$ à 31$^{a}$ {S}emana {E}pidemiológica do {C}alendário 2021 (27/06/2021 até 31/07/2021)},
+   howpublished = {COVID-19: Observatório Fluminense},
+   year = {(02-08-2021)},
+   note = {\url{https://https://doi.org/10.12957/eduerj.covid19rj.relatorio28}},
+}
+```
+
+```
+@misc{OF-COVID19-Relatorio33,
+   author = {A. {Cunha~Jr et al.}},
+   title = {Relatório 33 {P}rogresso da {COVID-19} no {B}rasil e no {E}stado do {R}io de {J}aneiro 27$^{a}$ à 31$^{a}$ {S}emana {E}pidemiológica do {C}alendário 2021 (27/06/2021 até 31/07/2021)},
    howpublished = {COVID-19: Observatório Fluminense},
    year = {(02-08-2021)},
    note = {\url{https://https://doi.org/10.12957/eduerj.covid19rj.relatorio28}},
