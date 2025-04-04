@@ -79,4 +79,4 @@ Todo material disponível nesse repositório está disponível para uso nos term
 
 <img src="logos/logo_uerj.png" width="13%"> &nbsp; &nbsp; <img src="logos/ufrj_logo_cor.png" width="10%"> &nbsp; &nbsp; <img src="logos/ufrgs_logo_cor.png" width="15%"> &nbsp; &nbsp; <img src="logos/ufu_logo_cor.png" width="12%"> 
 
-&nbsp; &nbsp; <img src="logos/ifms_logo_cor.png" width="15%"> &nbsp; &nbsp; <img src="logos/unesp_logo_cor.png" width="20%"> &nbsp; &nbsp; <img src="logos/cefet-rj_logo_cor.png" width="20%">
+&nbsp; &nbsp; <img src="logos/ifms_logo_cor.png" width="15%"> &nbsp; &nbsp; <img src="logos/unesp_logo_cor.png" width="20%"> &nbsp; &nbsp; <img src="logos/logo_cefetrj.png" width="20%">
