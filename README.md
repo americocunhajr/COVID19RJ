@@ -73,10 +73,10 @@ Em formato BibTeX:
 
 Todo material disponível nesse repositório está disponível para uso nos termos da licença CC-BY-NC-ND 4.0.
 
-<img src="logos/CC-BY-NC-ND-40.png" width="10%">
+<img src="logos/CC-BY-NC-ND-40.png" width="20%">
 
 ## Instituições dos pesquisadores participantes
 
-<img src="logos/uerj_logo_cor.jpg" width="13%"> &nbsp; &nbsp; <img src="logos/ufrj_logo_cor.png" width="10%"> &nbsp; &nbsp; <img src="logos/ufrgs_logo_cor.png" width="15%"> &nbsp; &nbsp; <img src="logos/ufu_logo_cor.png" width="12%"> 
+<img src="logos/logo_uerj.png" width="13%"> &nbsp; &nbsp; <img src="logos/ufrj_logo_cor.png" width="10%"> &nbsp; &nbsp; <img src="logos/ufrgs_logo_cor.png" width="15%"> &nbsp; &nbsp; <img src="logos/ufu_logo_cor.png" width="12%"> 
 
 &nbsp; &nbsp; <img src="logos/ifms_logo_cor.png" width="15%"> &nbsp; &nbsp; <img src="logos/unesp_logo_cor.png" width="20%"> &nbsp; &nbsp; <img src="logos/cefet-rj_logo_cor.png" width="20%">
